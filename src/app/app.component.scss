@@ -1,11 +1,144 @@
-#desktop_menu{
-    display:none;
+$font-family: 'Open Sans';
+$primary-color: #1592E6;
+$secondary-color: white;
+
+%login-style {
+  border: 1px solid $primary-color;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-decoration: none;
 }
-@media screen and (min-width:600px){
-    mat-sidenav-container mat-sidenav-content #phone_menu{
-        display: none;
+
+mat-sidenav-container {
+  height: 100%;
+  background-color: white;
+
+  mat-sidenav {
+      width: 60%;
+  }
+
+  mat-sidenav-content {
+    nav {
+      background-color: white;
+
+      .menu {
+        #desktop_menu {
+          display: none;
+        }
+
+        .menuIcon {
+          font-size: 32px;
+        }
+
+        mat-icon {
+          cursor: pointer;
+        }
+
+        a {
+          display: none;
+          font-size: 14px;
+          text-decoration: none;
+          font-family: $font-family;
+          padding-top: 12px;
+          color: black;
+
+          &:hover {
+            color: black;
+          }
+        }
+      }
+
+      img {
+        margin-left: 7rem;
+        padding: 16px 0px;
+        width: 67px;
+      }
+
+      .login {
+        .sinscrie {
+          @extend %login-style;
+          padding: 3px 20px;
+          color: $primary-color;
+
+        }
+
+        .seconnecter {
+          @extend %login-style;
+          background-color: $primary-color;
+          color: $secondary-color;
+          padding: 3px 10px;
+
+        }
+
+        .account {
+          display: none !important;
+
+          mat-icon {
+            font-size: 36px;
+            color: black;
+            margin-bottom: 10px;
+          }
+
+          a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+          }
+        }
+      }
     }
-    mat-sidenav-container mat-sidenav-content #desktop_menu{
-        display: flex;
+
+    .hero {
+      img {
+        width: 100%;
+        height: auto;
+        -webkit-filter: brightness(60%);
+        /* Safari 6.0 - 9.0 */
+        filter: brightness(60%);
+      }
+
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 84%);
+
     }
+  }
+}
+
+
+
+
+
+//Media Queries
+@media screen and (min-width:650px) {
+  mat-sidenav-container mat-sidenav-content nav .menu #phone_menu {
+    display: none;
+  }
+
+  mat-sidenav-container mat-sidenav-content nav .menu a {
+    display: flex;
+  }
+
+  mat-sidenav-container mat-sidenav-content nav .menu #desktop_menu {
+    display: flex;
+  }
+}
+
+@media screen and (max-width:650px) {
+  mat-sidenav-container mat-sidenav-content nav .login {
+
+    .sinscrie,
+    .seconnecter {
+      display: none !important;
+    }
+  }
+
+  mat-sidenav-container mat-sidenav-content nav .login {
+    .account {
+      display: flex !important;
+    }
+  }
+
+  mat-sidenav-container mat-sidenav-content nav img {
+    margin-left: 0;
+  }
+
 }

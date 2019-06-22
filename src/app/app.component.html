@@ -1,13 +1,43 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<mat-sidenav-container>
-  <mat-sidenav #sidenav mode="side" position="start" [fixedInViewport]="true">
-    <h1>Side bar content</h1>
+<mat-sidenav-container [hasBackdrop]=true>
+  <!-- Side nav bar -->
+  <mat-sidenav #sidenav mode="over" position="start" [fixedInViewport]="true">
+    <app-tree-menu></app-tree-menu>
   </mat-sidenav>
+
+  <!-- the main content and where the router shows -->
   <mat-sidenav-content>
-    <button id="phone_menu" mat-button (click)="sidenav.toggle()">Phone Menu</button>
-    <button id="desktop_menu" mat-button>Desktop Menu</button>
-    <!-- <app-menu></app-menu> -->
-    <h1>this is router content</h1>
+    <!-- Nav -->
+    <nav class="d-flex justify-content-between flex-direction-row align-items-center">
+
+      <!-- Menu button -->
+      <div class="menu ml-3 d-flex justify-content-center align-items-center flex-direction-row">
+        <mat-icon id="phone_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon"
+          (click)="sidenav.toggle()">menu</mat-icon>
+        <mat-icon id="desktop_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon">menu
+        </mat-icon>
+        <a href="#" class="text-uppercase">Menu</a>
+      </div>
+
+      <!-- Logo -->
+      <img src="../assets/Aljisr_logo.png">
+
+      <!-- Login -->
+      <div class="login mr-3">
+        <a href="#" class="sinscrie">S'inscrire</a>
+        <a href="#" class="seconnecter">Se connecter</a>
+
+        <!-- Mobile Login Version -->
+        <div class="account d-flex flex-column justify-content-center align-items-center">
+            <mat-icon id="phone_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
+            <a href="#">se connecter</a>
+        </div>
+        
+      </div>
+    </nav>
+    <section class="hero">
+      <img src="../assets/hero2.jpg">
+    </section>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
