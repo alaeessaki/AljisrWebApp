@@ -1,3 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-menu></app-menu>
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" position="start" [fixedInViewport]="true">
+    <h1>Side bar content</h1>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button id="phone_menu" mat-button (click)="sidenav.toggle()">Phone Menu</button>
+    <button id="desktop_menu" mat-button>Desktop Menu</button>
+    <!-- <app-menu></app-menu> -->
+    <h1>this is router content</h1>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

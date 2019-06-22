@@ -1,9 +1,0 @@
-<mat-sidenav-container>
-  <mat-sidenav #sidenav mode="side" position="start" [fixedInViewport]="true">
-    <h1>Side bar content</h1>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <button mat-button (click)="sidenav.toggle()" *ngIf="device=='phone'">Phone Menu</button>
-    <button mat-button *ngIf="device=='desktop'">Desktop Menu</button>
-  </mat-sidenav-content>
-</mat-sidenav-container>

@@ -1,0 +1,11 @@
+#desktop_menu{
+    display:none;
+}
+@media screen and (min-width:600px){
+    mat-sidenav-container mat-sidenav-content #phone_menu{
+        display: none;
+    }
+    mat-sidenav-container mat-sidenav-content #desktop_menu{
+        display: flex;
+    }
+}
