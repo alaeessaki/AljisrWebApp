@@ -25,7 +25,6 @@
     "ngx-bootstrap": "^4.3.0",
     "ngx-scrollbar": "^4.2.0",
     "rxjs": "~6.4.0",
-    "simplebar": "^4.0.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
   },
