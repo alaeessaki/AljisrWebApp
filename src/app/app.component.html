@@ -14,8 +14,8 @@
       <div class="menu ml-3 d-flex justify-content-center align-items-center flex-direction-row">
         <mat-icon id="phone_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon"
           (click)="sidenav.toggle()">menu</mat-icon>
-        <mat-icon id="desktop_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon">menu
-        </mat-icon>
+        <mat-icon id="desktop_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon">menu</mat-icon>
+
         <a href="#" class="text-uppercase">Menu</a>
       </div>
 
@@ -36,7 +36,18 @@
       </div>
     </nav>
     <section class="hero">
-      <img src="../assets/hero2.jpg">
+      <img src="../assets/hero.jpg">
+      <div class="slogan">
+        <h3 class="text-uppercase">Au service de l'école publique<br> depuis 1999</h3>
+      </div>
+      <div class="lang d-flex flex-row justify-content-center align-items-center ">
+          <mat-icon class="mr-3" aria-hidden="false" aria-label="Example home icon">call</mat-icon>
+          <mat-icon class="mr-3" aria-hidden="false" aria-label="Example home icon">place</mat-icon>
+          <mat-icon class="mr-3" aria-hidden="false" aria-label="Example home icon">search</mat-icon>
+          <a href="#">FR /</a>
+          <a href="#">EN /</a>
+          <a href="#" class="ar"> ع</a>
+      </div>
     </section>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
