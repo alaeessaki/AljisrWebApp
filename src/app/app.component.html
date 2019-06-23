@@ -2,7 +2,33 @@
 <mat-sidenav-container [hasBackdrop]=true >
   <!-- Side nav bar -->
   <mat-sidenav #sidenav mode="over" position="start" [fixedInViewport]="true">
-    <app-tree-menu></app-tree-menu>
+      <mat-toolbar>Menu</mat-toolbar>
+      <mat-card>
+          <mat-card-title>
+              <a routerLink="/home" (click)="sidenav.close()">HOME</a>
+          </mat-card-title>
+        </mat-card>
+      <div *ngFor="let item of Menu">
+        <mat-expansion-panel *ngIf="item.subtitle.length>1">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{item.title.name}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div *ngFor="let subitem of item.subtitle" class="sublink mb-3">
+            <a routerLink="/{{subitem.link}}" (click)="sidenav.close()">{{subitem.name}}</a>
+          </div>
+        </mat-expansion-panel>
+        <!-- <div *ngIf="item.subtitle.length<1">  
+        </div> -->
+      </div>
+      <div *ngFor="let item of Menu" class="othercards">
+          <mat-card *ngIf="item.subtitle.length<1">
+              <mat-card-title>
+                  <a href="{{item.title.link}}">{{item.title.name}}</a>
+              </mat-card-title>
+            </mat-card>
+      </div>
   </mat-sidenav>
 
   <!-- the main content and where the router shows -->
@@ -35,20 +61,8 @@
         
       </div>
     </nav>
-    <section class="hero">
-      <img src="../assets/hero.jpg">
-      <div class="slogan">
-        <h3 class="text-uppercase">Au service de l'école publique<br> depuis 1999</h3>
-      </div>
-      <div class="lang d-flex flex-row justify-content-center align-items-center ">
-          <mat-icon class="mr-3" aria-hidden="false" aria-label="Example home icon">call</mat-icon>
-          <mat-icon class="mr-3" aria-hidden="false" aria-label="Example home icon">place</mat-icon>
-          <mat-icon class="mr-3" aria-hidden="false" aria-label="Example home icon">search</mat-icon>
-          <a href="#">FR /</a>
-          <a href="#">EN /</a>
-          <a href="#" class="ar"> ع</a>
-      </div>
-    </section>
+    
+
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

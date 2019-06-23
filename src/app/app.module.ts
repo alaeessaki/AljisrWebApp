@@ -1,18 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './materials';
-import { TreeMenuComponent } from './tree-menu/tree-menu.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { QuisommenousComponent } from './quisommenous/quisommenous.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TreeMenuComponent,
+    HomePageComponent,
+    QuisommenousComponent,
+    routingComponent
   ],
   imports: [
     BrowserModule,

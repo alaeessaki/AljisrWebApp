@@ -1,0 +1,62 @@
+$font-family: 'Open Sans';
+$primary-color: #1592E6;
+$secondary-color: white;
+$lite-primary-color:rgb(182, 226, 255);
+.hero {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      -webkit-filter: brightness(60%);
+      /* Safari 6.0 - 9.0 */
+      filter: brightness(60%);
+    }
+
+    .slogan {
+      position: absolute;
+      top: 26%;
+      left: 7%;
+
+      h3 {
+        position: relative;
+        color: white;
+        font-size: 16px;
+        font-family: $font-family;
+
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: white;
+          height: 2px;
+          width: 21%;
+          top: -30%;
+        }
+      }
+    }
+
+    .lang {
+      position: absolute;
+      top: 2%;
+      right: 4%;
+
+      a {
+        padding-left: 4px;
+        font-family: $font-family;
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .ar {}
+
+      mat-icon {
+        color: white;
+        background-color: transparent;
+        font-size: 24px;
+      }
+    }
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 84%);
+
+  }
