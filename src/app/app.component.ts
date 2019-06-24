@@ -230,6 +230,7 @@ export class AppComponent {
       desktop_menu.style.display = "unset";
       desktop_menu.style.opacity = "1";
       sitebody.classList.add('noscroll');
+      sitebody.style.overflowY = "hidden";
       menubtn.style.display = "none";
       menubtn2.style.display = "flex";
       this.menuToggled = true;
@@ -238,6 +239,7 @@ export class AppComponent {
       desktop_menu.style.display = "none";
       desktop_menu.style.opacity = "0";
       sitebody.classList.remove('noscroll');
+      sitebody.style.overflowY = "auto";
       menubtn.style.display = "flex";
       menubtn2.style.display = "none";
       this.menuToggled = false;
