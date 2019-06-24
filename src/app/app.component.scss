@@ -21,11 +21,31 @@
   background: $primary-color !important;
 }
 
+.noscroll{
+  &::-webkit-scrollbar {
+    width: 0px !important;
+    background-color: $lite-primary-color !important;
+  }
+}
 %login-style {
   border: 1px solid $primary-color;
   text-transform: uppercase;
   font-size: 14px;
   text-decoration: none;
+}
+
+%not-selectibale{
+  // set text not selectibale
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer */
+  -khtml-user-select: none;
+  /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none;
+  /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none;
+  /* Disable Android and iOS callouts*/
 }
 
 mat-sidenav-container {
@@ -41,6 +61,7 @@ mat-sidenav-container {
       background-color: white;
 
       .menu {
+        @extend %not-selectibale;
         #desktop_menu {
           display: none;
         }
@@ -60,7 +81,8 @@ mat-sidenav-container {
           font-family: $font-family;
           padding-top: 12px;
           color: black;
-
+          cursor: pointer;
+          @extend %not-selectibale;
           &:hover {
             color: black;
           }
@@ -71,9 +93,11 @@ mat-sidenav-container {
         margin-left: 7rem;
         padding: 16px 0px;
         width: 67px;
+        @extend %not-selectibale;
       }
 
       .login {
+        @extend %not-selectibale;
         .sinscrie {
           @extend %login-style;
           padding: 3px 20px;
@@ -102,6 +126,73 @@ mat-sidenav-container {
             text-decoration: none;
             color: black;
             font-size: 14px;
+          }
+        }
+      }
+
+      #desktop_menu_container {
+        background-color: white;
+        overflow:auto;
+        height: calc(100vh);
+        width: 100%;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+        position: fixed;
+        z-index: 2;
+        top: 75px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        @extend %not-selectibale;
+
+        .single_row {
+          max-height: 100%;
+          overflow: auto;
+          margin-left: 100px;
+          margin-right: 5px;
+          margin-top: 40px;
+          margin-bottom: 40px;
+          .link_row {
+            width: 25%;
+            padding-bottom: 40px;
+            padding-left: 27.5px;
+            border-left: 2px solid $light-grey;
+
+            .link {
+              padding-bottom: 27px;
+              position: relative;
+
+              a {
+                font-size: 19px;
+                font-family: $font-family;
+                text-transform: uppercase;
+                color: $dark-blue;
+                font-weight: 600;
+              }
+
+              &::before {
+                content: "";
+                position: absolute;
+                bottom: 20px;
+                left: -28px;
+                width: 30%;
+                height: 2px;
+                background-color: $light-grey;
+
+
+              }
+            }
+
+            .sub_link {
+
+              a {
+                font-size: 12px;
+                font-family: $secondary-font;
+                font-style: italic;
+                color: $dark-blue;
+              }
+            }
           }
         }
       }
@@ -179,15 +270,17 @@ mat-toolbar {
   font-size: 18px;
   font-weight: 600;
 }
+
 .mat-card:not([class*=mat-elevation-z]) {
   box-shadow: none;
 }
 
 mat-card {
   padding: 6px;
+
   mat-card-title {
     a {
-        padding: 0;
+      padding: 0;
       text-decoration: none;
       color: black;
       font-family: "Roboto", "Helvetica Neue", sans-serif;
@@ -195,12 +288,14 @@ mat-card {
       font-weight: 400;
       text-transform: uppercase;
       margin-left: 19px;
+
       &:focus {
         outline: unset !important;
-    }
+      }
     }
   }
 }
+
 mat-expansion-panel {
   mat-expansion-panel-header {
     mat-panel-title {
@@ -224,9 +319,10 @@ mat-expansion-panel {
 .othercards {
   mat-card {
     padding: 6px;
+
     mat-card-title {
       a {
-          padding: 0;
+        padding: 0;
         text-decoration: none;
         color: black;
         font-family: "Roboto", "Helvetica Neue", sans-serif;
@@ -240,6 +336,32 @@ mat-expansion-panel {
 }
 
 
+
+@media screen and (max-width:980px) {
+  mat-sidenav-container mat-sidenav-content nav #desktop_menu_container .single_row .link_row .link a {
+    font-size: 14px;
+  }
+
+  mat-sidenav-container mat-sidenav-content nav #desktop_menu_container .single_row .link_row .sub_link a {
+    font-size: 9px;
+  }
+
+}
+
+@media screen and (max-width:750px) {
+  mat-sidenav-container mat-sidenav-content nav #desktop_menu_container .single_row .link_row {
+    width: 33%;
+  }
+
+  mat-sidenav-container mat-sidenav-content nav #desktop_menu_container .single_row .link_row .link a {
+    font-size: 16px;
+  }
+
+  mat-sidenav-container mat-sidenav-content nav #desktop_menu_container .single_row .link_row .sub_link a {
+    font-size: 11px;
+  }
+
+}
 
 //Media Queries
 @media screen and (min-width:650px) {

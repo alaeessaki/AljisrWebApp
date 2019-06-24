@@ -39,7 +39,7 @@
 
       a {
         padding-left: 4px;
-        font-family: $font-family;
+        font-family: $secondary-font;
         color: white;
         text-decoration: none;
         font-size: 14px;
@@ -47,11 +47,19 @@
 
       .ar {}
 
-      mat-icon {
-        color: white;
-        background-color: transparent;
-        font-size: 24px;
+      // mat-icon {
+      //   color: white;
+      //   background-color: transparent;
+      //   font-size: 24px;
+      // }
+      img{
+        width: 20px;
+        filter: brightness(100%);
+        -webkit-filter: brightness(100%);
+        margin-right: 15px;
+
       }
+    
     }
 
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 84%);
