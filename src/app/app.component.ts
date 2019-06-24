@@ -224,17 +224,22 @@ export class AppComponent {
   menuToggle(){
     let desktop_menu = document.getElementById('desktop_menu_container');
     let sitebody = document.getElementById('body_container');
+    let menubtn = document.getElementById('desktop_menu');
+    let menubtn2 = document.getElementById('closed_menu');
     if (this.menuToggled == false){
       desktop_menu.style.display = "unset";
       desktop_menu.style.opacity = "1";
       sitebody.classList.add('noscroll');
-
+      menubtn.style.display = "none";
+      menubtn2.style.display = "flex";
       this.menuToggled = true;
     }
     else{
       desktop_menu.style.display = "none";
       desktop_menu.style.opacity = "0";
       sitebody.classList.remove('noscroll');
+      menubtn.style.display = "flex";
+      menubtn2.style.display = "none";
       this.menuToggled = false;
     }
 

@@ -43,8 +43,13 @@
       <div class="menu ml-3 d-flex justify-content-center align-items-center flex-direction-row">
         <mat-icon id="phone_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon"
           (click)="sidenav.toggle()">menu</mat-icon>
-        <mat-icon id="desktop_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon" (click)="menuToggle()">menu
+        <mat-icon id="desktop_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon"
+          (click)="menuToggle()">menu
         </mat-icon>
+        <mat-icon id="closed_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon"
+          (click)="menuToggle()">close
+        </mat-icon>
+        <!-- <img id="" src="../assets/close.png" (click)="menuToggle()"> -->
 
         <a class="text-uppercase" (click)="menuToggle()">Menu</a>
       </div>
@@ -77,8 +82,8 @@
             </div>
             <!-- sublinks -->
             <div class="sub_link" *ngFor="let subitem of item.subtitle">
-                <a href="#">{{subitem.name}}</a>
-            </div>  
+              <a href="#">{{subitem.name}}</a>
+            </div>
           </div>
         </div>
       </div>
