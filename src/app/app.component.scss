@@ -329,7 +329,7 @@ mat-expansion-panel {
 //Media Queries
 @media screen and (min-width:650px) {
   mat-sidenav-container mat-sidenav-content nav .menu #phone_menu {
-    display: none;
+    display: none !important;
   }
 
   mat-sidenav-container mat-sidenav-content nav .menu a {
@@ -340,8 +340,10 @@ mat-expansion-panel {
     display: flex;
   }
 }
-
 @media screen and (max-width:650px) {
+  mat-sidenav-container mat-sidenav-content nav .menu #desktop_menu {
+    display: none !important;
+  }
   mat-sidenav-container mat-sidenav-content nav .login {
 
     .sinscrie,
@@ -349,6 +351,10 @@ mat-expansion-panel {
       display: none !important;
     }
   }
+  mat-sidenav-container mat-sidenav-content nav .menu  #closed_menu {
+    display: none;
+  }
+ 
 
   mat-sidenav-container mat-sidenav-content nav .login {
     .account {
