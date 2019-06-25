@@ -5,9 +5,9 @@
     img {
       width: 100%;
       height: auto;
-      -webkit-filter: brightness(60%);
+      -webkit-filter: brightness(40%);
       /* Safari 6.0 - 9.0 */
-      filter: brightness(60%);
+      filter: brightness(40%);
       
     }
 
@@ -19,8 +19,10 @@
       h3 {
         position: relative;
         color: white;
-        font-size: 16px;
+        font-size: 13px;
         font-family: $font-family;
+        letter-spacing: 3px;
+        font-weight: bold;
 
         &::before {
           content: "";
@@ -32,11 +34,88 @@
         }
       }
     }
+    .slogan2{
+      position: absolute;
+      top:50%;
+      left: 7%;
+      color: white;
+      
+      h1{
+        text-transform: uppercase;
+        font-family: $font-family;
+        font-weight: bold;
+        font-size: 68px;
+      }
+    }
+    .benevole{
+      position: absolute;
+      right:3%;
+      top: 51%;
+      color:white;
+      font-family: $font-family;
+      font-weight: 100;
+      h3{
+        font-size: 28px;
+      }
+      h1{
+        font-size: 44px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      h5{
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 3px;
+      }
+    }
+    .dot{
+      position: absolute;
+      top:49%;
+      right:27%;
+      background-color: $primary-color; 
+      width:90px;
+      height:90px;
+      border-radius: 50%;
+    }
+    .hand{
+      position: absolute;
+      width:30px;
+      top:51.6%;
+      right:29.4%;
+      filter: brightness(100%);
+      -webkit-filter: brightness(100%);
+    }
+    .carousel-dots{
+      position: absolute;
+      top: 74%;
+      right: 14.2%;
+      .one-dot{
+        cursor: pointer;
+        background-color: white;
+        width: 10px;
+        height: 10px;
+        margin:8.5px;
+        border-radius: 50%;
+        margin: 8.5px 5px;
+      }
+      .active-dot{
+        background-color: $primary-color;
+      }
+      mat-icon{
+        cursor: pointer;
+        color: white;
+        font-size: 28px;
+        font-weight: 100;
+      }
+      #left_arrow{
+        margin-right: 3px !important;
+      }
+    }
 
     .lang {
       position: absolute;
       top: 2%;
-      right: 4%;
+      right: 8%;
 
       a {
         padding-left: 4px;
@@ -53,6 +132,7 @@
         filter: brightness(100%);
         -webkit-filter: brightness(100%);
         margin-right: 15px;
+        cursor: pointer;
 
       }
     
