@@ -17,8 +17,9 @@ body {
 
 
 .carousel-indicators li {
-  width: 9px;
-  height: 9px;
+  width: .8vw;
+  height: .8vw;
+  margin: 0vw .2vw;
   border-radius: 50%;
   background-color: white;
 }
@@ -32,7 +33,6 @@ body {
   top: 79%;
   bottom: 16%;
   opacity: 1;
-
 }
 
 .carousel-control-prev {
@@ -48,3 +48,23 @@ body {
 }
 
 .carousel-control-prev-icon {}
+
+
+@media screen and (max-width:850px){
+  .carousel-control-prev, .carousel-control-next {
+    display: none;
+  }
+}
+
+@media screen and (max-width:650px){
+  .carousel-indicators {
+    left: 59% !important;
+    top: 88.4% !important;
+  }
+}
+@media screen and (max-width:350px){
+  .carousel-indicators {
+    left: 59% !important;
+    top: 92.4% !important;
+  }
+}

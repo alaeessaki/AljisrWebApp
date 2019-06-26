@@ -62,8 +62,6 @@ mat-sidenav-container {
 
   mat-sidenav-content {
     nav {
-      background-color: transparent;
-
       .menu {
         @extend %not-selectibale;
 
@@ -81,16 +79,14 @@ mat-sidenav-container {
 
         }
 
-        .rotate {
-          -webkit-animation: spin .2s linear;
-          -moz-animation: spin .2s linear;
-          animation: spin .2s linear;
-        }
+        // .rotate {
+        //   -webkit-animation: spin .2s linear;
+        //   -moz-animation: spin .2s linear;
+        //   animation: spin .2s linear;
+        // }
 
         #closed_menu {
           display: none;
-        
-
         }
 
         a {
@@ -340,10 +336,31 @@ mat-expansion-panel {
     display: flex;
   }
 }
+
 @media screen and (max-width:650px) {
   mat-sidenav-container mat-sidenav-content nav .menu #desktop_menu {
     display: none !important;
   }
+
+  mat-sidenav-container mat-sidenav-content nav .menu #phone_menu {
+    font-size: 25px !important;
+    margin-top: 5px;
+  }
+
+  mat-sidenav-container mat-sidenav-content nav img {
+    width: 9vw;
+  }
+
+  mat-sidenav-container mat-sidenav-content nav .login .account mat-icon {
+    font-size: 31px;
+    margin-bottom: 6px;
+  }
+
+  mat-sidenav-container mat-sidenav-content nav .login .account a {
+    font-size: 11px;
+    ;
+  }
+
   mat-sidenav-container mat-sidenav-content nav .login {
 
     .sinscrie,
@@ -351,10 +368,10 @@ mat-expansion-panel {
       display: none !important;
     }
   }
-  mat-sidenav-container mat-sidenav-content nav .menu  #closed_menu {
+
+  mat-sidenav-container mat-sidenav-content nav .menu #closed_menu {
     display: none;
   }
- 
 
   mat-sidenav-container mat-sidenav-content nav .login {
     .account {
@@ -366,4 +383,20 @@ mat-expansion-panel {
     margin-left: 0;
   }
 
+}
+
+@media screen and (max-width:450px) {
+  mat-sidenav-container mat-sidenav-content nav img {
+    width: 11vw;
+  }
+  mat-sidenav-container mat-sidenav-content nav .login {
+    .account {
+      mat-icon{
+        font-size: 25px;
+        margin-bottom: 0px;
+        margin-top: 5px; 
+        margin-left: 7px;
+      }
+    }
+  }
 }
