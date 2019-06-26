@@ -244,7 +244,12 @@ export class AppComponent {
       menubtn2.style.display = "none";
       this.menuToggled = false;
     }
+  }
 
+  chckMenu(){
+    if (this.menuToggled){
+      this.menuToggle();
+    }
   }
 
 }

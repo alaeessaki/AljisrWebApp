@@ -26,7 +26,7 @@
     <div *ngFor="let item of Menu" class="othercards">
       <mat-card *ngIf="item.subtitle.length<1">
         <mat-card-title>
-          <a href="{{item.title.link}}">{{item.title.name}}</a>
+          <a routerLink="/{{item.title.link}}">{{item.title.name}}</a>
         </mat-card-title>
       </mat-card>
     </div>
@@ -55,7 +55,7 @@
       </div>
 
       <!-- Logo -->
-      <img src="../assets/Aljisr_logo.png">
+      <a routerLink = "/home" (click)="chckMenu()"> <img src="../assets/Aljisr_logo.png"></a>
 
       <!-- Login -->
       <div class="login mr-3">
@@ -82,7 +82,7 @@
             </div>
             <!-- sublinks -->
             <div class="sub_link" *ngFor="let subitem of item.subtitle">
-              <a href="#">{{subitem.name}}</a>
+              <a routerLink="/{{subitem.link}}" (click)="menuToggle()">{{subitem.name}}</a>
             </div>
           </div>
         </div>
