@@ -1,6 +1,50 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-html,body{
-    height: 100%;
-    scroll-behavior: smooth;
+@import './variables.scss';
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
 }
+
+
+.carousel-indicators {
+  position: absolute !important;
+  left: 63% !important;
+  top: 79.4% !important;
+}
+
+
+.carousel-indicators li {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.carousel-indicators .active {
+  background-color: $primary-color;
+
+}
+
+.carousel-control {
+  top: 79%;
+  bottom: 16%;
+  opacity: 1;
+
+}
+
+.carousel-control-prev {
+  left: 75%;
+  width: 15px;
+  height: 15px;
+}
+
+.carousel-control-next {
+  right: 12%;
+  width: 15px;
+  height: 15px;
+}
+
+.carousel-control-prev-icon {}

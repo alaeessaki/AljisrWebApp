@@ -7,6 +7,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './materials';
 import { HomePageComponent } from './home-page/home-page.component';
 import { QuisommenousComponent } from './quisommenous/quisommenous.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 
@@ -15,13 +17,15 @@ import { QuisommenousComponent } from './quisommenous/quisommenous.component';
     AppComponent,
     HomePageComponent,
     QuisommenousComponent,
-    routingComponent
+    routingComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -62,7 +62,7 @@ mat-sidenav-container {
 
   mat-sidenav-content {
     nav {
-      background-color: white;
+      background-color: transparent;
 
       .menu {
         @extend %not-selectibale;

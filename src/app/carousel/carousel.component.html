@@ -1,0 +1,11 @@
+<carousel>
+  <slide *ngFor="let item of Images">
+    <img src="{{item.source}}" alt="{{item.alt}}" style="display: block; width: 100%; height: auto;">
+  </slide>
+
+  <!-- <div class="indicators">
+      <button *ngFor="let item of Images; let i = index" type="button" class="indicator"
+              [class.active]="i === activeSlide" [attr.aria-pressed]="i === activeSlide"
+              (click)="switchSlide(i)">Hello</button>
+    </div> -->
+</carousel>

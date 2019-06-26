@@ -1,16 +1,6 @@
 @import "../../variables.scss";
 .hero {
     position: relative;
-
-    img {
-      width: 100%;
-      height: auto;
-      -webkit-filter: brightness(40%);
-      /* Safari 6.0 - 9.0 */
-      filter: brightness(40%);
-      
-    }
-
     .slogan {
       position: absolute;
       top: 26%;
@@ -85,32 +75,34 @@
       filter: brightness(100%);
       -webkit-filter: brightness(100%);
     }
-    .carousel-dots{
-      position: absolute;
-      top: 74%;
-      right: 14.2%;
-      .one-dot{
-        cursor: pointer;
-        background-color: white;
-        width: 10px;
-        height: 10px;
-        margin:8.5px;
-        border-radius: 50%;
-        margin: 8.5px 5px;
-      }
-      .active-dot{
-        background-color: $primary-color;
-      }
-      mat-icon{
-        cursor: pointer;
-        color: white;
-        font-size: 28px;
-        font-weight: 100;
-      }
-      #left_arrow{
-        margin-right: 3px !important;
-      }
-    }
+    // .carousel-dots{
+    //   position: absolute;
+    //   top: 74%;
+    //   right: 14.2%;
+    //   .dots_container{
+    //     .one-dot{
+    //       cursor: pointer;
+    //       background-color: white;
+    //       width: 10px;
+    //       height: 10px;
+    //       margin:8.5px;
+    //       border-radius: 50%;
+    //       margin: 8.5px 5px;
+    //     }
+    //     .active-dot{
+    //       background-color: $primary-color;
+    //     }
+    //   }
+    //   mat-icon{
+    //     cursor: pointer;
+    //     color: white;
+    //     font-size: 28px;
+    //     font-weight: 100;
+    //   }
+    //   #left_arrow{
+    //     margin-right: 3px !important;
+    //   }
+    // }
 
     .lang {
       position: absolute;

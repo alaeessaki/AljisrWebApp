@@ -1,6 +1,7 @@
 <section class="hero">
-  <img src="../assets/hero2.jpg">
-
+    <app-carousel>
+      
+    </app-carousel>
   <!-- If you want to change hero img to video  -->
 
   <!-- <video id="video" width="100%" height="auto" autoplay oncanplay="this.muted=true" loop>
@@ -40,11 +41,18 @@
   <div class="carousel-dots d-flex flex-row">
     <mat-icon id="left_arrow" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon">
       keyboard_arrow_left</mat-icon>
-    <div class="one-dot"></div>
-    <div class="one-dot active-dot"></div>
-    <div class="one-dot"></div>
-    <div class="one-dot"></div>
+    <div class="dots_container" *ngFor="let item of Images">
+      <div class="one-dot"></div>
+    </div>
+
     <mat-icon id="right_arrow" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon">
       keyboard_arrow_right</mat-icon>
   </div>
 </section>
+
+<!-- <carousel [(activeSlide)]="activeSlideIndex">
+  <slide *ngFor="let slide of Images; let index=index">
+    <img [src]="Images.source" alt="image slide" style="display: block; width: 100%;">
+
+  </slide>
+</carousel> -->

@@ -5,3 +5,8 @@ export class menu{
     };
     subtitle:Array<{name:string,link:string}>;
 }
+
+export class images{
+    source:string;
+    alt:string;
+}
