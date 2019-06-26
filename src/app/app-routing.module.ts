@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { QuisommenousComponent } from './quisommenous/quisommenous.component';
-import { HomePageComponent } from './home-page/home-page.component';
+import { QuiSomeNousComponent } from './pages/qui-some-nous/qui-some-nous.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+
 const routes: Routes = [
-  { path: 'QuiSommeNous', component: QuisommenousComponent},
+  { path: 'QuiSommeNous', component: QuiSomeNousComponent},
   { path: 'home', component: HomePageComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
 ];
@@ -13,4 +14,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponent = [QuisommenousComponent,HomePageComponent];
+export const routingComponent = [QuiSomeNousComponent,HomePageComponent];
