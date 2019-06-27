@@ -1,25 +1,20 @@
 <section class="hero">
-  <app-carousel>
-
-  </app-carousel>
-  <!-- If you want to change hero img to video  -->
-
-  <!-- <video id="video" width="100%" height="auto" autoplay oncanplay="this.muted=true" loop>
-    <source src="../../assets/video.mp4" type="video/mp4">
-
-    Your browser does not support the video tag.
-  </video> -->
+  <app-carousel></app-carousel>
 
   <div class="slogan">
     <h3 class="text-uppercase">Au service de l'école publique<br> depuis 1999</h3>
   </div>
   <div class="lang d-flex flex-row justify-content-center align-items-center ">
-    <!-- <mat-icon class="mr-3" aria-hidden="false" aria-label="Example home icon">call</mat-icon>
-      <mat-icon class="mr-3" aria-hidden="false" aria-label="Example home icon">place</mat-icon>
-      <mat-icon class="mr-3" aria-hidden="false" aria-label="Example home icon">search</mat-icon> -->
-    <img src="../../assets/phone.png">
-    <img src="../../assets/place.png">
-    <img src="../../assets/search.png">
+    <img src="../../assets/phone.png" matTooltip="0522 98 01 36"
+    matTooltipPosition="left">
+    <img src="../../assets/place.png" matTooltip="Ecole El Bachiri Garçons, Angle Rue Ahmed kadmiri et Rue Bachir Laâlaj - Cité Plateau - casablanca"
+    matTooltipPosition="below">
+    <form class="Search" [style.display]="isClicked ? 'flex' : 'none'">
+      <mat-form-field class="example-full-width">
+        <input  matInput placeholder="Search">
+      </mat-form-field>
+    </form>
+    <img src="../../assets/search.png" (click)="clicked()">
 
 
     <a href="#">FR /</a>
@@ -49,10 +44,3 @@
       keyboard_arrow_right</mat-icon>
   </div>
 </section>
-
-<!-- <carousel [(activeSlide)]="activeSlideIndex">
-  <slide *ngFor="let slide of Images; let index=index">
-    <img [src]="Images.source" alt="image slide" style="display: block; width: 100%;">
-
-  </slide>
-</carousel> -->

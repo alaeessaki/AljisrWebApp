@@ -1,4 +1,5 @@
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/theming';
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
 
 @import './variables.scss';
 
@@ -9,12 +10,112 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+// materials styling
+
+$mat-myapp-primary: (50: #e3f2fc,
+  100: #b9def8,
+  200: #8ac9f3,
+  300: #5bb3ee,
+  400: #38a2ea,
+  500: #1592e6,
+  600: #128ae3,
+  700: #0f7fdf,
+  800: #0c75db,
+  900: #0663d5,
+  A100: #fdfeff,
+  A200: #cadfff,
+  A400: #97c1ff,
+  A700: #7eb1ff,
+  contrast: (50 : #0663d5,
+    100 : #0c75db,
+    200 : #0f7fdf,
+    300 : #128ae3,
+    400 : #1592e6,
+    500 : #38a2ea,
+    600 : #5bb3ee,
+    700 : #8ac9f3,
+    800 : #b9def8,
+    900 : #e3f2fc,
+    A100 : #7eb1ff,
+    A200 : #97c1ff,
+    A400 : #cadfff,
+    A700 : #fdfeff,
+  ));
+
+$mat-myapp-accent: (50: #ffff,
+  100: #ffff,
+  200: #ffff,
+  300: #ffff,
+  400: #ffff,
+  500: #ffff,
+  600: #ffff,
+  700: #ffff,
+  800: #ffff,
+  900: #ffff,
+  A100: #ffff,
+  A200: #ffff,
+  A400: #ffff,
+  A700: #ffff,
+  contrast: (50 : #0000,
+    100 : #0000,
+    200 : #0000,
+    300 : #0000,
+    400 :#0000,
+    500 :#0000,
+    600 :#0000,
+    700 : #0000,
+    800 : #0000,
+    900 : #0000,
+    A100 :#0000,
+    A200 : #0000,
+    A400 : #0000,
+    A700 : #0000,
+  ));
+$primary: mat-palette($mat-myapp-primary);
+$accent: mat-palette($mat-myapp-accent);
+
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// carousel styling
 .carousel-indicators {
   position: absolute !important;
   left: 63% !important;
   top: 79.4% !important;
 }
-
 
 .carousel-indicators li {
   width: .8vw;
@@ -39,32 +140,88 @@ body {
   left: 75%;
   width: 15px;
   height: 15px;
+  cursor: pointer;
 }
 
 .carousel-control-next {
   right: 12%;
   width: 15px;
   height: 15px;
+  cursor: pointer;
 }
 
-.carousel-control-prev-icon {}
 
 
-@media screen and (max-width:850px){
-  .carousel-control-prev, .carousel-control-next {
+// tooltip styling
+.mat-tooltip {
+  background-color: $primary-color;
+}
+
+// input 
+.mat-form-field-empty.mat-form-field-label {
+  color: #fff;
+}
+
+.mat-form-field-underline {
+  background-color: #ffff !important;
+}
+
+.mat-form-field-infix {
+  border: 0;
+}
+
+input.mat-input-element {
+  color: white;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: white;
+}
+
+.mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  color: white;
+}
+
+// media queries
+@media screen and (max-width:850px) {
+
+  .carousel-control-prev,
+  .carousel-control-next {
     display: none;
   }
 }
 
-@media screen and (max-width:650px){
+@media screen and (max-width:650px) {
   .carousel-indicators {
     left: 59% !important;
     top: 88.4% !important;
   }
+
+  .mat-form-field-appearance-legacy .mat-form-field-infix {
+    font-size: 13px;
+  }
 }
-@media screen and (max-width:350px){
+
+@media screen and (max-width:450px) {
+  .mat-form-field-appearance-legacy .mat-form-field-infix {
+    font-size: 10px;
+  }
+  .mat-form-field {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    width: 24vw;
+  }
+}
+
+
+
+@media screen and (max-width:350px) {
   .carousel-indicators {
     left: 59% !important;
     top: 92.4% !important;
   }
 }
+
+
+
