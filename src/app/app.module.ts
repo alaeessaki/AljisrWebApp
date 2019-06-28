@@ -8,7 +8,7 @@ import {MaterialModule} from './materials';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CarouselComponent } from './carousel/carousel.component';
 import { MycarouselComponent } from './mycarousel/mycarousel.component';
-
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 // pages module
 
 
@@ -26,6 +26,7 @@ import { MycarouselComponent } from './mycarousel/mycarousel.component';
     BrowserAnimationsModule,
     MaterialModule,
     CarouselModule.forRoot(),
+    Ng2CarouselamosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
