@@ -7,6 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './materials';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CarouselComponent } from './carousel/carousel.component';
+import { MycarouselComponent } from './mycarousel/mycarousel.component';
 
 // pages module
 
@@ -16,7 +17,8 @@ import { CarouselComponent } from './carousel/carousel.component';
   declarations: [
     AppComponent,
     routingComponent,
-    CarouselComponent
+    CarouselComponent,
+    MycarouselComponent
   ],
   imports: [
     BrowserModule,
