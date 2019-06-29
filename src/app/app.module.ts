@@ -9,6 +9,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CarouselComponent } from './carousel/carousel.component';
 import { MycarouselComponent } from './mycarousel/mycarousel.component';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import { CounterUpSectionComponent } from './counter-up-section/counter-up-section.component';
 // pages module
 
 
@@ -18,7 +19,8 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
     AppComponent,
     routingComponent,
     CarouselComponent,
-    MycarouselComponent
+    MycarouselComponent,
+    CounterUpSectionComponent
   ],
   imports: [
     BrowserModule,

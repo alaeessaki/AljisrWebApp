@@ -1,5 +1,26 @@
 @import "../../../variables.scss";
 
+%line {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 3px;
+  background-color: #1592E6;
+  bottom: 46%;
+  left: -33%;
+}
+
+%line2 {
+  content: "";
+  position: absolute;
+  background-color: #1592E6;
+  height: 100%;
+  width: 3%;
+  bottom: 0%;
+  left: -22%;
+}
+
+
 .hero {
   position: relative;
 
@@ -129,7 +150,7 @@
       font-weight: 600;
     }
 
-    .ar {}
+    //.ar {}
 
     img {
       width: 20px;
@@ -165,13 +186,7 @@
       }
 
       &::before {
-        content: "";
-        position: absolute;
-        width: 30%;
-        height: 3px;
-        background-color: #1592E6;
-        bottom: 46%;
-        left: -33%;
+        @extend %line;
       }
     }
 
@@ -207,7 +222,7 @@
   }
 }
 
-
+// que soutient-ils section 
 .que_setient_ils {
   .single_row {
     background-color: $background-grey;
@@ -228,6 +243,34 @@
 
   }
 }
+
+//aljisr en numéros section !!
+
+
+// dernieres nouvelles section !!!
+
+.dernieres_nouvelles {
+  position: relative;
+  font-family: $font-family;
+  height: 450px;
+
+  .title_container {
+    position: relative;
+
+    h1 {
+      color: $primary-color;
+      font-size: 25px;
+      text-transform: uppercase;
+      font-weight: 600;
+
+      &::before {
+        @extend %line;
+      }
+    }
+
+  }
+}
+
 
 #container {
   width: 100%;
