@@ -223,7 +223,7 @@
 }
 
 
-//aljisr en numéros section !!
+//aljisr en numéros section !! compo
 
 
 // dernieres nouvelles section !!!
@@ -240,15 +240,9 @@
       font-size: 25px;
       text-transform: uppercase;
       font-weight: 600;
-
-      &::before {
-        @extend %line;
-      }
     }
-
   }
 }
-
 
 
 
