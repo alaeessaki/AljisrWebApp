@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatInputModule} from '@angular/material/input';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
 
@@ -19,7 +20,8 @@ import {MatInputModule} from '@angular/material/input';
         MatToolbarModule,
         MatCardModule,
         MatTooltipModule,
-        MatInputModule
+        MatInputModule,
+        MatRadioModule
     ],
     exports: [
         MatButtonModule,
@@ -30,7 +32,8 @@ import {MatInputModule} from '@angular/material/input';
         MatToolbarModule,
         MatCardModule,
         MatTooltipModule,
-        MatInputModule
+        MatInputModule,
+        MatRadioModule
     ]
 })
 export class MaterialModule { }  
