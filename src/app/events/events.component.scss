@@ -1,54 +1,26 @@
 @import "../../variables.scss";
 
-
-%line {
-  content: "";
-  position: absolute;
-  width: 20%;
-  height: 3px;
-  background-color: #1592E6;
-  bottom: 68%;
-  left: 0%;
-}
-
-
 .events {
   background-color: $background-grey;
-
+  clip-path: polygon(0 0, 100% 0, 153% 100%, 0 84%);
+  padding-bottom: 10rem;
   .container {
-    .description {
-      width: 40%;
-      margin-right: 4rem;
-
-      h1 {
-        color: $primary-color;
-        font-size: 27px;
-        position: relative;
-        margin-bottom: 1.5rem;
-        padding-left: 7rem;
-
-        &::before {
-          @extend %line;
-        }
-      }
-
-      p {
-        color: $dark-grey;
-      }
+    app-events-details{
+      width: 45%;
     }
-
     .dates {
       cursor: pointer;
+      width: 55%;
 
       table {
+        border: 2px solid $dark-grey;
           border-color: $dark-grey;
           border-left: none;
           border-right: none; 
         .date_container {
             td{
-                border-color: $dark-grey;
+                border: 2px solid $dark-grey;
                 border-left: none;
-                border-width: 2px; 
             }
             
           .check {
@@ -72,12 +44,13 @@
             padding-top: 1rem;
             padding-bottom: 1rem;
             border-right: none;
+            width: 60%;
             .date {
-              font-size: 14px;
+              font-size: 12px;
             }
 
             .title {
-              font-size: 18px;
+              font-size: 16px;
             }
           }
 
@@ -87,12 +60,13 @@
             padding: 1rem 3rem;
 
             img {
-              width: 30%;
+              width: 20%;
+              margin-bottom: 5px;
 
             }
 
             h6 {
-              font-size: 14px;
+              font-size: 12px;
 
             }
           }
@@ -103,26 +77,29 @@
   }
 }
 
-.smallRadio .mat-radio-container {
+.bigRadio .mat-radio-container {
   height: 30px;
   width: 30px;
 }
 
-.smallRadio .mat-radio-outer-circle {
-  height: 30px;
-  width: 30px;
-  border-color: $primary-color;
-}
-
-.smallRadio .mat-radio-inner-circle {
+.bigRadio .mat-radio-outer-circle {
   height: 30px;
   width: 30px;
   border-color: $primary-color;
 }
 
-.smallRadio .mat-radio-button .mat-radio-ripple {
+.bigRadio .mat-radio-inner-circle {
+  height: 30px;
+  width: 30px;
+  border-color: $primary-color;
+}
+
+.bigRadio .mat-radio-button .mat-radio-ripple {
   height: 40px;
   width: 40px;
   left: calc(50% - 20px);
   top: calc(50% - 20px);
+}
+.bigRadio .mat-radio-button{
+  padding-left: 10px;
 }

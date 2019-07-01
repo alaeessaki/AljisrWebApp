@@ -1,31 +1,32 @@
 <section class="events">
   <div
-    class="container p-5 d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row justify-content-center">
-    <div class="description">
-      <h1 class="text-uppercase">événements<br> à venir</h1>
-      <p class="text-left">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum dolorem perferendis sit
-        voluptatibus suscipit
-        autem ex optio! Minus reiciendis nihil earum? Ducimus officia, officiis minima velit aliquid ratione sint ipsum.
-      </p>
-    </div>
+    class="container p-1 pt-5 d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row justify-content-center">
+
+    <app-events-details [event]="selectedItem" [firstPost]="firstPost"></app-events-details>
+
     <div class="dates d-flex flex-column">
-      <table border="2">
-        <tr class="date_container">
-          <td class="check" align="center">
-            <mat-radio-group aria-label="Select an option" class="smallRadio">
-              <mat-radio-button value="1" color="primary"></mat-radio-button>
-            </mat-radio-group>
-          </td>
-          <td class="title_container">
-            <h6 class="date">02 may</h6>
-            <h2 class="title">Lorem ipsum dolor sit amet consectetur</h2>
-          </td>
-          <td class="chose_container">
+      <mat-radio-group aria-label="Select an option" class="bigRadio">
+        <table>
+
+          <tr class="date_container" *ngFor="let item of event" (click)="onSelect(item)">
+
+            <td class="check" align="center">
+              <mat-radio-button [value]="item.id" color="primary"></mat-radio-button>
+            </td>
+
+            <td class="title_container">
+              <h6 class="date">{{item.date | uppercase}}</h6>
+              <h2 class="title">{{item.title | uppercase}}</h2>
+            </td>
+
+            <td class="chose_container">
               <img src="../../assets/right-arrow.png">
-              <h6>Participer</h6>
-          </td>
-        </tr>
-      </table>
+              <h6 class="text-uppercase">Participer</h6>
+            </td>
+
+          </tr>
+        </table>
+        </mat-radio-group>
     </div>
   </div>
 </section>

@@ -11,6 +11,7 @@ import { MycarouselComponent } from './mycarousel/mycarousel.component';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { CounterUpSectionComponent } from './counter-up-section/counter-up-section.component';
 import { EventsComponent } from './events/events.component';
+import { EventsDetailsComponent } from './events-details/events-details.component';
 // pages module
 
 
@@ -22,7 +23,8 @@ import { EventsComponent } from './events/events.component';
     CarouselComponent,
     MycarouselComponent,
     CounterUpSectionComponent,
-    EventsComponent
+    EventsComponent,
+    EventsDetailsComponent
   ],
   imports: [
     BrowserModule,

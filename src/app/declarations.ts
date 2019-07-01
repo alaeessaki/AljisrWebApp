@@ -10,3 +10,9 @@ export class images{
     source:string;
     alt:string;
 }
+export class events{
+    id:number;
+    title:string;
+    date:string;
+    description:string;
+}
