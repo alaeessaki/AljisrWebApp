@@ -1,23 +1,31 @@
-<div id="container">
-  <div ng2-carouselamos class="slides-wrapper" [items]="images" [width]="800" [$prev]="prev" [$next]="next"
-    [$item]="item">
-  </div>
+<section class="que_setient_ils">
+  <div class="single_row d-flex flex-column flex-md-row flex-lg-row flex-xl-row ">
+    <div class="title_container">
+      <h1>Que soutiennent<br>ils?</h1>
 
+      <ng-template #prev>
+        <img src="../../assets/left-arrow.png" id="left" />
+      </ng-template>
+      <ng-template #next>
+        <img src="../../assets/right_arrow.png" id="right" />
+      </ng-template>
 
-  <ng-template #prev>
-    <img src="../../assets/left-arrow.png" id="left" />
-  </ng-template>
-  <ng-template #next>
-    <img src="../../assets/right_arrow.png" id="right" />
-  </ng-template>
-  <ng-template #item let-item let-i="index">
-
-    <div class="slide-items">
-      <mat-card class="example-card" style="width:262px; height:358px;"
-        [style.backgroundImage]="'url('+ item.name +')'">
-        <div class="filter" [style.backgroundColor]="item.color"></div>
-      </mat-card>
     </div>
+    <div id="container">
+      <div ng2-carouselamos class="slides-wrapper" [items]="images" [width]="790" [$prev]="prev" [$next]="next"
+        [$item]="item">
+      </div>
 
-  </ng-template>
-</div>
+      <ng-template #item let-item let-i="index">
+
+        <div class="slide-items">
+          <mat-card class="example-card" style="width:255px; height:358px;"
+            [style.backgroundImage]="'url('+ item.name +')'">
+            <div class="filter" [style.backgroundColor]="item.color"></div>
+          </mat-card>
+        </div>
+
+      </ng-template>
+    </div>
+  </div>
+</section>

@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-mycarousel',
   templateUrl: './mycarousel.component.html',
-  styleUrls: ['./mycarousel.component.scss']
+  styleUrls: ['./mycarousel.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class MycarouselComponent implements OnInit {
   images: Array<any> = [];
