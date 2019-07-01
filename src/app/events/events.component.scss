@@ -3,7 +3,7 @@
 .events {
   background-color: $background-grey;
   clip-path: polygon(0 0, 100% 0, 153% 100%, 0 84%);
-  padding-bottom: 18rem;
+  padding-bottom: 10rem;
   padding-top: 3rem;
   .container {
     app-events-details{
@@ -71,6 +71,20 @@
 
             }
           }
+        }
+      }
+      .voir-tous{
+        padding-top: 4rem;
+        text-transform: uppercase;
+        p{
+          color:$primary-color;
+          font-size: 20px;
+          padding-right: 1rem;
+          padding-top: 12px;
+        }
+      
+        img{
+          width: 22px;
         }
       }
     }
