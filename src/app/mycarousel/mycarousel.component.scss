@@ -1,28 +1,43 @@
 @import "../../variables.scss";
 
-#container {
-  width: 100%;
-  margin: 5em auto;
-  padding: 0;
+// que soutient-ils section 
+.que_setient_ils {
+  .single_row {
+    background-color: $background-grey;
+    position: relative;
 
-  .ng2-carouselamos-container {
-    width: 70%;
-    margin: auto;
-  }
+    .title_container {
+      position: relative;
+      font-size: 27px;
+      margin-top: 81px;
+      margin-left: 71px;
+      margin-right: 72px;
 
-  .slide-items {
-    margin-right: 10px;
-
-    img {
-      width: 210px;
+      h1 {
+        color: $primary-color;
+        font-size: 27px;
+      }
     }
-  }
-}
+    #container {
+      width: 90%;
+      margin: 5em auto;
+      padding: 0;
+    
+      .ng2-carouselamos-container {
+        width: 100%;
+        margin: auto;
+      }
+    
+      .slide-items {
+        margin-right: 10px;
+    
+        img {
+          width: 210px;
+        }
+      }
+    }
 
-mat-card {
-  background-size: cover;
-  background-position: center;
-  position: relative;
+  }
 }
 
 .filter {
@@ -36,12 +51,23 @@ mat-card {
   height: 100%;
   opacity: 0.76;
 }
-#left,#right{
-    width:24px !important;
-    border: 1px solid #1592E6;
-    padding: 4px;
-    border-radius: 50%;
-}
-#left{
 
+
+// materials style
+mat-card {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#left,#right{
+  width:24px !important;
+  border: 1px solid #1592E6;
+  padding: 4px;
+  border-radius: 50%;
+}
+.controls{
+  top: 88% !important;
+  left: -284px !important;
+  width: 7% !important;
 }

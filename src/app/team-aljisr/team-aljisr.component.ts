@@ -1,12 +1,12 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit,ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-mycarousel',
-  templateUrl: './mycarousel.component.html',
-  styleUrls: ['./mycarousel.component.scss'],
+  selector: 'app-team-aljisr',
+  templateUrl: './team-aljisr.component.html',
+  styleUrls: ['./team-aljisr.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class MycarouselComponent implements OnInit {
+export class TeamAljisrComponent implements OnInit {
   images: Array<any> = [];
   constructor() {
     this.images = [
@@ -15,11 +15,9 @@ export class MycarouselComponent implements OnInit {
       { name: '../../assets/inno.png' , color:"rgba(103,55,131, 0.76)" },
       { name: 'http://lorempixel.com/640/480/cats/', color:"rgba(103,55,131, 0.76)"  }
     ]
-  }
+   }
 
   ngOnInit() {
   }
-
-
 
 }
