@@ -13,6 +13,7 @@ import { CounterUpSectionComponent } from './counter-up-section/counter-up-secti
 import { DernieresNouvComponent } from './dernieres-nouv/dernieres-nouv.component';
 import { EventsComponent } from './events/events.component';
 import { EventsDetailsComponent } from './events-details/events-details.component';
+import { CountUpModule } from 'countup.js-angular2';
 // pages module
 
 
@@ -27,7 +28,7 @@ import { EventsDetailsComponent } from './events-details/events-details.componen
     DernieresNouvComponent,
     EventsDetailsComponent,
     EventsComponent
-  ], 
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
