@@ -10,7 +10,6 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { MycarouselComponent } from './mycarousel/mycarousel.component';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { CounterUpSectionComponent } from './counter-up-section/counter-up-section.component';
-import { CountUpModule } from 'countup.js-angular2';
 import { DernieresNouvComponent } from './dernieres-nouv/dernieres-nouv.component';
 import { EventsComponent } from './events/events.component';
 import { EventsDetailsComponent } from './events-details/events-details.component';
@@ -28,7 +27,7 @@ import { EventsDetailsComponent } from './events-details/events-details.componen
     DernieresNouvComponent,
     EventsDetailsComponent,
     EventsComponent
-  ],
+  ], 
   imports: [
     BrowserModule,
     AppRoutingModule,
