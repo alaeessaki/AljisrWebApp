@@ -1,0 +1,105 @@
+@import "../../variables.scss";
+
+.events {
+  background-color: $background-grey;
+  clip-path: polygon(0 0, 100% 0, 153% 100%, 0 84%);
+  padding-bottom: 10rem;
+  .container {
+    app-events-details{
+      width: 45%;
+    }
+    .dates {
+      cursor: pointer;
+      width: 55%;
+
+      table {
+        border: 2px solid $dark-grey;
+          border-color: $dark-grey;
+          border-left: none;
+          border-right: none; 
+        .date_container {
+            td{
+                border: 2px solid $dark-grey;
+                border-left: none;
+            }
+            
+          .check {
+            mat-radio-group {
+              width: 10%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-right: 18px;
+
+              mat-radio-button {
+                width: 40%;
+                margin-right: 0.5rem;
+              }
+            }
+          }
+          .title_container {
+            padding-left: 2rem;
+            padding-right: 3rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-right: none;
+            width: 60%;
+            .date {
+              font-size: 12px;
+            }
+
+            .title {
+              font-size: 16px;
+            }
+          }
+
+          .chose_container {
+            border-right: none;
+            cursor: pointer;
+            padding: 1rem 3rem;
+
+            img {
+              width: 20%;
+              margin-bottom: 5px;
+
+            }
+
+            h6 {
+              font-size: 12px;
+
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.bigRadio .mat-radio-container {
+  height: 30px;
+  width: 30px;
+}
+
+.bigRadio .mat-radio-outer-circle {
+  height: 30px;
+  width: 30px;
+  border-color: $primary-color;
+}
+
+.bigRadio .mat-radio-inner-circle {
+  height: 30px;
+  width: 30px;
+  border-color: $primary-color;
+}
+
+.bigRadio .mat-radio-button .mat-radio-ripple {
+  height: 40px;
+  width: 40px;
+  left: calc(50% - 20px);
+  top: calc(50% - 20px);
+}
+.bigRadio .mat-radio-button{
+  padding-left: 10px;
+}

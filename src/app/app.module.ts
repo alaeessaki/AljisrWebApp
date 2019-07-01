@@ -12,6 +12,8 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { CounterUpSectionComponent } from './counter-up-section/counter-up-section.component';
 import { CountUpModule } from 'countup.js-angular2';
 import { DernieresNouvComponent } from './dernieres-nouv/dernieres-nouv.component';
+import { EventsComponent } from './events/events.component';
+import { EventsDetailsComponent } from './events-details/events-details.component';
 // pages module
 
 
@@ -23,7 +25,9 @@ import { DernieresNouvComponent } from './dernieres-nouv/dernieres-nouv.componen
     CarouselComponent,
     MycarouselComponent,
     CounterUpSectionComponent,
-    DernieresNouvComponent
+    DernieresNouvComponent,
+    EventsDetailsComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,

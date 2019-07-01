@@ -23,7 +23,7 @@
 .dernieres_nouvelles {
   position: relative;
   font-family: $font-family;
-  height: 450px;
+  padding-bottom: 4rem;
 
   .title_container {
     position: relative;
@@ -43,5 +43,18 @@
       width: 30px;
       height: 25px;
     }
+  }
+
+  .purple-sect {
+    background-color: $purple-rain;
+  }
+
+  .green-sect {
+    background-color: $green;
+  }
+
+  .blue-sect {
+    background-color: $blue-jisr;
+
   }
 }
