@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -8,17 +8,23 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class CounterUpSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+
+
+  }
 
   ngOnInit() {
     window.addEventListener('scroll', this.scroll, true);
+
   }
 
   scroll() {
     var coun = document.getElementById("counter");
-    console.log(coun.clientHeight);
+    console.log(coun.offsetTop);
+
+
   }
 
+  // countUP js lib
+
 }
-
-

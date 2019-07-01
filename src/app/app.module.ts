@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule, routingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MaterialModule} from './materials';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './materials';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CarouselComponent } from './carousel/carousel.component';
 import { MycarouselComponent } from './mycarousel/mycarousel.component';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { CounterUpSectionComponent } from './counter-up-section/counter-up-section.component';
+import { CountUpModule } from 'countup.js-angular2';
+import { DernieresNouvComponent } from './dernieres-nouv/dernieres-nouv.component';
 // pages module
 
 
@@ -20,7 +22,8 @@ import { CounterUpSectionComponent } from './counter-up-section/counter-up-secti
     routingComponent,
     CarouselComponent,
     MycarouselComponent,
-    CounterUpSectionComponent
+    CounterUpSectionComponent,
+    DernieresNouvComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { CounterUpSectionComponent } from './counter-up-section/counter-up-secti
     BrowserAnimationsModule,
     MaterialModule,
     CarouselModule.forRoot(),
-    Ng2CarouselamosModule
+    Ng2CarouselamosModule,
+    CountUpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

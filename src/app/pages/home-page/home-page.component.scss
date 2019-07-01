@@ -244,32 +244,12 @@
   }
 }
 
-//aljisr en numéros section !!
+//aljisr en numéros section !! compo
 
 
-// dernieres nouvelles section !!!
+// dernieres nouvelles section !!!  compo 
 
-.dernieres_nouvelles {
-  position: relative;
-  font-family: $font-family;
-  height: 450px;
 
-  .title_container {
-    position: relative;
-
-    h1 {
-      color: $primary-color;
-      font-size: 25px;
-      text-transform: uppercase;
-      font-weight: 600;
-
-      &::before {
-        @extend %line;
-      }
-    }
-
-  }
-}
 
 
 #container {
