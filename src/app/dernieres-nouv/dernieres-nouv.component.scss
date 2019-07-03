@@ -10,15 +10,6 @@
   left: -33%;
 }
 
-%line2 {
-  content: "";
-  position: absolute;
-  background-color: #1592E6;
-  height: 100%;
-  padding-right: 1.5px;
-  bottom: 0%;
-  left: -22%;
-}
 
 .dernieres_nouvelles {
   position: relative;
@@ -29,7 +20,7 @@
     position: relative;
     color: $primary-color;
     text-transform: uppercase;
-
+    
     h1 {
       font-size: 25px;
       font-weight: 600;
@@ -45,6 +36,30 @@
     width: 30px;
     height: 25px;
   }
+.colorfull-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p{
+    font-size: 30px;
+    padding-bottom:1rem;
+  }
+  .voir-tous{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    p{
+      margin:0;
+      letter-spacing: 6px;
+      font-size:13px;
+      padding-top: 11px;
+    }
+  }
+}
+  
 
   .purple-sect {
     background-color: $purple-rain;
