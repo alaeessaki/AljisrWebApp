@@ -9,19 +9,30 @@ import { Component, OnInit } from '@angular/core';
 export class CounterUpSectionComponent implements OnInit {
 
   constructor() {
-
-
   }
 
+  num1 = 0;
   ngOnInit() {
     window.addEventListener('scroll', this.scroll, true);
 
   }
 
-  scroll() {
-    var coun = document.getElementById("counter");
-    console.log(coun.offsetTop);
 
+
+  public scroll() {
+    var coun = document.getElementById("counter");
+    let coor = coun.getBoundingClientRect();
+
+
+    // console.log({
+    //   top: coor.top,
+    //   left: coor.left
+    // });
+
+    if (coor.top < 723) {
+      console.log("bobo");
+
+    }
 
   }
 
