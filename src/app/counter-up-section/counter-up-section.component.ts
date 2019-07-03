@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
@@ -10,50 +9,39 @@ import * as $ from 'jquery';
 export class CounterUpSectionComponent implements OnInit {
 
   constructor() {
-
-
   }
-
   ngOnInit() {
 
-    $('.counter').each(function () {
-      var $this = $(this),
-        countTo = $this.attr('data-count');
+    $(document).ready(function () {
+      var passed_countup = false;
+      $('body,html').bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup', function (event) {
 
-      $({ countNum: $this.text() }).animate({
-        countNum: countTo
-      },
-        {
-          duration: 4500,
-          easing: 'linear',
-          step: function () {
-            $this.text(Math.floor(this.countNum));
-          },
-          complete: function () {
-            $this.text(this.countNum);
-            //alert('finished');
+        if ($(window).scrollTop() >= ($("#countup_sec").offset().top - 400)) {
+          if (!passed_countup) {
+            $('.counter').each(function () {
+              var $this = $(this),
+                countTo = $this.attr('data-count');
+
+              $({ countNum: $this.text() }).animate({
+                countNum: countTo
+              },
+                {
+                  duration: 2000,
+                  easing: 'linear',
+                  step: function () {
+                    $this.text(Math.floor(this.countNum));
+                  },
+                  complete: function () {
+                    $this.text(this.countNum);
+                    //alert('finished');
+                  }
+                });
+            });
+            passed_countup = true;
           }
-        });
+        }
+      }).scroll();
     });
-
-
   }
-  num1: number = 0;
-  test: boolean;
-  // inc(){
-  //   var somme = 0;
-  //   somme = somme + 1;
-  //   this.num1 = somme;
-  // }
-  scroll() {
-    var coun = document.getElementById("counter");
-    var coor = coun.getBoundingClientRect();
-    if (coor.top < 453) {
-      this.test = true;
-    }
-  }
-
-
-  // countUP js lib
 
 }
