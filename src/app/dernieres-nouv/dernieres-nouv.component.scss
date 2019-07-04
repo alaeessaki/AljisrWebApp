@@ -10,67 +10,43 @@
   left: -33%;
 }
 
-
-.dernieres_nouvelles {
+.title_container {
   position: relative;
-  font-family: $font-family;
-  padding-bottom: 0;
+  color: $primary-color;
+  text-transform: uppercase;
 
-  .title_container {
-    position: relative;
-    color: $primary-color;
-    text-transform: uppercase;
-    
-    h1 {
-      font-size: 25px;
-      font-weight: 600;
+  h1 {
+    font-size: 25px;
+    font-weight: 600;
 
-      &::before {
-        @extend %line;
-      }
-    }
-
-  }
-
-  .arrow-right {
-    width: 30px;
-    height: 25px;
-  }
-.colorfull-section{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  p{
-    font-size: 30px;
-    padding-bottom:1rem;
-  }
-  .voir-tous{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    p{
-      margin:0;
-      letter-spacing: 6px;
-      font-size:13px;
-      padding-top: 11px;
+    &::before {
+      @extend %line;
     }
   }
 }
-  
 
-  .purple-sect {
-    background-color: $purple-rain;
+.arrow-right {
+  width: 30px;
+  height: 25px;
+}
+
+.text-cont {
+  color: white;
+
+  p {
+    font-size: 30px;
+    padding-bottom: 1rem;
   }
 
-  .green-sect {
-    background-color: $green;
-  }
+  .lire-suite-cont {
+    cursor: pointer;
 
-  .blue-sect {
-    background-color: $blue-jisr;
+    p {
+      margin: 0;
+      letter-spacing: 6px;
+      font-size: 13px;
+      padding-top: 11px;
+    }
 
   }
 }
