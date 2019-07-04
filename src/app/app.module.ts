@@ -14,6 +14,7 @@ import { DernieresNouvComponent } from './dernieres-nouv/dernieres-nouv.componen
 import { EventsComponent } from './events/events.component';
 import { EventsDetailsComponent } from './events-details/events-details.component';
 import { CountUpModule } from 'countup.js-angular2';
+import { AljisrPlatformsComponent } from './aljisr-platforms/aljisr-platforms.component';
 // pages module
 
 
@@ -27,7 +28,8 @@ import { CountUpModule } from 'countup.js-angular2';
     CounterUpSectionComponent,
     DernieresNouvComponent,
     EventsDetailsComponent,
-    EventsComponent
+    EventsComponent,
+    AljisrPlatformsComponent
   ],
   imports: [
     BrowserModule,
