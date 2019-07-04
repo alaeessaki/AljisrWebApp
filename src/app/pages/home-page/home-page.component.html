@@ -9,11 +9,12 @@
     <img src="../../assets/place.png"
       matTooltip="Ecole El Bachiri Garçons, Angle Rue Ahmed kadmiri et Rue Bachir Laâlaj - Cité Plateau - casablanca"
       matTooltipPosition="below">
-    <form class="Search" [style.display]="isClicked ? 'flex' : 'none'">
+      <app-search  [style.display]="isClicked ? 'flex' : 'none'"></app-search>
+    <!-- <form class="Search">
       <mat-form-field class="example-full-width">
         <input matInput placeholder="Search">
       </mat-form-field>
-    </form>
+    </form> -->
     <img src="../../assets/search.png" (click)="clicked()">
 
 

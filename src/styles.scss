@@ -90,25 +90,6 @@ $theme: mat-light-theme($primary, $accent);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // carousel styling
 .carousel-indicators {
   position: absolute !important;
@@ -156,32 +137,6 @@ $theme: mat-light-theme($primary, $accent);
   background-color: $primary-color;
 }
 
-// input 
-.mat-form-field-empty.mat-form-field-label {
-  color: #fff;
-}
-
-.mat-form-field-underline {
-  background-color: #ffff !important;
-}
-
-.mat-form-field-infix {
-  border: 0;
-}
-
-input.mat-input-element {
-  color: white;
-}
-
-.mat-form-field-appearance-legacy .mat-form-field-label {
-  color: white;
-}
-
-.mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
-  color: white;
-}
-
-
 // media queries
 @media screen and (max-width:850px) {
 
@@ -196,24 +151,8 @@ input.mat-input-element {
     left: 59% !important;
     top: 88.4% !important;
   }
-
-  .mat-form-field-appearance-legacy .mat-form-field-infix {
-    font-size: 13px;
-  }
 }
 
-@media screen and (max-width:450px) {
-  .mat-form-field-appearance-legacy .mat-form-field-infix {
-    font-size: 10px;
-  }
-
-  .mat-form-field {
-    display: inline-block;
-    position: relative;
-    text-align: left;
-    width: 24vw;
-  }
-}
 
 
 
