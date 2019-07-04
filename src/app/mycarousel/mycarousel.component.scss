@@ -18,19 +18,20 @@
         font-size: 27px;
       }
     }
+
     #container {
       width: 90%;
       margin: 5em auto;
       padding: 0;
-    
+
       .ng2-carouselamos-container {
         width: 100%;
         margin: auto;
       }
-    
+
       .slide-items {
         margin-right: 10px;
-    
+
         img {
           width: 210px;
         }
@@ -52,6 +53,21 @@
   opacity: 0.76;
 }
 
+.sub_description {
+  position: relative;
+  z-index: 2;
+  padding-top: 92%;
+  h3 {
+    color: white;
+    font-size: 23px;
+    font-family: $font-family;
+  }
+
+  img {
+    width: 64px !important;
+  }
+}
+
 
 // materials style
 .mat-card {
@@ -60,13 +76,15 @@
   position: relative;
 }
 
-#left,#right{
-  width:24px !important;
+#left,
+#right {
+  width: 24px !important;
   border: 1px solid #1592E6;
   padding: 4px;
   border-radius: 50%;
 }
-.controls{
+
+.controls {
   top: 88% !important;
   left: -284px !important;
   width: 7% !important;

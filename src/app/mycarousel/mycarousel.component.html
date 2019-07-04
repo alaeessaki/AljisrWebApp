@@ -22,6 +22,11 @@
           <mat-card class="example-card" style="width:255px; height:358px;"
             [style.backgroundImage]="'url('+ item.name +')'">
             <div class="filter" [style.backgroundColor]="item.color"></div>
+            <div class="sub_description d-flex flex-column justify-content-center align-items-center"
+            [style.paddingTop]="item.title == 'Environnement'? '102%' : '92%'">
+              <img [src]="item.subicon">
+              <h3>{{item.title}}</h3>
+            </div>
           </mat-card>
         </div>
 
