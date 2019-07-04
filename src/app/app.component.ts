@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { menu } from './declarations';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,8 +8,7 @@ import { menu } from './declarations';
 })
 export class AppComponent {
   title = 'aljisrwebapplication';
-  
-  
+
   Menu: menu[] = [
     {
       title: {

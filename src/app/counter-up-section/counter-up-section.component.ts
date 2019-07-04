@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-counter-up-section',
@@ -10,32 +10,38 @@ export class CounterUpSectionComponent implements OnInit {
 
   constructor() {
   }
-
-  num1 = 0;
   ngOnInit() {
-    window.addEventListener('scroll', this.scroll, true);
 
+    $(document).ready(function () {
+      var passed_countup = false;
+      $('body,html').bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup', function (event) {
+
+        if ($(window).scrollTop() >= ($("#countup_sec").offset().top - 400)) {
+          if (!passed_countup) {
+            $('.counter').each(function () {
+              var $this = $(this),
+                countTo = $this.attr('data-count');
+
+              $({ countNum: $this.text() }).animate({
+                countNum: countTo
+              },
+                {
+                  duration: 2000,
+                  easing: 'linear',
+                  step: function () {
+                    $this.text(Math.floor(this.countNum));
+                  },
+                  complete: function () {
+                    $this.text(this.countNum);
+                    //alert('finished');
+                  }
+                });
+            });
+            passed_countup = true;
+          }
+        }
+      }).scroll();
+    });
   }
-
-
-
-  public scroll() {
-    var coun = document.getElementById("counter");
-    let coor = coun.getBoundingClientRect();
-
-
-    // console.log({
-    //   top: coor.top,
-    //   left: coor.left
-    // });
-
-    if (coor.top < 723) {
-      console.log("bobo");
-
-    }
-
-  }
-
-  // countUP js lib
 
 }

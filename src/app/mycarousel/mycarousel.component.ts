@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
+
 @Component({
   selector: 'app-mycarousel',
   templateUrl: './mycarousel.component.html',
@@ -18,8 +19,9 @@ export class MycarouselComponent implements OnInit {
   }
 
   ngOnInit() {
+   
   }
 
-
-
 }
+
+
