@@ -257,6 +257,16 @@ mat-card {
   }
 }
 
+footer{
+  padding:0;
+  margin: 0;
+  background-color: #3498DB;
+  p{
+    margin:0;
+  }
+}
+
+
 mat-expansion-panel {
   mat-expansion-panel-header {
     mat-panel-title {

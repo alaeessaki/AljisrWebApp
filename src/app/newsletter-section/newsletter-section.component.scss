@@ -1,0 +1,73 @@
+@import '../../variables.scss';
+
+.newsletter_section {
+  background-color: $background-grey;
+
+  .single_row {
+    color: $primary-color;
+
+    .form-container {
+
+      // input 
+      .mat-form-field {
+        width: 280px;
+      }
+
+      .mat-form-field-empty.mat-form-field-label {
+        color: $primary-color;
+      }
+
+      .mat-form-field-underline {
+        background-color: #ffff !important;
+        width: 100%;
+      }
+
+      .mat-form-field-infix {
+        border: 0;
+      }
+
+      input.mat-input-element {
+        color: black;
+        margin-top: 0.9375em;
+      }
+
+      .mat-form-field-appearance-legacy .mat-form-field-label {
+        color: black;
+        font-size: 24px;
+        padding-left: 90px;
+        padding-bottom: 10px;
+      }
+
+      .mat-form-field-appearance-legacy .mat-form-field-underline {
+        height: 2px;
+        bottom: 0.8em;
+      }
+
+      .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+        color: $primary-color;
+
+      }
+    }
+
+    h1 {
+      font-size: 21px;
+    }
+
+    a {
+      font-size: 21px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $primary-color;
+        position: relative;
+      &::after{
+        position: absolute;
+        right: -49px;
+        content: "";
+        background-image: url("../../assets/right-arrow-blue.png");
+        height: 36px;
+        width: 36px;
+        background-size: cover;
+      }
+    }
+  }
+}

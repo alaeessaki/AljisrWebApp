@@ -13,8 +13,13 @@ import { CounterUpSectionComponent } from './counter-up-section/counter-up-secti
 import { DernieresNouvComponent } from './dernieres-nouv/dernieres-nouv.component';
 import { EventsComponent } from './events/events.component';
 import { EventsDetailsComponent } from './events-details/events-details.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component'
 import { CountUpModule } from 'countup.js-angular2';
-import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { AljisrPlatformsComponent } from './aljisr-platforms/aljisr-platforms.component';
+import { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';
+import { SearchComponent } from './search/search.component';
+import { FooterComponent } from './footer/footer.component';
+import { TeamAljisrComponent } from './team-aljisr/team-aljisr.component';
 // pages module
 
 
@@ -29,7 +34,12 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
     DernieresNouvComponent,
     EventsDetailsComponent,
     EventsComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
+    AljisrPlatformsComponent,
+    NewsletterSectionComponent,
+    SearchComponent,
+    FooterComponent,
+    TeamAljisrComponent
   ],
   imports: [
     BrowserModule,

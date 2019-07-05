@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 carousel {
   slide {
     img {
@@ -11,3 +13,71 @@ carousel {
   }
 }
 
+
+
+// carousel styling
+.carousel-indicators {
+  position: absolute !important;
+  left: 63% !important;
+  top: 79.4% !important;
+}
+
+.carousel-indicators li {
+  width: .8vw;
+  height: .8vw;
+  margin: 0vw .2vw;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.carousel-indicators .active {
+  background-color: $primary-color;
+
+}
+
+.carousel-control {
+  top: 79%;
+  bottom: 16%;
+  opacity: 1;
+}
+
+.carousel-control-prev {
+  left: 75%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.carousel-control-next {
+  right: 12%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+
+// media queries
+@media screen and (max-width:850px) {
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}
+
+@media screen and (max-width:650px) {
+  .carousel-indicators {
+    left: 59% !important;
+    top: 88.4% !important;
+  }
+}
+
+
+
+
+@media screen and (max-width:350px) {
+  .carousel-indicators {
+    left: 59% !important;
+    top: 92.4% !important;
+  }
+}

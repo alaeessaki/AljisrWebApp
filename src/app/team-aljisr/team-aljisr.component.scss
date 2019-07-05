@@ -1,0 +1,32 @@
+@import "../../variables.scss";
+
+%line {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 3px;
+  background-color: #1592E6;
+  bottom: 46%;
+  left: -33%;
+}
+
+.team-aljisr {
+  background-color: $light-grey;
+  padding-bottom: 26rem;
+
+  .title_container {
+    position: relative;
+    color: $primary-color;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    h1 {
+      font-size: 25px;
+      font-weight: 600;
+
+      &::before {
+        @extend %line;
+      }
+    }
+  }
+}
