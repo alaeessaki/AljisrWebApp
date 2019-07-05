@@ -17,6 +17,7 @@ import { CountUpModule } from 'countup.js-angular2';
 import { AljisrPlatformsComponent } from './aljisr-platforms/aljisr-platforms.component';
 import { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';
 import { SearchComponent } from './search/search.component';
+import { FooterComponent } from './footer/footer.component';
 // pages module
 
 
@@ -33,7 +34,8 @@ import { SearchComponent } from './search/search.component';
     EventsComponent,
     AljisrPlatformsComponent,
     NewsletterSectionComponent,
-    SearchComponent
+    SearchComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
