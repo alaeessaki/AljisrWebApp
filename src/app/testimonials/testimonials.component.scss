@@ -1,0 +1,205 @@
+@import "../../variables.scss";
+
+%line {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 3px;
+  background-color: #1592E6;
+  bottom: 46%;
+  left: -33%;
+}
+
+.testimonials {
+
+  .title_container {
+    position: relative;
+    color: $primary-color;
+    text-transform: uppercase;
+
+    h1 {
+      font-size: 25px;
+      font-weight: 600;
+
+      &::before {
+        @extend %line;
+      }
+    }
+  }
+
+
+  .carousel {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  ul.slides {
+    display: flex;
+    height: 444px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .slides * {
+    user-select: none;
+  }
+
+  ul.slides input {
+    display: none;
+  }
+
+  .slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+  }
+
+  .slide-image {
+    img {
+      width: 160px;
+      height: 160px;
+    }
+
+    .quotes {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    p {
+      color: $dark-grey;
+    }
+
+    span {
+      color: $primary-color;
+      font-weight: bolder;
+    }
+  }
+
+  .carousel-controls label {
+    display: none;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+  }
+
+  .slide-image:hover+.carousel-controls label {
+    opacity: 0.5;
+  }
+
+  .carousel-controls label:hover {
+    opacity: 1;
+  }
+
+  .carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+  }
+
+  .carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+  }
+
+  .carousel-dots {
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+  }
+
+  .carousel-dots .carousel-dot {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: $dark-grey;
+    opacity: 0.4;
+  }
+
+  input:checked+.slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+  }
+
+  input:checked+.slide-container .carousel-controls label {
+    display: flex;
+  }
+
+  input#img-1:checked~.carousel-dots,
+  input#img-2:checked~.carousel-dots,
+  input#img-3:checked~.carousel-dots,
+  input#img-4:checked~.carousel-dots,
+  input#img-5:checked~.carousel-dots label#img-dot-5,
+  input#img-6:checked~.carousel-dots label#img-dot-6 {
+    opacity: 1;
+    background-color: #1592E6;
+  }
+
+
+  input:checked+.slide-container .nav label {
+    display: flex;
+  }
+
+
+
+
+
+
+  // .carousel {
+  //   .slides {
+
+  //     input {
+  //       display: none;
+  //     }
+
+  //     li {
+  //       list-style: none;
+  //     }
+
+  //     * {
+  //       user-select: none;
+  //     }
+
+  //     img {
+  //       width: 160px;
+  //       height: 160px;
+  //     }
+
+  //     .quotes {
+  //       width: 5rem;
+  //       height: 4rem;
+  //     }
+
+  //     p {
+  //       color: $dark-grey;
+  //     }
+
+  //     span {
+  //       color: $primary-color;
+  //       font-weight: bolder;
+  //     }
+
+  //     .carousel-dots .carousel-dot {
+  //       display: flex;
+  //       width: 14px;
+  //       height: 14px;
+  //       border-radius: 50%;
+  //       background-color: $dark-grey;
+  //       opacity: 0.5;
+  //       margin: 10px;
+  //     }
+
+  //     .carousel-dot:hover {
+  //       background-color: $primary-color;
+  //     }
+  //   }
+  // }
+}
