@@ -1,39 +1,23 @@
-<section class="que_setient_ils" id="que_st_ils">
-  <div class="single_row d-flex flex-column flex-md-row flex-lg-row flex-xl-row ">
-    <div class="title_container" style="width: 20%">
-      <h1>Que soutiennent<br>ils?</h1>
+<div class="cards-container d-flex">
+  <div class="wraper d-flex">
+    <mat-card style="width:500px; height:200px;" id="firstclone">
+      test4
+    </mat-card>
+    <mat-card style="width:500px; height:200px;">
+      test1
+    </mat-card>
+    <mat-card style="width:500px; height:200px;">
+      test2
+    </mat-card>
+    <mat-card style="width:500px; height:200px;">
+      test3
+    </mat-card>
+    <mat-card style="width:500px; height:200px;" id="lastclone">
+      test4
+    </mat-card>
 
-      <ng-template #prev>
-        <img src="../../assets/left-arrow.png" id="left" />
-      </ng-template>
-      <ng-template #next>
-        <img src="../../assets/right_arrow.png" id="right" />
-      </ng-template>
 
-    </div>
-    <div id="container">
-      <div ng2-carouselamos class="slides-wrapper" [items]="images" [width]="790" [$prev]="prev" [$next]="next"
-        [$item]="item">
-      </div>
-
-      <ng-template #item let-item let-i="index">
-
-        <div class="slide-items">
-          <mat-card class="example-card" style="width:255px; height:358px;"
-            [style.backgroundImage]="'url('+ item.name +')'">
-            <div class="filter" [style.backgroundColor]="item.color"></div>
-            <div class="sub_description d-flex flex-column justify-content-center align-items-center"
-            [style.paddingTop]="item.title == 'Environnement'? '102%' : '92%'">
-              <img [src]="item.subicon">
-              <h3>{{item.title}}</h3>
-            </div>
-            <div class="arrow">
-              <img src="../../assets/rounded-arrow.png">
-            </div>
-          </mat-card>
-        </div>
-
-      </ng-template>
-    </div>
   </div>
-</section>
+</div>
+<button mat-button id="prevBtn">Prev</button>
+<button mat-button id="nextBtn">Next</button>

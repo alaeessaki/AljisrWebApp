@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
+import { Component, OnInit, ViewEncapsulation, ViewChild, Directive, Input, ElementRef } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-mycarousel',
@@ -8,19 +8,51 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class MycarouselComponent implements OnInit {
+  // @ViewChild('CarouselSlide', {static:false}) CarouselSlide: ElementRef
+  // @ViewChild('CarouselImg', {static:false}) CarouselImg:ElementRef
+  // ngAfterViewInit() {
+  //   const counter = 1;
+  //   const size = this.CarouselImg.nativeElement.width;
+  //   console.log(size);
+  // }
+
   images: Array<any> = [];
   constructor() {
     this.images = [
-      { name: '../../assets/educ.png', color:"rgba(52,152,219, 0.76)", title:"Education" ,subicon:"../../assets/book.png" },
-      { name: '../../assets/env.png' , color:"rgba(25,174,118, 0.76)", title:"Environnement" ,subicon:"../../assets/plant.png" },
-      { name: '../../assets/inno.png' , color:"rgba(103,55,131, 0.76)", title:"Innovation" ,subicon:"../../assets/innovation.png" },
-      { name: 'http://lorempixel.com/640/480/cats/', color:"rgba(103,55,131, 0.76)",title:"Lorem",subicon:"../../assets/innovation.png"  }
+      { id: 1, name: '../../assets/educ.png', color: "rgba(52,152,219, 0.76)", title: "Education", subicon: "../../assets/book.png" },
+      { id: 2, name: '../../assets/env.png', color: "rgba(25,174,118, 0.76)", title: "Environnement", subicon: "../../assets/plant.png" },
+      { id: 3, name: '../../assets/inno.png', color: "rgba(103,55,131, 0.76)", title: "Innovation", subicon: "../../assets/innovation.png" },
+      { id: 4, name: '../../assets/inno.png', color: "rgba(103,55,131, 0.76)", title: "Lorem", subicon: "../../assets/innovation.png" }
     ]
   }
 
   ngOnInit() {
-   
+    const carouselSlide:HTMLElement  = document.querySelector('.wraper') ;
+    const carouselElements = document.querySelectorAll('.wraper mat-card') ;
+    const prevBtn = document.querySelector('#prevBtn');
+    const nextBtn = document.querySelector('#nextBtn');
+
+
+    let counter = 1;
+    let size = carouselElements[0].clientWidth;
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+    //  btn listener 
+    nextBtn.addEventListener('click', () => {
+        if (counter >= carouselElements.length - 1 ) return;
+        carouselSlide.style.transition = "transform 0.4s ease-in-out";
+        counter++;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    })
+    prevBtn.addEventListener('click', () => {
+      if (counter <= 0 ) return;
+        carouselSlide.style.transition = "transform 0.4s ease-in-out";
+        counter--;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    })
+
   }
+
 
 }
 
