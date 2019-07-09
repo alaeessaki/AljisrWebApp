@@ -1,6 +1,37 @@
-// @import "../../variables.scss";
+@import "../../variables.scss";
 
 // // que soutient-ils section 
+.que-soutiennents-ils{
+  background-color: $background-grey;
+
+  .container{
+
+    .left-row-container{
+      width: 30%;
+      h1{
+        font-size: 27px;
+        font-family: $font-family;
+        color: $primary-color;
+
+      }
+    }
+    .cards-container{
+      width: 100%;
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+      .wraper{
+        margin: auto;
+        // mat-card{
+        //   // margin-right: 16px;
+        // }
+      }
+    }
+  }
+  
+}
+
 // .que_setient_ils {
 //   .single_row {
 //     background-color: $background-grey;
@@ -72,13 +103,3 @@
 //   width: 7% !important;
 // }
 
-.cards-container{
-  width:60%;
-  margin:0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow: hidden;
-  .wraper{
-    margin: auto;
-  }
-}
