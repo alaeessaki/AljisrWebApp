@@ -12,26 +12,28 @@ export class TeamAljisrComponent implements OnInit {
   ngOnInit() {
 
     const carouselSlide: HTMLElement = document.querySelector('.wrapper');
-    const carouselElements = document.querySelectorAll('.card');
-    const prevBtn = document.querySelector('#prevBtn');
-    const nextBtn = document.querySelector('#nextBtn');
+    const carouselElements = document.querySelectorAll('.member');
+    const prevBtn = document.querySelector('#prevmem');
+    const nextBtn = document.querySelector('#nextmem');
 
 
     let counter = 1;
-    let size = carouselElements[0].clientWidth;
+    let size = carouselElements[0].clientWidth + 5;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
 
 
     function movingSl() {
+      console.log(counter);
+
       if (counter >= carouselElements.length - 1) {
-        counter = 1;
+        counter = -1;
       }
       carouselSlide.style.transition = "transform 0.4s ease-in-out";
       counter++;
       carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
     }
-    setInterval(movingSl, 1000);
+    setInterval(movingSl, 2000);
 
     //  btn listener 
     nextBtn.addEventListener('click', () => {

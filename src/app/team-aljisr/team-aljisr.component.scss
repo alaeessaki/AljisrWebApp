@@ -12,7 +12,8 @@
 
 .team-aljisr {
   background-color: #F2F2F2;
-  padding-bottom: 26rem;
+  padding-bottom: 7rem;
+  font-family: $font-family;
 
   .title_container {
     position: relative;
@@ -32,13 +33,22 @@
 
   .cards-container {
 
-    width: 60%;
+    width: 77%;
     box-sizing: border-box;
     overflow: hidden;
 
-    .wrapper {
-      margin: auto;
-    }
   }
 
+
+  .membslide {
+    border-radius: 50%;
+    border: $primary-color solid;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
 }
