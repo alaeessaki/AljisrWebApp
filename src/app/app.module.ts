@@ -19,6 +19,8 @@ import { NewsletterSectionComponent } from './newsletter-section/newsletter-sect
 import { SearchComponent } from './search/search.component';
 import { FooterComponent } from './footer/footer.component';
 import { TeamAljisrComponent } from './team-aljisr/team-aljisr.component';
+import { QueSoutenonsNousComponent } from './que-soutenons-nous/que-soutenons-nous.component';
+import { HeroSectionComponent } from './hero-section/hero-section.component';
 
 // pages module
 
@@ -39,7 +41,9 @@ import { TeamAljisrComponent } from './team-aljisr/team-aljisr.component';
     NewsletterSectionComponent,
     SearchComponent,
     FooterComponent,
-    TeamAljisrComponent
+    TeamAljisrComponent,
+    QueSoutenonsNousComponent,
+    HeroSectionComponent
   ],
   imports: [
     BrowserModule,

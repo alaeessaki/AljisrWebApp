@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, ViewChild, Directive, Input, ElementRef } from '@angular/core';
-import * as $ from 'jquery';
+import { Component, OnInit, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-mycarousel',
@@ -8,13 +7,6 @@ import * as $ from 'jquery';
   encapsulation: ViewEncapsulation.None,
 })
 export class MycarouselComponent implements OnInit {
-  // @ViewChild('CarouselSlide', {static:false}) CarouselSlide: ElementRef
-  // @ViewChild('CarouselImg', {static:false}) CarouselImg:ElementRef
-  // ngAfterViewInit() {
-  //   const counter = 1;
-  //   const size = this.CarouselImg.nativeElement.width;
-  //   console.log(size);
-  // }
 
   images: Array<any> = [];
   constructor() {
@@ -34,8 +26,9 @@ export class MycarouselComponent implements OnInit {
 
 
     let counter = 1;
-    let size = carouselElements[0].clientWidth;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
+    let size = carouselElements[0].clientWidth + 16;
+  
+    carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)'
 
 
     function movingSl() {

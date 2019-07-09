@@ -1,23 +1,70 @@
-<div class="cards-container d-flex">
-  <div class="wraper d-flex">
-    <mat-card style="width:500px; height:200px;" id="firstclone">
-      test4
-    </mat-card>
-    <mat-card style="width:500px; height:200px;">
-      test1
-    </mat-card>
-    <mat-card style="width:500px; height:200px;">
-      test2
-    </mat-card>
-    <mat-card style="width:500px; height:200px;">
-      test3
-    </mat-card>
-    <mat-card style="width:500px; height:200px;" id="lastclone">
-      test4
-    </mat-card>
+<section class="que-soutiennents-ils">
+  <div class="container d-flex flex-column flex-md-row flex-lg-row flex-xl-row">
+    <div class="left-row-container d-flex flex-column">
+      <h1>Que soutiennents ils</h1>
+      <div class="btns-container">
+        <img id="prevBtn" src="../../assets/left-arrow.png">
+        <img id="nextBtn" src="../../assets/right_arrow.png">
+      </div>
+    </div>
 
+    <!-- cards container -->
+    <div class="cards-container d-flex">
+      <div class="wraper d-flex">
 
+        <!-- Card 4 -->
+        <mat-card style="width:268px; height:358px;" id="firstclone"
+          [style.backgroundImage]="'url('+ images[3].name +')'">
+          <div class="titles">
+            <img [src]="images[3].subicon">
+            <h6>{{images[3].title}}</h6>
+          </div>
+          <a href="#"><img class="redirecting_arrow" src="../../assets/rounded-arrow.png"></a>
+          <div style="width:268px; height:358px" class="filter" [style.backgroundColor]="images[3].color"></div>
+        </mat-card>
+
+        <!-- card 1 -->
+        <mat-card style="width:268px; height:358px;" [style.backgroundImage]="'url('+ images[0].name +')'">
+          <div class="titles">
+            <img [src]="images[0].subicon">
+            <h6>{{images[0].title}}</h6>
+          </div>
+          <a href="#"><img class="redirecting_arrow" src="../../assets/rounded-arrow.png"></a>
+          <div style="width:268px; height:358px" class="filter" [style.backgroundColor]="images[0].color"></div>
+        </mat-card>
+
+        <!-- card 2 -->
+        <mat-card style="width:268px; height:358px;" [style.backgroundImage]="'url('+ images[1].name +')'">
+          <div class="titles" style="top:57%">
+            <img [src]="images[1].subicon">
+            <h6>{{images[1].title}}</h6>
+          </div>
+          <a href="#"><img class="redirecting_arrow" src="../../assets/rounded-arrow.png"></a>
+          <div style="width:268px; height:358px" class="filter" [style.backgroundColor]="images[1].color"></div>
+        </mat-card>
+
+        <!-- card 3 -->
+        <mat-card style="width:268px; height:358px;" [style.backgroundImage]="'url('+ images[2].name +')'">
+          <div class="titles">
+            <img [src]="images[2].subicon">
+            <h6>{{images[2].title}}</h6>
+          </div>
+          <a href="#"><img class="redirecting_arrow" src="../../assets/rounded-arrow.png"></a>
+          <div style="width:268px; height:358px" class="filter" [style.backgroundColor]="images[2].color"></div>
+        </mat-card>
+
+        <!-- card 4 -->
+        <mat-card style="width:268px; height:358px;" id="lastclone"
+          [style.backgroundImage]="'url('+ images[3].name +')'">
+          <div class="titles">
+            <img [src]="images[3].subicon">
+            <h6>{{images[3].title}}</h6>
+          </div>
+          <a href="#"><img class="redirecting_arrow" src="../../assets/rounded-arrow.png"></a>
+          <div style="width:268px; height:358px" class="filter" [style.backgroundColor]="images[3].color"></div>
+        </mat-card>
+
+      </div>
+    </div>
   </div>
-</div>
-<button mat-button id="prevBtn">Prev</button>
-<button mat-button id="nextBtn">Next</button>
+</section>
