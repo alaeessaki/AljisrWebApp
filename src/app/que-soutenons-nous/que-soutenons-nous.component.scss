@@ -100,28 +100,32 @@
 }
 
 @media (max-width: 576px) {
+
+  .que_setienons_nous .single_row .title::before {
+    bottom: 55%;
+  }
+
   .que_setienons_nous .single_row .title h1 {
     font-size: 13px;
   }
-  .que_setienons_nous .single_row .cards_container {
 
-  }.card {
+  .que_setienons_nous .single_row .cards_container .card {
     img {
       width: 23px;
     }
 
     h3 {
-        font-size: 13px;
-        margin: 9px;
+      font-size: 13px;
+      margin: 9px;
     }
 
     p {
-        font-size: 11px;
+      font-size: 11px;
     }
   }
-.que_setienons_nous .single_row .cards_container {
-    margin-top: 12px;
-}
 
-  
+  .que_setienons_nous .single_row .cards_container {
+    margin-top: 12px;
+  }
+
 }
