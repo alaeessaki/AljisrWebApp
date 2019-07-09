@@ -11,8 +11,8 @@ export class TeamAljisrComponent implements OnInit {
 
   ngOnInit() {
 
-    const carouselSlide: HTMLElement = document.querySelector('.wraper');
-    const carouselElements = document.querySelectorAll('.wraper mat-card');
+    const carouselSlide: HTMLElement = document.querySelector('.wrapper');
+    const carouselElements = document.querySelectorAll('.card');
     const prevBtn = document.querySelector('#prevBtn');
     const nextBtn = document.querySelector('#nextBtn');
 
@@ -25,16 +25,14 @@ export class TeamAljisrComponent implements OnInit {
     function movingSl() {
       if (counter >= carouselElements.length - 1) {
         counter = 1;
-        carouselSlide.style.transition = "transform 0.4s ease-in-out";
-        counter--;
-        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-      };
+      }
       carouselSlide.style.transition = "transform 0.4s ease-in-out";
       counter++;
       carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
     }
-    setInterval(movingSl, 3000);
+    setInterval(movingSl, 1000);
+
     //  btn listener 
     nextBtn.addEventListener('click', () => {
       if (counter >= carouselElements.length - 1) return;
