@@ -33,11 +33,12 @@ export class MycarouselComponent implements OnInit {
 
     function movingSl() {
       if (counter >= carouselElements.length - 1) {
-        counter = 1;
+        counter = 0;
       }
       carouselSlide.style.transition = "transform 0.4s ease-in-out";
       counter++;
       carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+      console.log(counter);
     }
     setInterval(movingSl, 3000);
 
