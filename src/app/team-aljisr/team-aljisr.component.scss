@@ -30,4 +30,15 @@
     }
   }
 
+  .cards-container {
+
+    width: 60%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    .wrapper {
+      margin: auto;
+    }
+  }
+
 }
