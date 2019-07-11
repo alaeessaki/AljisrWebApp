@@ -29,13 +29,12 @@
 
 
   .carousel {
-    margin-left: 15%;
     margin-right: 15%;
   }
 
   ul.slides {
     display: flex;
-    height: 444px;
+    height: 440px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -50,9 +49,8 @@
   }
 
   .slide-image {
-    display: block;
     position: absolute;
-    width: 100%;
+    width: 120%;
     height: 100%;
     top: 0;
     opacity: 0;
@@ -120,7 +118,7 @@
     height: 17px;
     border-radius: 50%;
     background-color: $dark-grey;
-    opacity: 0.4;
+    opacity: 1;
   }
 
   input:checked+.slide-container .slide-image {
@@ -134,9 +132,13 @@
   }
 
   input#img-1:checked~.carousel-dots,
+  label#img-dot-1,
   input#img-2:checked~.carousel-dots,
+  label#img-dot-2,
   input#img-3:checked~.carousel-dots,
+  label#img-dot-3,
   input#img-4:checked~.carousel-dots,
+  label#img-dot-4,
   input#img-5:checked~.carousel-dots label#img-dot-5,
   input#img-6:checked~.carousel-dots label#img-dot-6 {
     opacity: 1;

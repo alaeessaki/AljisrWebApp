@@ -18,12 +18,12 @@ export class TeamAljisrComponent implements OnInit {
 
 
     let counter = 1;
-    let size = carouselElements[0].clientWidth + 5;
+    let size = carouselElements[0].clientWidth + 24;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
 
 
     function movingSl() {
-      console.log(counter);
+
 
       if (counter >= carouselElements.length - 1) {
         counter = -1;
