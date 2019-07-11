@@ -87,29 +87,11 @@
 @media (max-width: 576px) {
 
   .que_setienons_nous .single_row .title h1 {
-    font-size: 17px;
-  }
-
-  .que_setienons_nous .single_row .cards_container .card {
-    padding: 1rem 0rem;
-  }
-
-  .que_setienons_nous {
-    padding-top: 2rem;
-  }
-}
-
-@media (max-width: 576px) {
-
-  .que_setienons_nous .single_row .title::before {
-    bottom: 55%;
-  }
-
-  .que_setienons_nous .single_row .title h1 {
     font-size: 13px;
   }
 
   .que_setienons_nous .single_row .cards_container .card {
+    padding: 1rem 0rem;
     img {
       width: 23px;
     }
@@ -123,9 +105,12 @@
       font-size: 11px;
     }
   }
-
+  .que_setienons_nous {
+    padding-top: 2rem;
+  }
   .que_setienons_nous .single_row .cards_container {
     margin-top: 12px;
   }
-
+  
 }
+
