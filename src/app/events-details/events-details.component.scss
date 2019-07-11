@@ -22,6 +22,7 @@
     padding-left: 8rem;
     width: 100%;
     margin-right: 0rem;
+
     &::before {
       @extend %line;
     }
@@ -31,3 +32,29 @@
     color: $dark-grey;
   }
 }
+
+
+
+@media screen and (max-width:768px) {
+
+  .description {
+    h1 {
+      font-size: 20px;
+      padding-left: 10rem;
+    }
+    p{
+      font-size: 0.8rem;
+    }
+  }
+}
+
+  @media screen and (max-width: 576px) {
+    .description {
+      h1 {
+        font-size: 17px;
+      }
+      p{
+        font-size: 0.7rem;
+      }
+    }
+  }

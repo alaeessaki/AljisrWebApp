@@ -80,11 +80,11 @@
     }
   }
 }
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .aljisr_en_numero {
     .title_container{
       h1{
-        font-size: 13px;
+        font-size: 17px;
       }
     }
     .increm_text{
