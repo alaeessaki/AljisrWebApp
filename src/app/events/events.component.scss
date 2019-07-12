@@ -150,6 +150,10 @@
 
   .events .container .dates table .date_container .chose_container {
     padding: 0;
+
+    h6 {
+      font-size: 10px;
+    }
   }
 
   .voir-tous {
@@ -190,6 +194,39 @@
       font-size: 12px;
     }
   }
+
+
+  // radio btns size
+  .bigRadio .mat-radio-container {
+    height: 20px;
+    width: 20px;
+  }
+
+  .bigRadio .mat-radio-outer-circle {
+    height: 20px;
+    width: 20px;
+    border-color: $primary-color;
+  }
+
+  .bigRadio .mat-radio-inner-circle {
+    height: 20px;
+    width: 20px;
+    border-color: $primary-color;
+  }
+
+  .bigRadio .mat-radio-button .mat-radio-ripple {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    left: calc(50% - 15px);
+    top: calc(50% - 15px);
+  }
+
+  .bigRadio .mat-radio-button {
+    padding-left: 10px;
+  }
+
+
 }
 
 @media screen and (max-width: 375px) {
