@@ -33,7 +33,7 @@ export class TeamAljisrComponent implements OnInit {
       carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
     }
-    setInterval(movingSl, 2000);
+    // setInterval(movingSl, 2000);
 
     //  btn listener 
     nextBtn.addEventListener('click', () => {

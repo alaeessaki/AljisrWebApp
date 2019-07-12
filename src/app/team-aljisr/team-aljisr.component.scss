@@ -32,9 +32,23 @@
   }
 
   .cards-container {
-    width: 100%;
+    width: 70%;
     box-sizing: border-box;
     overflow: hidden;
+
+    .wrapper{
+      .card{
+        border: 0;
+        .card_container{
+          background-color: white;
+          clip-path: polygon(100% 0, 100% 85%, 75% 100%, 0 100%, 0 0);
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          margin: 0;
+        } 
+      }
+    }
   }
 
   // .wrapper {
