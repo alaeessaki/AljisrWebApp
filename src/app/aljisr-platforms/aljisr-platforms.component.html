@@ -3,7 +3,7 @@
     <h1 class="text-uppercase mb-3">{{title}}</h1>
     <p class="p-2">{{description}}</p>
   </div>
-  <div class="platforms-cards-container d-flex flex-column flex-md-row flex-lg-row flex-xl-row flex-wrap justify-content-center align-items-center">
+  <div class="platforms-cards-container d-flex flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row flex-wrap justify-content-center align-items-center">
     <mat-card *ngFor="let item of platforms" style="width:350px; height:320px;" [style.backgroundImage]="'url('+ item.name +')'" class="m-3">
       <div class="filter" [style.backgroundColor]="item.color"></div>
       <div class="desc-title-container">
