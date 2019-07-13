@@ -41,7 +41,7 @@
         border: 0;
         .card_container{
           background-color: white;
-          clip-path: polygon(100% 0, 100% 85%, 75% 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 90%, 80% 100%, 0 100%, 0 0);
           width: 100%;
           height: 100%;
           padding: 0;
@@ -51,16 +51,12 @@
     }
   }
 
-  // .wrapper {
-  //   clip-path: polygon(100% 79%, 79% 100%, 100% 100%);
-  // }
-
   .membslide {
     border-radius: 50%;
     border: $primary-color solid;
-    width: 40px;
-    height: 40px;
-    padding: 8px;
+    width: 35px;
+    height: 35px;
+    padding: 6px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
