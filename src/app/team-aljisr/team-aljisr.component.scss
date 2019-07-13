@@ -52,6 +52,7 @@
   }
 
   .membslide {
+    cursor: pointer;
     border-radius: 50%;
     border: $primary-color solid;
     width: 35px;
@@ -63,3 +64,81 @@
     -o-border-radius: 50%;
   }
 }
+
+
+@media screen and (max-width:768px) {
+
+  .team-aljisr {
+    .title_container {
+      h1 {
+        font-size: 20px;
+      }
+    }
+  
+    .cards-container {
+      .wrapper{
+        .card{
+          width: 13rem !important;
+          height: 25rem !important;
+          .card_container{
+            .card-body{
+              h5{
+                font-size: 1rem;
+              }
+              p{
+                font-size: 0.8rem;
+              }
+            }
+          } 
+        }
+      }
+    }
+  
+    .membslide {
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+    }
+  }
+
+
+}
+
+@media (max-width: 576px) {
+
+  .team-aljisr {
+    .title_container {
+      h1 {
+        font-size: 17px;
+      }
+    }
+  
+    .cards-container {
+      .wrapper{
+        .card{
+          width: 11rem !important;
+          height: 22rem !important;
+          .card_container{
+            .card-body{
+              h5{
+                font-size: 0.8rem;
+              }
+              p{
+                font-size: 0.6rem;
+              }
+            }
+          } 
+        }
+      }
+    }
+  
+    .membslide {
+      width: 25px;
+      height: 25px;
+      padding: 3px;
+    }
+  }
+
+  
+}
+
