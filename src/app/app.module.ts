@@ -21,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 import { TeamAljisrComponent } from './team-aljisr/team-aljisr.component';
 import { QueSoutenonsNousComponent } from './que-soutenons-nous/que-soutenons-nous.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
+import { TestimonsComponent } from './testimons/testimons.component';
 
 // pages module
 
@@ -43,7 +44,8 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
     FooterComponent,
     TeamAljisrComponent,
     QueSoutenonsNousComponent,
-    HeroSectionComponent
+    HeroSectionComponent,
+    TestimonsComponent
   ],
   imports: [
     BrowserModule,

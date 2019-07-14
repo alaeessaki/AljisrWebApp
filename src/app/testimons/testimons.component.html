@@ -1,0 +1,26 @@
+<div class="d-flex flex-row temoirespo">
+  <div class="mr-5 mb-4">
+    <img *ngIf="firstTemo" src="{{firstTemo.src}}" alt="{{firstTemo.alt}}" class="rounded-circle"
+      style="width: 10rem; height:10rem;">
+    <img *ngIf="temo" src="{{temo.src}}" alt="{{temo.alt}}" class="rounded-circle" style="width: 10rem; height:10rem;">
+
+    <img src="../../assets/quotes.png" alt="quotes" class="quotes">
+  </div>
+
+  <div *ngIf="firstTemo">
+    <p>{{firstTemo.testimon}}
+      <br><br>
+      <span>{{firstTemo.profile}}</span>
+      <br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+  </div>
+  <div *ngIf="temo">
+    <p>{{temo.testimon}}
+      <br><br>
+      <span>{{temo.profile}}</span>
+      <br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+  </div>
+</div>

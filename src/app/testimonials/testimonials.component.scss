@@ -11,6 +11,7 @@
 }
 
 .testimonials {
+  padding-bottom: 13rem;
 
   .title_container {
     position: relative;
@@ -27,181 +28,37 @@
     }
   }
 
-
-  .carousel {
-    margin-right: 15%;
+  .quotes {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 6rem;
   }
 
-  ul.slides {
+  p {
+    color: $dark-grey;
+    width: 34rem;
+  }
+
+  span {
+    color: $primary-color;
+    font-weight: bolder;
+  }
+
+
+}
+
+// media query doesn't work for flexing the radio buttons row 
+@media (max-width: 990px) {
+
+
+  .temoirespo {
     display: flex;
-    height: 440px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    flex-direction: column !important;
+
   }
 
-  .slides * {
-    user-select: none;
-  }
-
-  ul.slides input {
-    display: none;
-  }
-
-  .slide-image {
-    position: absolute;
-    width: 120%;
-    height: 100%;
-    top: 0;
-    opacity: 0;
-    transition: all .7s ease-in-out;
-  }
-
-  .slide-image {
-    img {
-      width: 160px;
-      height: 160px;
-    }
-
-    .quotes {
-      width: 2rem;
-      height: 2rem;
-    }
-
-    p {
-      color: $dark-grey;
-    }
-
-    span {
-      color: $primary-color;
-      font-weight: bolder;
-    }
-  }
-
-  .carousel-controls label {
-    display: none;
-    padding: 0 20px;
-    opacity: 0;
-    transition: opacity .2s;
-    cursor: pointer;
-  }
-
-  .slide-image:hover+.carousel-controls label {
-    opacity: 0.5;
-  }
-
-  .carousel-controls label:hover {
-    opacity: 1;
-  }
-
-  .carousel-controls .prev-slide {
-    width: 49%;
-    text-align: left;
-    left: 0;
-  }
-
-  .carousel-controls .next-slide {
-    width: 49%;
-    text-align: right;
-    right: 0;
-  }
-
-  .carousel-dots {
-    left: 0;
-    right: 0;
-    bottom: 20px;
-    z-index: 999;
-  }
-
-  .carousel-dots .carousel-dot {
-    width: 17px;
-    height: 17px;
-    border-radius: 50%;
-    background-color: $dark-grey;
-    opacity: 1;
-  }
-
-  input:checked+.slide-container .slide-image {
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 1s ease-in-out;
-  }
-
-  input:checked+.slide-container .carousel-controls label {
+  .radios {
     display: flex;
+    flex-direction: row !important;
   }
-
-  input#img-1:checked~.carousel-dots,
-  label#img-dot-1,
-  input#img-2:checked~.carousel-dots,
-  label#img-dot-2,
-  input#img-3:checked~.carousel-dots,
-  label#img-dot-3,
-  input#img-4:checked~.carousel-dots,
-  label#img-dot-4,
-  input#img-5:checked~.carousel-dots label#img-dot-5,
-  input#img-6:checked~.carousel-dots label#img-dot-6 {
-    opacity: 1;
-    background-color: #1592E6;
-  }
-
-
-  input:checked+.slide-container .nav label {
-    display: flex;
-  }
-
-
-
-
-
-
-  // .carousel {
-  //   .slides {
-
-  //     input {
-  //       display: none;
-  //     }
-
-  //     li {
-  //       list-style: none;
-  //     }
-
-  //     * {
-  //       user-select: none;
-  //     }
-
-  //     img {
-  //       width: 160px;
-  //       height: 160px;
-  //     }
-
-  //     .quotes {
-  //       width: 5rem;
-  //       height: 4rem;
-  //     }
-
-  //     p {
-  //       color: $dark-grey;
-  //     }
-
-  //     span {
-  //       color: $primary-color;
-  //       font-weight: bolder;
-  //     }
-
-  //     .carousel-dots .carousel-dot {
-  //       display: flex;
-  //       width: 14px;
-  //       height: 14px;
-  //       border-radius: 50%;
-  //       background-color: $dark-grey;
-  //       opacity: 0.5;
-  //       margin: 10px;
-  //     }
-
-  //     .carousel-dot:hover {
-  //       background-color: $primary-color;
-  //     }
-  //   }
-  // }
 }

@@ -29,19 +29,19 @@ export class CarouselComponent implements OnInit {
     // },
     {
       source: "../assets/hero3.jpg",
-      alt: "The president of Aljisr reading his speachs"
+      alt: "The president of Aljisr reading his speech"
     },
     {
       source: "../assets/hero4.jpg",
-      alt: "The president of Aljisr reading his speachs"
+      alt: "The president of Aljisr reading his speech"
     },
     {
       source: "../assets/hero5.jpg",
-      alt: "The president of Aljisr reading his speachs"
+      alt: "The president of Aljisr reading his speech"
     },
     {
       source: "../assets/hero6.jpg",
-      alt: "The president of Aljisr reading his speachs"
+      alt: "The president of Aljisr reading his speech"
     }
   ];
 }
