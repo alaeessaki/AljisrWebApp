@@ -62,3 +62,36 @@
     }
   }
 }
+
+
+@media screen and (max-width:768px) {
+
+  .aljisr_en_numero {
+    .title_container{
+      h1{
+        font-size: 20px;
+      }
+    }
+    .increm_text{
+      font-size: 13px;
+    }
+    .increm_num {
+      font-size: 26px;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .aljisr_en_numero {
+    .title_container{
+      h1{
+        font-size: 17px;
+      }
+    }
+    .increm_text{
+      font-size: 10px;
+    }
+    .increm_num {
+      font-size: 20px;
+    }
+  }
+}

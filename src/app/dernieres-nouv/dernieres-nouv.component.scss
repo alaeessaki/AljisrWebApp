@@ -15,6 +15,7 @@
   color: $primary-color;
   text-transform: uppercase;
   cursor: pointer;
+
   h1 {
     font-size: 25px;
     font-weight: 600;
@@ -28,13 +29,14 @@
 .arrow-right {
   width: 30px;
   height: 25px;
+  opacity: 0.6;
 }
 
 .text-cont {
   color: white;
 
   p {
-    font-size: 2vw;
+    font-size: 30px;
     padding-bottom: 1rem;
   }
 
@@ -44,8 +46,79 @@
     p {
       margin: 0;
       letter-spacing: 5px;
-      font-size: 1vw;
+      font-size: 15px;
       padding-top: 11px;
+      opacity: 0.6;
     }
   }
+}
+
+@media screen and (max-width:768px) {
+  .title_container {  
+    h1 {
+      font-size: 20px; 
+      &::before {
+        bottom: 48%;
+      }
+    }
+  }
+  .text-cont {
+    p {
+      font-size: 17px;
+      padding-bottom: 1rem;
+    }
+
+    .lire-suite-cont {
+      p {
+        letter-spacing: 3px;
+        font-size: 12px;
+      }
+    }
+  }
+  .image{
+    height:300px !important;
+  }
+  .color{
+    height: 300px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .title_container {  
+    h1 {
+      font-size: 17px; 
+    }
+    p{
+      font-size: 12px;
+    }
+  }
+  .text-cont {
+    padding: 15px;
+
+    p {
+      font-size: 16px;
+      padding-bottom: 1rem;
+    }
+
+    .lire-suite-cont {
+      p {
+        letter-spacing: 2px;
+        font-size: 10px;
+      }
+    }
+  }
+
+  .arrow-right {
+    width: 20px;
+    height: 15px;
+  }
+
+  .image {
+    height: 200px !important;
+  }
+
+  .color {
+    height: 200px !important;
+  }
+
 }

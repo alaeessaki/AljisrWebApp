@@ -1,95 +1,203 @@
 @import '../../variables.scss';
-footer{
-    background-color: $primary-color;
-    color:white;
-    .footer_container{
-        padding: 6rem 3rem !important;
-        padding-bottom: 3rem !important;
-        .left_row{
-            width: 20%;
-            h3{
-                font-size: 16px;
-                padding-bottom: 1rem;
-            }
-            .contact_medias{
 
-                .single_media{
-                    padding-bottom: .5rem;
-                    span{
-                        font-size: 600;
-                        font-family: $secondary-font;
-                        letter-spacing: 2px;
-                        font-size: 14px;
-                    }
-                }
-            }
+footer {
+  background-color: $primary-color;
+  color: white;
+
+  .footer_container {
+    padding: 6rem 3rem !important;
+    padding-bottom: 3rem !important;
+
+    .left_row {
+      width: 20%;
+
+      h3 {
+        font-size: 16px;
+        padding-bottom: 1rem;
+      }
+
+      .contact_medias {
+
+        .single_media {
+          padding-bottom: .5rem;
+
+          span {
+            font-size: 600;
+            font-family: $secondary-font;
+            letter-spacing: 2px;
+            font-size: 14px;
+          }
         }
-        .right_row {
-           
-            .top_column{
-                padding-left: 2rem;
-                .single_link{
-                    margin: 0rem 1.9rem 3.5rem 1.5rem;
-                    a{
-                        font-size: 0.9rem;
-                        text-transform: uppercase;
-                        color:white;
-                        text-decoration: none;
-                        font-weight: 600;
-                        border: 2px solid white;
-                        padding: 1rem 2.1rem;
-                        font-family: $font-family;
-
-                    }
-                }
-            }
-            .bottom_column{
-                padding-left: 3.5rem;
-                .single_row{
-                    .single_column{
-                        h6{
-                            font-size: 18px;
-                            font-weight: 600;
-                        }
-                        hr{
-                            background-color: white;
-                        }
-                        .links_row{
-                            padding-right: 2rem;
-                            width:30%;
-                            a{
-                                color:white;
-                                font-size: 14px;
-                                text-decoration: none;
-                            }
-                        }
-                    }
-                }
-                .bottom_left_row{
-                    width: 190%;
-                }
-                .bottom_right_row{
-                    padding-left: 2rem;
-
-                    h6{
-                        padding-bottom: 1rem;
-
-                    }
-                    .single-column{
-                        width: 100%;
-                        a{
-                            color: white;
-                            text-decoration: none;
-                            background-color: rgb(255, 255, 255, 0.3);
-                            padding: 1rem;
-                            margin: .5rem;
-                            margin-left: 0 !important;
-                            margin-right: 1rem !important;
-                            
-                        }
-                    }
-                }
-            }
-        }
+      }
     }
+
+    .right_row {
+
+      .top_column {
+        padding-left: 2rem;
+
+        .single_link {
+          margin: 0rem 1rem 1.5rem;
+
+          a {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid white;
+            padding: 0.8rem 0.6rem;
+            font-family: $font-family;
+
+            img{
+              width: 18%;
+              padding-right: 6%;
+            }
+          }
+        }
+      }
+
+      .bottom_column {
+        padding-left: 3rem;
+
+        .single_row {
+          .single_column {
+            h6 {
+              font-size: 18px;
+              font-weight: 600;
+            }
+
+            hr {
+              background-color: white;
+            }
+
+            .links_row {
+              padding-right: 2rem;
+              width: 30%;
+              a {
+                color: white;
+                font-size: 14px;
+                text-decoration: none;
+                padding-bottom: 5px;
+              }
+            }
+          }
+        }
+
+        .bottom_left_row {
+          width: 190%;
+        }
+
+        .bottom_right_row {
+          padding-left: 2rem;
+
+          h6 {
+            padding-bottom: 1rem;
+
+          }
+
+          .single-column {
+            width: 100%;
+
+            a {
+              color: white;
+              text-decoration: none;
+              background-color: rgb(255, 255, 255, 0.3);
+              padding: 1rem 0rem;
+              margin: .5rem;
+              margin-left: 0 !important;
+              margin-right: 1rem !important;
+              text-align: center;
+
+              img{
+                width:25%;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+@media screen and (max-width:769px) {
+  footer {
+    .footer_container {
+      .left_row {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 80px;
+      }
+
+      .right_row {
+
+        .top_column {
+          align-items: center;
+          justify-content: flex-start;
+          margin-bottom: 50px;
+
+          .single_link {
+            margin: auto !important;
+            margin-bottom: 70px !important;
+          }
+        }
+
+        .bottom_column {
+          padding-left: 0 !important;
+
+          .bottom_left_row {
+            width: 100%;
+            margin-bottom: 50px;
+          }
+
+          .bottom_right_row {
+            padding-left: 0 !important;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 425px) {
+  footer {
+    .footer_container {
+      .right_row {
+        .top_column {
+          .single_link {
+            a {
+              font-size: 0.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  footer {
+    .footer_container {
+      .right_row {
+        .top_column {
+          margin: 0 !important;
+          padding: 0 !important;
+
+          .single_link {
+            a {
+              font-size: 0.6rem;
+              padding: 1rem 1.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }

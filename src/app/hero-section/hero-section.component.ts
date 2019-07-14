@@ -11,7 +11,7 @@ export class HeroSectionComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
   isClicked = false;
   clicked(){
     if(this.isClicked){

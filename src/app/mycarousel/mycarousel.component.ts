@@ -11,10 +11,10 @@ export class MycarouselComponent implements OnInit {
   images: Array<any> = [];
   constructor() {
     this.images = [
-      { id: 1, name: '../../assets/educ.png', color: "rgba(52,152,219, 0.76)", title: "Education", subicon: "../../assets/book.png" },
-      { id: 2, name: '../../assets/env.png', color: "rgba(25,174,118, 0.76)", title: "Environnement", subicon: "../../assets/plant.png" },
-      { id: 3, name: '../../assets/inno.png', color: "rgba(103,55,131, 0.76)", title: "Innovation", subicon: "../../assets/innovation.png" },
-      { id: 4, name: '../../assets/inno.png', color: "rgba(103,55,131, 0.76)", title: "Lorem", subicon: "../../assets/innovation.png" }
+      { id: 1, name: '../../assets/educ.png', color: "rgba(52,152,219, 0.76)", title: "Education", subicon: "../../assets/icons/book.png" },
+      { id: 2, name: '../../assets/env.png', color: "rgba(25,174,118, 0.76)", title: "Environnement", subicon: "../../assets/icons/plant.png" },
+      { id: 3, name: '../../assets/inno.png', color: "rgba(103,55,131, 0.76)", title: "Innovation", subicon: "../../assets/icons/innovation.png" },
+      { id: 4, name: '../../assets/inno.png', color: "rgba(103,55,131, 0.76)", title: "Lorem", subicon: "../../assets/icons/innovation.png" }
     ]
   }
 
