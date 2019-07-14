@@ -50,15 +50,44 @@
 // media query doesn't work for flexing the radio buttons row 
 @media (max-width: 990px) {
 
-
   .temoirespo {
     display: flex;
     flex-direction: column !important;
-
+    align-items: center !important;
   }
 
   .radios {
     display: flex;
     flex-direction: row !important;
   }
+}
+
+@media (max-width: 768px) {
+  .testimonials p {
+    font-size: 15px;
+  }
+
+  .testimonials {
+    .title_container {
+      h1 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonials {
+    .title_container {
+      h1 {
+        font-size: 17px;
+      }
+    }
+  }
+  
+  .testimonials p {
+    font-size: 12px;
+    width: 80vw;
+  }
+
 }
