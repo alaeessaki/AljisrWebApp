@@ -1,0 +1,16 @@
+<section class="trophies-container d-flex flex-column align-items-center">
+  <div class="thetitle_container">
+    <h1>Les Trophés</h1>
+  </div>
+  <div class="thewrapper d-flex flex-column flex-sm-row flex-lg-row flex-xl-row flex-wrap justify-content-center">
+    <div class="card-container m-3" *ngFor="let trophie of trophies">
+      <div class="title-cont text-center">
+        <h1>{{trophie.title}}</h1>
+      </div>
+      <div class="bottom-column d-flex flex-row">
+        <img [src]="trophie.img">
+        <p>{{trophie.description}}</p>
+      </div>
+    </div>
+  </div>
+</section>
