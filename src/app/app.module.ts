@@ -24,7 +24,8 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { TestimonsComponent } from './testimons/testimons.component';
 import { TrophiesComponent } from './trophies/trophies.component';
 
-// pages module
+
+
 
 
 
