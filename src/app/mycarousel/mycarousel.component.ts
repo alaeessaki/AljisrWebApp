@@ -20,7 +20,7 @@ export class MycarouselComponent implements OnInit {
 
   ngOnInit() {
     const carouselSlide: HTMLElement = document.querySelector('.wraper');
-    const carouselElements = document.querySelectorAll('.wraper mat-card');
+    const carouselElements = document.querySelectorAll('.wraper #mycard');
     const prevBtn = document.querySelector('#prevBtn');
     const nextBtn = document.querySelector('#nextBtn');
 

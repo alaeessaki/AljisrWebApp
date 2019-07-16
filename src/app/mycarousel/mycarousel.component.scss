@@ -39,7 +39,7 @@
       .wraper {
         margin: auto;
 
-        mat-card {
+        #mycard {
           margin-right: 16px;
           position: relative;
           background-size: cover;
@@ -100,7 +100,7 @@
     font-size: 18px;
   }
 
-  mat-card {
+  #mycard {
     width: 190px !important;
     height: 280px !important;
   }
@@ -110,7 +110,7 @@
     height: 280px !important;
   }
 
-  .que-soutiennents-ils .container .cards-container .wraper mat-card .titles {
+  .que-soutiennents-ils .container .cards-container .wraper #mycard .titles {
     img {
       width: 45px;
     }
@@ -158,7 +158,7 @@
     margin-bottom: 25%;
   }
 
-  mat-card{
+  #mycard{
     width: 150px !important;
     height: 240px !important;
   }
@@ -168,7 +168,7 @@
     height: 240px !important;
   }
 
-  .que-soutiennents-ils .container .cards-container .wraper mat-card .titles {
+  .que-soutiennents-ils .container .cards-container .wraper #mycard .titles {
     img {
       width: 35px;
     }
