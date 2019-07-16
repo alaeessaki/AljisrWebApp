@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-team-aljisr',
   templateUrl: './team-aljisr.component.html',
-  styleUrls: ['./team-aljisr.component.scss']
+  styleUrls: ['./team-aljisr.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class TeamAljisrComponent implements OnInit {
 
@@ -33,7 +34,7 @@ export class TeamAljisrComponent implements OnInit {
       carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
     }
-    setInterval(movingSl, 2000);
+    // setInterval(movingSl, 2000);
 
     //  btn listener 
     nextBtn.addEventListener('click', () => {
