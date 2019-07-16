@@ -22,8 +22,10 @@ import { TeamAljisrComponent } from './team-aljisr/team-aljisr.component';
 import { QueSoutenonsNousComponent } from './que-soutenons-nous/que-soutenons-nous.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { TestimonsComponent } from './testimons/testimons.component';
+import { TrophiesComponent } from './trophies/trophies.component';
 
-// pages module
+
+
 
 
 
@@ -45,7 +47,8 @@ import { TestimonsComponent } from './testimons/testimons.component';
     TeamAljisrComponent,
     QueSoutenonsNousComponent,
     HeroSectionComponent,
-    TestimonsComponent
+    TestimonsComponent,
+    TrophiesComponent
   ],
   imports: [
     BrowserModule,

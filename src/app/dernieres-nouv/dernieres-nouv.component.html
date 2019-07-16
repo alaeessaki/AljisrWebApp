@@ -13,7 +13,7 @@
   <div class="row m-0 p-0" *ngFor="let item of images" style="width:100%">
     <!-- left img -->
     <div class="col-md image col-lg col-xl row m-0 p-0" [style.backgroundImage]="'url('+ item.name +')'" style="width:50%; height: 400px; background-size: cover;
-    background-position: center;" *ngIf="item.pos==0"></div>
+    background-position: center; transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);" *ngIf="item.pos==0"></div>
     <div class="col-md color col-lg col-xl row m-0 p-0" [style.backgroundColor]="item.color" style="width:50%; height: 400px;"
       *ngIf="item.pos==0">
 
@@ -38,6 +38,6 @@
       </div>
     </div>
     <div class="col-md col-lg image col-xl row m-0 p-0" [style.backgroundImage]="'url('+ item.name +')'" style="width:50%; height: 400px; background-size: cover;
-    background-position: center;" *ngIf="item.pos==1"></div>
+    background-position: center; transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);" *ngIf="item.pos==1"></div>
   </div>
 </section>
