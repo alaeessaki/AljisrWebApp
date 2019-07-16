@@ -6,11 +6,11 @@
   </div>
 
   <div class="container d-flex temoirespo justify-content-center">
-
-    <app-testimons [temo]="selectedItem" [firstTemo]="firstTemo" class="mb-"></app-testimons>
-    <div class="d-flex flex-column ml-5 radios mt-5">
+    <app-testimons [temo]="selectedItem" [firstTemo]="firstTemo"></app-testimons>
+    <div class="d-flex flex-column ml-5 radios">
       <div *ngFor="let item of temoin" (click)="onSelected(item)">
-        <mat-radio-button [value]="item.id" color="primary" [checked]="item===firstTemo"></mat-radio-button>
+        <mat-radio-button [value]="item.id" color="primary" [checked]="item===firstTemo" class="radio-buttons">
+        </mat-radio-button>
       </div>
     </div>
   </div>

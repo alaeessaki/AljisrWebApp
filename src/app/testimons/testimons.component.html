@@ -1,26 +1,25 @@
 <div class="d-flex flex-row temoirespo">
-  <div class="mr-5 mb-4">
+  <div class="mr-3 mb-4">
     <img *ngIf="firstTemo" src="{{firstTemo.src}}" alt="{{firstTemo.alt}}" class="rounded-circle"
       style="width: 10rem; height:10rem;">
     <img *ngIf="temo" src="{{temo.src}}" alt="{{temo.alt}}" class="rounded-circle" style="width: 10rem; height:10rem;">
-
-    <img src="../../assets/quotes.png" alt="quotes" class="quotes">
   </div>
 
+  <img src="../../assets/quotes.png" alt="quotes" class="quotes mr-3">
   <div *ngIf="firstTemo">
-    <p>{{firstTemo.testimon}}
-      <br><br>
+    <p>{{firstTemo.testimon}}</p>
+    <p>
       <span>{{firstTemo.profile}}</span>
       <br>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      {{firstTemo.status}}
     </p>
   </div>
   <div *ngIf="temo">
-    <p>{{temo.testimon}}
-      <br><br>
+    <p>{{temo.testimon}}</p>
+    <p>
       <span>{{temo.profile}}</span>
       <br>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      {{temo.status}}
     </p>
   </div>
 </div>

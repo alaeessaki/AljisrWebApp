@@ -10,7 +10,6 @@ import { temoins } from '../declarations';
 export class TestimonsComponent implements OnInit {
   @Input() temo: temoins;
   @Input() firstTemo: temoins;
-  @Input() witness: temoins;
 
   constructor() { }
 

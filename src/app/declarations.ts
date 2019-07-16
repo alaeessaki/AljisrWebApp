@@ -23,4 +23,5 @@ export class temoins {
     alt: string;
     testimon: string;
     profile: string;
+    status: string;
 }

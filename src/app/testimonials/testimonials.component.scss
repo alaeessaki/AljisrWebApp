@@ -31,10 +31,10 @@
   .quotes {
     width: 2.5rem;
     height: 2.5rem;
-    margin-bottom: 6rem;
   }
 
   p {
+    font-family: $font-family;
     color: $dark-grey;
     width: 34rem;
   }
@@ -43,6 +43,68 @@
     color: $primary-color;
     font-weight: bolder;
   }
+
+  .mat-radio-container {
+    height: 12px !important;
+  }
+
+  .mat-radio-outer-circle {
+    box-sizing: border-box !important;
+    height: 11px !important;
+    transition: border-color ease 280ms;
+    width: 11px !important;
+    border-width: 2px !important;
+    border-style: none !important;
+    border-radius: 50% !important;
+    background-color: rgb(192, 189, 189) !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -ms-border-radius: 50% !important;
+    -o-border-radius: 50% !important;
+  }
+
+  .mat-radio-inner-circle {
+    height: 23px !important;
+    left: -6px !important;
+    top: -6px !important;
+    width: 23px !important;
+  }
+
+  .mat-radio-button .mat-radio-ripple {
+    height: 0 !important;
+    width: 0 !important;
+  }
+
+  // .radio-group {
+
+  //   display: block;
+  //   position: relative;
+  //   padding-left: 35px;
+  //   margin-bottom: 12px;
+  //   cursor: pointer;
+  //   font-size: 22px;
+  //   -webkit-user-select: none;
+  //   -moz-user-select: none;
+  //   -ms-user-select: none;
+  //   user-select: none;
+
+  //   input {
+  //     cursor: pointer;
+  //     opacity: 0;
+  //     position: absolute;
+  //   }
+
+  //   .checkrad {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     height: 25px;
+  //     width: 25px;
+  //     background-color: #eee;
+  //     border-radius: 50%;
+  //   }
+
+  // }
 
 
 }
@@ -84,7 +146,7 @@
       }
     }
   }
-  
+
   .testimonials p {
     font-size: 12px;
     width: 80vw;

@@ -7,15 +7,15 @@ import * as $ from 'jquery';
   styleUrls: ['./counter-up-section.component.scss']
 })
 export class CounterUpSectionComponent implements OnInit {
-  countSections:Array<any>;
+  countSections: Array<any>;
   constructor() {
     this.countSections = [
-      {title:"Anneé de fondation", countend:1999},
-      {title:"projets achevés", countend:60},
-      {title:"Projets en cours", countend:130},
-      {title:"nombre de volontaires", countend:600},
-      {title:"villes touchées", countend:13},
-      {title:"nombre de partenaires", countend:42}
+      { title: "Anneé de fondation", countend: 1999 },
+      { title: "projets achevés", countend: 60 },
+      { title: "Projets en cours", countend: 130 },
+      { title: "nombre de volontaires", countend: 600 },
+      { title: "villes touchées", countend: 13 },
+      { title: "nombre de partenaires", countend: 42 }
     ]
   }
   ngOnInit() {
@@ -52,6 +52,6 @@ export class CounterUpSectionComponent implements OnInit {
     });
   }
 
-  title = "Aljisr en numéros";
+  title = "Al jisr en chiffres";
 
 }
