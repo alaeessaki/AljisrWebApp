@@ -27,7 +27,7 @@ carousel {
   height: .8vw;
   margin: 0vw .2vw;
   border-radius: 50%;
-  background-color: white;
+  opacity: 1;
 }
 
 .carousel-indicators .active {
@@ -36,20 +36,20 @@ carousel {
 }
 
 .carousel-control {
-  top: 80.1%;
+  top: 80.3%;
   bottom: 16%;
   opacity: 1;
 }
 
 .carousel-control-prev {
-  left: 75%;
+  left: 76%;
   width: 15px;
   height: 15px;
   cursor: pointer;
 }
 
 .carousel-control-next {
-  right: 12%;
+  right: 13%;
   width: 15px;
   height: 15px;
   cursor: pointer;
