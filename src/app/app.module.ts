@@ -24,6 +24,7 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { TestimonsComponent } from './testimons/testimons.component';
 import { TrophiesComponent } from './trophies/trophies.component';
 
+import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 
 
 
@@ -56,7 +57,8 @@ import { TrophiesComponent } from './trophies/trophies.component';
     BrowserAnimationsModule,
     MaterialModule,
     CarouselModule.forRoot(),
-    CountUpModule
+    CountUpModule,
+    SlimLoadingBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
