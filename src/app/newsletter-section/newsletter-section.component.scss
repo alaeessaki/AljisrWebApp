@@ -34,7 +34,7 @@
       .mat-form-field-appearance-legacy .mat-form-field-label {
         color: black;
         font-size: 24px;
-        padding-left: 90px;
+        padding-left: 80px;
         padding-bottom: 10px;
         font-style: italic;
       }
@@ -46,6 +46,7 @@
 
       .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
         color: $primary-color;
+        transform: translateY(-1.28125em) scale(1) perspective(100px) translateZ(.001px);
 
       }
     }
