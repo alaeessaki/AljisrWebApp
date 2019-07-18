@@ -29,12 +29,16 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { TestimonsComponent } from './testimons/testimons.component';
 import { TrophiesComponent } from './trophies/trophies.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
+<<<<<<< HEAD
 import { InscriStepperComponent } from './pages/inscription/inscri-stepper/inscri-stepper.component';
 
+=======
+import { LoginComponent } from './login/login.component';
+>>>>>>> 469236e58cb84601e98e0dd720bfa0176afa9db1
 
 
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
-import { LoginComponent } from './login/login.component';
+
 
 
 
@@ -43,6 +47,7 @@ import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
+    LoginComponent,
     AppComponent,
     routingComponent,
     CarouselComponent,
@@ -62,8 +67,11 @@ import { LoginComponent } from './login/login.component';
     TestimonsComponent,
     TrophiesComponent,
     InscriptionComponent,
+<<<<<<< HEAD
     InscriStepperComponent,
     LoginComponent,
+=======
+>>>>>>> 469236e58cb84601e98e0dd720bfa0176afa9db1
   ],
   imports: [
     BrowserModule,
