@@ -17,15 +17,14 @@ export class TeamAljisrComponent implements OnInit {
     const prevBtn = document.querySelector('#prevmem');
     const nextBtn = document.querySelector('#nextmem');
 
-    let clicked = false;
+
     let counter = 1;
     let size = carouselElements[0].clientWidth + 24;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
 
 
     function movingSl() {
-
-
       if (counter >= carouselElements.length - 1) {
         counter = -1;
       }
@@ -35,44 +34,60 @@ export class TeamAljisrComponent implements OnInit {
       carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
     }
 
-    setInterval(movingSl, 2000);
-  // stoping the carousel
 
-  // var clicked = false;
-  // function isClicked(){
-  //   if(clicked==false){
-  //     clicked = true;
-  //   }
-  //   else{
-  //     clicked = true;
-  //   }
-  // }
-  // carouselElements.forEach(element => {
-  //     element.addEventListener('click',isClicked);
-  // });
-  // if(clicked == false){
-  //   setInterval(movingSl, 2000);
-  // }
-  // else{
-  //   return;
-  // }
-  // console.log(clicked);
+    var DaCarousel = setInterval(movingSl, 2000);
+
+    // stoping the carousel
+
+    carouselSlide.addEventListener('mouseenter', function test() {
+      clearInterval(DaCarousel);
+      console.log('mmm');
+    });
+
+
+    carouselSlide.addEventListener('mouseleave', function toto() {
+      DaCarousel = setInterval(movingSl, 2000);
+      console.log('sss');
+    });
 
 
 
-  //  btn listener 
-  nextBtn.addEventListener('click', () => {
-    if (counter >= carouselElements.length - 1) return;
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
-    counter++;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-  })
-prevBtn.addEventListener('click', () => {
-  if (counter <= 0) return;
-  carouselSlide.style.transition = "transform 0.4s ease-in-out";
-  counter--;
-  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-})
+    // var entered = false;
+
+    // function isIn() {
+    //   if (entered == false) {
+    //     entered = true;
+    //   }
+    //   else {
+    //     entered = true;
+    //   }
+    // }
+    // carouselElements.forEach(element => {
+    //   element.addEventListener('mouseout', isIn);
+    // });
+    // if (entered == false) {
+    //   setInterval(movingSl, 2000);
+    // }
+    // else {
+    //   return;
+    // }
+    // console.log(clicked);
+
+
+
+    //  btn listener 
+    nextBtn.addEventListener('click', () => {
+      if (counter >= carouselElements.length - 1) return;
+      carouselSlide.style.transition = "transform 0.4s ease-in-out";
+      counter++;
+      carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    })
+    prevBtn.addEventListener('click', () => {
+      if (counter <= 0) return;
+      carouselSlide.style.transition = "transform 0.4s ease-in-out";
+      counter--;
+      carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    })
 
   }
 

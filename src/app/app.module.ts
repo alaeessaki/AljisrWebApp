@@ -23,6 +23,7 @@ import { QueSoutenonsNousComponent } from './que-soutenons-nous/que-soutenons-no
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { TestimonsComponent } from './testimons/testimons.component';
 import { TrophiesComponent } from './trophies/trophies.component';
+import { InscriptionComponent } from './pages/inscription/inscription.component';
 
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 
@@ -49,7 +50,8 @@ import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
     QueSoutenonsNousComponent,
     HeroSectionComponent,
     TestimonsComponent,
-    TrophiesComponent
+    TrophiesComponent,
+    InscriptionComponent,
   ],
   imports: [
     BrowserModule,

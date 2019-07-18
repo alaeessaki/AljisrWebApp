@@ -1,0 +1,9 @@
+@import '../../../variables.scss';
+
+.inscription {
+  background: $primary-color;
+  color: white;
+  font-family: $font-family;
+  margin-bottom: 5rem;
+  padding-bottom: 33px;
+}
