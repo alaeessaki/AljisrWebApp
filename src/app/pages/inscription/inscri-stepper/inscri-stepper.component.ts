@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-inscri-stepper',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inscri-stepper.component.scss']
 })
 export class InscriStepperComponent implements OnInit {
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+  finalFormGroup: FormGroup;
 
-  constructor() { }
+  constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required]
+    });
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
+    this.finalFormGroup = this._formBuilder.group({
+      finalCtrl: ['', Validators.required]
+    });
   }
-
 }

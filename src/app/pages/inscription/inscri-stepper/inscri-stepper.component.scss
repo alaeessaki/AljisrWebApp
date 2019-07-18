@@ -1,0 +1,25 @@
+@import '../../../../variables.scss';
+
+.mat-step-icon {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+
+.step-section {
+  padding-bottom: 13rem;
+
+
+  .mat-step-icon-selected {
+    background-color: white !important;
+    color: #38a2ea !important;
+    border: #38a2ea solid !important;
+  }
+
+
+
+  p {
+    color: $primary-color;
+    font-family: $font-family;
+  }
+}

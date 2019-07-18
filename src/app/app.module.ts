@@ -5,6 +5,7 @@ import { AppRoutingModule, routingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './materials';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // ngx components
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -28,6 +29,7 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { TestimonsComponent } from './testimons/testimons.component';
 import { TrophiesComponent } from './trophies/trophies.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
+import { InscriStepperComponent } from './pages/inscription/inscri-stepper/inscri-stepper.component';
 
 
 
@@ -59,11 +61,9 @@ import { LoginComponent } from './login/login.component';
     HeroSectionComponent,
     TestimonsComponent,
     TrophiesComponent,
-<<<<<<< HEAD
     InscriptionComponent,
-=======
+    InscriStepperComponent,
     LoginComponent,
->>>>>>> d961136a8598839bd33064f97e0273225733e4ca
   ],
   imports: [
     BrowserModule,
@@ -72,7 +72,9 @@ import { LoginComponent } from './login/login.component';
     MaterialModule,
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
-    SlimLoadingBarModule
+    SlimLoadingBarModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

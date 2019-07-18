@@ -1,3 +1,48 @@
-<p>
-  inscri-stepper works!
-</p>
+<div class="step-section container">
+  <div class="d-flex justify-content-between m-2">
+    <p>Personnel</p>
+    <p>Info</p>
+    <p>Vérification</p>
+  </div>
+  <mat-horizontal-stepper labelPosition="bottom" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <mat-form-field>
+          <input matInput placeholder="Address" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="finalFormGroup">
+      <form [formGroup]="finalFormGroup">
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <!-- <mat-step [stepControl]="thirdFormGroup">
+      You are now done.
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step> -->
+
+  </mat-horizontal-stepper>
+</div>

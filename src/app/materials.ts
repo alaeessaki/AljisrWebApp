@@ -1,13 +1,14 @@
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { NgModule } from '@angular/core';
-import {MatCardModule} from '@angular/material/card';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatInputModule} from '@angular/material/input';
-import {MatRadioModule} from '@angular/material/radio';
+import { MatCardModule } from '@angular/material/card';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
 
@@ -21,7 +22,8 @@ import {MatRadioModule} from '@angular/material/radio';
         MatCardModule,
         MatTooltipModule,
         MatInputModule,
-        MatRadioModule
+        MatRadioModule,
+        MatStepperModule
     ],
     exports: [
         MatButtonModule,
@@ -33,7 +35,8 @@ import {MatRadioModule} from '@angular/material/radio';
         MatCardModule,
         MatTooltipModule,
         MatInputModule,
-        MatRadioModule
+        MatRadioModule,
+        MatStepperModule
     ]
 })
 export class MaterialModule { }  
