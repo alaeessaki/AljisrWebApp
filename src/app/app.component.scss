@@ -123,15 +123,6 @@ mat-sidenav-container {
           color: $primary-color;
 
         }
-
-        .seconnecter {
-          @extend %login-style;
-          background-color: $primary-color;
-          color: $secondary-color;
-          padding: 3px 10px;
-
-        }
-
         .account {
           display: none !important;
 
@@ -376,8 +367,7 @@ mat-expansion-panel {
 
   mat-sidenav-container mat-sidenav-content nav .login {
 
-    .sinscrie,
-    .seconnecter {
+    .sinscrie {
       display: none !important;
     }
   }

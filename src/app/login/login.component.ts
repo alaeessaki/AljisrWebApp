@@ -13,7 +13,9 @@ export class LoginComponent implements OnInit {
   constructor(private modalService: BsModalService) {}
  
   openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template);
+
+    this.modalRef = this.modalService.show(template, {class: 'modal-xl login-modal'});
+ 
   }
 
   ngOnInit() {
