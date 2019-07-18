@@ -5,7 +5,12 @@ import { AppRoutingModule, routingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './materials';
+
+// ngx components
+import { ModalModule } from 'ngx-bootstrap/modal';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+
+// components
 import { CarouselComponent } from './carousel/carousel.component';
 import { MycarouselComponent } from './mycarousel/mycarousel.component';
 import { CounterUpSectionComponent } from './counter-up-section/counter-up-section.component';
@@ -13,7 +18,6 @@ import { DernieresNouvComponent } from './dernieres-nouv/dernieres-nouv.componen
 import { EventsComponent } from './events/events.component';
 import { EventsDetailsComponent } from './events-details/events-details.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component'
-import { CountUpModule } from 'countup.js-angular2';
 import { AljisrPlatformsComponent } from './aljisr-platforms/aljisr-platforms.component';
 import { NewsletterSectionComponent } from './newsletter-section/newsletter-section.component';
 import { SearchComponent } from './search/search.component';
@@ -25,7 +29,11 @@ import { TestimonsComponent } from './testimons/testimons.component';
 import { TrophiesComponent } from './trophies/trophies.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 
+
+
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
+import { LoginComponent } from './login/login.component';
+
 
 
 
@@ -51,7 +59,11 @@ import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
     HeroSectionComponent,
     TestimonsComponent,
     TrophiesComponent,
+<<<<<<< HEAD
     InscriptionComponent,
+=======
+    LoginComponent,
+>>>>>>> d961136a8598839bd33064f97e0273225733e4ca
   ],
   imports: [
     BrowserModule,
@@ -59,7 +71,7 @@ import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
     BrowserAnimationsModule,
     MaterialModule,
     CarouselModule.forRoot(),
-    CountUpModule,
+    ModalModule.forRoot(),
     SlimLoadingBarModule
   ],
   providers: [],
