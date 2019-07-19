@@ -9,6 +9,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatStepperModule } from '@angular/material/stepper';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
 
@@ -23,7 +24,8 @@ import { MatStepperModule } from '@angular/material/stepper';
         MatTooltipModule,
         MatInputModule,
         MatRadioModule,
-        MatStepperModule
+        MatStepperModule,
+        MatProgressBarModule
     ],
     exports: [
         MatButtonModule,
@@ -36,7 +38,8 @@ import { MatStepperModule } from '@angular/material/stepper';
         MatTooltipModule,
         MatInputModule,
         MatRadioModule,
-        MatStepperModule
+        MatStepperModule,
+        MatProgressBarModule
     ]
 })
 export class MaterialModule { }  

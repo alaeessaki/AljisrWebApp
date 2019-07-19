@@ -10,6 +10,8 @@ import {
   Router
 } from '@angular/router';
 
+import * as $ from 'jquery';
+
 
 @Component({
   selector: 'app-root',
@@ -23,6 +25,12 @@ export class AppComponent {
     this._router.events.subscribe((event: Event) => {
       this.navigationInterceptor(event);
     });
+  }
+
+  ngOnInit(){
+    $(window).on("load", function () {
+      setTimeout(()=>{$(".splash-wrapper").fadeOut("slow")},2000);
+  });
   }
   private navigationInterceptor(event: Event): void {
     if (event instanceof NavigationStart) {
