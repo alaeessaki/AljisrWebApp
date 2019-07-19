@@ -11,7 +11,7 @@
 
         <!-- first step -->
         <div class="first-step">
-          <mat-step [stepControl]="firstFormGroup" classe="d-flex justify-content-center align-items-center">
+          <mat-step [stepControl]="firstFormGroup" class=" container d-flex justify-content-center align-items-center">
             <form [formGroup]="firstFormGroup" class="d-flex flex-column">
               <label>Sexe</label>
               <mat-radio-group aria-label="Select an option">
@@ -28,16 +28,16 @@
               </div>
               <label>Date de Naissance</label>
 
-              <!-- <mat-form-field>
-                <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+              <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Choisissez une date" required>
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
-              </mat-form-field> -->
-
+              </mat-form-field>
 
               <mat-form-field>
                 <input matInput placeholder="Téléphone" formControlName="firstCtrl" required>
               </mat-form-field>
+
               <p class="mt-5"> En cliquant sur suivant vous acceptez no <span>Conditions générales <br> Notre politique
                   de
                   données et notre Politique de cookie.</span>

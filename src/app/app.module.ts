@@ -38,6 +38,7 @@ import { LoginComponent } from './login/login.component';
 
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
+import { MatNativeDateModule } from '@angular/material';
 
 
 
@@ -82,8 +83,10 @@ import { SplashScreenComponent } from './splash-screen/splash-screen.component';
     FormsModule,
     ReactiveFormsModule,
     MatDatepickerModule,
+    MatNativeDateModule,
+
   ],
-  providers: [],
+  providers: [MatNativeDateModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

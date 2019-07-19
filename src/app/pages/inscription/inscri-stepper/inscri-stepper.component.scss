@@ -32,6 +32,11 @@
   border: solid $primary-color;
 }
 
+// calendar icon selected color ;_;
+.mat-calendar-body-selected {
+  color: white !important;
+}
+
 .step-section {
   padding-bottom: 7rem;
   font-family: $font-family;
