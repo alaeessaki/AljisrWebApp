@@ -42,13 +42,25 @@
 
   .lire-suite-cont {
     cursor: pointer;
-
+    
     p {
       margin: 0;
       letter-spacing: 5px;
       font-size: 15px;
       padding-top: 11px;
       opacity: 0.6;
+      transition: transform .5s;
+    }
+    img{
+      transition: transform .5s;
+    }
+    &:hover{
+      p{
+        transform: translateX(-5px);
+      }
+      img{
+        transform: translateX(+5px);
+      }
     }
   }
 }
