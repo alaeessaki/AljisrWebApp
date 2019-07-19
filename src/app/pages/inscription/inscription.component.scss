@@ -4,6 +4,18 @@
   background: $primary-color;
   color: white;
   font-family: $font-family;
-  margin-bottom: 5rem;
   padding-bottom: 23px;
+}
+
+.lang-ins {
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }

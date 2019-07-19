@@ -1,42 +1,78 @@
-<div class="step-section container">
-  <div class="d-flex justify-content-between m-2">
-    <p>Personnel</p>
-    <p>Info</p>
-    <p>Vérification</p>
-  </div>
-  <mat-horizontal-stepper labelPosition="bottom" #stepper>
-    <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
-        <mat-form-field>
-          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="secondFormGroup">
-      <form [formGroup]="secondFormGroup">
-        <mat-form-field>
-          <input matInput placeholder="Address" formControlName="secondCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
+<section id="sign-bg" class="pt-5">
+  <div class="step-section container">
+    <div class="descri-bar d-flex justify-content-between mr-5 ml-2">
+      <p>Personnel</p>
+      <p>Info</p>
+      <p>Vérification</p>
+    </div>
 
-    <mat-step [stepControl]="finalFormGroup">
-      <form [formGroup]="finalFormGroup">
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button (click)="stepper.reset()">Reset</button>
-        </div>
-      </form>
-    </mat-step>
+    <div class="container">
+      <mat-horizontal-stepper class="container mt-5" #stepper>
 
-    <!-- <mat-step [stepControl]="thirdFormGroup">
+        <!-- first step -->
+        <div class="first-step">
+          <mat-step [stepControl]="firstFormGroup" classe="d-flex justify-content-center align-items-center">
+            <form [formGroup]="firstFormGroup" class="d-flex flex-column">
+              <label>Sexe</label>
+              <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1" color="primary" class="mr-5">Homme</mat-radio-button>
+                <mat-radio-button value="2" color="primary">Femme</mat-radio-button>
+              </mat-radio-group>
+              <div>
+                <mat-form-field class="mr-4">
+                  <input matInput placeholder="Prénom" formControlName="firstCtrl" required>
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput placeholder="Nom" formControlName="firstCtrl" required>
+                </mat-form-field>
+              </div>
+              <label>Date de Naissance</label>
+
+              <!-- <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field> -->
+
+
+              <mat-form-field>
+                <input matInput placeholder="Téléphone" formControlName="firstCtrl" required>
+              </mat-form-field>
+              <p class="mt-5"> En cliquant sur suivant vous acceptez no <span>Conditions générales <br> Notre politique
+                  de
+                  données et notre Politique de cookie.</span>
+                Vous pouvez recevoir des notifications par SMS de notre part et vous pouvez vous désinscrire à tout
+                moment.
+              </p>
+              <div>
+                <button mat-raised-button color="primary" matStepperNext class="text-white">Suivant</button>
+              </div>
+            </form>
+          </mat-step>
+        </div>
+        <!-- second step -->
+        <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup">
+            <mat-form-field>
+              <input matInput placeholder="something" formControlName="secondCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Précedent</button>
+              <button mat-raised-button color="primary" matStepperNext class="text-white">Suivant</button>
+            </div>
+          </form>
+        </mat-step>
+        <!-- the final step  -->
+        <mat-step [stepControl]="finalFormGroup">
+          <form [formGroup]="finalFormGroup">
+            <div>
+              <button mat-button matStepperPrevious>Précedent</button>
+              <button mat-button (click)="stepper.reset()">Réintialiser</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <!-- <mat-step [stepControl]="thirdFormGroup">
       You are now done.
       <div>
         <button mat-button matStepperPrevious>Back</button>
@@ -44,5 +80,7 @@
       </div>
     </mat-step> -->
 
-  </mat-horizontal-stepper>
-</div>
+      </mat-horizontal-stepper>
+    </div>
+  </div>
+</section>

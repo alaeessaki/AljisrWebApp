@@ -1,25 +1,66 @@
 @import '../../../../variables.scss';
 
+
+#sign-bg {
+  background-color: $background-grey;
+}
+
+.mat-horizontal-stepper-header-container {
+  background-color: $background-grey;
+  margin-bottom: 2rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
 .mat-step-icon {
   width: 40px !important;
   height: 40px !important;
+  color: white !important;
+  background-color: $primary-color !important;
 }
 
+.mat-stepper-horizontal-line {
+  border-top-width: 3px !important;
+  border: solid $primary-color !important;
+  margin: 2px -64px 0px -83px !important;
+
+}
+
+.mat-step-icon-selected {
+  color: $primary-color !important;
+  background-color: white !important;
+  border: solid $primary-color;
+}
 
 .step-section {
-  padding-bottom: 13rem;
+  padding-bottom: 7rem;
+  font-family: $font-family;
 
+  .descri-bar {
+    padding: 2rem 0 0 2rem;
 
-  .mat-step-icon-selected {
-    background-color: white !important;
-    color: #38a2ea !important;
-    border: #38a2ea solid !important;
+    p {
+      color: $primary-color;
+    }
   }
 
 
 
   p {
-    color: $primary-color;
-    font-family: $font-family;
+    color: gray;
+
+    span {
+      color: $primary-color;
+    }
   }
+
+
+
+  .mat-horizontal-content-container {
+
+    overflow: visible !important;
+    padding: 53px 37px 37rem 21px !important;
+  }
+
+
 }

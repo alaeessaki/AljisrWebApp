@@ -1,8 +1,19 @@
-<nav class="inscription">
-  <div class="container ml-4 pt-4 p-0">
+<nav class="inscription d-flex justify-content-between">
+  <div class="pt-4 pl-4 d-flex flex-row justify-content-center align-items-center">
     Accueil
     <img src="../../../assets/icons/rounded-arrow.png" alt="tree" width="14" height="14">
     S'inscrire
+  </div>
+  <div class="lang-ins d-flex flex-row justify-content-center align-items-center pt-4 pr-4">
+    <img src="../../../assets/icons/phone.png" matTooltip="0522 98 01 36" matTooltipPosition="left">
+    <img src="../../../assets/icons/place.png"
+      matTooltip="Ecole El Bachiri Garçons, Angle Rue Ahmed kadmiri et Rue Bachir Laâlaj - Cité Plateau - casablanca"
+      matTooltipPosition="below">
+    <app-search [style.display]="isClicked ? 'flex' : 'none'"></app-search>
+    <img src="../../../assets/icons/search.png" (click)="clicked()">
+    <a href="#">FR /</a>
+    <a href="#">EN /</a>
+    <a href="#" class="ar"> ع</a>
   </div>
 </nav>
 <app-inscri-stepper></app-inscri-stepper>

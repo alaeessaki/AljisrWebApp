@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './materials';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
 
 // ngx components
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -76,7 +78,8 @@ import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
     ModalModule.forRoot(),
     SlimLoadingBarModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDatepickerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
