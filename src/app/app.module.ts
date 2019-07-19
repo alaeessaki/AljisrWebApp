@@ -35,6 +35,7 @@ import { LoginComponent } from './login/login.component';
 
 
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
+import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 
 
 
@@ -66,6 +67,7 @@ import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
     InscriptionComponent,
     InscriStepperComponent,
     LoginComponent,
+    SplashScreenComponent,
   ],
   imports: [
     BrowserModule,
