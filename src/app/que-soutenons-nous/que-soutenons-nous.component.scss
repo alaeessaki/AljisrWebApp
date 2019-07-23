@@ -3,7 +3,7 @@
 .QuiSoutenonsNous {
   .container {
     position: relative;
-
+    padding-bottom: 2rem;
     .title {
       .number {
         @extend %number;
@@ -28,7 +28,7 @@
 
     .cards-container {
       padding: 0px 125px;
-
+      padding-bottom: 2.5rem;
       .active {
         background-color: color(primary) !important;
         height: 360px;
@@ -49,7 +49,7 @@
 
       .theCard {
         background-color: color(backround-grey);
-
+        cursor: pointer;
         .card-cont {
           height: 320px;
           padding: 68px 13px;
@@ -79,6 +79,37 @@
         }
 
       }
+    }
+    .liner{
+        .liner-cont{
+            position: relative;
+            width: 30%;
+            .dot{
+                width:10px;
+                height: 10px;
+                background-color: black;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+            }
+            .line{
+                height: 4px;
+                width: 120px;
+                background-color: black;
+                position: absolute;
+                left: 30px;
+                top : 3.5px;
+                z-index: 2;
+            }
+            .rect{
+                height: 12px;
+                width: 60px;
+                background-color: color(primary);
+                position: absolute;
+                left : 80px;
+                z-index: 1;
+            }
+        }
     }
   }
 }
