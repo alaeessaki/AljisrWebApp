@@ -9,7 +9,7 @@
   background-color: $background-grey;
   margin-bottom: 2rem;
   margin-left: -1rem;
-  margin-right: -1rem;
+  margin-right: -4rem;
 }
 
 .mat-step-icon {
@@ -42,13 +42,12 @@
   font-family: $font-family;
 
   .descri-bar {
-    padding: 2rem 0 0 2rem;
+    padding: 0 0 0 2rem;
 
     p {
       color: $primary-color;
     }
   }
-
 
 
   p {
@@ -59,11 +58,7 @@
     }
   }
 
-
-
   .mat-horizontal-content-container {
-
-    overflow: visible !important;
     padding: 53px 37px 37rem 21px !important;
   }
 
