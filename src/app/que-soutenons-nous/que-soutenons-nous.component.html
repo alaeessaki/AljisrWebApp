@@ -1,0 +1,21 @@
+<section class="QuiSoutenonsNous">
+    <div class="container">
+        <div class="title d-flex flex-row align-items-center">
+            <span class="number">01</span>
+            <h1 class="text-uppercase">Que Soutenons-nous</h1>
+        </div>
+        <div class="description">
+            <p>depuis 1999, nous contribuons à éduquer les enfants et à réinsérer les jeunes en difficulté</p>
+        </div>
+        <div class="cards-container row justify-content-center align-items-center">
+            <div class="theCard col-12 col-sm-6 col-md-4" *ngFor="let section of sections"
+                (mouseenter)="active(section)" [class.active]="section.active">
+                <div class="card-cont d-flex flex-column">
+                    <h1 class="text-uppercase">{{section.title}}</h1>
+                    <p>{{section.description}}</p>
+                    <img [src]="section.icon">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
