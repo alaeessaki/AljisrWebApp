@@ -43,6 +43,9 @@
           p {
             color: color(reverse) !important;
           }
+          img{
+            top: 90% !important;
+          }
         }
 
       }
@@ -57,7 +60,7 @@
 
           h1 {
             font-family: $font-family;
-            font-weight: bolder;
+            font-weight: 900;
             font-size: 20px;
             color: color(primary);
             margin-bottom: 20px;

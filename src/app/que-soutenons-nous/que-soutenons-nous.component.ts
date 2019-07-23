@@ -10,13 +10,12 @@ export class QueSoutenonsNousComponent implements OnInit {
   constructor() { 
     this.sections = [
       {id:1,title:"accompagner",description:"Nous plaçons la préscolarisation au coeur de l'éducation et de la protection de la petite enfance, et par la lecture nous renforçons connaissances et apprentissages de enfants de l'école publique", icon:"../../assets/Que-soutenons-nous/1.png", active:false},
-      {id:2, title:"former & insérer",description:"Contre l'échec, nous formons à des métiers et insérons en entreprises, nous dennons une deuxième chance pour développer un parcours scioprofessionel", icon:"../../assets/Que-soutenons-nous/2.png", active:true},
+      {id:2, title:"former & insérer",description:"Contre l'échec, nous formons à des métiers et insérons en entreprises, nous dennons une deuxième chance pour développer un parcours scioprofessionel", icon:"../../assets/Que-soutenons-nous/2-white.png", active:true},
       {id:3,title:"impacter",description:"Nous participons au progrès social avec des projets accélérateurs de développement et de qualité de vie", icon:"../../assets/Que-soutenons-nous/3.png",  active:false}
     ]
   }
 
   ngOnInit() {
-    
   }
   active(section){
     this.sections.forEach(element => {
