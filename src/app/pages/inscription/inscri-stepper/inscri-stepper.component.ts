@@ -1,7 +1,10 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-
+export interface Plateformes {
+  value: string;
+  viewValue: string;
+}
 
 @Component({
   selector: 'app-inscri-stepper',
@@ -28,4 +31,12 @@ export class InscriStepperComponent implements OnInit {
       finalCtrl: ['', Validators.required]
     });
   }
+
+  plateforme: Plateformes[] = [
+    { value: 'status 1', viewValue: 'Educatrices' },
+    { value: 'status 2', viewValue: 'Associatifs' },
+    { value: 'status 3', viewValue: 'Bénévoles' },
+    { value: 'status 4', viewValue: 'Parents' },
+    { value: 'status 5', viewValue: 'Partenaires' },
+  ];
 }

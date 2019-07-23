@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './materials';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSelectModule } from '@angular/material/select';
 
 
 // ngx components
@@ -84,7 +85,7 @@ import { MatNativeDateModule } from '@angular/material';
     ReactiveFormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
-
+    MatSelectModule,
   ],
   providers: [MatNativeDateModule],
   bootstrap: [AppComponent]
