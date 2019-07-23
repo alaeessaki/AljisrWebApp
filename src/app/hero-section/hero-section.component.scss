@@ -5,13 +5,13 @@
   // top: 0;
   .slogan {
     position: absolute;
-    top: 26%;
+    top: 41%;
     left: 7%;
 
     h3 {
       position: relative;
       color: white;
-      font-size: 1vw;
+      font-size: 1.2vw;
       font-family: $font-family;
       letter-spacing: 3px;
       font-weight: bold;
@@ -29,7 +29,7 @@
 
   .slogan2 {
     position: absolute;
-    top: 50%;
+    top: 77%;
     left: 7%;
     color: white;
     display: none;
@@ -37,15 +37,15 @@
     h1 {
       text-transform: uppercase;
       font-family: $font-family;
-      font-weight: bold;
-      font-size: 5vw;
+      font-weight: bolder;
+      font-size: 5.3vw;
     }
   }
 
   .benevole {
     position: absolute;
     right: 3%;
-    top: 51%;
+    top: 80%;
     color: white;
     font-family: $font-family;
     font-weight: 100;
@@ -69,7 +69,7 @@
 
   .dot {
     position: absolute;
-    top: 49%;
+    top: 76%;
     right: 27%;
     background-color: color(primary);
     width: 7vw;
@@ -80,7 +80,7 @@
   .hand {
     position: absolute;
     width: 2.4vw;
-    top: 51.6%;
+    top: 79.5%;
     right: 29.4%;
     filter: brightness(100%);
     -webkit-filter: brightness(100%);
@@ -88,8 +88,8 @@
 
   .lang {
     position: absolute;
-    top: 2%;
-    right: 8%;
+    top: 6%;
+    right: 5%;
 
     a {
       padding-left: 4px;
@@ -111,9 +111,6 @@
 
     }
   }
-
-  clip-path: polygon(0 0, 100% 0, 153% 100%, 0 84%);
-
 }
 
 @media screen and (min-width:650px) {
