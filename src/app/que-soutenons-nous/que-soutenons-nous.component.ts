@@ -19,9 +19,23 @@ export class QueSoutenonsNousComponent implements OnInit {
   }
   active(section){
     this.sections.forEach(element => {
+      var rect = document.getElementById('rectangle');
       if(element == section){
         element.active = true;
-        element.icon = `../../assets/Que-soutenons-nous/${element.id}-white.png`
+        element.icon = `../../assets/Que-soutenons-nous/${element.id}-white.png`;
+        if(element.id == 1){
+          rect.style.transition = "left 1s";
+          rect.style.left = "40px";
+        }
+        else if(element.id == 2){
+          rect.style.transition = "left 1s";
+          rect.style.left = "60px";
+        }
+        else{
+          rect.style.transition = "left 1s";
+          rect.style.left = "80px";
+        }
+        
       }
       else{
         element.active = false;
