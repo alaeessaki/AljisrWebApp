@@ -93,5 +93,5 @@ $theme: mat-light-theme($primary, $accent);
 
 // tooltip styling
 .mat-tooltip {
-  background-color: $primary-color;
+  background-color: color(primary);
 }

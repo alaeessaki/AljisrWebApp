@@ -1,8 +1,8 @@
 @import "../../variables.scss";
 
 .hero {
-  position: relative;
-
+  // position: absolute;
+  // top: 0;
   .slogan {
     position: absolute;
     top: 26%;
@@ -71,7 +71,7 @@
     position: absolute;
     top: 49%;
     right: 27%;
-    background-color: $primary-color;
+    background-color: color(primary);
     width: 7vw;
     height: 7vw;
     border-radius: 50%;

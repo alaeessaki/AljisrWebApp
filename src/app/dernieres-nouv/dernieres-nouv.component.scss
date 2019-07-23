@@ -1,136 +1,136 @@
-@import "../../variables.scss";
+// @import "../../variables.scss";
 
-%line {
-  content: "";
-  position: absolute;
-  width: 30%;
-  height: 3px;
-  background-color: #1592E6;
-  bottom: 46%;
-  left: -33%;
-}
+// %line {
+//   content: "";
+//   position: absolute;
+//   width: 30%;
+//   height: 3px;
+//   background-color: #1592E6;
+//   bottom: 46%;
+//   left: -33%;
+// }
 
-.title_container {
-  position: relative;
-  color: $primary-color;
-  text-transform: uppercase;
-  cursor: pointer;
+// .title_container {
+//   position: relative;
+//   color: $primary-color;
+//   text-transform: uppercase;
+//   cursor: pointer;
 
-  h1 {
-    font-size: 25px;
-    font-weight: 600;
+//   h1 {
+//     font-size: 25px;
+//     font-weight: 600;
 
-    &::before {
-      @extend %line;
-    }
-  }
-}
+//     &::before {
+//       @extend %line;
+//     }
+//   }
+// }
 
-.arrow-right {
-  width: 30px;
-  height: 25px;
-  opacity: 0.6;
-}
+// .arrow-right {
+//   width: 30px;
+//   height: 25px;
+//   opacity: 0.6;
+// }
 
-.text-cont {
-  color: white;
+// .text-cont {
+//   color: white;
 
-  p {
-    font-size: 30px;
-    padding-bottom: 1rem;
-  }
+//   p {
+//     font-size: 30px;
+//     padding-bottom: 1rem;
+//   }
 
-  .lire-suite-cont {
-    cursor: pointer;
+//   .lire-suite-cont {
+//     cursor: pointer;
     
-    p {
-      margin: 0;
-      letter-spacing: 5px;
-      font-size: 15px;
-      padding-top: 11px;
-      opacity: 0.6;
-      transition: transform .5s;
-    }
-    img{
-      transition: transform .5s;
-    }
-    &:hover{
-      p{
-        transform: translateX(-5px);
-      }
-      img{
-        transform: translateX(+5px);
-      }
-    }
-  }
-}
+//     p {
+//       margin: 0;
+//       letter-spacing: 5px;
+//       font-size: 15px;
+//       padding-top: 11px;
+//       opacity: 0.6;
+//       transition: transform .5s;
+//     }
+//     img{
+//       transition: transform .5s;
+//     }
+//     &:hover{
+//       p{
+//         transform: translateX(-5px);
+//       }
+//       img{
+//         transform: translateX(+5px);
+//       }
+//     }
+//   }
+// }
 
-@media screen and (max-width:768px) {
-  .title_container {  
-    h1 {
-      font-size: 20px; 
-      &::before {
-        bottom: 48%;
-      }
-    }
-  }
-  .text-cont {
-    p {
-      font-size: 17px;
-      padding-bottom: 1rem;
-    }
+// @media screen and (max-width:768px) {
+//   .title_container {  
+//     h1 {
+//       font-size: 20px; 
+//       &::before {
+//         bottom: 48%;
+//       }
+//     }
+//   }
+//   .text-cont {
+//     p {
+//       font-size: 17px;
+//       padding-bottom: 1rem;
+//     }
 
-    .lire-suite-cont {
-      p {
-        letter-spacing: 3px;
-        font-size: 12px;
-      }
-    }
-  }
-  .image{
-    height:300px !important;
-  }
-  .color{
-    height: 300px !important;
-  }
-}
+//     .lire-suite-cont {
+//       p {
+//         letter-spacing: 3px;
+//         font-size: 12px;
+//       }
+//     }
+//   }
+//   .image{
+//     height:300px !important;
+//   }
+//   .color{
+//     height: 300px !important;
+//   }
+// }
 
-@media (max-width: 576px) {
-  .title_container {  
-    h1 {
-      font-size: 17px; 
-    }
-    p{
-      font-size: 12px;
-    }
-  }
-  .text-cont {
-    padding: 15px;
+// @media (max-width: 576px) {
+//   .title_container {  
+//     h1 {
+//       font-size: 17px; 
+//     }
+//     p{
+//       font-size: 12px;
+//     }
+//   }
+//   .text-cont {
+//     padding: 15px;
 
-    p {
-      font-size: 16px;
-      padding-bottom: 1rem;
-    }
+//     p {
+//       font-size: 16px;
+//       padding-bottom: 1rem;
+//     }
 
-    .lire-suite-cont {
-      p {
-        letter-spacing: 2px;
-        font-size: 10px;
-      }
-    }
-  }
+//     .lire-suite-cont {
+//       p {
+//         letter-spacing: 2px;
+//         font-size: 10px;
+//       }
+//     }
+//   }
 
-  .arrow-right {
-    width: 20px;
-    height: 15px;
-  }
+//   .arrow-right {
+//     width: 20px;
+//     height: 15px;
+//   }
 
-  .image {
-    height: 200px !important;
-  }
+//   .image {
+//     height: 200px !important;
+//   }
 
-  .color {
-    height: 200px !important;
-  }
+//   .color {
+//     height: 200px !important;
+//   }
 
-}
+// }

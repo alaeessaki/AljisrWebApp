@@ -15,24 +15,30 @@
 
 /* Handle */
 *::-webkit-scrollbar-thumb {
-  background: $primary-color !important;
+  background: color(primary) !important;
   border-radius: 10px !important;
 }
 
 /* Handle on hover */
 *::-webkit-scrollbar-thumb:hover {
-  background: $primary-color !important;
+  background: color(primary) !important;
 }
 
 .noscroll {
   &::-webkit-scrollbar {
     width: 0px !important;
-    background-color: $lite-primary-color !important;
+    background-color: color(lite-primary) !important;
   }
 }
 
+
+
+
+
+
+// extends 
 %login-style {
-  border: 1px solid $primary-color;
+  border: 1px solid color(primary);
   text-transform: uppercase;
   font-size: 14px;
   text-decoration: none;
@@ -52,6 +58,14 @@
   /* Disable Android and iOS callouts*/
 }
 
+
+
+
+
+
+
+
+
 mat-sidenav-container {
   height: 100%;
   background-color: white;
@@ -65,28 +79,13 @@ mat-sidenav-container {
       .menu {
         @extend %not-selectibale;
 
-        #desktop_menu {
-          display: none;
-        }
-
         .menuIcon {
           font-size: 32px;
         }
 
         mat-icon {
-
           cursor: pointer;
 
-        }
-
-        // .rotate {
-        //   -webkit-animation: spin .2s linear;
-        //   -moz-animation: spin .2s linear;
-        //   animation: spin .2s linear;
-        // }
-
-        #closed_menu {
-          display: none;
         }
 
         a {
@@ -105,7 +104,7 @@ mat-sidenav-container {
         }
       }
 
-      a{
+      a {
         img {
           margin-left: 7rem;
           padding: 16px 0px;
@@ -120,9 +119,10 @@ mat-sidenav-container {
         .sinscrie {
           @extend %login-style;
           padding: 3px 20px;
-          color: $primary-color;
+          color: color(primary);
 
         }
+
         .account {
           display: none !important;
 
@@ -139,72 +139,82 @@ mat-sidenav-container {
           }
         }
       }
+    }
 
-      #desktop_menu_container {
-        background-color: white;
-        overflow: auto;
-        height: calc(100vh);
-        width: 100%;
-        display: none;
-        opacity: 0;
-        transition: opacity 0.5s;
-        position: fixed;
-        z-index: 2;
-        top: 75px;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        @extend %not-selectibale;
+    .homeNav {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
 
-        .single_row {
-          max-height: 100%;
-          overflow: auto;
-          margin-left: 100px;
-          margin-right: 5px;
-          margin-top: 40px;
-          margin-bottom: 40px;
+      .homeMenu {
+        position: absolute;
+        top: 18px;
+        left: 65px;
 
-          .link_row {
-            width: 25%;
-            padding-bottom: 40px;
-            padding-left: 27.5px;
-            border-left: 2px solid $light-grey;
+        .btnContainer {
+          position: relative;
+          background-color: color(reverse);
+          width: 48px;
+          height: 48px;
+          border: .5px solid color(primary);
+          border-radius: 50%;
 
-            .link {
-              padding-bottom: 27px;
-              position: relative;
-
-              a {
-                font-size: 19px;
-                font-family: $font-family;
-                text-transform: uppercase;
-                color: $dark-blue;
-                font-weight: 600;
-              }
-
-              &::before {
-                content: "";
-                position: absolute;
-                bottom: 20px;
-                left: -28px;
-                width: 30%;
-                height: 2px;
-                background-color: $light-grey;
-
-
-              }
-            }
-
-            .sub_link {
-
-              a {
-                font-size: 12px;
-                font-family: $secondary-font;
-                font-style: italic;
-                color: $dark-blue;
-              }
-            }
+          #phone_menu {
+            position: absolute;
+            z-index: 2;
+            color: color(secondary);
+            top: 8px;
+            left: 8px;
           }
+        }
+
+        a {
+          padding-left: 10px;
+          font-size: 15px;
+          font-family: $font-family;
+          font-weight: 300;
+          color: color(reverse);
+          padding-top: 0;
+
+          &:hover {
+            color: color(reverse);
+          }
+        }
+      }
+
+
+      .homeLogo {
+        position: absolute;
+        left: 48%;
+        top: 10px;
+        background-color: color(reverse);
+        border-radius: 0 0 4px 4px;
+        top: 0;
+        transform: translateX(-50%) skewX(-9deg);
+        width: 226px;
+        height: 88px;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 225px;
+          height: 95px;
+          background-color: transparent;
+          background-color: rgba(255, 255, 255, 0.15);
+          border-radius: 0 0 4px 4px;
+          position: absolute;
+          z-index: 2;
+          left: 8px;
+          top: 0;
+        }
+
+        img {
+          margin-left: 3.9rem;
+          padding: 9px 3px;
+          width: 97px;
+          transform: skew(-3deg, 0deg);
         }
       }
     }
@@ -248,12 +258,13 @@ mat-card {
   }
 }
 
-footer{
-  padding:0;
+footer {
+  padding: 0;
   margin: 0;
   background-color: #3498DB;
-  p{
-    margin:0;
+
+  p {
+    margin: 0;
   }
 }
 
@@ -328,24 +339,17 @@ mat-expansion-panel {
 
 //Media Queries
 @media screen and (min-width:650px) {
-  mat-sidenav-container mat-sidenav-content nav .menu #phone_menu {
-    display: none !important;
-  }
 
   mat-sidenav-container mat-sidenav-content nav .menu a {
     display: flex;
   }
 
-  mat-sidenav-container mat-sidenav-content nav .menu #desktop_menu {
-    display: flex;
+  mat-sidenav {
+    width: 35% !important;
   }
 }
 
 @media screen and (max-width:650px) {
-  mat-sidenav-container mat-sidenav-content nav .menu #desktop_menu {
-    display: none !important;
-  }
-
   mat-sidenav-container mat-sidenav-content nav .menu #phone_menu {
     font-size: 25px !important;
     margin-top: 5px;
@@ -392,15 +396,15 @@ mat-expansion-panel {
   mat-sidenav-container mat-sidenav-content nav a img {
     width: 11vw;
   }
+
   mat-sidenav-container mat-sidenav-content nav .login {
     .account {
-      mat-icon{
+      mat-icon {
         font-size: 25px;
         margin-bottom: 0px;
-        margin-top: 5px; 
+        margin-top: 5px;
         margin-left: 7px;
       }
     }
   }
 }
-

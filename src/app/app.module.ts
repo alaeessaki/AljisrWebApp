@@ -29,7 +29,6 @@ import { TeamAljisrComponent } from './team-aljisr/team-aljisr.component';
 import { QueSoutenonsNousComponent } from './que-soutenons-nous/que-soutenons-nous.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { TestimonsComponent } from './testimons/testimons.component';
-import { TrophiesComponent } from './trophies/trophies.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { InscriStepperComponent } from './pages/inscription/inscri-stepper/inscri-stepper.component';
 
@@ -66,7 +65,6 @@ import { MatNativeDateModule } from '@angular/material';
     QueSoutenonsNousComponent,
     HeroSectionComponent,
     TestimonsComponent,
-    TrophiesComponent,
     InscriptionComponent,
     InscriStepperComponent,
     LoginComponent,

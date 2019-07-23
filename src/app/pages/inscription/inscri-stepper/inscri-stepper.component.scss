@@ -2,11 +2,11 @@
 
 
 #sign-bg {
-  background-color: $background-grey;
+  background-color: color(backround-grey);
 }
 
 .mat-horizontal-stepper-header-container {
-  background-color: $background-grey;
+  background-color: color(backround-grey);
   margin-bottom: 2rem;
   margin-left: -1rem;
   margin-right: -1rem;
@@ -16,20 +16,20 @@
   width: 40px !important;
   height: 40px !important;
   color: white !important;
-  background-color: $primary-color !important;
+  background-color: color(primary) !important;
 }
 
 .mat-stepper-horizontal-line {
   border-top-width: 3px !important;
-  border: solid $primary-color !important;
+  border: solid color(primary) !important;
   margin: 2px -64px 0px -83px !important;
 
 }
 
 .mat-step-icon-selected {
-  color: $primary-color !important;
+  color: color(primary) !important;
   background-color: white !important;
-  border: solid $primary-color;
+  border: solid color(primary);
 }
 
 // calendar icon selected color ;_;
@@ -45,7 +45,7 @@
     padding: 2rem 0 0 2rem;
 
     p {
-      color: $primary-color;
+      color: color(primary);
     }
   }
 
@@ -55,7 +55,7 @@
     color: gray;
 
     span {
-      color: $primary-color;
+      color: color(primary);
     }
   }
 

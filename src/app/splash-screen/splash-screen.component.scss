@@ -15,16 +15,6 @@
   }
 }
 
-// @keyframes infintRotate {
-//     0% {
-//       transform: rotate(0deg);
-//     }
-
-//     100% {
-//       transform: rotate(360deg);
-//     }
-//   }
-
 
 .splash-wrapper {
   width: 100vw;
@@ -46,7 +36,7 @@
 
     h1 {
       font-size: 1.1vw;
-      color: $primary-color;
+      color: color(primary);
       font-family: $font-family;
       font-weight: 600;
       padding-top: 2.5%;
