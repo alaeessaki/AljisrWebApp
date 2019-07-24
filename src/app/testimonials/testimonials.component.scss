@@ -5,28 +5,36 @@
 
 
 .testimonials {
-  .quotes {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
+  .testi-cont {
+    .col-8 {
+      .title-cont {
+        padding-left: 8vw;
+      }
+    }
 
-  p {
-    font-family: $font-family;
-    color: color(para-grey);
-    font-weight: bold;
-    font-size: 14px;
+    .quotes {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
 
-    span {
-      color: color(primary);
+    p {
+      font-family: $font-family;
+      color: color(para-grey);
       font-weight: bold;
-      font-size: 15px;
-    }
+      font-size: 14px;
 
-    .status {
-      font-size: 16px;
-      color: #bebebe;
-    }
+      span {
+        color: color(primary);
+        font-weight: bold;
+        font-size: 15px;
+      }
 
+      .status {
+        font-size: 16px;
+        color: #bebebe;
+      }
+
+    }
   }
 
 

@@ -7,7 +7,7 @@
     p {
       font-family: $paragraph-font;
       color: color(reverse);
-      font-size: 27px;
+      font-size: 20px;
       font-weight: bold;
     }
 
@@ -16,7 +16,7 @@
       border-radius: 30px;
       display: flex;
       flex-direction: row;
-      width: 80%;
+      width: 69%;
       margin-top: 60px;
       cursor: pointer;
       position: relative;
@@ -53,11 +53,11 @@
       }
 
       a {
-        font-size: 27px;
+        font-size: 18px;
         color: color(reverse);
         text-decoration: none;
         font-weight: bold;
-        padding: 6px 18px;
+        padding: 6px 0px;
         padding-left: 87px;
       }
     }

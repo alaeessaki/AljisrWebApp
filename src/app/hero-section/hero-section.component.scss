@@ -11,10 +11,11 @@
     h3 {
       position: relative;
       color: white;
-      font-size: 1.2vw;
+      font-size: 0.9vw;
       font-family: $font-family;
-      letter-spacing: 3px;
+      letter-spacing: 1.5px;
       font-weight: bold;
+      line-height: 18px;
 
       &::before {
         content: "";
@@ -29,7 +30,7 @@
 
   .slogan2 {
     position: absolute;
-    top: 77%;
+    top: 81%;
     left: 7%;
     color: white;
     display: none;
@@ -38,50 +39,50 @@
       text-transform: uppercase;
       font-family: $font-family;
       font-weight: bolder;
-      font-size: 5.3vw;
+      font-size: 4.5vw;
     }
   }
 
   .benevole {
     position: absolute;
-    right: 3%;
-    top: 80%;
+    right: 6%;
+    top: 85%;
     color: white;
     font-family: $font-family;
     font-weight: 100;
 
     h3 {
-      font-size: 2vw;
+      font-size: 1.7vw;
     }
 
     h1 {
-      font-size: 3.5vw;
+      font-size: 3vw;
       text-transform: uppercase;
       font-weight: 600;
     }
 
     h5 {
       text-transform: uppercase;
-      font-size: 1vw;
+      font-size: .9vw;
       letter-spacing: 3px;
     }
   }
 
   .dot {
     position: absolute;
-    top: 76%;
-    right: 27%;
-    background-color: color(primary);
-    width: 7vw;
-    height: 7vw;
+    top: 81%;
+    right: 28%;
+    background-color: #22C0FF;
+    width: 6vw;
+    height: 6vw;
     border-radius: 50%;
   }
 
   .hand {
     position: absolute;
-    width: 2.4vw;
-    top: 79.5%;
-    right: 29.4%;
+    width: 2vw;
+    top: 84%;
+    right: 30%;
     filter: brightness(100%);
     -webkit-filter: brightness(100%);
   }

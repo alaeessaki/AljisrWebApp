@@ -1,136 +1,88 @@
-// @import "../../variables.scss";
+@import '../../variables.scss';
+@import '../../needs.scss';
+@import '../../extends.scss';
 
-// %line {
-//   content: "";
-//   position: absolute;
-//   width: 30%;
-//   height: 3px;
-//   background-color: #1592E6;
-//   bottom: 46%;
-//   left: -33%;
-// }
 
-// .title_container {
-//   position: relative;
-//   color: $primary-color;
-//   text-transform: uppercase;
-//   cursor: pointer;
+.dernier-nouvelles{
+    padding-bottom: 10%;
+    .container{
+        .title{
 
-//   h1 {
-//     font-size: 25px;
-//     font-weight: 600;
+        }
+    }
+    .news-container{
+        padding-left: 10%;
+        padding-right: 25%;
+        padding-bottom: 100px;
+        .new-card{
+            position: relative;
+            .new-img{
 
-//     &::before {
-//       @extend %line;
-//     }
-//   }
-// }
-
-// .arrow-right {
-//   width: 30px;
-//   height: 25px;
-//   opacity: 0.6;
-// }
-
-// .text-cont {
-//   color: white;
-
-//   p {
-//     font-size: 30px;
-//     padding-bottom: 1rem;
-//   }
-
-//   .lire-suite-cont {
-//     cursor: pointer;
-    
-//     p {
-//       margin: 0;
-//       letter-spacing: 5px;
-//       font-size: 15px;
-//       padding-top: 11px;
-//       opacity: 0.6;
-//       transition: transform .5s;
-//     }
-//     img{
-//       transition: transform .5s;
-//     }
-//     &:hover{
-//       p{
-//         transform: translateX(-5px);
-//       }
-//       img{
-//         transform: translateX(+5px);
-//       }
-//     }
-//   }
-// }
-
-// @media screen and (max-width:768px) {
-//   .title_container {  
-//     h1 {
-//       font-size: 20px; 
-//       &::before {
-//         bottom: 48%;
-//       }
-//     }
-//   }
-//   .text-cont {
-//     p {
-//       font-size: 17px;
-//       padding-bottom: 1rem;
-//     }
-
-//     .lire-suite-cont {
-//       p {
-//         letter-spacing: 3px;
-//         font-size: 12px;
-//       }
-//     }
-//   }
-//   .image{
-//     height:300px !important;
-//   }
-//   .color{
-//     height: 300px !important;
-//   }
-// }
-
-// @media (max-width: 576px) {
-//   .title_container {  
-//     h1 {
-//       font-size: 17px; 
-//     }
-//     p{
-//       font-size: 12px;
-//     }
-//   }
-//   .text-cont {
-//     padding: 15px;
-
-//     p {
-//       font-size: 16px;
-//       padding-bottom: 1rem;
-//     }
-
-//     .lire-suite-cont {
-//       p {
-//         letter-spacing: 2px;
-//         font-size: 10px;
-//       }
-//     }
-//   }
-
-//   .arrow-right {
-//     width: 20px;
-//     height: 15px;
-//   }
-
-//   .image {
-//     height: 200px !important;
-//   }
-
-//   .color {
-//     height: 200px !important;
-//   }
-
-// }
+            }
+            .new-text{
+                padding: 35px;
+                height: 100%;
+                position: absolute;
+                left: 70%;
+                right: -70%;
+                top: 8%;
+                background-color: color(reverse);
+                border-bottom: 4px solid color(primary);
+                h1{
+                    font-size: 18px;
+                    font-family: $font-family;
+                    font-weight: bold;
+                    color: #596059;
+                    position: relative;
+                    padding-bottom: 5px;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        height: 10px;
+                        width: 10px;
+                        background-color: color(primary);
+                        left: -20px;
+                        bottom :26px;
+                        border-radius: 50%;
+                    }
+                    
+                }
+                p{
+                    font-size: 12px;
+                    color : #596059;
+                    font-weight: $font-family;
+                }
+                a{
+                    font-size: 13px;
+                    font-family: $font-family;
+                    text-decoration: none;
+                    color: #596059;
+                    font-weight: bold;
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+    .voir-plus{
+        float: right;
+        margin-right: 8%;
+        a{
+            text-decoration: none;
+            color: color(reverse);
+            background-color: color(primary);
+            font-size: 13px;
+            font-family: $font-family;
+            padding: 15px 70px;
+            position: relative;            
+            &::before{
+                content: "";
+                position: absolute;
+                width: 130%;
+                height: 3px;
+                background-color: color(primary);
+                left: -100%;
+                bottom: 40%;
+            }
+        }
+    }
+}
