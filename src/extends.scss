@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+// extends 
+%number{
+    font-size: 150px;
+    font-family: $font-family;
+    color: color(backround-grey);
+    font-weight: bolder;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: 50%;
+        right: 12%;
+        background-color: black;
+        height: 4px;
+        width: 50%;
+    }  
+}

@@ -1,21 +1,12 @@
 @import '../../variables.scss';
+@import '../../needs.scss';
+@import '../../extends.scss';
 
 .QuiSoutenonsNous {
   .container {
     position: relative;
     padding-bottom: 2rem;
-    .title {
-      .number {
-        @extend %number;
-      }
-
-      h1 {
-        font-family: $font-family;
-        font-size: 28px;
-        font-weight: 900;
-      }
-    }
-
+    
     .description {
       p {
         font-size: 18px;
@@ -27,7 +18,7 @@
     }
 
     .cards-container {
-      padding: 0px 125px;
+      padding: 0px 10vw;
       padding-bottom: 2.5rem;
       .active {
         background-color: color(primary) !important;
@@ -60,7 +51,7 @@
 
           h1 {
             font-family: $font-family;
-            font-weight: 900;
+            font-weight: bold;
             font-size: 20px;
             color: color(primary);
             margin-bottom: 20px;
@@ -68,7 +59,7 @@
 
           p {
             font-family: $font-family;
-            font-weight: 400;
+            font-weight: 300;
             color: color(secondary);
             font-size: 14px;
           }
@@ -82,37 +73,6 @@
         }
 
       }
-    }
-    .liner{
-        .liner-cont{
-            position: relative;
-            width: 30%;
-            .dot{
-                width:10px;
-                height: 10px;
-                background-color: black;
-                border-radius: 50%;
-                position: absolute;
-                left: 0;
-            }
-            .line{
-                height: 4px;
-                width: 120px;
-                background-color: black;
-                position: absolute;
-                left: 30px;
-                top : 3.5px;
-                z-index: 2;
-            }
-            .rect{
-                height: 12px;
-                width: 60px;
-                background-color: color(primary);
-                position: absolute;
-                left : 80px;
-                z-index: 1;
-            }
-        }
     }
   }
 }

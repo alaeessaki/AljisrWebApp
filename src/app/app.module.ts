@@ -38,6 +38,7 @@ import { LoginComponent } from './login/login.component';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { MatNativeDateModule } from '@angular/material';
+import { IlNousSoutiennentComponent } from './il-nous-soutiennent/il-nous-soutiennent.component';
 
 
 
@@ -69,6 +70,7 @@ import { MatNativeDateModule } from '@angular/material';
     InscriStepperComponent,
     LoginComponent,
     SplashScreenComponent,
+    IlNousSoutiennentComponent,
   ],
   imports: [
     BrowserModule,

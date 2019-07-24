@@ -17,25 +17,11 @@ $colors :(
     secondary: #675E69,
     reverse: #FFFFFF,
     secondary-bold: #5A5A5A,
-    backround-grey: #FAFAFA
+    backround-grey: #FAFAFA,
+    background-grey-bold : #F2F6F7,
+    dots-grey: rgb(209, 209, 209)
 );
 
 
 
-// extends 
-%number{
-    font-size: 150px;
-    font-family: $font-family;
-    color: color(backround-grey);
-    font-weight: bolder;
-    position: relative;
-    &::before{
-        content: "";
-        position: absolute;
-        bottom: 50%;
-        right: 12%;
-        background-color: black;
-        height: 4px;
-        width: 50%;
-    }  
-}
+
