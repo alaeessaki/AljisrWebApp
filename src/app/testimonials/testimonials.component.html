@@ -1,18 +1,32 @@
-<section class="testimonials mt-5">
-  <div class="container d-flex justify-content-center">
-    <div class="title_container mb-5 mt-4">
-      <h1>témoignages</h1>
-    </div>
-  </div>
-
-  <div class="container d-flex temoirespo justify-content-center">
-    <app-testimons [temo]="selectedItem" [firstTemo]="firstTemo"></app-testimons>
-    <div class="d-flex flex-column ml-5 radios">
-      <div *ngFor="let item of temoin" (click)="onSelected(item)">
-        <mat-radio-button [value]="item.id" color="primary" [checked]="item===firstTemo" class="radio-buttons">
-        </mat-radio-button>
+<section class="testimonials row">
+  <div class="col-8">
+    <div class="container">
+      <div class="title d-flex flex-row align-items-center">
+        <span class="number">03</span>
+        <h1 class="text-uppercase">Témoignages</h1>
       </div>
     </div>
+    <div class="d-flex flex-row">
+      <div class="container d-flex temoirespo justify-content-center">
+        <app-testimons [temo]="selectedItem" [firstTemo]="firstTemo"></app-testimons>
+        <div class="d-flex flex-column ml-5 radios">
+          <div *ngFor="let item of temoin" (click)="onSelected(item)">
+            <mat-radio-button [value]="item.id" color="primary" [checked]="item===firstTemo" class="radio-buttons">
+            </mat-radio-button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="liner d-flex justify-content-end align-items-end">
+      <div class="liner-cont">
+        <div class="dot"></div>
+        <div class="line"></div>
+        <div class="rect" id="rectangle"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <app-check-card paragraph="Rejoignez notre grande Communauté de bénévoles" btnText="Bénévoler"></app-check-card>
   </div>
 
 </section>

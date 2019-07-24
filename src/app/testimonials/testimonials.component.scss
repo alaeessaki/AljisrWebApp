@@ -1,79 +1,99 @@
-// @import "../../variables.scss";
+@import '../../variables.scss';
+@import '../../needs.scss';
+@import '../../extends.scss';
 
-// %line {
-//   content: "";
-//   position: absolute;
-//   width: 30%;
-//   height: 3px;
-//   background-color: #1592E6;
-//   bottom: 46%;
-//   left: -33%;
-// }
 
-// .testimonials {
-//   padding-bottom: 7rem;
 
-//   .title_container {
-//     position: relative;
-//     color: $primary-color;
-//     text-transform: uppercase;
+.testimonials {
+  .quotes {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 
-//     h1 {
-//       font-size: 25px;
-//       font-weight: 600;
+  p {
+    font-family: $font-family;
+    color: color(para-grey);
+    font-weight: bold;
+    font-size: 14px;
 
-//       &::before {
-//         @extend %line;
-//       }
-//     }
-//   }
+    span {
+      color: color(primary);
+      font-weight: bold;
+      font-size: 15px;
+    }
 
-//   .quotes {
-//     width: 2.5rem;
-//     height: 2.5rem;
-//   }
+    .status {
+      font-size: 16px;
+      color: #bebebe;
+    }
 
-//   p {
-//     font-family: $font-family;
-//     color: $dark-grey;
-//     width: 34rem;
-//   }
+  }
 
-//   span {
-//     color: $primary-color;
-//     font-weight: bolder;
-//   }
 
-//   .mat-radio-container {
-//     height: 12px !important;
-//   }
+  .blue-shadow {
+    position: relative;
+    right: 6px;
+    bottom: 136px;
+    z-index: -1;
+    width: 9rem;
+    height: 9rem;
+  }
 
-//   .mat-radio-outer-circle {
-//     box-sizing: border-box !important;
-//     height: 11px !important;
-//     transition: border-color ease 280ms;
-//     width: 11px !important;
-//     border-width: 2px !important;
-//     border-style: none !important;
-//     border-radius: 50% !important;
-//     background-color: rgb(192, 189, 189) !important;
-//     -webkit-border-radius: 50% !important;
-//     -moz-border-radius: 50% !important;
-//     -ms-border-radius: 50% !important;
-//     -o-border-radius: 50% !important;
-//   }
 
-//   .mat-radio-inner-circle {
-//     height: 23px !important;
-//     left: -6px !important;
-//     top: -6px !important;
-//     width: 23px !important;
-//   }
+  @media (max-width: 990px) {
 
-//   .mat-radio-button .mat-radio-ripple {
-//     height: 0 !important;
-//     width: 0 !important;
-//   }
+    .temoirespo {
+      display: flex;
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+
+    .radios {
+      display: flex;
+      flex-direction: row !important;
+    }
+
+    .blue-shadow {
+      right: 169px;
+      bottom: -14px;
+    }
+  }
+
+}
+
+
+//material radio customize
+
+.mat-radio-container {
+  height: 12px !important;
+}
+
+.mat-radio-outer-circle {
+  box-sizing: border-box !important;
+  height: 11px !important;
+  transition: border-color ease 280ms;
+  width: 11px !important;
+  border-width: 2px !important;
+  border-style: none !important;
+  border-radius: 50% !important;
+  background-color: rgb(192, 189, 189) !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  -o-border-radius: 50% !important;
+}
+
+.mat-radio-inner-circle {
+  height: 23px !important;
+  left: -6px !important;
+  top: -6px !important;
+  width: 23px !important;
+}
+
+.mat-radio-button .mat-radio-ripple {
+  height: 0 !important;
+  width: 0 !important;
+}
 
 //   // .radio-group {
 
@@ -106,23 +126,10 @@
 
 //   // }
 
-
 // }
 
-// // media query doesn't work for flexing the radio buttons row 
-// @media (max-width: 990px) {
 
-//   .temoirespo {
-//     display: flex;
-//     flex-direction: column !important;
-//     align-items: center !important;
-//   }
 
-//   .radios {
-//     display: flex;
-//     flex-direction: row !important;
-//   }
-// }
 
 // @media (max-width: 768px) {
 //   .testimonials p {
