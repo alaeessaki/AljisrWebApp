@@ -9,17 +9,17 @@
     
     .description {
       p {
-        font-size: 18px;
+        font-size: 14px;
         color: color(secondary-bold);
         position: relative;
-        top: -43px;
+        top: -30px;
         right: -60px;
       }
     }
 
     .cards-container {
       padding: 0px 10vw;
-      padding-bottom: 2.5rem;
+      padding-bottom: 4.5rem;
       .active {
         background-color: color(primary) !important;
         height: 360px;
@@ -52,7 +52,7 @@
           h1 {
             font-family: $font-family;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 18px;
             color: color(primary);
             margin-bottom: 20px;
           }
@@ -61,7 +61,7 @@
             font-family: $font-family;
             font-weight: 300;
             color: color(secondary);
-            font-size: 14px;
+            font-size: 13px;
           }
 
           img {

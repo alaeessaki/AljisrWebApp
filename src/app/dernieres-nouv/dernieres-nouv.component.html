@@ -1,43 +1,25 @@
-<section class="mt-5 p-0" style="width:100%;">
-  <div class="d-flex justify-content-center">
-
-    <div class="title_container mb-5 mt-4">
-      <h1>dernières nouvelles</h1>
-    </div>
-  </div>
-  <div class="d-flex justify-content-center title_container mb-5">
-    <p class="pr-2">voir tout</p>
-    <img class="arrow-right" src="../../../assets/icons/right-arrow-blue.png" alt="voir tout">
+<section class="dernier-nouvelles">
+  <div class="container">
+      <div class="title d-flex flex-row align-items-center">
+          <span class="number">05</span>
+          <h1 class="text-uppercase">Dernières nouvelles</h1>
+        </div>
   </div>
 
-  <div class="row m-0 p-0" *ngFor="let item of images" style="width:100%">
-    <!-- left img -->
-    <div class="col-md image col-lg col-xl row m-0 p-0" [style.backgroundImage]="'url('+ item.name +')'" style="width:50%; height: 400px; background-size: cover;
-    background-position: center; transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);" *ngIf="item.pos==0"></div>
-    <div class="col-md color col-lg col-xl row m-0 p-0" [style.backgroundColor]="item.color" style="width:50%; height: 400px;"
-      *ngIf="item.pos==0">
+  <div class="news-container d-flex flex-row justify-content-between align-items-center">
+      <div class="new-card" *ngFor="let new of news">
+        <div class="new-img" [style.backgroundImage]="'url('+new.img+')'" style="width:280px; height:400px; background-size: cover; background-position: center;">
 
-      <div class="d-flex flex-column text-cont m-auto">
-        <p>{{item.title}}</p>
-        <div class="d-flex flex-row align-items-center lire-suite-cont">
-          <p class="pr-2">Lire la suite</p>
-          <img class="arrow-right" src="../../../assets/icons/right-arrow-white.png" alt="lire la suite">
+        </div>
+        <div class="new-text">
+          <h1 class="text-uppercase">{{new.title}}</h1>
+          <p>{{new.description}}</p>
+          <a href="">Lire la suite</a>
         </div>
       </div>
-    </div>
+  </div>
 
-    <!-- right img -->
-    <div class="col-md col-lg color col-xl row m-0 p-0" [style.backgroundColor]="item.color" style="width:50%; height: 400px;"
-      *ngIf="item.pos==1">
-      <div class="d-flex flex-column text-cont m-auto">
-        <p>{{item.title}}</p>
-        <div class="d-flex flex-row  align-items-center  lire-suite-cont">
-          <p class="pr-2">Lire la suite</p>
-          <img class="arrow-right" src="../../../assets/icons/right-arrow-white.png" alt="lire la suite">
-        </div>
-      </div>
-    </div>
-    <div class="col-md col-lg image col-xl row m-0 p-0" [style.backgroundImage]="'url('+ item.name +')'" style="width:50%; height: 400px; background-size: cover;
-    background-position: center; transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);" *ngIf="item.pos==1"></div>
+  <div class="voir-plus">
+    <a href="">Voir Plus</a>
   </div>
 </section>
