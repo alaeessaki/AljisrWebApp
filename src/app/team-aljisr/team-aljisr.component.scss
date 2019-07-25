@@ -1,18 +1,52 @@
-// @import "../../variables.scss";
-
-// %line {
-//   content: "";
-//   position: absolute;
-//   width: 30%;
-//   height: 3px;
-//   background-color: #1592E6;
-//   bottom: 46%;
-//   left: -33%;
-// }
+@import '../../variables.scss';
+@import '../../needs.scss';
+@import '../../extends.scss';
 
 
-// // title style 
-// .team-aljisr {
+
+
+
+.team-aljisr {
+  padding-bottom: 11rem;
+
+  .container {
+    #nextmem {
+      transform: rotateZ(180deg);
+      -webkit-transform: rotateZ(180deg);
+      -moz-transform: rotateZ(180deg);
+      -ms-transform: rotateZ(180deg);
+      -o-transform: rotateZ(180deg);
+    }
+  }
+
+  .voir-plus {
+    float: right;
+    margin-right: 8%;
+
+    a {
+      text-decoration: none;
+      color: color(reverse);
+      background-color: color(primary);
+      font-size: 13px;
+      font-family: $font-family;
+      padding: 15px 70px;
+      position: relative;
+
+      top: 5rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 130%;
+        height: 3px;
+        background-color: color(primary);
+        left: -100%;
+        bottom: 40%;
+      }
+    }
+  }
+}
+
 //   background-color: #F2F2F2;
 //   padding-bottom: 7rem;
 //   font-family: $font-family;
@@ -75,7 +109,7 @@
 //     flex-direction: column-reverse !important;
 //     width: 100%;
 //     height: -webkit-fill-available;
-    
+
 //     &:hover{
 //       .mat-expansion-panel-header-title{
 //       background-color: white !important;
@@ -91,16 +125,16 @@
 //     text-transform: uppercase;
 //     margin-right: 0;
 //     color: #828282;
-  
+
 //   }
-  
+
 //   .mat-expansion-panel-body {
 //     padding: 12px 24px 19px;
 //     p{
 //       font-size: 12px;
 //     }
 //   }
-  
+
 // }
 
 // // indecators style
@@ -123,7 +157,7 @@
 
 // // Media queries
 // @media screen and (max-width:768px) {
-  
+
 //   .team-aljisr {
 //     .title_container {
 //       h1 {
