@@ -17,6 +17,36 @@
       -ms-transform: rotateZ(180deg);
       -o-transform: rotateZ(180deg);
     }
+
+    .cards-container {
+      width: 83%;
+      padding-top: 4rem;
+      box-sizing: border-box;
+      overflow: hidden;
+
+      .wrapper {
+        width: 117rem;
+
+
+        .member {
+          align-self: flex-start;
+          box-shadow: unset !important;
+          position: relative;
+          padding-right: 2rem;
+
+
+          .card-profile {
+            border: solid color(primary);
+            position: absolute;
+            background-color: white;
+            top: -2rem;
+            padding: 2rem;
+            z-index: -1;
+          }
+        }
+      }
+
+    }
   }
 
   .voir-plus {
@@ -71,26 +101,7 @@
 
 // // carousel style
 // .team-aljisr {
-//   .container {
-//     .cards-container {
-//       width: 70%;
-//       box-sizing: border-box;
-//       overflow: hidden;
 
-//       .wrapper {
-//         width: 117rem;
-//         .member {
-//           align-self: flex-start;
-//           box-shadow: unset !important;
-//           .header{
-//             img{
-//               width:100%;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
 
 // }
 
