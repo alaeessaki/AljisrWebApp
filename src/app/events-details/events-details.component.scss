@@ -6,8 +6,17 @@
 .description {
   width: 100%;
   margin-right: 10rem;
+
   p {
     color: color(secondary);
+    font-size: 14px;
+  }
+
+  .liner {
+    .liner-cont {
+      right: 63px !important;
+      top: 22px !important;
+    }
   }
 }
 

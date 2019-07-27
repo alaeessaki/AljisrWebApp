@@ -1,147 +1,70 @@
-// @import '../../variables.scss';
+@import "../../variables.scss";
 
-// .newsletter_section {
-//   background-color: $background-grey;
+.newsletter-sec {
+  .news-wrapper {
+    background-color: color(background-grey-bold);
 
-//   .single_row {
-//     color: $primary-color;
+    .news-title {
+      h1 {
+        font-size: 22px;
+        font-family: $paragraph-font;
+        color: color(primary);
+        font-weight: bolder;
 
-//     .form-container {
+      }
 
-//       // input 
-//       .mat-form-field {
-//         width: 280px;
-//       }
+      p {
+        font-size: 12px;
+        font-family: $paragraph-font;
+        font-weight: bolder;
+        color: black;
+      }
+    }
 
-//       .mat-form-field-empty.mat-form-field-label {
-//         color: $primary-color;
-//       }
+    .form-wrapper {
+      width: 40%;
 
-//       .mat-form-field-underline {
-//         background-color: #ffff !important;
-//         width: 100%;
-//       }
+      .mat-form-field {
+        width: 100%;
+        position: relative;
+        z-index: 1;
 
-//       .mat-form-field-infix {
-//         border: 0;
-//       }
+        // &:hover{
+        //     .mat-icon {
+        //         right: -11px;
+        //         top: -42px;
+        //         height: 55px;
+        //         transition:  right 0.2s, top 0.2s, height 0.2s; 
+        //     }
+        // }
+        // &:not(:hover){
+        //     .mat-icon {
+        //         transition:  right 0.2s, top 0.2s, height 0.2s; 
+        //     }
+        // }
+      }
 
-//       input.mat-input-element {
-//         color: black;
-//         margin-top: 0.9375em;
-//       }
+      /** Overrides label color **/
 
-//       .mat-form-field-appearance-legacy .mat-form-field-label {
-//         color: black;
-//         font-size: 24px;
-//         padding-left: 80px;
-//         padding-bottom: 10px;
-//         font-style: italic;
-//       }
-
-//       .mat-form-field-appearance-legacy .mat-form-field-underline {
-//         height: 2px;
-//         bottom: 0.8em;
-//       }
-
-//       .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
-//         color: $primary-color;
-//         transform: translateY(-1.28125em) scale(1) perspective(100px) translateZ(.001px);
-
-//       }
-//     }
-
-//     h1 {
-//       font-size: 21px;
-//     }
-
-//     a {
-//       font-size: 21px;
-//       text-decoration: none;
-//       text-transform: uppercase;
-//       color: $primary-color;
-//       position: relative;
-
-//       &::after {
-//         position: absolute;
-//         right: -49px;
-//         content: "";
-//         background-image: url("../../assets/icons/right-arrow-blue.png");
-//         height: 36px;
-//         width: 36px;
-//         background-size: cover;
-//       }
-//     }
-//   }
-// }
+      .mat-form-field-outline-start,
+      .mat-form-field-outline-gap,
+      .mat-form-field-outline-end {
+        border-radius: unset !important;
+      }
 
 
-
-
-// @media screen and (max-width:767px) {
-
-//   .newsletter_section {
-//     .single_row {
-//       .form-container {
-
-//         // input 
-//         .mat-form-field-appearance-legacy .mat-form-field-label {
-//           font-size: 20px;
-//         }
-//       }
-
-//       h1 {
-//         margin-bottom: 50px;
-//       }
-
-//       a {
-//         margin-top: 50px;
-//       }
-//     }
-//   }
-// }
-
-// @media screen and (max-width: 576px) {
-
-//   .newsletter_section {
-//     .single_row {
-//       .form-container {
-
-//         // input 
-//         .mat-form-field-appearance-legacy .mat-form-field-label {
-//           font-size: 17px;
-//         }
-//       }
-
-//       h1 {
-//         font-size: 17px
-//       }
-
-//       a {
-//         font-size: 17px;
-
-//         &::after {
-//           height: 25px;
-//           width: 29px;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media screen and (max-width: 399px) {
-
-//   .newsletter_section {
-//     .single_row {
-
-//       a {
-
-
-//         &::after {
-//           right: -12px;
-//           bottom: 15px;
-//         }
-//       }
-//     }
-//   }
-// }
+      .mat-icon {
+        cursor: pointer;
+        position: absolute;
+        right: -12px;
+        top: -44px;
+        background-color: #22C0FF;
+        color: white;
+        width: 56px;
+        height: 59px;
+        z-index: 0;
+        padding-left: 15px;
+      }
+    }
+  }
+}
