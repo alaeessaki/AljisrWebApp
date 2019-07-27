@@ -1,54 +1,49 @@
-// @import "../../variables.scss";
-
-// %line {
-//   content: "";
-//   position: absolute;
-//   width: 30%;
-//   height: 3px;
-//   background-color: #1592E6;
-//   bottom: 46%;
-//   left: -33%;
-// }
-
-// %line2 {
-//   content: "";
-//   position: absolute;
-//   background-color: #1592E6;
-//   height: 100%;
-//   padding-right: 1.5px;
-//   bottom: 0%;
-//   left: -22%;
-// }
+@import '../../variables.scss';
+@import '../../needs.scss';
+@import '../../extends.scss';
 
 
-// .aljisr_en_numero {
-//   background-color: $background-grey;
-//   // position: relative;
-//   font-family: $font-family;
-//   padding-bottom: 4rem;
 
-//   .title_container {
 
-//     position: relative;
+.aljisr_en_numero {
+  font-family: $font-family;
 
-//     h1 {
-//       color: $primary-color;
-//       font-size: 25px;
-//       text-transform: uppercase;
-//       font-weight: 600;
+  #counter {
+    .row {
+      .col-md-4 {
 
-//       &::before {
-//         @extend %line;
-//       }
-//     }
-//   }
+        .increm_num {
+          text-transform: uppercase;
+          font-size: 30px;
+          width: 8rem;
+          font-weight: bolder;
+          color: #5A5A5A;
+        }
 
-//   .increm_text {
-//     color: gray;
-//     text-transform: uppercase;
-//     font-size: 16px;
-//     width: 8rem;
-//   }
+        p {
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 17%;
+            right: -16%;
+            background-color: #22C0FF;
+            height: 10px;
+            width: 119%;
+            z-index: -1;
+          }
+        }
+
+      }
+
+    }
+  }
+
+
+}
+
+
 
 //   .increm_num {
 //     color: $primary-color;

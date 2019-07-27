@@ -3,6 +3,7 @@
     <img *ngIf="firstTemo" src="{{firstTemo.src}}" alt="{{firstTemo.alt}}" class="rounded-circle"
       style="width: 10rem; height:10rem;">
     <img *ngIf="temo" src="{{temo.src}}" alt="{{temo.alt}}" class="rounded-circle" style="width: 10rem; height:10rem;">
+    <img class="blue-shadow" src="../../assets/testimonials/eclipse-shadow.png" alt="blue-shadow">
   </div>
 
   <img src="../../assets/quotes.png" alt="quotes" class="quotes mr-3">
@@ -11,7 +12,7 @@
     <p>
       <span>{{firstTemo.profile}}</span>
       <br>
-      {{firstTemo.status}}
+      <span class="status">{{firstTemo.status}}</span>
     </p>
   </div>
   <div *ngIf="temo">
@@ -19,7 +20,7 @@
     <p>
       <span>{{temo.profile}}</span>
       <br>
-      {{temo.status}}
+      <span class="status">{{temo.status}}</span>
     </p>
   </div>
 </div>

@@ -1,6 +1,8 @@
-@function color($color-name){
-    @return map-get($colors, $color-name)
-};
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
+
+;
 
 
 
@@ -11,17 +13,13 @@ $secondary-font: 'Roboto';
 $paragraph-font: 'Poppins';
 
 // colors
-$colors :(
-    primary: #22C0FF,
-    lite-primary: rgb(117, 216, 255),
-    secondary: #675E69,
-    reverse: #FFFFFF,
-    secondary-bold: #5A5A5A,
-    backround-grey: #FAFAFA,
-    background-grey-bold : #F2F6F7,
-    dots-grey: rgb(209, 209, 209)
+$colors :(primary: #22C0FF,
+  lite-primary: rgb(117, 216, 255),
+  secondary: #675E69,
+  reverse: #FFFFFF,
+  secondary-bold: #5A5A5A,
+  backround-grey: #FAFAFA,
+  background-grey-bold : #F2F6F7,
+  dots-grey: rgb(209, 209, 209),
+  para-grey:#c0c0c0,
 );
-
-
-
-
