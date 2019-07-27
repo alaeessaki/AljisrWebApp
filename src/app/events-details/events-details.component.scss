@@ -1,63 +1,31 @@
-// @import "../../variables.scss";
+@import "../../variables.scss";
+@import "../../needs.scss";
+@import "../../extends.scss";
 
-// %line {
-//   content: "";
-//   position: absolute;
-//   width: 20%;
-//   height: 3px;
-//   background-color: #1592E6;
-//   bottom: 68%;
-//   left: 0%;
-// }
 
-// .description {
-//   width: 100%;
-//   margin-right: 10rem;
-
-//   h1 {
-//     color: color(primary);
-//     font-size: 24px;
-//     position: relative;
-//     margin-bottom: 1.5rem;
-//     padding-left: 8rem;
-//     width: 100%;
-//     margin-right: 0rem;
-
-//     &::before {
-//       @extend %line;
-//     }
-//   }
-
-//   p {
-//     color: $dark-grey;
-//   }
-// }
+.description {
+  width: 100%;
+  margin-right: 10rem;
+  p {
+    color: color(secondary);
+  }
+}
 
 
 
-// @media screen and (max-width:768px) {
+@media screen and (max-width:768px) {
 
-//   .description {
-//     h1 {
-//       font-size: 20px;
-//       padding-left: 10rem;
-//     }
+  .description {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
 
-//     p {
-//       font-size: 0.8rem;
-//     }
-//   }
-// }
-
-// @media screen and (max-width: 576px) {
-//   .description {
-//     h1 {
-//       font-size: 17px;
-//       padding-left: 7rem;
-//     }
-
-//     p {
-//       font-size: 0.7rem;
-//     }
-//   }
-// }
+@media screen and (max-width: 576px) {
+  .description {
+    p {
+      font-size: 0.7rem;
+    }
+  }
+}
