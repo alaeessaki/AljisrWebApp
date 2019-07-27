@@ -42,6 +42,12 @@ import { IlNousSoutiennentComponent } from './il-nous-soutiennent/il-nous-soutie
 import { CheckCardComponent } from './check-card/check-card.component';
 
 
+// httpClient
+import {HttpClientModule} from '@angular/common/http';
+
+// services 
+import {UsersService} from './users.service';
+
 
 
 
@@ -86,9 +92,10 @@ import { CheckCardComponent } from './check-card/check-card.component';
     ReactiveFormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    HttpClientModule
 
   ],
-  providers: [MatNativeDateModule],
+  providers: [MatNativeDateModule, UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

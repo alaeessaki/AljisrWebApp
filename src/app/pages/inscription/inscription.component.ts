@@ -12,4 +12,13 @@ export class InscriptionComponent implements OnInit {
   ngOnInit() {
   }
 
+  isClicked = false;
+  clicked() {
+    if (this.isClicked) {
+      this.isClicked = false;
+    }
+    else {
+      this.isClicked = true;
+    }
+  }
 }
