@@ -9,7 +9,6 @@ import {events} from '../declarations';
 })
 export class EventsDetailsComponent implements OnInit {
   @Input() event:events;
-  @Input() firstPost:events;
   constructor() { }
 
   ngOnInit() {

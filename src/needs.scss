@@ -1,0 +1,46 @@
+@import './variables.scss';
+
+// Needs
+.liner{
+    .liner-cont{
+        position: relative;
+        width: 30%;
+        .dot{
+            width:10px;
+            height: 10px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+        }
+        .line{
+            height: 4px;
+            width: 120px;
+            background-color: black;
+            position: absolute;
+            left: 30px;
+            top : 3.5px;
+            z-index: 2;
+        }
+        .rect{
+            height: 12px;
+            width: 60px;
+            background-color: color(primary);
+            position: absolute;
+            left : 80px;
+            z-index: 1;
+        }
+    }
+}
+
+.title {
+    .number {
+      @extend %number;
+    }
+
+    h1 {
+      font-family: $font-family;
+      font-size: 22px;
+      font-weight: bold;
+    }
+  }

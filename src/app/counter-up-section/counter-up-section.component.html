@@ -1,17 +1,20 @@
 <section class="aljisr_en_numero" id="countup_sec">
-  <div class="d-flex justify-content-center align-items-center">
-    <div class="title_container mt-5 mb-5 mt-4">
-      <h1>{{title}}</h1>
+  <div class="container">
+    <div class="title d-flex flex-row align-items-center">
+      <span class="number">04</span>
+      <h1 class="text-uppercase">Al jisr en chiffres ( 1999 - 2019 )</h1>
     </div>
   </div>
   <div class="container" id="counter">
-    <div class="row mb-4">
-
-      <div class="col-md-4 d-flex justify-content-center" *ngFor="let section of countSections">
-        <div class="increm_text mr-4">{{section.title}}</div>
-        <p class="increm_num counter" [attr.data-count]="section.countend">0</p>
+    <div class="row mb-4 d-flex align-items-center justify-content-center">
+      <div class="col-md-4 d-flex flex-column align-items-center" *ngFor="let section of countSections">
+        <img src="{{section.counticon}}" alt="counter-icons" width="35" height="35" class="mb-3">
+        <div class="increm_num d-flex justify-content-center">
+          <p class=" counter" [attr.data-count]="section.countend">0</p>
+          +
+        </div>
+        <div class="increm_text mr-4 mb-5">{{section.title}}</div>
       </div>
-
     </div>
   </div>
 </section>

@@ -2,13 +2,24 @@
   <div
     class="container p-1 pt-5 d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row justify-content-center">
 
-    <app-events-details [event]="selectedItem" [firstPost]="firstPost"></app-events-details>
+    <div class="events-details-container">
+
+      <app-events-details [event]="selectedItem"></app-events-details>
+
+      <div class="liner d-flex justify-content-end align-items-end">
+        <div class="liner-cont">
+          <div class="dot"></div>
+          <div class="line"></div>
+          <div class="rect" id="eventsRectangle"></div>
+        </div>
+      </div>
+    </div>
 
     <div class="dates d-flex flex-column">
       <mat-radio-group aria-label="Select an option" class="bigRadio">
         <table>
 
-          <tr class="date_container" *ngFor="let item of event" (click)="onSelect(item)">
+          <tr class="date_container" *ngFor="let item of event" (click)="onSelect(item); changed(item.id) ">
 
             <td class="check" align="center">
               <mat-radio-button [value]="item.id" color="primary" [checked]="item===selectedItem"></mat-radio-button>

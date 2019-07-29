@@ -1,7 +1,7 @@
 @import '../../variables.scss';
 
 footer {
-  background-color: $primary-color;
+  background-color: color(primary);
   color: white;
 
   .footer_container {

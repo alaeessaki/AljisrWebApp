@@ -1,7 +1,7 @@
 <!-- Loading bar -->
 <ng2-slim-loading-bar color="#1592E6" [height]="'3px'"></ng2-slim-loading-bar>
 <!-- Splash screen -->
-<app-splash-screen></app-splash-screen>
+<!-- <app-splash-screen></app-splash-screen> -->
 
 <!-- container -->
 <mat-sidenav-container [hasBackdrop]=true>
@@ -41,27 +41,22 @@
   <mat-sidenav-content id="body_container">
 
     <!-- Nav -->
-    <nav class="d-flex justify-content-between flex-direction-row align-items-center">
-
+    <!-- Route navbar -->
+    <nav class="d-flex justify-content-between flex-direction-row align-items-center" *ngIf="!itsHome">
       <!-- Menu button -->
       <div class="menu ml-3 d-flex justify-content-center align-items-center flex-direction-row">
         <mat-icon id="phone_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon"
           (click)="sidenav.toggle()">menu</mat-icon>
-        <mat-icon id="desktop_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon"
-          (click)="menuToggle()">menu
-        </mat-icon>
-        <mat-icon id="closed_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon"
-          (click)="menuToggle()">close
-        </mat-icon>
-        <!-- <img id="" src="../assets/close.png" (click)="menuToggle()"> -->
 
-        <a class="text-uppercase" (click)="menuToggle()">Menu</a>
+        <a class="text-uppercase" (click)="sidenav.toggle()">Menu</a>
+
       </div>
 
       <!-- Logo -->
-      <a routerLink="/home" (click)="chckMenu()"> <img src="../assets/Aljisr_logo.png"></a>
+      <a routerLink="/home"> <img src="../assets/Aljisr_logo.png"></a>
 
       <!-- Login -->
+
       <div class="login mr-3">
         <a routerLink="/Inscription" class="sinscrie">S'inscrire</a>
         <app-login></app-login>
@@ -74,24 +69,39 @@
         </div>
       </div>
 
-      <!-- Desktop menu -->
-      <div id="desktop_menu_container">
-        <!-- single row  -->
-        <div class="single_row d-flex flex-row flex-wrap">
-          <!-- Each link row -->
-          <div class="link_row" *ngFor="let item of Menu">
-            <!-- main link -->
-            <div class="link">
-              <a href="#">{{item.title.name}}</a>
-            </div>
-            <!-- sublinks -->
-            <div class="sub_link" *ngFor="let subitem of item.subtitle">
-              <a routerLink="/{{subitem.link}}" (click)="menuToggle()">{{subitem.name}}</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </nav>
+
+    <!-- Home Navbar -->
+    <nav class="homeNav d-flex justify-content-between flex-direction-row align-items-center" *ngIf="itsHome">
+        <!-- Menu button -->
+        <div class="homeMenu menu ml-3 d-flex justify-content-center align-items-center flex-direction-row">
+          <div class="btnContainer">
+              <mat-icon id="phone_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon"
+              (click)="sidenav.toggle()">menu</mat-icon>
+          </div>
+  
+          <a class="text-uppercase" (click)="sidenav.toggle()">Menu</a>
+  
+        </div>
+  
+        <!-- Logo -->
+        <a class="homeLogo" routerLink="/home"> <img src="../assets/Aljisr_logo.png"></a>
+  
+        <!-- Login -->
+  
+        <!-- <div class="login mr-3">
+          <a routerLink="/Inscription" class="sinscrie">S'inscrire</a>
+          <app-login></app-login>
+   -->
+          <!-- Mobile Login Version -->
+          <!-- <div class="account d-flex flex-column justify-content-center align-items-center">
+            <mat-icon id="phone_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon">
+              account_circle</mat-icon>
+            <a href="#">se connecter</a>
+          </div>
+        </div> -->
+  
+      </nav>
 
 
     <router-outlet></router-outlet>

@@ -30,7 +30,6 @@ import { TeamAljisrComponent } from './team-aljisr/team-aljisr.component';
 import { QueSoutenonsNousComponent } from './que-soutenons-nous/que-soutenons-nous.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { TestimonsComponent } from './testimons/testimons.component';
-import { TrophiesComponent } from './trophies/trophies.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { InscriStepperComponent } from './pages/inscription/inscri-stepper/inscri-stepper.component';
 
@@ -40,9 +39,18 @@ import { LoginComponent } from './login/login.component';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { MatNativeDateModule } from '@angular/material';
+import { IlNousSoutiennentComponent } from './il-nous-soutiennent/il-nous-soutiennent.component';
+import { CheckCardComponent } from './check-card/check-card.component';
 
 
+// httpClient
+import { HttpClientModule } from '@angular/common/http';
 
+// services 
+import { UsersService } from './users.service';
+import { TrophiesBinderComponent } from './trophies/trophies-binder.component';
+import { TrophieDetailsComponent } from './trophie-details/trophie-details.component';
+import { TrophiesPicsComponent } from './trophies-pics/trophies-pics.component';
 
 
 
@@ -67,11 +75,15 @@ import { MatNativeDateModule } from '@angular/material';
     QueSoutenonsNousComponent,
     HeroSectionComponent,
     TestimonsComponent,
-    TrophiesComponent,
     InscriptionComponent,
     InscriStepperComponent,
     LoginComponent,
     SplashScreenComponent,
+    IlNousSoutiennentComponent,
+    CheckCardComponent,
+    TrophiesBinderComponent,
+    TrophieDetailsComponent,
+    TrophiesPicsComponent,
   ],
   imports: [
     BrowserModule,
@@ -86,8 +98,10 @@ import { MatNativeDateModule } from '@angular/material';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
+    HttpClientModule
+
   ],
-  providers: [MatNativeDateModule],
+  providers: [MatNativeDateModule, UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

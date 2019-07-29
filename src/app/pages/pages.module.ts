@@ -6,12 +6,14 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { InscriStepperComponent } from './inscription/inscri-stepper/inscri-stepper.component';
 
 @NgModule({
-  declarations: [HomePageComponent, QuiSomeNousComponent, InscriptionComponent, InscriStepperComponent],
+  declarations: [
+    
+  ],
   imports: [
     CommonModule
   ],
   exports:[
-    HomePageComponent
+   
   ]
 })
 export class PagesModule { }

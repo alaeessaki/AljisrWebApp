@@ -5,9 +5,9 @@ carousel {
     img {
       width: 100%;
       height: auto;
-      -webkit-filter: brightness(40%);
+      -webkit-filter: brightness(50%);
       /* Safari 6.0 - 9.0 */
-      filter: brightness(40%);
+      filter: brightness(50%);
 
     }
   }
@@ -18,7 +18,7 @@ carousel {
 // carousel styling
 .carousel-indicators {
   position: absolute !important;
-  left: 63% !important;
+  left: 58% !important;
   top: 79.4% !important;
 }
 
@@ -31,7 +31,7 @@ carousel {
 }
 
 .carousel-indicators .active {
-  background-color: $primary-color;
+  background-color: color(primary);
 
 }
 
@@ -42,17 +42,19 @@ carousel {
 }
 
 .carousel-control-prev {
-  left: 76%;
+  left: 73%;
   width: 15px;
   height: 15px;
   cursor: pointer;
+  z-index: 3;
 }
 
 .carousel-control-next {
-  right: 13%;
+  right: 15%;
   width: 15px;
   height: 15px;
   cursor: pointer;
+  z-index: 3;
 }
 
 

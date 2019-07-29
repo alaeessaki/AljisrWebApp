@@ -1,35 +1,22 @@
 @import "../../variables.scss";
+@import "../../needs.scss";
+@import "../../extends.scss";
 
-%line {
-  content: "";
-  position: absolute;
-  width: 20%;
-  height: 3px;
-  background-color: #1592E6;
-  bottom: 68%;
-  left: 0%;
-}
 
 .description {
   width: 100%;
   margin-right: 10rem;
 
-  h1 {
-    color: $primary-color;
-    font-size: 24px;
-    position: relative;
-    margin-bottom: 1.5rem;
-    padding-left: 8rem;
-    width: 100%;
-    margin-right: 0rem;
-
-    &::before {
-      @extend %line;
-    }
+  p {
+    color: color(secondary);
+    font-size: 14px;
   }
 
-  p {
-    color: $dark-grey;
+  .liner {
+    .liner-cont {
+      right: 63px !important;
+      top: 22px !important;
+    }
   }
 }
 
@@ -38,11 +25,6 @@
 @media screen and (max-width:768px) {
 
   .description {
-    h1 {
-      font-size: 20px;
-      padding-left: 10rem;
-    }
-
     p {
       font-size: 0.8rem;
     }
@@ -51,11 +33,6 @@
 
 @media screen and (max-width: 576px) {
   .description {
-    h1 {
-      font-size: 17px;
-      padding-left: 7rem;
-    }
-
     p {
       font-size: 0.7rem;
     }

@@ -1,17 +1,28 @@
-<section class="que_setienons_nous">
-  <div class="single_row d-flex flex-column justify-content-center align-items-center">
-    <div class="title">
-      <h1 class="text-uppercase">Que soutenons nous ?</h1>
+<section class="QuiSoutenonsNous">
+    <div class="container">
+        <div class="title d-flex flex-row align-items-center">
+            <span class="number">01</span>
+            <h1 class="text-uppercase">Que Soutenons-nous</h1>
+        </div>
+        <div class="description">
+            <p>depuis 1999, nous contribuons à éduquer les enfants et à réinsérer les jeunes en difficulté</p>
+        </div>
+        <div class="cards-container row justify-content-center align-items-center">
+            <div class="theCard col-12 col-sm-6 col-md-4" *ngFor="let section of sections"
+                (mouseenter)="active(section)" [class.active]="section.active">
+                <div class="card-cont d-flex flex-column">
+                    <h1 class="text-uppercase">{{section.title}}</h1>
+                    <p>{{section.description}}</p>
+                    <img [src]="section.icon">
+                </div>
+            </div>
+        </div>
+        <div class="liner d-flex justify-content-end align-items-end">
+            <div class="liner-cont">
+                <div class="dot"></div>
+                <div class="line"></div>
+                <div class="rect" id="rectangle"></div>
+            </div>
+        </div>
     </div>
-
-    <div
-      class="cards_container d-flex flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row flex-wrap justify-content-center align-items-center">
-
-      <div class="card d-flex flex-column justify-content-center align-items-center" *ngFor="let section of sections">
-        <img [src]="section.image">
-        <h3>{{section.title}}</h3>
-        <p>{{section.description}}</p>
-      </div>
-    </div>
-  </div>
 </section>

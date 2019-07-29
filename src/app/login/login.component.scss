@@ -1,7 +1,7 @@
 @import '../../variables.scss';
 
 %login-style {
-  border: 1px solid $primary-color;
+  border: 1px solid color(primary);
   text-transform: uppercase;
   font-size: 14px;
   text-decoration: none;
@@ -9,8 +9,8 @@
 
 .seconnecter {
   @extend %login-style;
-  background-color: $primary-color;
-  color: $secondary-color;
+  background-color: color(primary);
+  color: color(reverse);
   padding: 2px 10px;
 
 }
@@ -28,7 +28,7 @@
       position: absolute;
       right: 15px;
       top: 10px;
-      color: $primary-color;
+      color: color(primary);
       opacity: 1;
       font-size: 2.8vw;
       font-weight: 400;
@@ -49,7 +49,7 @@
           left: 0;
           right: 0;
           bottom: 0;
-          background-color: $primary-color;
+          background-color: color(primary);
           opacity: 0.92;
         }
         .red-cont{
@@ -71,7 +71,7 @@
                 }
                 .mat-button{
                     background-color: white;
-                    color: $primary-color;
+                    color: color(primary);
                     font-weight: 600;
                     font-family: $font-family;
                     font-size: 12px;
@@ -96,7 +96,7 @@
           }
 
           .mat-form-field-empty.mat-form-field-label {
-            color: $primary-color;
+            color: color(primary);
           }
 
 
@@ -123,12 +123,12 @@
         }
 
           .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
-            color: $primary-color;
+            color: color(primary);
           }
 
         }
         .mat-button{
-            background-color: $primary-color;
+            background-color: color(primary);
             color: white;
             font-weight: 600;
             font-family: $font-family;

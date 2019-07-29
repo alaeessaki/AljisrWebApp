@@ -21,5 +21,4 @@ export class InscriptionComponent implements OnInit {
       this.isClicked = true;
     }
   }
-
 }

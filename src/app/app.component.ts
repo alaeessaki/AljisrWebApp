@@ -20,17 +20,35 @@ import * as $ from 'jquery';
 })
 export class AppComponent {
   title = 'aljisrwebapplication';
-
+  itsHome = false;
   constructor(private _loadingBar: SlimLoadingBarService, private _router: Router) {
     this._router.events.subscribe((event: Event) => {
       this.navigationInterceptor(event);
     });
+    this._router.events.subscribe(
+      (event: any) => {
+        if (event instanceof NavigationEnd) {
+          if( this._router.url == "/home"){
+            this.isHome();
+          }
+          else{
+            this.isHomeNt();
+          }
+          
+        }
+      }
+    );
   }
-
-  ngOnInit(){
+  isHome(){
+    this.itsHome=true;
+  }
+  isHomeNt(){
+    this.itsHome=false;
+  }
+  ngOnInit() {
     $(window).on("load", function () {
-      setTimeout(()=>{$(".splash-wrapper").fadeOut("slow")},2000);
-  });
+      setTimeout(() => { $(".splash-wrapper").fadeOut("slow") }, 2000);
+    });
   }
   private navigationInterceptor(event: Event): void {
     if (event instanceof NavigationStart) {
@@ -261,36 +279,5 @@ export class AppComponent {
       ]
     },
   ];
-  menuToggled = false
-  menuToggle() {
-    let desktop_menu = document.getElementById('desktop_menu_container');
-    let sitebody = document.getElementById('body_container');
-    let menubtn = document.getElementById('desktop_menu');
-    let menubtn2 = document.getElementById('closed_menu');
-    if (this.menuToggled == false) {
-      desktop_menu.style.display = "unset";
-      desktop_menu.style.opacity = "1";
-      sitebody.classList.add('noscroll');
-      sitebody.style.overflowY = "hidden";
-      menubtn.style.display = "none";
-      menubtn2.style.display = "flex";
-      this.menuToggled = true;
-    }
-    else {
-      desktop_menu.style.display = "none";
-      desktop_menu.style.opacity = "0";
-      sitebody.classList.remove('noscroll');
-      sitebody.style.overflowY = "auto";
-      menubtn.style.display = "flex";
-      menubtn2.style.display = "none";
-      this.menuToggled = false;
-    }
-  }
-
-  chckMenu() {
-    if (this.menuToggled) {
-      this.menuToggle();
-    }
-  }
 
 }

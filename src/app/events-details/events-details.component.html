@@ -1,6 +1,9 @@
 <div class="description">
-  <h1 class="text-uppercase">événements<br>à venir</h1>
-  <p class="text-left pr-5 " *ngIf="firstPost">{{firstPost.description}}
-  <p class="text-left pr-5 " *ngIf="event">{{event.description}}
-  </p>
+  <div class="container">
+    <div class="title d-flex flex-row align-items-center">
+      <span class="number">04</span>
+      <h1 class="text-uppercase">événements</h1>
+    </div>
+  </div>
+  <p class="text-left pr-5 " *ngIf="event">{{event.description}}</p>
 </div>

@@ -1,0 +1,41 @@
+@import '../../variables.scss';
+
+.trophies-details-wrapper {
+  width: 100%;
+  padding-left: 150px;
+
+  .trophies-details {
+    p {
+      font-family: $font-family;
+      font-size: 14px;
+      font-weight: 600;
+      color: #717171;
+      position: relative;
+
+      &::before {
+        content: "";
+        height: 55%;
+        width: 4px;
+        background-color: black;
+        position: absolute;
+        left: -50px;
+        top: -15px;
+
+      }
+    }
+  }
+}
+
+.Voir-plus {
+  margin-top: 55px;
+  margin-left: 150px;
+
+  a {
+    background-color: color(primary);
+    font-family: $font-family;
+    font-size: 13px;
+    text-decoration: none;
+    color: color(reverse);
+    padding: 15px 70px;
+  }
+}

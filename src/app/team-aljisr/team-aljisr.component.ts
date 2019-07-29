@@ -13,15 +13,16 @@ export class TeamAljisrComponent implements OnInit {
   ngOnInit() {
 
     const carouselSlide: HTMLElement = document.querySelector('.wrapper');
-    const carouselElements = document.querySelectorAll('.member');
+    const carouselElements = document.querySelectorAll('.wrapper .member');
+    const breakingCarousel: HTMLElement = document.querySelector('#stopping-carousel');
     const prevBtn = document.querySelector('#prevmem');
     const nextBtn = document.querySelector('#nextmem');
 
 
     let counter = 1;
-    let size = carouselElements[0].clientWidth + 24;
+    let size = carouselElements[0].clientWidth + 280;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-
+    console.log(size);
 
 
     function movingSl() {
@@ -39,15 +40,13 @@ export class TeamAljisrComponent implements OnInit {
 
     // stoping the carousel
 
-    carouselSlide.addEventListener('mouseenter', function test() {
+    breakingCarousel.addEventListener('mouseenter', function test() {
       clearInterval(DaCarousel);
-      console.log('mmm');
     });
 
 
-    carouselSlide.addEventListener('mouseleave', function toto() {
+    breakingCarousel.addEventListener('mouseleave', function toto() {
       DaCarousel = setInterval(movingSl, 2000);
-      console.log('sss');
     });
 
 

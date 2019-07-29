@@ -24,32 +24,33 @@ body {
 // materials styling
 
 $mat-myapp-primary: (50: #e3f2fc,
-  100: #b9def8,
-  200: #8ac9f3,
-  300: #5bb3ee,
-  400: #38a2ea,
-  500: #1592e6,
-  600: #128ae3,
-  700: #0f7fdf,
-  800: #0c75db,
-  900: #0663d5,
-  A100: #fdfeff,
-  A200: #cadfff,
-  A400: #97c1ff,
-  A700: #7eb1ff,
-  contrast: (50 : #0663d5,
-    100 : #0c75db,
-    200 : #0f7fdf,
-    300 : #128ae3,
-    400 : #1592e6,
-    500 : #38a2ea,
-    600 : #5bb3ee,
-    700 : #8ac9f3,
-    800 : #b9def8,
-    900 : #e3f2fc,
-    A100 : #7eb1ff,
-    A200 : #97c1ff,
-    A400 : #cadfff,
+  100: #BDECFF,
+  200: #91E0FF,
+  300: #64D3FF,
+  400: #43C9FF,
+  500: #22C0FF,
+  600: #1EBAFF,
+  700: #19B2FF,
+  800: #14AAFF,
+  900: #0C9CFF,
+  A100: #FFFFFF,
+  A200: #F6FBFF,
+  A400: #C3E4FF,
+  A500: #22c0ff,
+  A700: #22c0ff,
+  contrast: (50 : #0C9CFF,
+    100 : #0C9CFF,
+    200 : #14AAFF,
+    300 : #19B2FF,
+    400 : #1EBAFF,
+    500 : #22C0FF,
+    600 : #43C9FF,
+    700 : #64D3FF,
+    800 : #91E0FF,
+    900 : #BDECFF,
+    A100 : #22c0ff,
+    A200 : #22c0ff,
+    A400 : #C3E4FF,
     A700 : #fdfeff,
   ));
 
@@ -82,7 +83,7 @@ $mat-myapp-accent: (50: #ffff,
     A400 : #0000,
     A700 : #0000,
   ));
-$primary: mat-palette($mat-myapp-primary);
+$primary: mat-palette($mat-myapp-primary, A500);
 $accent: mat-palette($mat-myapp-accent);
 
 $theme: mat-light-theme($primary, $accent);
@@ -93,5 +94,5 @@ $theme: mat-light-theme($primary, $accent);
 
 // tooltip styling
 .mat-tooltip {
-  background-color: $primary-color;
+  background-color: color(primary);
 }
