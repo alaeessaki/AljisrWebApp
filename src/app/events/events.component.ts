@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { events } from '../declarations';
+
 @Component({
   selector: 'app-events',
   templateUrl: './events.component.html',

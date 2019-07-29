@@ -1,0 +1,10 @@
+<div class="trophie-pic-wrapper d-flex flex-column justify-content-center align-items-center" *ngIf="selectedTrophie">
+  <div class="trophie-pic-container">
+    <h1 class="trophie-title text-uppercase">{{selectedTrophie.name}}</h1>
+    <div class="img-wrapper">
+      <div class="img-container" [style.backgroundImage]="'url('+ selectedTrophie.img +')'"></div>
+      <img [src]="selectedTrophie.img" (load)="imgPreloadUrl = selectedTrophie.img " hidden>
+      <mat-spinner *ngIf="imgPreloadUrl !== selectedTrophie.img"></mat-spinner>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<section class="trophies-section">
+  <div class="trophies-wrapper">
+    <div class="trophies-opening">
+      <h1>Ensemble préparons <span class="title-spec">l'avenir</span></h1>
+    </div>
+    <div class="container">
+      <div class="title d-flex flex-row align-items-center">
+        <span class="number">07</span>
+        <h1 class="text-uppercase">trophés</h1>
+      </div>
+    </div>
+    <div class="trophies-binding-section d-flex flex-row">
+
+      <app-trophie-details [selectedTrophie]="selectedTrophie"></app-trophie-details>
+
+      <div class="trophies-indicators d-flex flex-row align-items-center">
+        <div class="indicator" *ngFor="let trophie of Trophies">
+          <div class="indicator-dot" (click)="onSelectTrophie(trophie); changed(trophie.id)"
+            [class.indicator-dot-selected]="trophie===selectedTrophie"></div>
+        </div>
+      </div>
+    </div>
+
+    <app-trophies-pics [selectedTrophie]="selectedTrophie"></app-trophies-pics>
+
+    <div class="liner d-flex justify-content-end align-items-end">
+      <div class="liner-cont">
+        <div class="dot"></div>
+        <div class="line"></div>
+        <div class="rect" id="trophieRectangle"></div>
+      </div>
+    </div>
+  </div>
+
+</section>

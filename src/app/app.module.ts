@@ -47,8 +47,9 @@ import {HttpClientModule} from '@angular/common/http';
 
 // services 
 import {UsersService} from './users.service';
-
-
+import { TrophiesBinderComponent } from './trophies/trophies-binder.component';
+import { TrophieDetailsComponent } from './trophie-details/trophie-details.component';
+import { TrophiesPicsComponent } from './trophies-pics/trophies-pics.component';
 
 
 
@@ -79,6 +80,9 @@ import {UsersService} from './users.service';
     SplashScreenComponent,
     IlNousSoutiennentComponent,
     CheckCardComponent,
+    TrophiesBinderComponent,
+    TrophieDetailsComponent,
+    TrophiesPicsComponent,
   ],
   imports: [
     BrowserModule,
