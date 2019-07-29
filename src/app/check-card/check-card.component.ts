@@ -15,12 +15,15 @@ export class CheckCardComponent implements OnInit {
   @Input() paragraph:string;
   @Input() btnText:string;
   @Input() modalId:string;
+  @Input() id;
+
 
   checked() {
-    var dot = document.getElementById('check-dot');
-    var dot_cont = document.getElementById('checker-cont');
-    var checker = document.getElementById('checker');
-    var checker_text = document.getElementById('checker-text');
+    console.log(this.id)
+    var dot = document.getElementById(`check-dot${this.id}`);
+    var dot_cont = document.getElementById(`checker-cont${this.id}`);
+    var checker = document.getElementById(`checker${this.id}`);
+    var checker_text = document.getElementById(`checker-text${this.id}`);
 
     dot.style.transition = "background-color .5s, left .5s";
     dot_cont.style.transition = "background-color .5s";
@@ -32,10 +35,10 @@ export class CheckCardComponent implements OnInit {
     dot.style.left = "20%";
   }
   checknt() {
-    var dot = document.getElementById('check-dot');
-    var dot_cont = document.getElementById('checker-cont');
-    var checker = document.getElementById('checker');
-    var checker_text = document.getElementById('checker-text');
+    var dot = document.getElementById(`check-dot${this.id}`);
+    var dot_cont = document.getElementById(`checker-cont${this.id}`);
+    var checker = document.getElementById(`checker${this.id}`);
+    var checker_text = document.getElementById(`checker-text${this.id}`);
     
     dot.style.transition = "background-color .5s, left .5s";
     dot_cont.style.transition = "background-color .5s";

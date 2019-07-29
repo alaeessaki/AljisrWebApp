@@ -17,7 +17,6 @@ export class TrophiesPicsComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.rect)
   }
 
   onSelectTrophie() {
