@@ -3,8 +3,16 @@
 .events {
   clip-path: polygon(0 0, 100% 0, 153% 100%, 0 84%);
   .container {
-    app-events-details {
+    .events-details-container{
       width: 45%;
+      app-events-details {
+        width: 100%;
+      }
+      .liner{
+        position: relative;
+        right: 65px;
+        top: 30px;
+      }
     }
 
     .dates {
@@ -142,8 +150,11 @@
     padding-left: 1.5rem !important;
     flex-direction: column !important;
 
-    app-events-details {
+    .events-details-container{
       width: 100%;
+      app-events-details {
+        width: 100%;
+      }
     }
   }
 

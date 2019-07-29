@@ -30,6 +30,7 @@ export class TrophiesBinderComponent implements OnInit {
   onSelectTrophie(trophie: Trophie): void {
     this.selectedTrophie = trophie;
   }
+  
   changed(id) {
     var rect = document.getElementById("trophieRectangle");
     rect.style.transition = "left 1s";
