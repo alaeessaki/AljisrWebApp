@@ -5,9 +5,6 @@ import { AppRoutingModule, routingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './materials';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatSelectModule } from '@angular/material/select';
 
 
 // ngx components
@@ -93,11 +90,7 @@ import { TrophiesPicsComponent } from './trophies-pics/trophies-pics.component';
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
     SlimLoadingBarModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule,
     HttpClientModule
 
   ],

@@ -9,8 +9,11 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatStepperModule } from '@angular/material/stepper';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
 
@@ -27,7 +30,11 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
         MatRadioModule,
         MatStepperModule,
         MatProgressBarModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatDatepickerModule,
+        MatSelectModule,
     ],
     exports: [
         MatButtonModule,
@@ -42,7 +49,11 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
         MatRadioModule,
         MatStepperModule,
         MatProgressBarModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatDatepickerModule,
+        MatSelectModule,
     ]
 })
 export class MaterialModule { }  

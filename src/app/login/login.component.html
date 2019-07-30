@@ -11,9 +11,10 @@
         <div class="red-cont">
           <h1>inscrivez vous</h1>
           <p>Aujourd'hui aggissons enssemble pour l'école de demain</p>
-          <div class="sinscrire-field d-flex flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row align-items-center">
-              <a href="#">Vous n'avez pas de compte ?</a>
-              <button mat-button class="indentifierBtn">Créer un profil</button>
+          <div
+            class="sinscrire-field d-flex flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row align-items-center">
+            <a routerLink="/Inscription" (click)="modalRef.hide()">Vous n'avez pas de compte ?
+              <button mat-button class="indentifierBtn">Créer un profil</button></a>
           </div>
         </div>
       </div>
@@ -28,7 +29,7 @@
           <mat-form-field appearance="legacy">
             <mat-label>Password</mat-label>
             <input matInput>
-            <mat-icon class="material-icons-outlined"  matPrefix>vpn_key</mat-icon>
+            <mat-icon class="material-icons-outlined" matPrefix>vpn_key</mat-icon>
           </mat-form-field>
           <button mat-button class="indentifierBtn">S'identifier</button>
           <a href="">Mot de passe oublié ?</a>

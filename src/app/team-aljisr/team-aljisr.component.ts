@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ShowOnDirtyErrorStateMatcher } from '@angular/material';
 
 @Component({
   selector: 'app-team-aljisr',
@@ -8,9 +9,13 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class TeamAljisrComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
 
+  }
+
+  x
   ngOnInit() {
+
 
     const carouselSlide: HTMLElement = document.querySelector('.wrapper');
     const carouselElements = document.querySelectorAll('.wrapper .member');
@@ -49,28 +54,15 @@ export class TeamAljisrComponent implements OnInit {
       DaCarousel = setInterval(movingSl, 2000);
     });
 
+    function showTeam() {
+      console.log("it's me");
+
+    }
+
+    showTeam();
 
 
-    // var entered = false;
 
-    // function isIn() {
-    //   if (entered == false) {
-    //     entered = true;
-    //   }
-    //   else {
-    //     entered = true;
-    //   }
-    // }
-    // carouselElements.forEach(element => {
-    //   element.addEventListener('mouseout', isIn);
-    // });
-    // if (entered == false) {
-    //   setInterval(movingSl, 2000);
-    // }
-    // else {
-    //   return;
-    // }
-    // console.log(clicked);
 
 
 

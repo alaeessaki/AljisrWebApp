@@ -22,7 +22,7 @@
           <tr class="date_container" *ngFor="let item of event" (click)="onSelect(item); changed(item.id) ">
 
             <td class="check" align="center">
-              <mat-radio-button [value]="item.id" color="primary" [checked]="item===selectedItem"></mat-radio-button>
+              <mat-radio-button [value]="item.id" color="primary" [checked]="item===selectedItem" #anotherMatRadio></mat-radio-button>
             </td>
 
             <td class="title_container" [class.selected]="item===selectedItem">
