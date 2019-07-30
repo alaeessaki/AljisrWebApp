@@ -1,12 +1,15 @@
 @import '../../variables.scss';
 @import '../../needs.scss';
 @import '../../extends.scss';
+@import '../../mediaqueries.scss';
 
 .QuiSoutenonsNous {
   .container {
     position: relative;
     padding-bottom: 2rem;
-    
+    @include xl-device{
+      max-width: 80%;
+    }
     .description {
       p {
         font-size: 14px;
@@ -20,11 +23,26 @@
     .cards-container {
       padding: 0px 10vw;
       padding-bottom: 4.5rem;
+      @include l-device{
+        padding: 0px 2vw;
+      }
+
       .active {
         background-color: color(primary) !important;
         height: 360px;
         transition: height .5s;
-
+        @include xl-device{
+          height: 440px;
+        }
+        @include laptop{
+          height: 330px;
+        }
+        @include tablet{
+          height: 260px;
+        }
+        @include tablet-sm{
+          height: 320px;
+        }
         .card-cont {
           h1 {
             color: color(reverse) !important;
@@ -36,6 +54,12 @@
           }
           img{
             top: 90% !important;
+            @include tablet{
+              top: 81% !important;
+            }
+            @include tablet-sm{
+              top: 74% !important;
+            }
           }
         }
 
@@ -48,13 +72,35 @@
           height: 320px;
           padding: 68px 13px;
           position: relative;
+          @include xl-device{
+            height: 400px;
+          }
+          @include laptop{
+            height: 290px;
+          }
+          @include tablet{
+            height: 260px;
+          }
+          @include tablet-sm{
+            height: 320px;
+          }
 
           h1 {
             font-family: $font-family;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 130%;
             color: color(primary);
             margin-bottom: 20px;
+            @include laptop{
+              font-size: 100%;
+            }
+            @include tablet{
+              font-size: 75%;
+            }     
+            @include tablet-sm{
+              font-size: 100%
+            }       
+
           }
 
           p {
@@ -62,13 +108,29 @@
             font-weight: 300;
             color: color(secondary);
             font-size: 13px;
+            @include laptop{
+              font-size: 72%;
+            }
+            @include tablet{
+              font-size: 60%;
+            }
+            @include tablet-sm{
+              font-size: 80%
+            }    
+            
           }
 
           img {
             position: absolute;
             right: 2%;
             top: 81%;
-            filter: grayscale(10%) !important;
+
+            @include laptop{
+              width: 15%;
+            }
+            @include tablet-sm{
+              width: 10% !important;
+            }
           }
         }
 
