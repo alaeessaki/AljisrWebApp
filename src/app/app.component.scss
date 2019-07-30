@@ -1,5 +1,5 @@
 @import "../variables.scss";
-
+@import "../mediaqueries.scss";
 
 
 //scroll background 
@@ -153,6 +153,14 @@ mat-sidenav-container {
         top: 18px;
         left: 65px;
 
+        @include tablet {
+          left: 15px;
+        }
+
+        @include mobile-md{
+          top: 10px;
+          left: 10px;
+        }
         .btnContainer {
           position: relative;
           background-color: color(reverse);
@@ -160,12 +168,35 @@ mat-sidenav-container {
           height: 42px;
           border-radius: 50%;
 
+          @include tablet {
+            width: 35px;
+            height: 35px;
+          }
+
+          @include mobile-md {
+            width: 30px;
+            height: 30px;
+
+          }
+
           #phone_menu {
             position: absolute;
             z-index: 2;
             color: color(secondary);
             top: 8px;
             left: 8px;
+
+            @include tablet {
+              margin-top: 0 !important;
+              font-size: 22px !important;
+              top: 7px !important;
+              left: 7px !important;
+            }
+            @include mobile-md{
+              font-size: 19px !important;
+              top: 6px !important;
+              left: 6px !important;
+            }
           }
         }
 
@@ -176,6 +207,10 @@ mat-sidenav-container {
           font-weight: 300;
           color: color(reverse);
           padding-top: 4px;
+
+          @include tablet {
+            font-size: 12px;
+          }
 
           &:hover {
             color: color(reverse);
@@ -195,6 +230,21 @@ mat-sidenav-container {
         width: 190px;
         height: 80px;
 
+        @include tablet {
+          width: 150px;
+          height: 60px;
+        }
+
+        @include tablet-sm {
+          width: 120px;
+          height: 50px;
+        }
+
+        @include mobile-md {
+          width: 95px;
+          height: 45px;
+        }
+
         &::before {
           content: "";
           display: block;
@@ -207,6 +257,23 @@ mat-sidenav-container {
           z-index: 2;
           left: 8px;
           top: 0;
+
+          @include tablet {
+            width: 150px;
+            height: 65px;
+          }
+
+          @include tablet-sm {
+            width: 120px;
+            height: 57px;
+          }
+
+          @include mobile-md {
+            width: 95px;
+            height: 50px;
+          }
+
+
         }
 
         img {
@@ -214,6 +281,24 @@ mat-sidenav-container {
           padding: 9px 3px;
           width: 86px;
           transform: skew(-3deg, 0deg);
+
+          @include tablet {
+            margin-left: 2.8rem;
+            padding: 5px 3px;
+            width: 65px;
+          }
+
+          @include tablet-sm {
+            margin-left: 2.2em;
+            padding: 4px 3px;
+            width: 55px;
+          }
+
+          @include mobile-md {
+            margin-left: 1.5em;
+            padding: 4px 4px;
+            width: 50px;
+          }
         }
       }
     }
