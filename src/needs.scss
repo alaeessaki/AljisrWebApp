@@ -11,6 +11,10 @@
       top: 50px;
     }
 
+    @include mobile-l {
+      right: 120px;
+    }
+
     .dot {
       width: 10px;
       height: 10px;
@@ -44,11 +48,35 @@
 .title {
   .number {
     @extend %number;
+
+    @include laptop {
+      font-size: 100px !important;
+    }
+
+    @include tablet {
+      font-size: 80px !important;
+    }
+
+    @include mobile-l {
+      font-size: 75px !important;
+    }
   }
 
   h1 {
     font-family: $font-family;
     font-size: 22px;
     font-weight: bold;
+
+    @include laptop {
+      font-size: 18px;
+    }
+
+    @include tablet {
+      font-size: 16px !important;
+    }
+
+    @include mobile-l {
+      font-size: 12px !important;
+    }
   }
 }

@@ -17,6 +17,18 @@
         position: relative;
         top: -30px;
         right: -60px;
+
+        @include laptop{
+          font-size: 13px;
+          top: -18px;
+        }
+        @include tablet{
+          font-size: 12px;
+        }
+        @include tablet-sm{
+          right: 0;
+          top: -10px;
+        }
       }
     }
 
@@ -25,6 +37,9 @@
       padding-bottom: 4.5rem;
       @include l-device{
         padding: 0px 2vw;
+      }
+      @include mobile-l{
+        padding: 0px 3vw;
       }
 
       .active {
@@ -99,6 +114,9 @@
             }     
             @include tablet-sm{
               font-size: 100%
+            }  
+            @include mobile-l{
+              font-size: 95%
             }       
 
           }
@@ -116,6 +134,9 @@
             }
             @include tablet-sm{
               font-size: 80%
+            }    
+            @include mobile-l{
+              font-size: 70%
             }    
             
           }
