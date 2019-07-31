@@ -10,15 +10,15 @@ import { ShowOnDirtyErrorStateMatcher } from '@angular/material';
 export class TeamAljisrComponent implements OnInit {
 
   constructor() {
+    this.showTeam();
 
   }
 
-  x
   ngOnInit() {
 
 
     const carouselSlide: HTMLElement = document.querySelector('.wrapper');
-    const carouselElements = document.querySelectorAll('.wrapper .member');
+    const carouselElements = document.querySelectorAll('.member');
     const breakingCarousel: HTMLElement = document.querySelector('#stopping-carousel');
     const prevBtn = document.querySelector('#prevmem');
     const nextBtn = document.querySelector('#nextmem');
@@ -54,16 +54,6 @@ export class TeamAljisrComponent implements OnInit {
       DaCarousel = setInterval(movingSl, 2000);
     });
 
-    function showTeam() {
-      console.log("it's me");
-
-    }
-
-    showTeam();
-
-
-
-
 
 
     //  btn listener 
@@ -81,5 +71,15 @@ export class TeamAljisrComponent implements OnInit {
     })
 
   }
+
+  // displaying the description of the team
+
+  showTeam() {
+    let teamstat = document.getElementsByClassName("card-profile")[0] as HTMLElement;
+
+    console.log(teamstat);
+
+  }
+
 
 }

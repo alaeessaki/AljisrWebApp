@@ -27,19 +27,25 @@
       .wrapper {
         width: 117rem;
 
-
         .member {
           align-self: flex-start;
           box-shadow: unset !important;
           position: relative;
           padding-right: 2rem;
 
+          .team-img {
+            position: relative;
+            bottom: 2rem;
+            height: 15rem;
+          }
+
 
           .card-profile {
             border: solid color(primary);
             position: absolute;
             background-color: white;
-            top: -2rem;
+            top: -4rem;
+            left: 4rem;
             padding: 2rem;
             z-index: -1;
           }
