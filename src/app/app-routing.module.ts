@@ -4,12 +4,15 @@ import { QuiSomeNousComponent } from './pages/qui-some-nous/qui-some-nous.compon
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { InscriStepperComponent } from './pages/inscription/inscri-stepper/inscri-stepper.component';
+import {ContactlistComponent} from './contactlist/contactlist.component';
 
 const routes: Routes = [
   { path: 'Inscription', component: InscriptionComponent },
   { path: 'QuiSommeNous', component: QuiSomeNousComponent },
-  { path: 'home', component: HomePageComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'contacts', component: ContactlistComponent },
+  // { path: 'home', component: HomePageComponent },
+  { path: '', component: HomePageComponent },
+  // { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -17,4 +20,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponent = [QuiSomeNousComponent, HomePageComponent, InscriptionComponent, InscriStepperComponent];
+export const routingComponent = [QuiSomeNousComponent, HomePageComponent, InscriptionComponent, InscriStepperComponent, ContactlistComponent];

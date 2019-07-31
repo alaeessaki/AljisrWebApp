@@ -28,7 +28,7 @@ export class AppComponent {
     this._router.events.subscribe(
       (event: any) => {
         if (event instanceof NavigationEnd) {
-          if( this._router.url == "/home"){
+          if( this._router.url == "/home" || this._router.url == "/"){
             this.isHome();
           }
           else{
