@@ -48,6 +48,7 @@ import { UsersService } from './users.service';
 import { TrophiesBinderComponent } from './trophies/trophies-binder.component';
 import { TrophieDetailsComponent } from './trophie-details/trophie-details.component';
 import { TrophiesPicsComponent } from './trophies-pics/trophies-pics.component';
+import { ContactlistComponent } from './contactlist/contactlist.component';
 
 
 
@@ -81,6 +82,7 @@ import { TrophiesPicsComponent } from './trophies-pics/trophies-pics.component';
     TrophiesBinderComponent,
     TrophieDetailsComponent,
     TrophiesPicsComponent,
+    ContactlistComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,16 @@
+<p>
+  contactlist 
+</p>
+<ul *ngIf="contacts">
+    <li *ngFor="let contact of contacts">
+      name : {{contact.first_name}}, lastName: {{contact.last_name}}, phone: {{contact.phone}}
+    </li>
+</ul>
+
+
+<!-- 
+<ul *ngIf="contacts">
+    <li *ngFor="let contact in contacts">
+      name : {{contact.first_name}} 
+    </li>
+</ul> -->
