@@ -44,10 +44,12 @@
 
       .active {
         background-color: color(primary) !important;
-        height: 360px;
         transition: height .5s;
         @include xl-device{
           height: 440px;
+        }
+        @include md-device{
+          height: 330px;
         }
         @include laptop{
           height: 330px;
@@ -84,11 +86,13 @@
         background-color: color(backround-grey);
         cursor: pointer;
         .card-cont {
-          height: 320px;
           padding: 68px 13px;
           position: relative;
           @include xl-device{
             height: 400px;
+          }
+          @include md-device{
+            height: 290px;
           }
           @include laptop{
             height: 290px;
@@ -103,9 +107,14 @@
           h1 {
             font-family: $font-family;
             font-weight: bold;
-            font-size: 130%;
+            font-size: 110%;
             color: color(primary);
             margin-bottom: 20px;
+
+            @include md-device{
+              
+            }
+
             @include laptop{
               font-size: 100%;
             }
@@ -125,7 +134,7 @@
             font-family: $font-family;
             font-weight: 300;
             color: color(secondary);
-            font-size: 13px;
+            font-size: 12px;
             @include laptop{
               font-size: 72%;
             }

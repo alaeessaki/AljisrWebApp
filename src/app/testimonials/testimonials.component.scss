@@ -1,14 +1,18 @@
 @import '../../variables.scss';
 @import '../../needs.scss';
 @import '../../extends.scss';
-
+@import '../../mediaqueries.scss';
 
 
 .testimonials {
-  padding-bottom: 7rem;
   position: relative;
 
   .testi-cont {
+    width: 100%;
+    padding-bottom: 5rem;
+    .testi-wrapper {
+      padding-left: 60px;
+    }
 
     .col-8 {
       .title-cont {
@@ -25,7 +29,7 @@
       font-family: $font-family;
       color: color(para-grey);
       font-weight: bold;
-      font-size: 14px;
+      font-size: 13px;
 
       span {
         color: color(primary);
@@ -42,6 +46,7 @@
 
     .testim-checker {
       position: absolute;
+      top: -10px;
       right: 0rem;
       width: 425px;
     }
@@ -54,32 +59,6 @@
 
   }
 
-  .temoirespo {
-    width: 47rem;
-
-    .mr-3 {
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        border-radius: 50%;
-        background-color: color(primary);
-        right: 20px;
-        top: 23px;
-        width: 9rem;
-        height: 9rem;
-        z-index: -1;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-      }
-    }
-  }
-
-
-
   // .blue-shadow {
   //   position: relative;
   //   right: 6px;
@@ -91,17 +70,37 @@
 
 
 
-  @media (max-width: 990px) {
-
+  @media (max-width: 1050px) {
+    .check-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding: 90px 38px !important;
+      .faire-un-dont {
+        margin-top: 30px !important;
+      }
+    }
     .testi-cont {
       display: flex;
       flex-direction: column !important;
       padding-top: 2rem;
+      padding-bottom: 0;
 
       .temoirespo {
         display: flex;
         flex-direction: column !important;
         align-items: center !important;
+        width: 100vw;
+      }
+
+      .testi-wrapper {
+        padding-left: 0 !important;
+
+        .liner {
+          margin-bottom: 36px;
+        }
       }
 
       .radios {
@@ -112,16 +111,39 @@
       .testim-checker {
         position: relative;
         margin-top: 5rem;
-
+        width: 100%;
       }
     }
-
-    // .blue-shadow {
-    //   right: 10px;
-    //   bottom: 138px;
-    // }
   }
 
+}
+
+.temoirespo {
+  width: 51vw;
+
+  .temoin-para-cont {
+    width: 65%;
+  }
+
+  .temoicont {
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      background-color: color(primary);
+      position: absolute;
+      right: 20px;
+      top: 23px;
+      z-index: -1;
+    }
+  }
 }
 
 
