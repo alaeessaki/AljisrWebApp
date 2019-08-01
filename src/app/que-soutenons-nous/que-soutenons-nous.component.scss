@@ -111,13 +111,13 @@
             }
             @include tablet{
               font-size: 75%;
-            }     
+            }
             @include tablet-sm{
               font-size: 100%
-            }  
+            }
             @include mobile-l{
               font-size: 95%
-            }       
+            }
 
           }
 
@@ -134,11 +134,11 @@
             }
             @include tablet-sm{
               font-size: 80%
-            }    
+            }
             @include mobile-l{
               font-size: 70%
-            }    
-            
+            }
+
           }
 
           img {

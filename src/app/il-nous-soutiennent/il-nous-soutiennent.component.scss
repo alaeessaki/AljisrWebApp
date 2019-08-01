@@ -8,7 +8,7 @@
   position: relative;
   padding-top: 60px;
 
-  .container { 
+  .titlecontainer {
     .title {
       padding-bottom: 28px;
 
@@ -16,6 +16,9 @@
         position: relative;
         z-index: 2;
       }
+    }
+    @include laptop{
+      padding-bottom: 205px;
     }
   }
 
@@ -38,6 +41,9 @@
     z-index: 1;
     right: 0;
     top: 65px;
+    @include laptop {
+      top: 230px;
+    }
 
     .left-row {
       background-color: color(background-grey-bold);
