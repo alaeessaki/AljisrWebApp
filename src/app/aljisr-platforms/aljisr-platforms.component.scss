@@ -33,7 +33,10 @@
           flex: 1;
           width: 50%;
           height: 100%;
-          background-color: color(secondary-bold);
+          background-image: url('../../assets/aljisrplatforms.png');
+          background-size: auto;
+          background-position: center;
+          background-repeat: no-repeat;
           position: relative;
 
           .top-col {
@@ -51,7 +54,7 @@
               flex: 1;
               width: 240px;
               height: 100px;
-              background-color: black;
+              background-color: #32373d;
 
               h1 {
                 color: white;
@@ -70,26 +73,29 @@
 
             .quotes {
               background-color: color(primary);
-
+              width: 250px;
+              height: 210px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
               h1 {
                 color: color(reverse);
                 font-size: 18px;
                 font-family: $paragraph-font;
                 font-weight: bolder;
-                padding: 5rem 4rem;
               }
             }
           }
 
           .bottom-col {
             position: absolute;
-            top: 303px;
+            top: 302.8px;
             right: 0;
 
             .associatifs,
             .parents {
               background-color: color(reverse);
-              padding: 50.5px 76.3px;
+              padding: 50.5px 76.4px;
               position: relative;
 
               a {
@@ -142,42 +148,51 @@
           }
 
           .team-aljisr {
+
             background-color: color(primary);
+
+            a {
+              color: color(reverse);
+            }
           }
         }
 
         .right-row {
-            position: absolute;
-            left: 150px;
-            top: 75px;
+          position: absolute;
+          left: 150px;
+          top: 75px;
+
           .contact {
             width: 176px;
-            background-color: black;
+            background-color: #32373d;
             padding: 2rem 0rem;
-                h4{
-                    padding-top: 1rem;
-                    padding-left: 1rem;
-                    width: 78%;
-                    color: color(reverse);
-                    font-size: 12px;
-                    font-family: $paragraph-font;
-                    font-weight: 600;
 
-                }
-                mat-icon{
-                    color: white;
-                    font-size: 32px;
-                    padding: 1rem;
-                    padding-bottom: 3rem;
-                }
-                .phone-number{
-                    color: color(reverse);
-                    font-size: 20px;
-                    font-family: $paragraph-font;
-                    font-weight: bolder;
-                    width: 55%;
-                    padding-left: 1rem;
-                }
+            h4 {
+              padding-top: 1rem;
+              padding-left: 1rem;
+              width: 78%;
+              color: color(reverse);
+              font-size: 12px;
+              font-family: $paragraph-font;
+              font-weight: 600;
+
+            }
+
+            mat-icon {
+              color: white;
+              font-size: 32px;
+              padding: 1rem;
+              padding-bottom: 3rem;
+            }
+
+            .phone-number {
+              color: color(reverse);
+              font-size: 20px;
+              font-family: $paragraph-font;
+              font-weight: bolder;
+              width: 55%;
+              padding-left: 1rem;
+            }
           }
         }
       }
