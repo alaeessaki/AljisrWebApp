@@ -36,18 +36,27 @@
           .team-img {
             position: relative;
             bottom: 2rem;
-            height: 15rem;
+            height: 12rem;
+            width: 16rem;
           }
 
 
           .card-profile {
-            border: solid color(primary);
+            border: solid #22C0FF;
             position: absolute;
             background-color: white;
-            top: -4rem;
+            top: -3.5rem;
             left: 4rem;
-            padding: 2rem;
+            font-size: 11px;
             z-index: -1;
+            height: 11rem;
+            width: 13.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+              display: none;
+            }
           }
         }
       }

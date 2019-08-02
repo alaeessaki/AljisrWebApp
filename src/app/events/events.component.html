@@ -1,6 +1,6 @@
 <section class="events">
   <div
-    class="container p-1 pt-5 d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row justify-content-center">
+    class="container events-cont p-1 pt-5 d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row justify-content-center">
 
     <div class="events-details-container">
 
@@ -27,7 +27,7 @@
 
             <td class="title_container" [class.selected]="item===selectedItem">
               <h6 class="date">{{item.date | uppercase}}</h6>
-              <h2 class="title">{{item.title | uppercase}}</h2>
+              <h2 class="eventstitle">{{item.title | uppercase}}</h2>
             </td>
 
             <td class="chose_container">

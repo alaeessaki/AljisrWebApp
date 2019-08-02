@@ -1,15 +1,18 @@
 @import "../../variables.scss";
 @import "../../needs.scss";
 @import "../../extends.scss";
-
+@import '../../mediaqueries.scss';
 
 .description {
   width: 100%;
   margin-right: 10rem;
-
   p {
     color: color(secondary);
     font-size: 14px;
+    padding-left: 3%;
+    @include laptop{
+      padding-left: 5px;
+    }
   }
 
   .liner {

@@ -1,7 +1,6 @@
 @import "../../variables.scss";
 
 .events {
-  clip-path: polygon(0 0, 100% 0, 153% 100%, 0 84%);
   .container {
     .events-details-container{
       width: 45%;
@@ -61,7 +60,7 @@
               color: color(secondary);
             }
 
-            .title {
+            .eventstitle {
               font-size: 14px;
               color: color(secondary);
             }
@@ -185,7 +184,7 @@
       font-size: 12px;
     }
 
-    .title {
+    .eventstitle {
       font-size: 14px;
     }
   }
@@ -200,7 +199,7 @@
       font-size: 10px;
     }
 
-    .title {
+    .eventstitle {
       font-size: 12px;
     }
   }
@@ -248,8 +247,15 @@
       font-size: 8px;
     }
 
-    .title {
+    .eventstitle {
       font-size: 10px;
     }
   }
+}
+
+@media screen and (min-width:1459px){
+  .events .events-cont {
+      margin-left: 10%;
+  }
+
 }

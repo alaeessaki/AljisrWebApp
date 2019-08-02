@@ -1,79 +1,124 @@
 @import '../../variables.scss';
 @import '../../needs.scss';
 @import '../../extends.scss';
+@import '../../mediaqueries.scss';
 
+.dernier-nouvelles {
+  .news-container {
+    padding-left: 10%;
+    padding-right: 25%;
+    padding-bottom: 100px;
+    padding-top: 2%;
+    .new-card {
+      position: relative;
 
-.dernier-nouvelles{
-    .news-container{
-        padding-left: 10%;
-        padding-right: 25%;
-        padding-bottom: 100px;
-        .new-card{
+      .new-text {
+        position: absolute;
+        left: 70%;
+        top: 8%;
+        background-color: color(reverse);
+        border-bottom: 4px solid color(primary);
+        height: 100%;
+        width: 20vw;
+
+        .text-container {
+          word-wrap: break-word;
+          padding: 35px;
+
+          @include laptop{
+            padding: 27px;
+          }
+          height: 100%;
+          width: 20vw;
+
+          h1 {
+            font-size: 18px;
+            font-family: $font-family;
+            font-weight: bold;
+            color: #596059;
             position: relative;
-            .new-text{
-                padding: 35px;
-                height: 100%;
-                position: absolute;
-                left: 70%;
-                right: -70%;
-                top: 8%;
-                background-color: color(reverse);
-                border-bottom: 4px solid color(primary);
-                h1{
-                    font-size: 18px;
-                    font-family: $font-family;
-                    font-weight: bold;
-                    color: #596059;
-                    position: relative;
-                    padding-bottom: 5px;
-                    &::before{
-                        content: "";
-                        position: absolute;
-                        height: 10px;
-                        width: 10px;
-                        background-color: color(primary);
-                        left: -20px;
-                        bottom :26px;
-                        border-radius: 50%;
-                    }
-                    
-                }
-                p{
-                    font-size: 12px;
-                    color : #596059;
-                    font-weight: $font-family;
-                }
-                a{
-                    font-size: 13px;
-                    font-family: $font-family;
-                    text-decoration: none;
-                    color: #596059;
-                    font-weight: bold;
-                    padding-top: 5px;
-                }
+            padding-bottom: 5px;
+
+            @include laptop{
+                font-size: 14px;
             }
-        }
-    }
-    .voir-plus{
-        float: right;
-        margin-right: 8%;
-        a{
-            text-decoration: none;
-            color: color(reverse);
-            background-color: color(primary);
+
+            &::before {
+              content: "";
+              position: absolute;
+              height: 10px;
+              width: 10px;
+              background-color: color(primary);
+              left: -20px;
+              bottom: 26px;
+              border-radius: 50%;
+
+              @include laptop{
+                height: 8px;
+                width: 8px;
+                left: -18px;
+                bottom: 22px;
+              }
+            }
+
+          }
+
+          .text-cont {
+            height: 68%;
+
+            p {
+              font-size: 12px;
+              color: #596059;
+              font-weight: $font-family;
+              height: 100%;
+              width: 100%;
+              overflow: hidden;
+
+              @include laptop{
+                  font-size: 10px;
+              }
+            }
+          }
+
+          a {
             font-size: 13px;
             font-family: $font-family;
-            padding: 15px 70px;
-            position: relative;            
-            &::before{
-                content: "";
-                position: absolute;
-                width: 130%;
-                height: 3px;
-                background-color: color(primary);
-                left: -100%;
-                bottom: 40%;
+            text-decoration: none;
+            color: #596059;
+            font-weight: bold;
+            padding-top: 5px;
+            @include laptop{
+                font-size: 11px;
+                padding-top: 8px;
             }
+          }
         }
+      }
     }
+  }
+
+  .voir-plus {
+    float: right;
+    margin-right: 8%;
+
+    a {
+      text-decoration: none;
+      color: color(reverse);
+      background-color: color(primary);
+      font-size: 13px;
+      font-family: $font-family;
+      padding: 15px 70px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 130%;
+        height: 3px;
+        background-color: color(primary);
+        left: -100%;
+        bottom: 40%;
+      }
+    }
+  }
 }
