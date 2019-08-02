@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { element } from 'protractor';
+
 
 @Component({
   selector: 'app-aljisr-platforms',
@@ -13,7 +13,7 @@ export class AljisrPlatformsComponent implements OnInit {
   constructor() {
    
   }
-  quotes:Array<string> = ["Qui lit pense \nQui pense raisonne", "blalala \nblablabla"]
+  quotes:Array<string> = ["Qui lit pense \nQui pense raisonne", "this an other \n quotes", "this is the \n quote n°3"]
 
   index = 0;
   currentQuote = this.quotes[this.index];

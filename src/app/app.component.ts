@@ -47,7 +47,7 @@ export class AppComponent {
   }
   ngOnInit() {
     $(window).on("load", function () {
-      setTimeout(() => { $(".splash-wrapper").fadeOut("slow") }, 2000);
+      setTimeout(() => { $(".splash-wrapper").fadeOut("slow") },0);
     });
   }
   private navigationInterceptor(event: Event): void {
