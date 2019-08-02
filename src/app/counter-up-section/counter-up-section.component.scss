@@ -7,6 +7,7 @@
 
 .aljisr_en_numero {
   font-family: $font-family;
+  margin-bottom: 90px;
   #counter {  
     .row {
       .col-md-4 {
@@ -36,6 +37,30 @@
 
       }
 
+    }
+  }
+  .voir-plus {
+    float: right;
+    margin-right: 8%;
+
+    a {
+      text-decoration: none;
+      color: color(reverse);
+      background-color: color(primary);
+      font-size: 13px;
+      font-family: $font-family;
+      padding: 15px 70px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 130%;
+        height: 3px;
+        background-color: color(primary);
+        left: -100%;
+        bottom: 40%;
+      }
     }
   }
 

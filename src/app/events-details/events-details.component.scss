@@ -9,6 +9,7 @@
   p {
     color: color(secondary);
     font-size: 14px;
+    padding-left: 3%;
     @include laptop{
       padding-left: 5px;
     }

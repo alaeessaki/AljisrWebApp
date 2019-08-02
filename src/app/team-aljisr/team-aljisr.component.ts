@@ -25,7 +25,7 @@ export class TeamAljisrComponent implements OnInit {
 
 
     let counter = 1;
-    let size = carouselElements[0].clientWidth + 280;
+    let size = carouselElements[0].clientWidth +20;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
     console.log(size);
 
