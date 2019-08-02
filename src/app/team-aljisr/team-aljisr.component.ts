@@ -14,6 +14,7 @@ export class TeamAljisrComponent implements OnInit {
 
   }
 
+
   ngOnInit() {
 
 
