@@ -14,15 +14,19 @@
           font-size: 16px;
           font-weight: 500;
           color: color(ara-grey-bold);
-          @include tablet{
-            padding: 6vw 9vw;
-            font-size: 14px;
+
+          @include tablet {
+            padding: 5vw 6vw;
           }
         }
       }
     }
 
-    .aljisr-platforms-container {
+    .aljisr-platforms-container-desktop {
+      @include tablet {
+        display: none;
+      }
+
       padding-bottom: 6rem;
       background-color: color(background-grey-bold);
 
@@ -33,7 +37,8 @@
         display: flex;
         padding-top: 4rem;
         padding-left: 10rem;
-        @include laptop-breakpoint{
+
+        @include laptop-breakpoint {
           padding-left: 9vw;
         }
 
@@ -86,6 +91,7 @@
               display: flex;
               justify-content: center;
               align-items: center;
+
               h1 {
                 color: color(reverse);
                 font-size: 18px;
@@ -169,7 +175,8 @@
           position: absolute;
           left: 150px;
           top: 75px;
-          @include laptop-breakpoint{
+
+          @include laptop-breakpoint {
             right: 29px;
           }
 
@@ -208,6 +215,45 @@
         }
       }
 
+    }
+
+    .aljisr-platforms-container-mobile{
+      background-color: color(background-grey-bold);
+      .plat-opening{
+        background-color: color(primary);
+        padding: 2rem;
+        margin: 0vw 6vw;
+        h1{
+          font-size: 18px;
+          font-family: $paragraph-font;
+          font-weight: bolder;
+          text-align: center;
+          color: color(reverse);
+        }
+      }
+      .plat-container{
+        margin: 0vw 5.6vw;
+        .single-col {
+          background-color: color(reverse);
+          .plat{
+            position: relative;
+            width: 50%;
+            height: 30vw;
+            border-right: 2px solid color(background-grey-bold);
+            border-bottom: 2px solid color(background-grey-bold);
+            a{
+              position: absolute;
+              top: 35%;
+              left: 8%;
+              text-decoration: none;
+              color: black;
+              font-family: $paragraph-font;
+              font-weight: bolder;
+              font-size: 17px;
+            }
+          }
+        }
+      }
     }
   }
 }

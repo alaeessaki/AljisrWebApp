@@ -128,13 +128,15 @@
     position: relative;
     top: 35px;
     right: 45px;
-
     @include laptop {
       top: -90px;
     }
     @include laptop-breakpoint{
       top: 0px;
       left: -34px;
+    }
+    @include tablet{
+      display: none !important;
     }
   }
 

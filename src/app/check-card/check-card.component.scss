@@ -22,7 +22,7 @@
       flex-direction: row;
       width: 69%;
       @include tablet{
-        width: 57%;
+        width: 100%;
       }
       margin-top: 60px;
       cursor: pointer;
@@ -68,6 +68,7 @@
         padding-left: 87px;
         @include tablet{
           font-size: 15px;
+          padding-left: 15vw;
         }
       }
     }
