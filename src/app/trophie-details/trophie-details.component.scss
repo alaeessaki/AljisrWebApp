@@ -13,6 +13,9 @@
     @include tablet{
       height: 45vw;
     }
+    @include tablet-sm{
+      height: 25vw;
+    }
     &::before {
       content: "";
       height: 55%;
@@ -44,6 +47,9 @@
   width: 100%;
   @include laptop{
     margin-top: 160px;
+  }
+  @include tablet-sm{
+    margin-top: 60px;
   }
   a {
     background-color: color(primary);

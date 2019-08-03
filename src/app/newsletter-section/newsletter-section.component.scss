@@ -27,6 +27,9 @@
       @include laptop-breakpoint{
         width: 70%;
       }
+      @include tablet-sm{
+        width: 100%;
+      }
       .mat-form-field {
         width: 100%;
         position: relative;

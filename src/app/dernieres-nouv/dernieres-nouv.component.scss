@@ -27,6 +27,9 @@
           width: 30vw !important;
           height: 45vw !important;
         }
+        @include tablet-sm{
+          height: 50vw;
+        }
       }
       .new-text {
         position: absolute;
@@ -58,6 +61,9 @@
 
             @include laptop{
                 font-size: 14px;
+            }
+            @include tablet-sm{
+              font-size: 12px;
             }
 
             &::before {
@@ -93,6 +99,9 @@
 
               @include laptop{
                   font-size: 10px;
+              }
+              @include tablet-sm{
+                font-size: 9px;
               }
             }
           }

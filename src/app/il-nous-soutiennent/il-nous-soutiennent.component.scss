@@ -76,6 +76,9 @@
           padding-right: 140px;
           margin-left: 36px;
           margin-bottom: 30px;
+          @include tablet-sm{
+            padding-right: 60px;
+          }
 
           a {
             color: color(primary);
@@ -85,6 +88,9 @@
             text-decoration: none;
             @include tablet{
               font-size: 14px;
+            }
+            @include tablet-sm{
+              font-size: 13px; 
             }
           }
         }

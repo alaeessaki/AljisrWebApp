@@ -10,6 +10,10 @@
   @include laptop-breakpoint{
     position: unset;
   }
+  @include tablet-sm{
+    width: 100%;
+    margin-top: 3rem;
+  }
 
   .trophie-pic-container {
     background-color: color(reverse);
@@ -27,6 +31,10 @@
       @include tablet{
         font-size: 16px;
       }
+      @include tablet{
+        text-align: center;
+        padding: 2rem 3rem;
+      }
       &::before {
         content: "";
         height: 5px;
@@ -35,6 +43,9 @@
         position: absolute;
         bottom: 0;
         left: 16%;
+        @include tablet-sm{
+          left: 40%;
+        }
       }
 
     }
@@ -47,6 +58,9 @@
         width: 90%;
         height: 90%;
         margin: auto;
+      }
+      @include tablet-sm{
+        width: 70%;
       }
       .img-container {
         width: 100%;

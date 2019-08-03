@@ -41,6 +41,10 @@
       @include mobile-l{
         padding: 0px 3vw;
       }
+      @include tablet-sm{
+        padding: 0px 6vw !important;
+      }
+
 
       .active {
         background-color: color(primary) !important;
@@ -164,6 +168,13 @@
           }
         }
 
+      }
+    }
+    .liner{
+      .liner-cont{
+        @include tablet-sm{
+          right: 30%;
+        }
       }
     }
   }

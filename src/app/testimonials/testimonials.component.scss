@@ -12,6 +12,14 @@
     padding-bottom: 5rem;
     .testi-wrapper {
       padding-left: 60px;
+
+      .liner{
+        .liner-cont{
+          @include tablet-sm{
+            right: 40%;
+          }
+        }
+      }
     }
 
     .col-8 {
@@ -30,16 +38,24 @@
       color: color(para-grey);
       font-weight: bold;
       font-size: 13px;
-
+      @include tablet-sm{
+        font-size: 12px;
+      }
       span {
         color: color(primary);
         font-weight: bold;
         font-size: 15px;
+        @include tablet-sm{
+          font-size: 13px;
+        }
       }
 
       .status {
         font-size: 16px;
         color: #bebebe;
+        @include tablet-sm{
+          font-size: 13px;
+        }
       }
 
     }
@@ -159,6 +175,10 @@
     height: 11px !important;
     transition: border-color ease 280ms;
     width: 11px !important;
+    @include tablet-sm{
+      width: 9px !important;
+      height: 9px !important;
+    }
     border-width: 2px !important;
     border-style: none !important;
     border-radius: 50% !important;
@@ -174,6 +194,10 @@
     left: -6px !important;
     top: -6px !important;
     width: 23px !important;
+    @include tablet-sm{
+      height: 21px !important;
+      width: 21px !important;
+    }
   }
 
   .mat-radio-button .mat-radio-ripple {

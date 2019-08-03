@@ -13,6 +13,9 @@
       @include tablet{
         font-size: 17px;
       }
+      @include tablet-sm{
+        font-size: 2.5vw;
+      }
     }
 
     .faire-un-dont {
@@ -69,6 +72,10 @@
         @include tablet{
           font-size: 15px;
           padding-left: 15vw;
+        }
+        @include tablet-sm{
+          padding-left: 14vw;
+          font-size: 2.3vw;
         }
       }
     }

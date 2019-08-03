@@ -18,6 +18,10 @@
           @include tablet {
             padding: 5vw 6vw;
           }
+          @include tablet-sm{
+            padding: 7vw 10vw;
+            font-size: 13px;
+          }
         }
       }
     }
