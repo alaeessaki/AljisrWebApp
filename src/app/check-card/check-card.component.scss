@@ -1,4 +1,5 @@
 @import '../../variables.scss';
+@import '../../mediaqueries.scss';
 
 .check-card {
     background-color: color(primary);
@@ -9,6 +10,9 @@
       color: color(reverse);
       font-size: 20px;
       font-weight: bold;
+      @include tablet{
+        font-size: 17px;
+      }
     }
 
     .faire-un-dont {
@@ -17,6 +21,9 @@
       display: flex;
       flex-direction: row;
       width: 69%;
+      @include tablet{
+        width: 57%;
+      }
       margin-top: 60px;
       cursor: pointer;
       position: relative;
@@ -59,6 +66,9 @@
         font-weight: bold;
         padding: 6px 0px;
         padding-left: 87px;
+        @include tablet{
+          font-size: 15px;
+        }
       }
     }
   }

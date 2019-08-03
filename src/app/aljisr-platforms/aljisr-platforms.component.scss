@@ -1,4 +1,5 @@
 @import '../../variables.scss';
+@import '../../mediaqueries.scss';
 
 .aljisr-platforms-section {
   .aljisr-platforms-wrapper {
@@ -13,6 +14,10 @@
           font-size: 16px;
           font-weight: 500;
           color: color(ara-grey-bold);
+          @include tablet{
+            padding: 6vw 9vw;
+            font-size: 14px;
+          }
         }
       }
     }
@@ -28,6 +33,9 @@
         display: flex;
         padding-top: 4rem;
         padding-left: 10rem;
+        @include laptop-breakpoint{
+          padding-left: 9vw;
+        }
 
         .image-background {
           flex: 1;
@@ -161,6 +169,9 @@
           position: absolute;
           left: 150px;
           top: 75px;
+          @include laptop-breakpoint{
+            right: 29px;
+          }
 
           .contact {
             width: 176px;

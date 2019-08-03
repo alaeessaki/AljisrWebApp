@@ -1,7 +1,7 @@
 @import '../../variables.scss';
 @import '../../needs.scss';
 @import '../../extends.scss';
-
+@import '../../mediaqueries.scss';
 
 
 
@@ -11,13 +11,19 @@
   #counter {  
     .row {
       .col-md-4 {
-
+        img{
+          width: 30px;
+          height: 30px;
+        }
         .increm_num {
           text-transform: uppercase;
           font-size: 30px;
           width: 8rem;
           font-weight: bolder;
           color: #5A5A5A;
+          @include tablet{
+            font-size: 25px;
+          }
         }
 
         p {
@@ -50,6 +56,9 @@
       font-size: 13px;
       font-family: $font-family;
       padding: 15px 70px;
+      @include tablet{
+        padding: 10px 60px;
+      }
       position: relative;
 
       &::before {

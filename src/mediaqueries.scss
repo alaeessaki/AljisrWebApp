@@ -3,6 +3,7 @@ $xl-device: 2560px;
 $l-device: 1440px;
 $md-device : 1300px;
 $laptop: 1024px;
+$laptop-breakpoint: 992px;
 $tablet: 768px;  
 $tablet-sm: 575px;
 $mobile-l: 425px;
@@ -29,6 +30,11 @@ $mobile-s: 320px;
 
 @mixin laptop {
     @media (max-width : #{$laptop}) {
+        @content;
+    }
+}
+@mixin laptop-breakpoint {
+    @media (max-width : #{$laptop-breakpoint}) {
         @content;
     }
 }

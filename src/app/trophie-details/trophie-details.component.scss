@@ -14,6 +14,9 @@
       font-weight: 600;
       color: #717171;
       position: relative;
+      @include tablet{
+        font-size: 13px;
+      }
 
       &::before {
         content: "";
@@ -32,6 +35,7 @@
 .Voir-plus {
   margin-top: 55px;
   margin-left: 150px;
+  width: 100%;
   @include laptop{
     margin-top: 160px;
   }
@@ -42,5 +46,8 @@
     text-decoration: none;
     color: color(reverse);
     padding: 15px 70px;
+    @include laptop-breakpoint{
+      padding: 1.5vw 7vw;
+    }
   }
 }

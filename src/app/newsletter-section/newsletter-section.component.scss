@@ -1,4 +1,5 @@
 @import "../../variables.scss";
+@import "../../mediaqueries.scss";
 
 .newsletter-sec {
   .news-wrapper {
@@ -23,7 +24,9 @@
 
     .form-wrapper {
       width: 40%;
-
+      @include laptop-breakpoint{
+        width: 70%;
+      }
       .mat-form-field {
         width: 100%;
         position: relative;

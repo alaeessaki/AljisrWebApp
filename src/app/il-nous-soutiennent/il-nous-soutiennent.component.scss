@@ -20,7 +20,16 @@
     @include laptop{
       padding-bottom: 205px;
     }
+    @include tablet{
+      padding-bottom: 0;
+    }
+  } 
+  .bg-dots{
+    @include tablet{
+      display: none !important;
+    }
   }
+
 
   .rendez-vous-solidaires {
     background-color: color(primary);
@@ -32,6 +41,9 @@
       font-family: $paragraph-font;
       font-weight: bold;
       margin: 0;
+      @include tablet{
+        font-size: 15px;
+      }
     }
   }
 
@@ -43,6 +55,11 @@
     top: 144px;
     @include laptop {
       top: 230px;
+    }
+    @include tablet{
+      position: unset;
+      width: 100%;
+      margin-bottom: 50px;
     }
 
     .left-row {
@@ -66,7 +83,9 @@
             font-family: $paragraph-font;
             font-weight: bolder;
             text-decoration: none;
-
+            @include tablet{
+              font-size: 14px;
+            }
           }
         }
       }

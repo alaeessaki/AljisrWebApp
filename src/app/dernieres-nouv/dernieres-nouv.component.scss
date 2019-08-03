@@ -9,9 +9,25 @@
     padding-right: 25%;
     padding-bottom: 100px;
     padding-top: 2%;
+    @include tablet{
+      flex-direction: column !important;
+       padding-left: 0;
+       padding-top: 0;
+    }
     .new-card {
       position: relative;
-
+      &:first-child{
+        @include tablet{
+          margin-bottom: 90px;
+          margin-top: 20px;
+        }
+      }
+      .img-new-cont{
+        @include tablet{
+          width: 30vw !important;
+          height: 45vw !important;
+        }
+      }
       .new-text {
         position: absolute;
         left: 70%;
@@ -20,17 +36,18 @@
         border-bottom: 4px solid color(primary);
         height: 100%;
         width: 20vw;
-
+        @include tablet{
+          width: 30vw;
+        }
         .text-container {
           word-wrap: break-word;
           padding: 35px;
-
+          height: 100%;
+          width: 100%;
           @include laptop{
             padding: 27px;
           }
-          height: 100%;
-          width: 20vw;
-
+        
           h1 {
             font-size: 18px;
             font-family: $font-family;
@@ -108,6 +125,9 @@
       font-size: 13px;
       font-family: $font-family;
       padding: 15px 70px;
+      @include tablet{
+        padding: 10px 60px;
+      }
       position: relative;
 
       &::before {

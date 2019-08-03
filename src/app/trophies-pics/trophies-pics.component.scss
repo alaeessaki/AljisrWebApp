@@ -1,4 +1,5 @@
 @import '../../variables.scss';
+@import '../../mediaqueries.scss';
 
 .trophie-pic-wrapper {
   position: absolute;
@@ -6,6 +7,9 @@
   top: 15px;
   width: 350px;
   height: 500px;
+  @include laptop-breakpoint{
+    position: unset;
+  }
 
   .trophie-pic-container {
     background-color: color(reverse);
@@ -20,7 +24,9 @@
       position: relative;
       padding: 2rem 2rem;
       letter-spacing: 1px;
-
+      @include tablet{
+        font-size: 16px;
+      }
       &::before {
         content: "";
         height: 5px;
@@ -37,7 +43,11 @@
       padding: 2rem;
       width: 100%;
       height: 100%;
-
+      @include tablet{
+        width: 90%;
+        height: 90%;
+        margin: auto;
+      }
       .img-container {
         width: 100%;
         height: 80%;

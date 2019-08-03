@@ -1,4 +1,5 @@
 @import '../../variables.scss';
+@import '../../mediaqueries.scss';
 
 footer {
   background-color: color(primary);
@@ -7,7 +8,9 @@ footer {
   .footer_container {
     padding: 6rem 3rem !important;
     padding-bottom: 3rem !important;
-
+    @include tablet{
+      flex-direction: column !important;
+    }
     .left_row {
       width: 20%;
 
