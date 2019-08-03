@@ -50,6 +50,7 @@
   }
   @include tablet-sm{
     margin-top: 60px;
+    width: unset;
   }
   a {
     background-color: color(primary);

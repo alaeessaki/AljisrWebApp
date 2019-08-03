@@ -7,7 +7,9 @@
   .trophies-wrapper {
     margin-bottom: 150px;
     position: relative;
-
+    @include tablet-sm{
+      margin-bottom: 0;
+    }
     .trophies-opening {
       background-color: color(primary);
       color: color(reverse);
