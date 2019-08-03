@@ -2,69 +2,71 @@
 
 
 #sign-bg {
+
   background-color: color(backround-grey);
-}
 
-.mat-horizontal-stepper-header-container {
-  background-color: color(backround-grey);
-  margin-bottom: 2rem;
-  margin-left: -1rem;
-  margin-right: -1rem;
-}
+  .step-section {
+    padding-bottom: 15rem;
+    font-family: $font-family;
 
-.mat-step-icon {
-  width: 40px !important;
-  height: 40px !important;
-  color: white !important;
-  background-color: color(primary) !important;
-}
+    .descri-bar {
+      padding: 2rem 0 0 0rem;
+      position: relative;
+      top: 4rem;
 
-.mat-stepper-horizontal-line {
-  border-top-width: 3px !important;
-  border: solid color(primary) !important;
-  margin: 2px -64px 0px -83px !important;
+      p {
+        color: color(primary);
+      }
+    }
 
-}
 
-.mat-step-icon-selected {
-  color: color(primary) !important;
-  background-color: white !important;
-  border: solid color(primary);
-}
-
-// calendar icon selected color ;_;
-.mat-calendar-body-selected {
-  color: white !important;
-}
-
-.step-section {
-  padding-bottom: 15rem;
-  font-family: $font-family;
-
-  .descri-bar {
-    padding: 2rem 0 0 2rem;
 
     p {
-      color: color(primary);
+      color: gray;
+
+      span {
+        color: color(primary);
+      }
+    }
+
+
+
+    .mat-horizontal-content-container {
+
+      padding: 53px 37px 37rem 21px !important;
+    }
+
+    .mat-horizontal-stepper-header-container {
+      background-color: color(backround-grey);
+      margin-bottom: 2rem;
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+
+    .mat-step-icon {
+      width: 40px !important;
+      height: 40px !important;
+      color: white !important;
+      background-color: color(primary) !important;
+    }
+
+    .mat-stepper-horizontal-line {
+      border-top-width: 3px !important;
+      border: solid color(primary) !important;
+      margin: 2px -64px 0px -83px !important;
+
+    }
+
+    .mat-step-icon-selected {
+      color: color(primary) !important;
+      background-color: white !important;
+      border: solid color(primary);
+    }
+
+    // calendar icon selected color ;_;
+    .mat-calendar-body-selected {
+      color: white !important;
     }
   }
-
-
-
-  p {
-    color: gray;
-
-    span {
-      color: color(primary);
-    }
-  }
-
-
-
-  .mat-horizontal-content-container {
-
-    padding: 53px 37px 37rem 21px !important;
-  }
-
 
 }
