@@ -96,12 +96,16 @@ footer {
 
           h6 {
             padding-bottom: 1rem;
-
+            @include tablet{
+              padding-left: 3vw;
+            }
           }
 
           .single-column {
             width: 100%;
-
+            @include tablet{
+              justify-content: center !important;
+            }
             a {
               color: white;
               text-decoration: none;
