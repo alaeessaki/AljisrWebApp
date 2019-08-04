@@ -222,6 +222,10 @@
     }
 
     .aljisr-platforms-container-mobile{
+      display: none;
+      @include tablet{
+        display: unset;
+      }
       background-color: color(background-grey-bold);
       .plat-opening{
         background-color: color(primary);
@@ -273,3 +277,4 @@
     }
   }
 }
+
