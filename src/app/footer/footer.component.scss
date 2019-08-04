@@ -41,7 +41,7 @@ footer {
 
         .single_link {
           margin: 0rem 1rem 1.5rem;
-
+          
           a {
             font-size: 0.8rem;
             text-transform: uppercase;
@@ -51,7 +51,7 @@ footer {
             border: 2px solid white;
             padding: 0.8rem 0.6rem;
             font-family: $font-family;
-
+            max-height: 17vw;
             img{
               width: 18%;
               padding-right: 6%;
