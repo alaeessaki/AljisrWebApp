@@ -31,6 +31,13 @@
           width: 40vw !important;
           height: 65vw !important;
         }
+        @include mobile-md{
+          width: 50vw !important;
+          height: 70vw !important;
+        }
+        @include mobile-sm{
+          height: 300px!important;
+        }
       }
       .new-text {
         position: absolute;
@@ -45,6 +52,9 @@
         }
         @include tablet-sm{
           width: 40vw;
+        }
+        @include mobile-md{
+          width: 50vw;
         }
         .text-container {
           word-wrap: break-word;

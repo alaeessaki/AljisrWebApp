@@ -2,91 +2,108 @@
 @import '../../mediaqueries.scss';
 
 .check-card {
-    background-color: color(primary);
-    padding: 126px 38px;
-    border-bottom: 2px solid white;
-    p {
-      font-family: $paragraph-font;
-      color: color(reverse);
-      font-size: 20px;
-      font-weight: bold;
-      @include tablet{
-        font-size: 17px;
-      }
-      @include tablet-sm{
-        font-size: 2.5vw;
-      }
-      @include mobile-l{
-        font-size: 4vw;
-      }
+  background-color: color(primary);
+  padding: 126px 38px;
+  border-bottom: 2px solid white;
+
+  p {
+    font-family: $paragraph-font;
+    color: color(reverse);
+    font-size: 20px;
+    font-weight: bold;
+
+    @include tablet {
+      font-size: 17px;
     }
 
-    .faire-un-dont {
+    @include tablet-sm {
+      font-size: 2.5vw;
+    }
+
+    @include mobile-l {
+      text-align: center;
+      font-size: 4vw;
+    }
+  }
+
+  .faire-un-dont {
+    border: 1px solid color(reverse);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 69%;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include mobile-l {
+      width: 70%;
+      margin: auto;
+      margin-top: 49px;
+    }
+
+    margin-top: 60px;
+    cursor: pointer;
+    position: relative;
+
+    .checker {
+      width: 25%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
       border: 1px solid color(reverse);
       border-radius: 30px;
-      display: flex;
-      flex-direction: row;
-      width: 69%;
-      @include tablet{
-        width: 100%;
-      }
-      @include mobile-l{
-        width:70%;
-      }
-      margin-top: 60px;
-      cursor: pointer;
-      position: relative;
 
-      .checker {
-        width: 25%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
+      .checker-cont {
+        width: 100%;
+        height: 100%;
+        background-color: color(reverse);
+        position: relative;
         border: 1px solid color(reverse);
         border-radius: 30px;
 
-        .checker-cont {
-          width: 100%;
-          height: 100%;
-          background-color: color(reverse);
-          position: relative;
+        .checker-dot {
+          width: 70%;
+          height: 50%;
+          background-color: color(primary);
           border: 1px solid color(reverse);
           border-radius: 30px;
+          position: absolute;
+          top: 28%;
+          left: 5%;
 
-          .checker-dot {
-            width: 70%;
-            height: 50%;
-            background-color: color(primary);
-            border: 1px solid color(reverse);
-            border-radius: 30px;
-            position: absolute;
-            top: 28%;
-            left: 5%;
-
-          }
-        }
-      }
-
-      a {
-        font-size: 18px;
-        color: color(reverse);
-        text-decoration: none;
-        font-weight: bold;
-        padding: 6px 0px;
-        padding-left: 87px;
-        @include tablet{
-          font-size: 15px;
-          padding-left: 15vw;
-        }
-        @include tablet-sm{
-          padding-left: 14vw;
-          font-size: 2.3vw;
-        }
-        @include mobile-l{
-          font-size: 3.3vw;
-          padding-left: 17vw;
         }
       }
     }
+
+    a {
+      font-size: 18px;
+      color: color(reverse);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 0px;
+      padding-left: 87px;
+
+      @include tablet {
+        font-size: 15px;
+        padding-left: 15vw;
+      }
+
+      @include tablet-sm {
+        padding-left: 14vw;
+        font-size: 2.3vw;
+      }
+
+      @include mobile-l {
+        font-size: 3.3vw;
+        padding-left: 17vw;
+      }
+
+      @include mobile-md {
+        padding-left: 24vw;
+      }
+    }
   }
+}

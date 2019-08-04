@@ -2,6 +2,12 @@
 @import "../../mediaqueries.scss";
 
 .newsletter-sec {
+  .ng-star-inserted{
+    @include mobile-md{
+      font-size: 12px;
+      top: 2.5em;
+    }
+  }
   .news-wrapper {
     background-color: color(background-grey-bold);
 

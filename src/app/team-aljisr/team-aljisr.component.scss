@@ -50,6 +50,10 @@
               height: 10rem;
               width: 14rem;
             }
+            @include mobile-l{
+              height: 6rem;
+              width: 8rem;
+            }
           }
 
 
@@ -67,6 +71,11 @@
             @include tablet {
               height: 11rem;
               width: 11.5rem;
+            }
+            @include mobile-l{
+              height: 7rem;
+              width: 7.5rem;
+              left: 1rem;
             }
 
             display: flex;

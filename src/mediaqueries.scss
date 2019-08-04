@@ -8,7 +8,7 @@ $tablet: 768px;
 $tablet-sm: 576px;
 $mobile-l: 425px;
 $mobile-md : 375px;
-$mobile-s: 320px;
+$mobile-sm: 320px;
 
 
 @mixin xl-device {
@@ -62,8 +62,8 @@ $mobile-s: 320px;
   }
 }
 
-@mixin mobile-s{
-  @media (max-width: #{$mobile-s}) {
+@mixin mobile-sm{
+  @media (max-width: #{$mobile-sm}) {
       @content;   
   }
 }
