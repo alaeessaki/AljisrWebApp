@@ -44,6 +44,9 @@
       @include tablet{
         font-size: 15px;
       }
+      @include mobile-l{
+        padding: 33px 50px;
+      }
     }
   }
 
@@ -60,6 +63,9 @@
       position: unset;
       width: 100%;
       margin-bottom: 50px;
+    }
+    @include mobile-l{
+      flex-direction: column !important;
     }
 
     .left-row {
@@ -91,6 +97,9 @@
             }
             @include tablet-sm{
               font-size: 13px; 
+            }
+            @include mobile-l{
+              font-size: 3.6vw;
             }
           }
         }

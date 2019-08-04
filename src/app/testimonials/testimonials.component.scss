@@ -10,12 +10,13 @@
   .testi-cont {
     width: 100%;
     padding-bottom: 5rem;
+
     .testi-wrapper {
       padding-left: 60px;
 
-      .liner{
-        .liner-cont{
-          @include tablet-sm{
+      .liner {
+        .liner-cont {
+          @include tablet-sm {
             right: 40%;
           }
         }
@@ -31,6 +32,11 @@
     .quotes {
       width: 2.5rem;
       height: 2.5rem;
+      @include mobile-l{
+        width: 9vw;
+        height: 9vw;
+        margin-bottom: 18px;
+      }
     }
 
     p {
@@ -38,14 +44,17 @@
       color: color(para-grey);
       font-weight: bold;
       font-size: 13px;
-      @include tablet-sm{
+
+      @include tablet-sm {
         font-size: 12px;
       }
+
       span {
         color: color(primary);
         font-weight: bold;
         font-size: 15px;
-        @include tablet-sm{
+
+        @include tablet-sm {
           font-size: 13px;
         }
       }
@@ -53,7 +62,8 @@
       .status {
         font-size: 16px;
         color: #bebebe;
-        @include tablet-sm{
+
+        @include tablet-sm {
           font-size: 13px;
         }
       }
@@ -85,7 +95,6 @@
   // }
 
 
-
   @media (max-width: 1050px) {
     .check-card {
       display: flex;
@@ -94,10 +103,12 @@
       align-items: center;
       margin-bottom: 2rem;
       padding: 90px 38px !important;
+
       .faire-un-dont {
         margin-top: 30px !important;
       }
     }
+
     .testi-cont {
       display: flex;
       flex-direction: column !important;
@@ -113,6 +124,9 @@
 
       .testi-wrapper {
         padding-left: 0 !important;
+        .testi-flexer {
+          margin-right: 0 !important;
+        }
 
         .liner {
           margin-bottom: 36px;
@@ -144,10 +158,25 @@
   .temoicont {
     position: relative;
 
+    img {
+      @include mobile-l {
+        width: 30vw !important;
+        height: 30vw !important;
+      }
+    }
+
     &::before {
       content: '';
       width: 7rem;
       height: 7rem;
+
+      @include mobile-l {
+        width: 28vw !important;
+        height: 28vw !important;
+        right: 15px;
+        top: 12px;
+      }
+
       border-radius: 50%;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
@@ -175,10 +204,12 @@
     height: 11px !important;
     transition: border-color ease 280ms;
     width: 11px !important;
-    @include tablet-sm{
+
+    @include tablet-sm {
       width: 9px !important;
       height: 9px !important;
     }
+
     border-width: 2px !important;
     border-style: none !important;
     border-radius: 50% !important;
@@ -194,7 +225,8 @@
     left: -6px !important;
     top: -6px !important;
     width: 23px !important;
-    @include tablet-sm{
+
+    @include tablet-sm {
       height: 21px !important;
       width: 21px !important;
     }

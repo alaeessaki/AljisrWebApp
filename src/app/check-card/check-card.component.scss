@@ -16,6 +16,9 @@
       @include tablet-sm{
         font-size: 2.5vw;
       }
+      @include mobile-l{
+        font-size: 4vw;
+      }
     }
 
     .faire-un-dont {
@@ -26,6 +29,9 @@
       width: 69%;
       @include tablet{
         width: 100%;
+      }
+      @include mobile-l{
+        width:70%;
       }
       margin-top: 60px;
       cursor: pointer;
@@ -76,6 +82,10 @@
         @include tablet-sm{
           padding-left: 14vw;
           font-size: 2.3vw;
+        }
+        @include mobile-l{
+          font-size: 3.3vw;
+          padding-left: 17vw;
         }
       }
     }

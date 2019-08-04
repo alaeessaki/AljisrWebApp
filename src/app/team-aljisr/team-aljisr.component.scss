@@ -10,6 +10,13 @@
   padding-bottom: 11rem;
 
   .container {
+    .liner{
+      .liner-cont{
+        @include tablet-sm{
+          right: 35%;
+        }
+      }
+    }
     #nextmem {
       transform: rotateZ(180deg);
       -webkit-transform: rotateZ(180deg);

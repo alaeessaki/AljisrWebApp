@@ -159,6 +159,9 @@
       .liner{
         right: 179px;
         top: -25px;
+        @include mobile-l{
+          right: 0%;
+        }
       }
       app-events-details {
         width: 100%;

@@ -229,6 +229,9 @@
         margin: 0vw 6vw;
         h1{
           font-size: 18px;
+          @include mobile-l{
+            font-size: 15px;
+          }
           font-family: $paragraph-font;
           font-weight: bolder;
           text-align: center;
@@ -254,6 +257,15 @@
               font-family: $paragraph-font;
               font-weight: bolder;
               font-size: 17px;
+              @include mobile-l{
+                font-size: 3.5vw;
+              }
+            }
+            img{
+              @include mobile-l{
+                width: 5vw;
+                height: 5vw;
+              }
             }
           }
         }

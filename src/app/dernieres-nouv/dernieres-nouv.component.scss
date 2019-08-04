@@ -28,7 +28,8 @@
           height: 45vw !important;
         }
         @include tablet-sm{
-          height: 50vw;
+          width: 40vw !important;
+          height: 65vw !important;
         }
       }
       .new-text {
@@ -41,6 +42,9 @@
         width: 20vw;
         @include tablet{
           width: 30vw;
+        }
+        @include tablet-sm{
+          width: 40vw;
         }
         .text-container {
           word-wrap: break-word;
