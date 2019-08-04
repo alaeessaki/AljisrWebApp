@@ -331,6 +331,9 @@ mat-card {
       color: black;
       font-family: "Roboto", "Helvetica Neue", sans-serif;
       font-size: 14px;
+      @include tablet-sm{
+        font-size: 12px;
+      }
       font-weight: 400;
       text-transform: uppercase;
       margin-left: 19px;
@@ -358,6 +361,9 @@ mat-expansion-panel {
     mat-panel-title {
       text-transform: uppercase;
       font-size: 14px;
+      @include tablet-sm{
+        font-size: 12px;
+      }
     }
   }
 
@@ -369,10 +375,15 @@ mat-expansion-panel {
       color: black;
       text-decoration: none;
       font-weight: 600;
+      @include tablet-sm{
+        font-size: 11px;
+      }
     }
   }
 }
-
+.mat-expansion-panel{
+  box-shadow: unset !important;
+}
 .othercards {
   mat-card {
     padding: 6px;
@@ -384,6 +395,9 @@ mat-expansion-panel {
         color: black;
         font-family: "Roboto", "Helvetica Neue", sans-serif;
         font-size: 14px;
+        @include tablet-sm{
+          font-size: 12px;
+        }
         font-weight: 400;
         text-transform: uppercase;
         margin-left: 19px;
