@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ShowOnDirtyErrorStateMatcher } from '@angular/material';
+import { Component, AfterViewInit, OnInit , ViewEncapsulation } from '@angular/core';
+import {TeamAljisrService} from './team-aljisr.service';
 
 @Component({
   selector: 'app-team-aljisr',
@@ -7,17 +7,20 @@ import { ShowOnDirtyErrorStateMatcher } from '@angular/material';
   styleUrls: ['./team-aljisr.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class TeamAljisrComponent implements OnInit {
+export class TeamAljisrComponent implements AfterViewInit {
+  members:Array<any>;
 
-  constructor() {
-    this.showTeam();
+  constructor( private _teamAljisr : TeamAljisrService) {
 
+    // this.showTeam();
+    
   }
 
+  ngOnInit(){
+    this.members = this._teamAljisr.getTeamMembers();
+  }
 
-  ngOnInit() {
-
-
+  carousel(){
     const carouselSlide: HTMLElement = document.querySelector('.wrapper');
     const carouselElements = document.querySelectorAll('.member');
     const breakingCarousel: HTMLElement = document.querySelector('#stopping-carousel');
@@ -28,8 +31,6 @@ export class TeamAljisrComponent implements OnInit {
     let counter = 1;
     let size = carouselElements[0].clientWidth +20;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    console.log(size);
-
 
     function movingSl() {
       if (counter >= carouselElements.length - 1) {
@@ -73,14 +74,8 @@ export class TeamAljisrComponent implements OnInit {
 
   }
 
-  // displaying the description of the team
-
-  showTeam() {
-    let teamstat = document.getElementsByClassName("card-profile")[0] as HTMLElement;
-
-    console.log(teamstat);
-
+  ngAfterViewInit(){
+    this.carousel();
   }
-
 
 }

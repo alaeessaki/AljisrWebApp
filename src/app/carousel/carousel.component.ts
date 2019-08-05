@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { images } from '../declarations';
 import { CarouselConfig } from 'ngx-bootstrap/carousel';
+import { HeroImgsService } from './hero-imgs.service';
 
 @Component({
   selector: 'app-carousel',
@@ -12,36 +13,12 @@ import { CarouselConfig } from 'ngx-bootstrap/carousel';
   ]
 })
 export class CarouselComponent implements OnInit {
-
-  constructor() { }
+  images:Array<any>
+  constructor(private _heroImgs : HeroImgsService) { }
 
   ngOnInit() {
+    this.images = this._heroImgs.getImages();
   }
 
-  Images: images[] = [
-    {
-      source: "../assets/hero2.jpg",
-      alt: "A girl and a boy writing their notes in a paper"
-    },
-    // {
-    //   source: "../assets/hero.jpg",
-    //   alt: "The president of Aljisr reading his speachs"
-    // },
-    {
-      source: "../assets/hero3.jpg",
-      alt: "The president of Aljisr reading his speech"
-    },
-    {
-      source: "../assets/hero4.jpg",
-      alt: "The president of Aljisr reading his speech"
-    },
-    {
-      source: "../assets/hero5.jpg",
-      alt: "The president of Aljisr reading his speech"
-    },
-    {
-      source: "../assets/hero6.jpg",
-      alt: "The president of Aljisr reading his speech"
-    }
-  ];
+  
 }

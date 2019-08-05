@@ -13,7 +13,6 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 // components
 import { CarouselComponent } from './carousel/carousel.component';
-import { MycarouselComponent } from './mycarousel/mycarousel.component';
 import { CounterUpSectionComponent } from './counter-up-section/counter-up-section.component';
 import { DernieresNouvComponent } from './dernieres-nouv/dernieres-nouv.component';
 import { EventsComponent } from './events/events.component';
@@ -38,17 +37,18 @@ import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { MatNativeDateModule } from '@angular/material';
 import { IlNousSoutiennentComponent } from './il-nous-soutiennent/il-nous-soutiennent.component';
 import { CheckCardComponent } from './check-card/check-card.component';
-
+import { TrophiesBinderComponent } from './trophies/trophies-binder.component';
+import { TrophieDetailsComponent } from './trophie-details/trophie-details.component';
+import { TrophiesPicsComponent } from './trophies-pics/trophies-pics.component';
+import { ContactlistComponent } from './contactlist/contactlist.component';
 
 // httpClient
 import { HttpClientModule } from '@angular/common/http';
 
 // services 
 import { UsersService } from './users.service';
-import { TrophiesBinderComponent } from './trophies/trophies-binder.component';
-import { TrophieDetailsComponent } from './trophie-details/trophie-details.component';
-import { TrophiesPicsComponent } from './trophies-pics/trophies-pics.component';
-import { ContactlistComponent } from './contactlist/contactlist.component';
+
+
 
 
 
@@ -59,7 +59,6 @@ import { ContactlistComponent } from './contactlist/contactlist.component';
     AppComponent,
     routingComponent,
     CarouselComponent,
-    MycarouselComponent,
     CounterUpSectionComponent,
     DernieresNouvComponent,
     EventsDetailsComponent,

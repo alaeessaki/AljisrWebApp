@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { NavigationEnd, Router } from '@angular/router';
+import { AljisrNumsService } from './aljisr-nums.service';
 
 @Component({
   selector: 'app-counter-up-section',
@@ -10,15 +11,8 @@ import { NavigationEnd, Router } from '@angular/router';
 export class CounterUpSectionComponent implements OnInit {
   countSections: Array<any>;
   isHome = false;
-  constructor(private _router: Router) {
-    this.countSections = [
-      { title: "Volontaires", countend: 1000, counticon: "../../assets/enchiffre/icon3.png", h: 60, w: 40 },
-      { title: "Villes", countend: 5, counticon: "../../assets/enchiffre/icon2.png", h: 40, w: 60 },
-      { title: "Partenaires", countend: 130, counticon: "../../assets/enchiffre/icon1.png", h: 40, w: 40 },
-      { title: "Projets", countend: 600, counticon: "../../assets/enchiffre/icon3.png", h: 60, w: 40 },
-      { title: "Experience", countend: 20, counticon: "../../assets/enchiffre/icon2.png", h: 40, w: 60 },
-      { title: "Programmes", countend: 42, counticon: "../../assets/enchiffre/icon1.png", h: 40, w: 40 }
-    ];
+
+  constructor(private _router: Router, private _AljisrNums: AljisrNumsService) {
     this._router.events.subscribe(
       (event: any) => {
         if (event instanceof NavigationEnd) {
@@ -36,6 +30,7 @@ export class CounterUpSectionComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.countSections = this._AljisrNums.getNums();
   }
 
   getRoutePos() {

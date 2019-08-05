@@ -11,16 +11,16 @@
     <div class="cards-container overflow-hidden ">
       <div class="wrapper d-flex flex-row ">
 
-        <div class="member mr-4">
+        <div class="member mr-4" *ngFor="let member of members">
           <div class="team-img" (click)="showTeam()">
-            <img src="../../assets/team/Untitled-1.png" alt="l'équipe" class="w-100 h-100">
+            <img [src]="member.img" alt="l'équipe" class="w-100 h-100">
           </div>
           <div class="card-profile">
-            <p>lorem test idst</p>
+            <p>{{member.desc}}</p>
           </div>
         </div>
 
-        <div class="member mr-4">
+        <!-- <div class="member mr-4">
           <div class="team-img">
             <img src="../../assets/team/Untitled-2.png" alt="l'équipe" class="w-100 h-100">
           </div>
@@ -55,7 +55,7 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita minima ad deserunt quod ipsam,
               blanditiis saepe similique aliquam explicabo dignissimos</p>
           </div>
-        </div>
+        </div> -->
 
 
       </div>
