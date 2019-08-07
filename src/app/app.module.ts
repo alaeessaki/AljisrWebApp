@@ -47,6 +47,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 // services 
 import { UsersService } from './users.service';
+import { BenevolerComponent } from './benevoler/benevoler.component';
 
 
 
@@ -82,6 +83,7 @@ import { UsersService } from './users.service';
     TrophieDetailsComponent,
     TrophiesPicsComponent,
     ContactlistComponent,
+    BenevolerComponent,
   ],
   imports: [
     BrowserModule,

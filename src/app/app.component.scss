@@ -71,7 +71,162 @@ mat-sidenav-container {
   background-color: white;
 
   mat-sidenav {
-    width: 60%;
+    width: 40%;
+    background-color: color(primary);
+    display: flex;
+    flex-direction: row;
+
+    @include tablet {
+      width: 50%;
+      height: 100%;
+    }
+    @include tablet-sm{
+      width: 60%;
+    }
+
+    .side-menu-container {
+      width: 100%;
+      .left-row {
+        width: 20%;
+        @include mobile-l{
+          width: 30%;
+        }
+        background-color: color(reverse);
+
+        .left-row-wrapper {
+          padding: 17vh 2px 5px 5px;
+
+          
+          .social-link{
+            transform: rotate(-90deg);
+            margin-top: 54px;
+            img{
+              width: 25%;
+            }
+            a{
+              font-size: 12px;
+              @include tablet-sm{
+                font-size: 10px;
+              }
+              padding-left: 3px;
+              color: color(primary);
+              font-family: $secondary-font;
+              text-decoration: none;
+              &:focus{
+                outline: none !important;
+              }
+            }
+          }
+        }
+
+      }
+
+      .right-row {
+        width: 80%;
+        @include mobile-l{
+          width: 70%;
+        }
+        height: 100%;
+        width: 100%;
+
+        mat-toolbar {
+          font-family: $secondary-font;
+          background-color: color(primary);
+          border-bottom: 1px solid #3498DB;
+          color: color(reverse);
+          height: 85px;
+          font-size: 18px;
+          @include mobile-l{
+            font-size: 15px;
+          }
+          font-weight: bolder;
+          border: unset;
+        }
+
+        .sidenav-container {
+          width: 100%;
+          height: 100%;
+
+          mat-card {
+            padding: 6px;
+            background-color: color(primary);
+
+            mat-card-title {
+              a {
+                padding: 0;
+                text-decoration: none;
+                color: color(reverse);
+                font-family: $secondary-font;
+                font-size: 16px;
+
+                @include tablet-sm {
+                  font-size: 12px;
+                }
+                @include mobile-l{
+                  font-size: 11px;
+                }
+
+                font-weight: bolder;
+                margin-left: 19px;
+
+                &:focus {
+                  outline: unset !important;
+                }
+              }
+            }
+          }
+
+          mat-expansion-panel {
+            background-color: color(primary);
+            box-shadow: unset !important;
+
+            mat-expansion-panel-header {
+
+              &:hover {
+                background-color: color(primary);
+              }
+
+              mat-panel-title {
+                color: color(reverse);
+                font-size: 16px;
+                font-family: $secondary-font;
+                font-weight: 900;
+
+                @include tablet-sm {
+                  font-size: 12px;
+                }
+                @include mobile-l{
+                  font-size: 11px;
+                }
+              }
+            }
+
+            .sublink {
+              margin-left: 10px;
+
+              a {
+                color: color(reverse);
+                text-decoration: none;
+                font-family: $secondary-font;
+                font-weight: bold;
+                font-size: 13px;
+                @include tablet-sm {
+                  font-size: 11px;
+                }
+                @include mobile-l{
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+
+          .mat-expansion-panel {
+            box-shadow: unset !important;
+          }
+        }
+      }
+    }
+
   }
 
   mat-sidenav-content {
@@ -106,7 +261,6 @@ mat-sidenav-container {
 
       a {
         img {
-          margin-left: 7rem;
           padding: 16px 0px;
           width: 67px;
           @extend %not-selectibale;
@@ -115,29 +269,6 @@ mat-sidenav-container {
 
       .login {
         @extend %not-selectibale;
-
-        .sinscrie {
-          @extend %login-style;
-          padding: 3px 20px;
-          color: color(primary);
-
-        }
-
-        .account {
-          display: none !important;
-
-          mat-icon {
-            font-size: 36px;
-            color: black;
-            margin-bottom: 10px;
-          }
-
-          a {
-            text-decoration: none;
-            color: black;
-            font-size: 14px;
-          }
-        }
       }
     }
 
@@ -157,10 +288,11 @@ mat-sidenav-container {
           left: 15px;
         }
 
-        @include mobile-md{
+        @include mobile-md {
           top: 10px;
           left: 10px;
         }
+
         .btnContainer {
           position: relative;
           background-color: color(reverse);
@@ -192,7 +324,8 @@ mat-sidenav-container {
               top: 7px !important;
               left: 7px !important;
             }
-            @include mobile-md{
+
+            @include mobile-md {
               font-size: 19px !important;
               top: 6px !important;
               left: 6px !important;
@@ -306,44 +439,14 @@ mat-sidenav-container {
 }
 
 
-mat-toolbar {
-  font-family: 'Open Sans';
-  text-transform: uppercase;
-  background-color: white;
-  border-bottom: 1px solid #3498DB;
-  color: #3498DB;
-  height: 85px;
-  font-size: 18px;
-  font-weight: 600;
-}
+
 
 .mat-card:not([class*=mat-elevation-z]) {
   box-shadow: none;
 }
 
-mat-card {
-  padding: 6px;
 
-  mat-card-title {
-    a {
-      padding: 0;
-      text-decoration: none;
-      color: black;
-      font-family: "Roboto", "Helvetica Neue", sans-serif;
-      font-size: 14px;
-      @include tablet-sm{
-        font-size: 12px;
-      }
-      font-weight: 400;
-      text-transform: uppercase;
-      margin-left: 19px;
 
-      &:focus {
-        outline: unset !important;
-      }
-    }
-  }
-}
 
 footer {
   padding: 0;
@@ -356,55 +459,6 @@ footer {
 }
 
 
-mat-expansion-panel {
-  mat-expansion-panel-header {
-    mat-panel-title {
-      text-transform: uppercase;
-      font-size: 14px;
-      @include tablet-sm{
-        font-size: 12px;
-      }
-    }
-  }
-
-  .sublink {
-    margin-left: 10px;
-    text-transform: uppercase;
-
-    a {
-      color: black;
-      text-decoration: none;
-      font-weight: 600;
-      @include tablet-sm{
-        font-size: 11px;
-      }
-    }
-  }
-}
-.mat-expansion-panel{
-  box-shadow: unset !important;
-}
-.othercards {
-  mat-card {
-    padding: 6px;
-
-    mat-card-title {
-      a {
-        padding: 0;
-        text-decoration: none;
-        color: black;
-        font-family: "Roboto", "Helvetica Neue", sans-serif;
-        font-size: 14px;
-        @include tablet-sm{
-          font-size: 12px;
-        }
-        font-weight: 400;
-        text-transform: uppercase;
-        margin-left: 19px;
-      }
-    }
-  }
-}
 
 
 
@@ -440,10 +494,6 @@ mat-expansion-panel {
 
   mat-sidenav-container mat-sidenav-content nav .menu a {
     display: flex;
-  }
-
-  mat-sidenav {
-    width: 35% !important;
   }
 }
 

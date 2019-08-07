@@ -1,0 +1,138 @@
+<div class="benevole" (click)="openModal(template2)">
+  <h3>Aidez nous</h3>
+  <h1>Bénévolez<br>Maintenant</h1>
+  <h5>Aider les autres</h5>
+</div>
+<span class="dot" (click)="openModal(template2)"></span>
+<img class="hand" src="../../assets/icons/hand.png" (click)="openModal(template2)">
+
+<ng-template #template2>
+  <div class="modal-body">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="benevole-container">
+      <div class="lta-img-container d-flex justify-content-center">
+        <img src="../../assets/aljisr-program.png">
+      </div>
+      <div class="toolbar-wrapper">
+        <div class="toolbar-container">
+          <h5>Formulaire d'inscription bénévoles au programme de bénévolat | Learn To Act</h5>
+        </div>
+      </div>
+      <div class="formulaire-wrapper">
+        <div class="form-wrapper">
+          <div class="form-title d-flex flex-row justify-content-between align-items-center">
+            <h1>Nom Complet</h1>
+            <h1 class="spec-title">Informations Personnelles</h1>
+          </div>
+          <div class="double-form-container d-flex flex-column flex-sm-column flex-md-row">
+            <div class="form-cont">
+              <mat-form-field appearance="outline">
+                <mat-label>Nom</mat-label>
+                <input matInput #nom>
+              </mat-form-field>
+            </div>
+            <div class="form-cont">
+              <mat-form-field appearance="outline">
+                <mat-label>Prénom</mat-label>
+                <input matInput #prenom>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="form-title">
+            <h1>Adresse</h1>
+          </div>
+          <div class="single-form-container">
+            <div class="form-cont">
+              <mat-form-field appearance="outline">
+                <mat-label>Adresse</mat-label>
+                <input matInput #adresse>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="form-title">
+            <h1>Nom de l'établissement</h1>
+          </div>
+          <div class="single-form-container">
+            <div class="form-cont">
+              <mat-form-field appearance="outline">
+                <mat-label>Nom de l'établissement</mat-label>
+                <input matInput #nomdetablissement>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="form-title d-flex flex-row justify-content-between align-items-center">
+            <h1>Email</h1>
+            <h1 class="spec-title">Informations du compte</h1>
+          </div>
+          <div class="single-form-container">
+            <div class="form-cont">
+              <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput #email>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="form-title">
+            <h1>Téléphone</h1>
+          </div>
+          <div class="single-form-container">
+            <div class="form-cont">
+              <mat-form-field appearance="outline">
+                <mat-label>Téléphone</mat-label>
+                <input matInput #telephone>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="form-title d-flex flex-row justify-content-between align-items-center">
+            <h1>Nome de votre association/club</h1>
+            <h1 class="spec-title">Associatifs</h1>
+          </div>
+          <div class="single-form-container">
+            <div class="form-cont">
+              <mat-form-field appearance="outline">
+                <mat-label>Nome de votre association/club</mat-label>
+                <input matInput #nomdelassociation>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="form-title">
+            <h1>Expérience dans le domaine associatif ?</h1>
+          </div>
+          <div class="single-form-container">
+            <div class="select-form-cont">
+              <mat-form-field appearance="outline">
+                <mat-select placeholder="Select">
+                  <mat-option value="oui">Oui</mat-option>
+                  <mat-option value="Non">Non</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="checkbox-cont">
+            <mat-checkbox color="primary" class="mycheck"><span class="accord">Je Souhaite adérer au programme <a href="">"learn to act"</a> et je m'engage à dispenser l'activité suivante avec <a href="">
+                  régularuté</a></span></mat-checkbox>
+          </div>
+
+          <div class="btn-cont d-flex justify-content-center align-items-center">
+            <div class="single-btn-cont">
+                <button mat-stroked-button color="primary" class="mybtn">Annuler</button>
+            </div>
+            <div class="single-btn-cont">
+                <button mat-flat-button color="primary" class="mybtn">Confirmé</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</ng-template>

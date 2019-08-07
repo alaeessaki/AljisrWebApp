@@ -1,0 +1,241 @@
+@import '../../variables.scss';
+@import '../../mediaqueries.scss';
+
+.benevole {
+  cursor: pointer;
+  position: absolute;
+  right: 6%;
+  top: 58%;
+  color: white;
+  font-family: $font-family;
+  font-weight: 100;
+
+  @include tablet-sm {
+    top: 55%;
+    right: 7%;
+  }
+
+  h3 {
+    font-size: 1.7vw;
+
+    @include tablet-sm {
+      font-size: 2.5vw;
+    }
+  }
+
+  h1 {
+    font-size: 3vw;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    @include tablet-sm {
+      font-size: 5vw;
+    }
+  }
+
+  h5 {
+    text-transform: uppercase;
+    font-size: .9vw;
+    letter-spacing: 3px;
+
+    @include tablet-sm {
+      font-size: 1.7vw;
+      letter-spacing: 2px;
+    }
+
+  }
+}
+
+.dot {
+  cursor: pointer;
+  position: absolute;
+  top: 54%;
+  right: 28%;
+  background-color: #22C0FF;
+  width: 6vw;
+  height: 6vw;
+  border-radius: 50%;
+
+  @include tablet-sm {
+    width: 8vw;
+    height: 8vw;
+    top: 51%;
+    right: 44%;
+  }
+}
+
+.hand {
+  cursor: pointer;
+  position: absolute;
+  width: 2vw;
+  top: 56.5%;
+  right: 30%;
+  filter: brightness(100%);
+  -webkit-filter: brightness(100%);
+
+  @include tablet-sm {
+    width: 3vw;
+    top: 54%;
+    right: 46.5%;
+  }
+}
+
+
+.benevole-modal {
+  .modal-content {
+    border: none !important;
+    border-radius: unset !important;
+  }
+
+  .modal-content .modal-body {
+    padding: 0 !important;
+
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      color: color(primary);
+      opacity: 1;
+      font-size: 2.8vw;
+      font-weight: 400;
+    }
+
+    .benevole-container {
+      .lta-img-container {
+        margin-top: 65px;
+        margin-bottom: 20px;
+      }
+
+      .toolbar-wrapper {
+        margin: 0px 10%;
+
+        .toolbar-container {
+          background-color: #e0e0e0;
+          border-left: 4px solid color(primary);
+
+          h5 {
+            color: color(para-grey-bold);
+            font-size: 14px;
+            font-family: $font-family;
+            padding: 20px;
+          }
+        }
+      }
+
+      .formulaire-wrapper {
+        margin: 0% 11%;
+
+        .form-wrapper {
+          margin-top: 5%;
+
+          .form-title {
+            margin-bottom: 3px;
+
+            h1 {
+              font-size: 15px;
+              font-family: $font-family;
+              font-weight: bolder;
+              margin: 0 !important;
+            }
+
+            .spec-title {
+              font-size: 13px;
+              color: color(reverse);
+              background-color: color(primary);
+              padding: 7px 17px;
+              border-radius: 5px;
+              font-weight: 300;
+            }
+          }
+
+          .double-form-container {
+            width: 100%;
+
+            .form-cont {
+              &:first-child {
+                padding-right: 10px;
+              }
+
+              width: 50%;
+
+              .mat-form-field {
+                width: 100%;
+              }
+            }
+          }
+
+          .single-form-container {
+            width: 100%;
+
+            .form-cont {
+              width: 100%;
+
+              .mat-form-field {
+                width: 100%;
+              }
+            }
+
+            .select-form-cont {
+              width: 15%;
+
+              .mat-form-field {
+                width: 100%;
+
+              }
+            }
+          }
+
+          .checkbox-cont {
+            width: 100%;
+
+            .mat-checkbox {
+              .mat-checkbox-label {
+                white-space: initial;
+
+                .accord {
+                  color: color(para-grey);
+
+                  a {
+                    color: color(primary);
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+          }
+
+          .btn-cont {
+            width: 100%;
+            padding: 50px 0px;
+
+            .single-btn-cont {
+              width: 120px;
+              height: 45px;
+              &:first-child {
+                margin-right: 10px;
+              }
+
+              .mybtn {
+                width: 100%;
+                height: 100%;
+
+              }
+
+              .mat-stroked-button {
+                border-color: color(primary);
+              }
+            }
+
+          }
+
+        }
+      }
+    }
+
+  }
+}
+
+.cdk-global-overlay-wrapper,
+.cdk-overlay-container {
+  z-index: 99999 !important;
+}

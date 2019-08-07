@@ -1,4 +1,9 @@
-<button class="seconnecter" (click)="openModal(template)">Se connecter</button>
+<div class="account d-flex flex-column justify-content-center align-items-center" (click)="openModal(template)">
+  <mat-icon id="phone_menu" class="menuIcon" aria-hidden="false" aria-label="Example home icon">
+    account_circle</mat-icon>
+  <a class="seconnecter">S'identifier</a>
+</div>
+
 <ng-template #template>
   <div class="modal-body">
     <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">

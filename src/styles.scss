@@ -96,3 +96,7 @@ $theme: mat-light-theme($primary, $accent);
 .mat-tooltip {
   background-color: color(primary);
 }
+.specific-class > .mat-expansion-indicator, .mat-expansion-indicator:after {
+  color: color(reverse) !important;
+}
+
