@@ -193,7 +193,9 @@
                 white-space: initial;
 
                 .accord {
-                  color: color(para-grey);
+                  position: relative;
+                  top: 1px;
+                  color: #929292;
 
                   a {
                     color: color(primary);
@@ -211,6 +213,7 @@
             .single-btn-cont {
               width: 120px;
               height: 45px;
+
               &:first-child {
                 margin-right: 10px;
               }
