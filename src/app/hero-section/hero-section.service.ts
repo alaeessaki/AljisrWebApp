@@ -1,17 +1,15 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HeroSectionService {
   slogons:Array<any>; 
-  constructor() { 
-    this.slogons = [
-      "Au service de l'école publique \n depuis 1999",
-      "Aujourd'hui agissons ensemble pour \n l'école de demain"
-    ];
+  constructor(private http: HttpClient) { 
+
   }
   getSlogon(){
-    return this.slogons;
+    return this.http.get('http://localhost:3000/api/quotes');
   }
 }

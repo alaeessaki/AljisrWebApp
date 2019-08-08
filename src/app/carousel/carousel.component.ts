@@ -13,13 +13,15 @@ import { HeroImgsService } from './hero-imgs.service';
 })
 export class CarouselComponent implements OnInit {
   
-  images:Array<any>;
+  images:Object;
 
   constructor(private _heroImgs : HeroImgsService) { }
 
   ngOnInit() {
     // getting data from hero-imgs service
-    this.images = this._heroImgs.getImages();
+    this._heroImgs.getImages().subscribe(data=>{
+      this.images = data;
+    });
   }
 
   

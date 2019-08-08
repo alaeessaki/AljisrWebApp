@@ -9,15 +9,19 @@ import { QuotesService } from './quotes.service';
 })
 export class TestimonialsComponent implements OnInit {
 
-  temoin:temoins[];
+  temoin;
   selectedItem2:temoins;
   constructor(private _quotes:QuotesService) {  }
 
   ngOnInit() {
     // getting temoins from services
-    this.temoin = this._quotes.getTemoins();
-    this.selectedItem2 = this.temoin[0];
-    this.changeX((this.temoin.length));
+    this._quotes.getTemoins().subscribe(data=>{
+      this.temoin = data;
+      this.selectedItem2 = this.temoin[0];
+      this.changeX((this.temoin.length));
+    });
+   
+    
   }
 
   onSelected(item: temoins): void {

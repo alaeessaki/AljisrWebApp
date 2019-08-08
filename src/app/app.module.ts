@@ -40,7 +40,6 @@ import { CheckCardComponent } from './check-card/check-card.component';
 import { TrophiesBinderComponent } from './trophies/trophies-binder.component';
 import { TrophieDetailsComponent } from './trophie-details/trophie-details.component';
 import { TrophiesPicsComponent } from './trophies-pics/trophies-pics.component';
-import { ContactlistComponent } from './contactlist/contactlist.component';
 
 // httpClient
 import { HttpClientModule } from '@angular/common/http';
@@ -82,7 +81,6 @@ import { BenevolerComponent } from './benevoler/benevoler.component';
     TrophiesBinderComponent,
     TrophieDetailsComponent,
     TrophiesPicsComponent,
-    ContactlistComponent,
     BenevolerComponent,
   ],
   imports: [
