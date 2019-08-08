@@ -339,7 +339,7 @@ mat-sidenav-container {
           font-family: $font-family;
           font-weight: 300;
           color: color(reverse);
-          padding-top: 4px;
+          padding-top: 8px;
 
           @include tablet {
             font-size: 12px;
@@ -515,23 +515,6 @@ footer {
   mat-sidenav-container mat-sidenav-content nav .login .account a {
     font-size: 11px;
     ;
-  }
-
-  mat-sidenav-container mat-sidenav-content nav .login {
-
-    .sinscrie {
-      display: none !important;
-    }
-  }
-
-  mat-sidenav-container mat-sidenav-content nav .menu #closed_menu {
-    display: none;
-  }
-
-  mat-sidenav-container mat-sidenav-content nav .login {
-    .account {
-      display: flex !important;
-    }
   }
 
   mat-sidenav-container mat-sidenav-content nav a img {

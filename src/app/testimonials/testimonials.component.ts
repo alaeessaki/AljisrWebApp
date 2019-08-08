@@ -8,14 +8,13 @@ import { QuotesService } from './quotes.service';
   encapsulation: ViewEncapsulation.None
 })
 export class TestimonialsComponent implements OnInit {
+
   temoin:temoins[];
   selectedItem2:temoins;
-  constructor(private _quotes:QuotesService) {
-
-
-  }
+  constructor(private _quotes:QuotesService) {  }
 
   ngOnInit() {
+    // getting temoins from services
     this.temoin = this._quotes.getTemoins();
     this.selectedItem2 = this.temoin[0];
     this.changeX((this.temoin.length));
@@ -25,6 +24,7 @@ export class TestimonialsComponent implements OnInit {
     this.selectedItem2 = item;
   }
 
+  // rect liner change
   changeX(id) {
     var rectem = document.getElementById("rect-testi");
     rectem.style.transition = "left 1s";

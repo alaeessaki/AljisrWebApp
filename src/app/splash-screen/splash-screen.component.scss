@@ -34,7 +34,7 @@
       position: relative;
 
       img {
-        width: 11%;
+        width: 20%;
         animation: moveUpAndDown 2s infinite;
 
         @include laptop-breakpoint {

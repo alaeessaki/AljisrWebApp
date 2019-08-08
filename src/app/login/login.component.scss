@@ -23,7 +23,7 @@
     @include tablet-sm {
       margin-right: 5px;
     }
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
 
   .seconnecter {
@@ -31,6 +31,12 @@
     background-color: white;
     color: color(primary) !important;
     font-weight: bold;
+    @include mobile-l{
+      font-size: 10px;
+    }
+    @include mobile-md{
+      font-size: 9px;
+    }
 
   }
 }
@@ -176,8 +182,4 @@
 
 }
 
-@media screen and (max-width:650px) {
-  .seconnecter {
-    display: none !important;
-  }
-}
+

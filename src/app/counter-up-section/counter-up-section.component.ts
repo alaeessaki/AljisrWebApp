@@ -31,6 +31,7 @@ export class CounterUpSectionComponent implements OnInit {
 
   ngOnInit() {
     this.countSections = this._AljisrNums.getNums();
+    
   }
 
   getRoutePos() {
@@ -38,7 +39,7 @@ export class CounterUpSectionComponent implements OnInit {
   }
   public justScroll() {
     var passed_countup = false;
-    $('body,html').bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup', function (event) {
+    $('body').bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup', function (event) {
       if ($(window).scrollTop() >= ($("#countup_sec").offset().top - 400)) {
         if (!passed_countup) {
           $('.counter').each(function () {

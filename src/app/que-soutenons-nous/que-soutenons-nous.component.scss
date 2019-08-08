@@ -98,9 +98,6 @@
           @include md-device{
             height: 290px;
           }
-          @include laptop{
-            height: 290px;
-          }
           @include tablet{
             height: 260px;
           }
@@ -114,10 +111,6 @@
             font-size: 110%;
             color: color(primary);
             margin-bottom: 20px;
-
-            @include md-device{
-              
-            }
 
             @include laptop{
               font-size: 100%;

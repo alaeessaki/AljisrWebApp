@@ -8,6 +8,7 @@
 
   <!-- Side nav bar -->
   <mat-sidenav #sidenav mode="over" position="start" [fixedInViewport]="true">
+
     <div class="side-menu-container d-flex">
       <div class="left-row">
         <div class="left-row-wrapper d-flex flex-column">
@@ -59,6 +60,7 @@
               </mat-card-title>
             </mat-card>
           </div>
+
         </div>
       </div>
     </div>
@@ -68,26 +70,23 @@
   <mat-sidenav-content id="body_container">
 
     <!-- Nav -->
+
     <!-- Route navbar -->
     <nav class="d-flex justify-content-between flex-direction-row align-items-center" *ngIf="!itsHome">
       <!-- Menu button -->
-      <div class="menu ml-3 d-flex justify-content-center align-items-center flex-direction-row">
+      <div class="menu ml-3 d-flex justify-content-center align-items-center">
         <mat-icon id="phone_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon"
           (click)="sidenav.toggle()">menu</mat-icon>
 
         <a class="text-uppercase" (click)="sidenav.toggle()">Menu</a>
-
       </div>
 
       <!-- Logo -->
-      <a routerLink="/"> <img src="../assets/Aljisr_logo.png"></a>
-
+      <a routerLink="/"> <img src="../assets/Aljisr_logo2.png"></a>
+      
       <!-- Login -->
-
       <div class="login mr-5">
-
         <app-login></app-login>
-
       </div>
 
     </nav>
@@ -106,21 +105,8 @@
       </div>
 
       <!-- Logo -->
-      <a class="homeLogo" routerLink="/"> <img src="../assets/Aljisr_logo.png"></a>
+      <a class="homeLogo" routerLink="/"> <img src="../assets/Aljisr_logo2.png"></a>
 
-      <!-- Login -->
-
-      <!-- <div class="login mr-3">
-          <a routerLink="/Inscription" class="sinscrie">S'inscrire</a>
-          <app-login></app-login>
-   -->
-      <!-- Mobile Login Version -->
-      <!-- <div class="account d-flex flex-column justify-content-center align-items-center">
-            <mat-icon id="phone_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon">
-              account_circle</mat-icon>
-            <a href="#">se connecter</a>
-          </div>
-        </div> -->
 
     </nav>
 

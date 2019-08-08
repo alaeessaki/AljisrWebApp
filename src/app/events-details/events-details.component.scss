@@ -7,8 +7,9 @@
   width: 100%;
   margin-right: 10rem;
   .title{
-    @include laptop-breakpoint{
-      margin-left: 0;
+    margin-left: 35px !important;
+    @include laptop{
+      margin-left: 0 !important;
     }
   }
   p {

@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { images } from '../declarations';
 import { CarouselConfig } from 'ngx-bootstrap/carousel';
 import { HeroImgsService } from './hero-imgs.service';
 
@@ -13,10 +12,13 @@ import { HeroImgsService } from './hero-imgs.service';
   ]
 })
 export class CarouselComponent implements OnInit {
-  images:Array<any>
+  
+  images:Array<any>;
+
   constructor(private _heroImgs : HeroImgsService) { }
 
   ngOnInit() {
+    // getting data from hero-imgs service
     this.images = this._heroImgs.getImages();
   }
 

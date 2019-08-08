@@ -1,5 +1,6 @@
 @import "../../variables.scss";
 
+// carousel-imgs styling
 carousel {
   slide {
     img {
@@ -12,8 +13,6 @@ carousel {
     }
   }
 }
-
-
 
 // carousel styling
 .carousel-indicators {
@@ -73,9 +72,6 @@ carousel {
     top: 88.4% !important;
   }
 }
-
-
-
 
 @media screen and (max-width:350px) {
   .carousel-indicators {
