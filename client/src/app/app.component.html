@@ -69,48 +69,55 @@
   <!-- the main content and where the router shows -->
   <mat-sidenav-content id="body_container">
 
-    <!-- Nav -->
+    <!-- headers -->
 
-    <!-- Route navbar -->
-    <nav class="d-flex justify-content-between flex-direction-row align-items-center" *ngIf="!itsHome">
-      <!-- Menu button -->
-      <div class="menu ml-3 d-flex justify-content-center align-items-center">
-        <mat-icon id="phone_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon"
-          (click)="sidenav.toggle()">menu</mat-icon>
-
-        <a class="text-uppercase" (click)="sidenav.toggle()">Menu</a>
-      </div>
-
-      <!-- Logo -->
-      <a routerLink="/"> <img src="../assets/Aljisr_logo2.png"></a>
-      
-      <!-- Login -->
-      <div class="login mr-5">
-        <app-login></app-login>
-      </div>
-
-    </nav>
-
-    <!-- Home Navbar -->
-    <nav class="homeNav d-flex justify-content-between flex-direction-row align-items-center" *ngIf="itsHome">
-      <!-- Menu button -->
-      <div class="homeMenu menu ml-3 d-flex justify-content-center align-items-center flex-direction-row">
-        <div class="btnContainer">
+    <header *ngIf="!itsHome">
+      <!-- Route navbar -->
+      <nav class="d-flex justify-content-between flex-direction-row align-items-center">
+        <!-- Menu button -->
+        <div class="menu ml-3 d-flex justify-content-center align-items-center">
           <mat-icon id="phone_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon"
             (click)="sidenav.toggle()">menu</mat-icon>
+
+          <a class="text-uppercase" (click)="sidenav.toggle()">Menu</a>
         </div>
 
-        <a class="text-uppercase" (click)="sidenav.toggle()">Menu</a>
+        <!-- Logo -->
+        <a routerLink="/"> <img src="../assets/Aljisr_logo2.png"></a>
 
-      </div>
+        <!-- Login -->
+        <div class="login mr-5">
+          <app-login></app-login>
+        </div>
 
-      <!-- Logo -->
-      <a class="homeLogo" routerLink="/"> <img src="../assets/Aljisr_logo2.png"></a>
+      </nav>
+    </header>
 
+    <!-- Home Navbar -->
+    <header *ngIf="itsHome">
+      <nav class="homeNav d-flex justify-content-between flex-direction-row align-items-center">
+        <!-- Menu button -->
+        <div class="homeMenu menu ml-3 d-flex justify-content-center align-items-center flex-direction-row">
+          <div class="btnContainer">
+            <mat-icon id="phone_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon"
+              (click)="sidenav.toggle()">menu</mat-icon>
+          </div>
 
-    </nav>
+          <a class="text-uppercase" (click)="sidenav.toggle()">Menu</a>
 
-    <router-outlet></router-outlet>
+        </div>
+
+        <!-- Logo -->
+        <a class="homeLogo" routerLink="/"> <img src="../assets/Aljisr_logo2.png"></a>
+
+      </nav>
+    </header>
+
+    <main>
+
+      <router-outlet></router-outlet>
+
+    </main>
 
     <app-footer></app-footer>
   </mat-sidenav-content>

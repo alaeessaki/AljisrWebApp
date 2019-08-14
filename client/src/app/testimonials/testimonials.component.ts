@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { temoins } from '../declarations';
-import { QuotesService } from './quotes.service';
+import { HomePageService } from '../pages/home-page/home-page.service';
 @Component({
   selector: 'app-testimonials',
   templateUrl: './testimonials.component.html',
@@ -9,14 +9,16 @@ import { QuotesService } from './quotes.service';
 })
 export class TestimonialsComponent implements OnInit {
 
-  temoin;
+  temoin:Array<any>;
   selectedItem2:temoins;
-  constructor(private _quotes:QuotesService) {  }
+  title:string;
+  constructor(private _homePage:HomePageService) {  }
 
   ngOnInit() {
     // getting temoins from services
-    this._quotes.getTemoins().subscribe(data=>{
-      this.temoin = data;
+    this._homePage.getdata().subscribe(data=>{
+      this.temoin = data[0].temoinSection.temoins;
+      this.title = data[0].temoinSection.title;
       this.selectedItem2 = this.temoin[0];
       this.changeX((this.temoin.length));
     });

@@ -9,7 +9,7 @@ var app = express();
 const route = require('./routes/routes')
 
 // connect to mongodb
-mongoose.connect('mongodb://localhost:27017/aljisr',{useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/aljisr-fr',{useNewUrlParser: true});
 
 // on connection
 mongoose.connection.on('connected', ()=>{
@@ -24,7 +24,7 @@ mongoose.connection.on('error', (err)=>{
 
 
 // port no
-const port = 3000;
+const port = 3200;
 
 // adding middleware - cors
 app.use(cors());

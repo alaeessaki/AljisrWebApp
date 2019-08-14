@@ -80,39 +80,49 @@ mat-sidenav-container {
       width: 50%;
       height: 100%;
     }
-    @include tablet-sm{
+
+    @include tablet-sm {
       width: 60%;
     }
 
     .side-menu-container {
       width: 100%;
+
       .left-row {
-        width: 20%;
-        @include mobile-l{
-          width: 30%;
+        position: fixed;
+        width: 80px;
+        height: 100%;
+        @include mobile-l {
+          width: 60px;
         }
+
         background-color: color(reverse);
 
         .left-row-wrapper {
           padding: 17vh 2px 5px 5px;
 
-          
-          .social-link{
+
+          .social-link {
             transform: rotate(-90deg);
             margin-top: 54px;
-            img{
+
+            img {
               width: 25%;
             }
-            a{
+
+            a {
               font-size: 12px;
-              @include tablet-sm{
+
+              @include tablet-sm {
                 font-size: 10px;
               }
+
               padding-left: 3px;
               color: color(primary);
               font-family: $secondary-font;
               text-decoration: none;
-              &:focus{
+
+              &:focus {
                 outline: none !important;
               }
             }
@@ -122,10 +132,12 @@ mat-sidenav-container {
       }
 
       .right-row {
-        width: 80%;
-        @include mobile-l{
-          width: 70%;
+        margin-left: 80px;
+
+        @include mobile-l {
+          margin-left: 60px;
         }
+
         height: 100%;
         width: 100%;
 
@@ -136,9 +148,11 @@ mat-sidenav-container {
           color: color(reverse);
           height: 85px;
           font-size: 18px;
-          @include mobile-l{
+
+          @include mobile-l {
             font-size: 15px;
           }
+
           font-weight: bolder;
           border: unset;
         }
@@ -162,7 +176,8 @@ mat-sidenav-container {
                 @include tablet-sm {
                   font-size: 12px;
                 }
-                @include mobile-l{
+
+                @include mobile-l {
                   font-size: 11px;
                 }
 
@@ -195,7 +210,8 @@ mat-sidenav-container {
                 @include tablet-sm {
                   font-size: 12px;
                 }
-                @include mobile-l{
+
+                @include mobile-l {
                   font-size: 11px;
                 }
               }
@@ -210,10 +226,12 @@ mat-sidenav-container {
                 font-family: $secondary-font;
                 font-weight: bold;
                 font-size: 13px;
+
                 @include tablet-sm {
                   font-size: 11px;
                 }
-                @include mobile-l{
+
+                @include mobile-l {
                   font-size: 10px;
                 }
               }
@@ -464,26 +482,26 @@ footer {
 
 
 @media screen and (max-width:980px) {
-  mat-sidenav-container mat-sidenav-content nav #desktop_menu_container .single_row .link_row .link a {
+  mat-sidenav-container mat-sidenav-content header nav #desktop_menu_container .single_row .link_row .link a {
     font-size: 14px;
   }
 
-  mat-sidenav-container mat-sidenav-content nav #desktop_menu_container .single_row .link_row .sub_link a {
+  mat-sidenav-container mat-sidenav-content header nav #desktop_menu_container .single_row .link_row .sub_link a {
     font-size: 9px;
   }
 
 }
 
 @media screen and (max-width:750px) {
-  mat-sidenav-container mat-sidenav-content nav #desktop_menu_container .single_row .link_row {
+  mat-sidenav-container mat-sidenav-content header nav #desktop_menu_container .single_row .link_row {
     width: 33%;
   }
 
-  mat-sidenav-container mat-sidenav-content nav #desktop_menu_container .single_row .link_row .link a {
+  mat-sidenav-container mat-sidenav-content header nav #desktop_menu_container .single_row .link_row .link a {
     font-size: 16px;
   }
 
-  mat-sidenav-container mat-sidenav-content nav #desktop_menu_container .single_row .link_row .sub_link a {
+  mat-sidenav-container mat-sidenav-content header nav #desktop_menu_container .single_row .link_row .sub_link a {
     font-size: 11px;
   }
 
@@ -492,43 +510,43 @@ footer {
 //Media Queries
 @media screen and (min-width:650px) {
 
-  mat-sidenav-container mat-sidenav-content nav .menu a {
+  mat-sidenav-container mat-sidenav-content header nav .menu a {
     display: flex;
   }
 }
 
 @media screen and (max-width:650px) {
-  mat-sidenav-container mat-sidenav-content nav .menu #phone_menu {
+  mat-sidenav-container mat-sidenav-content header nav .menu #phone_menu {
     font-size: 25px !important;
     margin-top: 5px;
   }
 
-  mat-sidenav-container mat-sidenav-content nav a img {
+  mat-sidenav-container mat-sidenav-content header nav a img {
     width: 9vw;
   }
 
-  mat-sidenav-container mat-sidenav-content nav .login .account mat-icon {
+  mat-sidenav-container mat-sidenav-content header nav .login .account mat-icon {
     font-size: 31px;
     margin-bottom: 6px;
   }
 
-  mat-sidenav-container mat-sidenav-content nav .login .account a {
+  mat-sidenav-container mat-sidenav-content header nav .login .account a {
     font-size: 11px;
     ;
   }
 
-  mat-sidenav-container mat-sidenav-content nav a img {
+  mat-sidenav-container mat-sidenav-content header nav a img {
     margin-left: 0;
   }
 
 }
 
 @media screen and (max-width:450px) {
-  mat-sidenav-container mat-sidenav-content nav a img {
+  mat-sidenav-container mat-sidenav-content header nav a img {
     width: 11vw;
   }
 
-  mat-sidenav-container mat-sidenav-content nav .login {
+  mat-sidenav-container mat-sidenav-content header nav .login {
     .account {
       mat-icon {
         font-size: 25px;

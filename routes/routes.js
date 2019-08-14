@@ -2,30 +2,28 @@ const express = require('express');
 const router = express.Router();
 
 // HeroSection
-const Quotes = require('../models/heroSection/quotes');
-const Imgs = require('../models/heroSection/imgs');
+// const Quotes = require('../models/heroSection/quotes');
+// const Imgs = require('../models/heroSection/imgs');
+const HomePage = require('../models/homePage/homePage');
 
-// Temoins
-const Temoin = require('../models/temoins/temoins');
+// // Temoins
+// const Temoin = require('../models/temoins/temoins');
 
 // retrieving herosectiondata
-router.get('/quotes', (req,res, next)=>{
-    Quotes.find(function(err, quotes){
-        res.json(quotes);
-    })
-})
-router.get('/imgs', (req,res, next)=>{
-    Imgs.find(function(err, imgs){
-        res.json(imgs);
+// router.get('/quotes', (req,res, next)=>{
+//     Quotes.find(function(err, quotes){
+//         res.json(quotes);
+//     })
+// })
+
+router.get('/homePage', (req,res, next)=>{
+    HomePage.find(function(err, data){
+        res.json(data);
     })
 })
 
-// retrieving temoins data
-router.get('/temoins', (req,res, next)=>{
-    Temoin.find(function(err, temoins){
-        res.json(temoins);
-    })
-})
+
+
 
 // add contact
 // router.post('/contact', (req, res, next)=>{

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroSectionService } from './hero-section.service';
+import { HomePageService } from '../pages/home-page/home-page.service';
 
 @Component({
   selector: 'app-hero-section',
@@ -9,13 +9,13 @@ import { HeroSectionService } from './hero-section.service';
 export class HeroSectionComponent implements OnInit {
   index: number;
   currentSlogon: string;
-  slogons;
-  constructor(private _heroSection: HeroSectionService) {
+  slogons:Array<string>;
+  constructor(private _homePage: HomePageService) {
   }
 
   ngOnInit() {
-    this._heroSection.getSlogon().subscribe(data => {
-      this.slogons = data;
+    this._homePage.getdata().subscribe(data => {
+      this.slogons = data[0].heroSection.slogons;
       this.getCurrentSlogon();
     });
     let _this = this;
@@ -29,17 +29,17 @@ export class HeroSectionComponent implements OnInit {
 
   getCurrentSlogon() {
     this.index = 0;
-    this.currentSlogon = this.slogons[this.index].quote;
+    this.currentSlogon = this.slogons[this.index];
   }
 
   change() {
     if (this.index < this.slogons.length -1) {
       this.index++;
-      this.currentSlogon = this.slogons[this.index].quote;
+      this.currentSlogon = this.slogons[this.index];
     }
     else {
       this.index = 0;
-      this.currentSlogon = this.slogons[this.index].quote;
+      this.currentSlogon = this.slogons[this.index];
     }
   }
 
