@@ -15,7 +15,7 @@ export class HeroSectionComponent implements OnInit {
 
   ngOnInit() {
     this._homePage.getdata().subscribe(data => {
-      this.slogons = data[0].heroSection.slogons;
+      this.slogons = data[0].slogons;
       this.getCurrentSlogon();
     });
     let _this = this;

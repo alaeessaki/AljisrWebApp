@@ -5,7 +5,6 @@ const router = express.Router();
 // const Quotes = require('../models/heroSection/quotes');
 // const Imgs = require('../models/heroSection/imgs');
 const HomePage = require('../models/homePage/homePage');
-
 // // Temoins
 // const Temoin = require('../models/temoins/temoins');
 
@@ -18,12 +17,9 @@ const HomePage = require('../models/homePage/homePage');
 
 router.get('/homePage', (req,res, next)=>{
     HomePage.find(function(err, data){
-        res.json(data);
+        res.json(data)
     })
 })
-
-
-
 
 // add contact
 // router.post('/contact', (req, res, next)=>{

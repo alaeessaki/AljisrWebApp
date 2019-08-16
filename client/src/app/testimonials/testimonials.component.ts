@@ -17,9 +17,9 @@ export class TestimonialsComponent implements OnInit {
   ngOnInit() {
     // getting temoins from services
     this._homePage.getdata().subscribe(data=>{
-      this.temoin = data[0].temoinSection.temoins;
-      this.title = data[0].temoinSection.title;
-      this.selectedItem2 = this.temoin[0];
+      this.temoin = data[2].temoins;
+      this.title = data[2].name;
+      this.selectedItem2 = this.temoin[2];
       this.changeX((this.temoin.length));
     });
    

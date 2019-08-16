@@ -17,9 +17,9 @@ export class QueSoutenonsNousComponent implements OnInit {
 
   ngOnInit() {
     this._homePage.getdata().subscribe(data => {
-      this.sections = data[0].queSetounonsNous.cards;
-      this.title = data[0].queSetounonsNous.title;
-      this.subtitle = data[0].queSetounonsNous.subtitle;
+      this.sections = data[1].cards;
+      this.title = data[1].name;
+      this.subtitle = data[1].subname;
     })
   }
 

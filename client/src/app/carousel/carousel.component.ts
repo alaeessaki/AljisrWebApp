@@ -20,7 +20,7 @@ export class CarouselComponent implements OnInit {
   ngOnInit() {
     // getting data from hero-imgs service
     this._homePage.getdata().subscribe(data=>{
-      this.images = data[0].heroSection.imgs
+      this.images = data[0].imgs
     });
   }
 
