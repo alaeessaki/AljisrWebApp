@@ -10,7 +10,7 @@
       <div class="col-md-4 d-flex flex-column align-items-center" *ngFor="let section of countSections">
         <img src="{{section.counticon}}" alt="counter-icons" width="35" height="35" class="mb-3">
         <div class="increm_num d-flex justify-content-center">
-          <p class=" counter" [attr.data-count]="section.countend">0</p>
+          <p class="counter" [attr.data-count]="section.countend">0</p>
           +
         </div>
         <div class="increm_text mb-5">{{section.title}}</div>

@@ -20,6 +20,7 @@ export class CounterUpSectionComponent implements OnInit {
   }
   ngOnInit() {
 
+
     $(document).ready(function () {
       var passed_countup = false;
       $('body,html').bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup', function (event) {
