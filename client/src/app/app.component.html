@@ -1,0 +1,117 @@
+<!-- Loading bar -->
+<ng2-slim-loading-bar color="#1592E6" [height]="'3px'"></ng2-slim-loading-bar>
+<!-- Splash screen -->
+<app-splash-screen></app-splash-screen>
+
+<!-- container -->
+<mat-sidenav-container [hasBackdrop]=true>
+
+  <!-- Side nav bar -->
+  <mat-sidenav #sidenav mode="over" position="start" [fixedInViewport]="true">
+
+    <div class="side-menu-container d-flex">
+      <div class="left-row">
+        <div class="left-row-wrapper d-flex flex-column">
+
+          <app-login></app-login>
+
+          <div class="mb-4 social-link d-flex flexe-row align-items-center justify-content-center">
+            <img src="../assets/icons/facebook-logo-blue.png">
+            <a href="">facebook</a>
+          </div>
+
+          <div class="mb-4 social-link d-flex flexe-row align-items-center justify-content-center">
+            <img src="../assets/icons/instagram-logo-blue.png">
+            <a href="">instagram</a>
+          </div>
+
+          <div class="social-link d-flex flexe-row align-items-center justify-content-center">
+            <img src="../assets/icons/youtube-blue.png">
+            <a href="">youtube</a>
+          </div>
+        </div>
+      </div>
+      <div class="right-row">
+        <mat-toolbar>Menu</mat-toolbar>
+        <div class="sidenav-container d-flex flex-column">
+          <mat-card>
+            <mat-card-title>
+              <a routerLink="/" (click)="sidenav.close()">Home</a>
+            </mat-card-title>
+          </mat-card>
+          <div *ngFor="let item of Menu">
+            <mat-expansion-panel *ngIf="item.subtitle.length>1">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{item.title.name}}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div *ngFor="let subitem of item.subtitle" class="sublink mb-3">
+                <a routerLink="/{{subitem.link}}" (click)="sidenav.close()">{{subitem.name}}</a>
+              </div>
+            </mat-expansion-panel>
+          </div>
+
+          <!-- Links that doesnt have sulinks -->
+          <div *ngFor="let item of Menu" class="othercards">
+            <mat-card *ngIf="item.subtitle.length<1">
+              <mat-card-title>
+                <a routerLink="/{{item.title.link}}">{{item.title.name}}</a>
+              </mat-card-title>
+            </mat-card>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </mat-sidenav>
+
+  <!-- the main content and where the router shows -->
+  <mat-sidenav-content id="body_container">
+
+    <!-- Nav -->
+
+    <!-- Route navbar -->
+    <nav class="d-flex justify-content-between flex-direction-row align-items-center" *ngIf="!itsHome">
+      <!-- Menu button -->
+      <div class="menu ml-3 d-flex justify-content-center align-items-center">
+        <mat-icon id="phone_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon"
+          (click)="sidenav.toggle()">menu</mat-icon>
+
+        <a class="text-uppercase" (click)="sidenav.toggle()">Menu</a>
+      </div>
+
+      <!-- Logo -->
+      <a routerLink="/"> <img src="../assets/Aljisr_logo2.png"></a>
+      
+      <!-- Login -->
+      <div class="login mr-5">
+        <app-login></app-login>
+      </div>
+
+    </nav>
+
+    <!-- Home Navbar -->
+    <nav class="homeNav d-flex justify-content-between flex-direction-row align-items-center" *ngIf="itsHome">
+      <!-- Menu button -->
+      <div class="homeMenu menu ml-3 d-flex justify-content-center align-items-center flex-direction-row">
+        <div class="btnContainer">
+          <mat-icon id="phone_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon"
+            (click)="sidenav.toggle()">menu</mat-icon>
+        </div>
+
+        <a class="text-uppercase" (click)="sidenav.toggle()">Menu</a>
+
+      </div>
+
+      <!-- Logo -->
+      <a class="homeLogo" routerLink="/"> <img src="../assets/Aljisr_logo2.png"></a>
+
+
+    </nav>
+
+    <router-outlet></router-outlet>
+
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

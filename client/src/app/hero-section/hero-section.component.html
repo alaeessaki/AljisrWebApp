@@ -1,0 +1,30 @@
+<section class="hero">
+  <app-carousel></app-carousel>
+
+  <div class="slogan">
+    <h3 class="text-uppercase" style="white-space: pre-line;">{{currentSlogon}}</h3>
+  </div>
+  <div class="lang d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row justify-content-center align-items-center ">
+    <div class="homeIcons d-flex flex-row">
+      <img src="../../assets/icons/phone.png" matTooltip="0522 98 01 36" matTooltipPosition="left">
+      <img src="../../assets/icons/place.png"
+        matTooltip="Ecole El Bachiri Garçons, Angle Rue Ahmed kadmiri et Rue Bachir Laâlaj - Cité Plateau - casablanca"
+        matTooltipPosition="below">
+      <app-search [style.display]="isClicked ? 'flex' : 'none'"></app-search>
+      <img src="../../assets/icons/search.png" (click)="clicked()">
+    </div>
+    <div class="lang-container d-flex flex-row">
+      <a href="#">FR /</a>
+      <a href="#">EN /</a>
+      <a href="#" class="ar"> ع</a>
+    </div>
+  </div>
+
+  <div class="slogan2">
+    <h1>INSPIRER<br>LES JEUNES<br>à enquêter</h1>
+  </div>
+
+  <app-benevoler></app-benevoler>
+  
+
+</section>

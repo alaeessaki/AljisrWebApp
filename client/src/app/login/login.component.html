@@ -1,0 +1,45 @@
+<div class="account d-flex flex-column justify-content-center align-items-center" (click)="openModal(template)">
+  <mat-icon id="phone_menu" class="menuIcon" aria-hidden="false" aria-label="Example home icon">
+    account_circle</mat-icon>
+  <a class="seconnecter">S'identifier</a>
+</div>
+
+<ng-template #template>
+  <div class="modal-body">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="container row">
+      <div class="col-6 left-row">
+        <div class="filter">
+        </div>
+        <div class="red-cont">
+          <h1>inscrivez vous</h1>
+          <p>Aujourd'hui aggissons enssemble pour l'école de demain</p>
+          <div
+            class="sinscrire-field d-flex flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row align-items-center">
+            <a routerLink="/Inscription" (click)="modalRef.hide()">Vous n'avez pas de compte ?
+              <button mat-button class="indentifierBtn">Créer un profil</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 right-row">
+        <div class="login-forms-container d-flex flex-column justify-content-center align-items-center">
+          <img src="../../assets/Aljisr_logo.png" style="width: 18%">
+          <mat-form-field appearance="legacy">
+            <mat-label>Username / Email</mat-label>
+            <input matInput>
+            <mat-icon class="material-icons-outlined" matPrefix>email</mat-icon>
+          </mat-form-field>
+          <mat-form-field appearance="legacy">
+            <mat-label>Password</mat-label>
+            <input matInput>
+            <mat-icon class="material-icons-outlined" matPrefix>vpn_key</mat-icon>
+          </mat-form-field>
+          <button mat-button class="indentifierBtn">S'identifier</button>
+          <a href="">Mot de passe oublié ?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

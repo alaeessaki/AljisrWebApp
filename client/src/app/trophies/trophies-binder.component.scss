@@ -1,0 +1,172 @@
+@import '../../variables.scss';
+@import '../../needs.scss';
+@import '../../extends.scss';
+@import '../../mediaqueries.scss';
+
+.trophies-section {
+  width: 100%;
+
+  .trophies-wrapper {
+    margin-bottom: 150px;
+    position: relative;
+    @include tablet-sm{
+      margin-bottom: 0;
+    }
+    .trophies-opening {
+      background-color: color(primary);
+      color: color(reverse);
+
+      h1 {
+        font-size: 20px;
+        font-family: $paragraph-font;
+        font-weight: bold;
+        padding: 3rem;
+        padding-left: 8rem;
+        position: relative;
+        @include tablet{
+          font-size: 18px;
+        }
+        @include tablet-sm{
+          font-size: 14px;
+          padding-left: 3rem;
+          line-height: 30px;
+        }
+
+        &::before {
+          content: "";
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: color(reverse);
+          position: absolute;
+          left: 8%;
+          @include tablet-sm{
+            left: 3%;
+          }
+          bottom: 44%;
+        }
+
+        .title-spec {
+          font-size: 20px;
+          color: color(primary);
+          background-color: color(reverse);
+          padding: 2px 43px;
+          margin-left: 5px;
+          border-radius: 10px;
+          @include tablet{
+            font-size: 18px;
+          }
+          @include tablet-sm{
+            font-size: 15px;
+          }
+
+        }
+      }
+    }
+
+    .trophie-details-container {
+      @include laptop-breakpoint{
+        display: flex;
+        flex-direction: row;
+
+      }
+      @include tablet-sm{
+        flex-direction: column;
+      }
+      .left-row{
+        .trophies-binding-section {
+          width: 60%;
+          @include laptop-breakpoint{
+            width: 100%;
+          }
+          position: relative;
+  
+          app-trophie-details {
+            width: 70%;
+            @include laptop-breakpoint{
+              width: 100%;
+            }
+          }
+  
+          .trophies-indicators {
+            padding-left: 2rem;
+            position: relative;
+  
+            @include laptop {
+              position: absolute;
+              top: 60%;
+              left: 20%;
+            }
+            @include tablet-sm{
+              top: 50%;
+            }
+  
+            &::before {
+              content: "";
+              height: 6px;
+              width: 100%;
+              background-color: black;
+              position: absolute;
+              bottom: 21%;
+              left: 18%;
+  
+              @include laptop {
+                bottom: -30px;
+              }
+            }
+  
+            .indicator {
+              .indicator-dot {
+                cursor: pointer;
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+                background-color: black;
+                border-radius: 50%;
+                @include tablet-sm{
+                  width: 12px;
+                  height: 12px;
+                }
+              }
+  
+              .indicator-dot-selected {
+                width: 15px;
+                height: 15px;
+                @include tablet-sm{
+                  width: 12px;
+                  height: 12px;
+                }
+                background-color: color(reverse);
+                border: 3px solid color(primary);
+              }
+            }
+          }
+        }
+      }
+      .right-row{
+        @include laptop-breakpoint{
+          margin-right: 5vw;
+        }
+      }
+    }
+
+
+  }
+
+  .liner {
+    position: relative;
+    top: 35px;
+    right: 45px;
+    @include laptop {
+      top: -90px;
+    }
+    @include laptop-breakpoint{
+      top: 0px;
+      left: -34px;
+    }
+    @include tablet{
+      display: none !important;
+    }
+  }
+
+}

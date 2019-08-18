@@ -1,0 +1,278 @@
+@import "../../variables.scss";
+@import '../../mediaqueries.scss';
+
+.events {
+  padding-bottom: 7rem;
+  .container {
+    .events-details-container{
+      width: 45%;
+      @include laptop-breakpoint{
+        margin-right: 10vw;
+      }
+      app-events-details {
+        width: 100%;
+      }
+      .liner{
+        position: relative;
+        right: 65px;
+        top: 30px;
+      }
+    }
+
+    .dates {
+      cursor: pointer;
+      width: 55%;
+
+      table {
+        border: 2px solid color(secondary);
+        border-color: color(secondary);
+        border-left: none;
+        border-right: none;
+        margin-top: 5rem;
+
+        .date_container {
+          td {
+            border: 2px solid color(secondary);
+            border-left: none;
+          }
+
+          .check {
+            mat-radio-group {
+              width: 10%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-right: 18px;
+
+              mat-radio-button {
+                width: 40%;
+                margin-right: 0.5rem;
+              }
+            }
+          }
+
+          .title_container {
+            padding-left: 2rem;
+            padding-right: 3rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-right: none;
+            width: 60%;
+
+            .date {
+              font-size: 11px;
+              color: color(secondary);
+            }
+
+            .eventstitle {
+              font-size: 14px;
+              color: color(secondary);
+            }
+          }
+
+          .chose_container {
+            border-right: none;
+            cursor: pointer;
+            padding: 1rem 3rem;
+
+            img {
+              width: 20%;
+              margin-bottom: 5px;
+
+            }
+
+            h6 {
+              font-size: 11px;
+              color: color(secondary);
+            }
+          }
+        }
+      }
+
+      .voir-tous {
+        padding-top: 4rem;
+        text-transform: uppercase;
+
+        p {
+          color: color(primary);
+          font-size: 16px;
+          padding-right: 1rem;
+          padding-top: 12px;
+        }
+
+        img {
+          width: 18px;
+        }
+      }
+    }
+
+  }
+}
+
+
+
+.selected {
+  color: color(primary);
+}
+
+
+.bigRadio .mat-radio-container {
+  height: 30px;
+  width: 30px;
+}
+
+.bigRadio .mat-radio-outer-circle {
+  height: 30px;
+  width: 30px;
+  border-color: color(primary);
+}
+
+.bigRadio .mat-radio-inner-circle {
+  height: 30px;
+  width: 30px;
+  border-color: color(primary);
+}
+
+.bigRadio .mat-radio-button .mat-radio-ripple {
+  height: 40px;
+  width: 40px;
+  left: calc(50% - 20px);
+  top: calc(50% - 20px);
+}
+
+.bigRadio .mat-radio-button {
+  padding-left: 10px;
+}
+
+
+
+
+
+@media screen and (max-width:834px) {
+  .events .container {
+    padding-left: 1.5rem !important;
+    flex-direction: column !important;
+
+    .events-details-container{
+      width: 100%;
+      .liner{
+        right: 179px;
+        top: -25px;
+        @include mobile-l{
+          right: 0%;
+        }
+      }
+      app-events-details {
+        width: 100%;
+      }
+    }
+  }
+
+  .events .container .dates{
+    width: 85% !important;
+    table .date_container{
+      .chose_container {
+        padding: 0;
+    
+        h6 {
+          font-size: 10px;
+        }
+      }
+    } 
+  } 
+
+  .voir-tous {
+    margin-left: 60%;
+
+    p {
+      font-size: 16px !important;
+    }
+
+    img {
+      width: 22px;
+    }
+  }
+
+  .events .container .dates table .date_container .title_container {
+    padding-right: 10rem !important;
+
+    .date {
+      font-size: 12px;
+    }
+
+    .eventstitle {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .events .container .dates table .date_container .title_container {
+
+    padding-right: 4rem !important;
+
+    .date {
+      font-size: 10px;
+    }
+
+    .eventstitle {
+      font-size: 12px;
+    }
+  }
+
+
+  // radio btns size
+  .bigRadio .mat-radio-container {
+    height: 20px;
+    width: 20px;
+  }
+
+  .bigRadio .mat-radio-outer-circle {
+    height: 20px;
+    width: 20px;
+    border-color: color(primary);
+  }
+
+  .bigRadio .mat-radio-inner-circle {
+    height: 20px;
+    width: 20px;
+    border-color: color(primary);
+  }
+
+  .bigRadio .mat-radio-button .mat-radio-ripple {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    left: calc(50% - 15px);
+    top: calc(50% - 15px);
+  }
+
+  .bigRadio .mat-radio-button {
+    padding-left: 10px;
+  }
+
+
+}
+
+@media screen and (max-width: 375px) {
+  .events .container .dates table .date_container .title_container {
+
+    padding-right: 2rem !important;
+
+    .date {
+      font-size: 8px;
+    }
+
+    .eventstitle {
+      font-size: 10px;
+    }
+  }
+}
+
+@media screen and (min-width:1459px){
+  .events .events-cont {
+      margin-left: 10%;
+  }
+
+}

@@ -1,0 +1,134 @@
+@import "../../variables.scss";
+@import "../../mediaqueries.scss";
+
+.hero {
+  position: relative;
+  // top: 0;
+  .slogan {
+    position: absolute;
+    top: 35%;
+    left: 7%;
+
+    @include mobile-md{
+      top: 40%;
+    }
+
+    h3 {
+      position: relative;
+      color: white;
+      font-size: 0.9vw;
+      font-family: $font-family;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+      line-height: 18px;
+
+      @include tablet{
+        font-size: 1.2vw;
+      }
+      @include tablet-sm{
+        font-size: 1.4vw;
+        letter-spacing: 1px;
+      }
+      @include mobile-md{
+        line-height: 10px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: white;
+        height: 2px;
+        width: 21%;
+        top: -30%;
+      }
+    }
+  }
+
+  .slogan2 {
+    position: absolute;
+    top: 59%;
+    left: 7%;
+    color: white;
+    @include tablet-sm{
+      display: none;
+    }
+    h1 {
+      text-transform: uppercase;
+      font-family: $font-family;
+      font-weight: bolder;
+      font-size: 4.5vw;
+    }
+  }
+ 
+  .lang {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+
+    @include tablet-sm{
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+    @include tablet-sm{
+      top:5%;
+    }
+    @include mobile-l{
+      top:7%;
+    }
+
+    .lang-container{
+      @include tablet{
+        padding-right: 14px;
+        line-height: 30px;
+      }
+      @include mobile-l{
+        line-height: 10px;
+      }
+      a {
+        padding-left: 4px;
+        font-family: $font-family;
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+  
+        @include tablet{
+          font-size: 12px;
+        }
+        @include mobile-l{
+          font-size: 8px;
+        }
+        
+      }
+    }
+   
+
+    //.ar {}
+    .homeIcons{
+      @include tablet-sm{
+        max-height: 6vw;
+      }
+      img {
+        width: 20px;
+        filter: brightness(100%);
+        -webkit-filter: brightness(100%);
+        margin-right: 15px;
+        cursor: pointer;
+  
+        @include tablet{
+          width: 16px;
+        }
+        @include tablet-sm{
+          width: 3vw;
+        }
+        @include mobile-l{
+          width: 12px;
+          margin-right: 8px;
+          padding-bottom: 9px;
+        }
+  
+      }
+    }
+    
+  }
+}

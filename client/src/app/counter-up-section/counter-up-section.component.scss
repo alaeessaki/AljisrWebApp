@@ -1,0 +1,78 @@
+@import '../../variables.scss';
+@import '../../needs.scss';
+@import '../../extends.scss';
+@import '../../mediaqueries.scss';
+
+
+
+.aljisr_en_numero {
+  font-family: $font-family;
+  margin-bottom: 90px;
+  #counter {  
+    .row {
+      .num-sec{
+        img{
+          width: 30px;
+          height: 30px;
+        }
+        .increm_num {
+          text-transform: uppercase;
+          font-size: 30px;
+          width: 8rem;
+          font-weight: bolder;
+          color: #5A5A5A;
+          @include tablet{
+            font-size: 25px;
+          }
+        }
+
+        p {
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 17%;
+            right: -16%;
+            background-color: #22C0FF;
+            height: 10px;
+            width: 119%;
+            z-index: -1;
+          }
+        }
+
+      }
+
+    }
+  }
+  .voir-plus {
+    float: right;
+    margin-right: 8%;
+
+    a {
+      text-decoration: none;
+      color: color(reverse);
+      background-color: color(primary);
+      font-size: 13px;
+      font-family: $font-family;
+      padding: 15px 70px;
+      @include tablet{
+        padding: 10px 60px;
+      }
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 130%;
+        height: 3px;
+        background-color: color(primary);
+        left: -100%;
+        bottom: 40%;
+      }
+    }
+  }
+
+
+}
+

@@ -1,0 +1,49 @@
+@import "../../variables.scss";
+@import "../../needs.scss";
+@import "../../extends.scss";
+@import '../../mediaqueries.scss';
+
+.description {
+  width: 100%;
+  margin-right: 10rem;
+  .title{
+    margin-left: 35px !important;
+    @include laptop{
+      margin-left: 0 !important;
+    }
+  }
+  p {
+    color: color(secondary);
+    font-size: 14px;
+    padding-left: 3%;
+    @include laptop{
+      padding-left: 5px;
+    }
+  }
+
+  .liner {
+    .liner-cont {
+      right: 63px !important;
+      top: 22px !important;
+    }
+  }
+}
+
+
+
+@media screen and (max-width:768px) {
+
+  .description {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .description {
+    p {
+      font-size: 0.7rem;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<section class="testimonials">
+  <!-- section title -->
+  <div class="titlecontainer title-cont">
+    <div class="title d-flex flex-row align-items-center">
+      <span class="number">03</span>
+      <h1 class="text-uppercase">Témoignages</h1>
+    </div>
+  </div>
+
+  <div class="testi-cont d-flex">
+    <div class="testi-wrapper">
+      <div class="testi-flexer d-flex flex-row mr-5">
+        <div class="container d-flex temoirespo justify-content-center">
+          <app-testimons [temo]="selectedItem2"></app-testimons>
+          <div class="d-flex flex-column radios">
+            <div *ngFor="let tm of temoin" (click)="onSelected(tm); changeX(tm.id) ">
+              <mat-radio-group aria-label="Select an option" class="bigRadio2">
+                <mat-radio-button [value]="tm.id" color="primary" [checked]="tm===selectedItem2" class="radio-buttons">
+                </mat-radio-button>
+              </mat-radio-group>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="liner d-flex justify-content-end align-items-end">
+        <div class="liner-cont">
+          <div class="dot"></div>
+          <div class="line"></div>
+          <div class="rect" id="rect-testi"></div>
+        </div>
+      </div>
+    </div>
+    <div class="testim-checker">
+      <app-check-card paragraph="Rejoignez notre grande Communauté de Bénévoles" btnText="Bénévoler" id="2">
+      </app-check-card>
+    </div>
+  </div>
+</section>

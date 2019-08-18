@@ -1,0 +1,81 @@
+@import "../../variables.scss";
+
+// carousel-imgs styling
+carousel {
+  slide {
+    img {
+      width: 100%;
+      height: auto;
+      -webkit-filter: brightness(50%);
+      /* Safari 6.0 - 9.0 */
+      filter: brightness(50%);
+
+    }
+  }
+}
+
+// carousel styling
+.carousel-indicators {
+  position: absolute !important;
+  left: 58% !important;
+  top: 79.4% !important;
+}
+
+.carousel-indicators li {
+  width: .8vw;
+  height: .8vw;
+  margin: 0vw .2vw;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.carousel-indicators .active {
+  background-color: color(primary);
+
+}
+
+.carousel-control {
+  top: 80.3%;
+  bottom: 16%;
+  opacity: 1;
+}
+
+.carousel-control-prev {
+  left: 73%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.carousel-control-next {
+  right: 15%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+
+// media queries
+@media screen and (max-width:850px) {
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}
+
+@media screen and (max-width:650px) {
+  .carousel-indicators {
+    left: 59% !important;
+    top: 88.4% !important;
+  }
+}
+
+@media screen and (max-width:350px) {
+  .carousel-indicators {
+    left: 50% !important;
+    top: 88.4% !important;
+  }
+}

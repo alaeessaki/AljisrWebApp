@@ -1,0 +1,102 @@
+@import '~@angular/material/theming';
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import "../node_modules/ng2-slim-loading-bar/style.css";
+
+@import './variables.scss';
+
+html,
+body {
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// materials styling
+
+$mat-myapp-primary: (50: #e3f2fc,
+  100: #BDECFF,
+  200: #91E0FF,
+  300: #64D3FF,
+  400: #43C9FF,
+  500: #22C0FF,
+  600: #1EBAFF,
+  700: #19B2FF,
+  800: #14AAFF,
+  900: #0C9CFF,
+  A100: #FFFFFF,
+  A200: #F6FBFF,
+  A400: #C3E4FF,
+  A500: #22c0ff,
+  A700: #22c0ff,
+  contrast: (50 : #0C9CFF,
+    100 : #0C9CFF,
+    200 : #14AAFF,
+    300 : #19B2FF,
+    400 : #1EBAFF,
+    500 : #22C0FF,
+    600 : #43C9FF,
+    700 : #64D3FF,
+    800 : #91E0FF,
+    900 : #BDECFF,
+    A100 : #22c0ff,
+    A200 : #22c0ff,
+    A400 : #C3E4FF,
+    A700 : #fdfeff,
+  ));
+
+$mat-myapp-accent: (50: #ffff,
+  100: #ffff,
+  200: #ffff,
+  300: #ffff,
+  400: #ffff,
+  500: #ffff,
+  600: #ffff,
+  700: #ffff,
+  800: #ffff,
+  900: #ffff,
+  A100: #ffff,
+  A200: #ffff,
+  A400: #ffff,
+  A700: #ffff,
+  contrast: (50 : #0000,
+    100 : #0000,
+    200 : #0000,
+    300 : #0000,
+    400 :#0000,
+    500 :#0000,
+    600 :#0000,
+    700 : #0000,
+    800 : #0000,
+    900 : #0000,
+    A100 :#0000,
+    A200 : #0000,
+    A400 : #0000,
+    A700 : #0000,
+  ));
+$primary: mat-palette($mat-myapp-primary, A500);
+$accent: mat-palette($mat-myapp-accent);
+
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
+
+
+
+// tooltip styling
+.mat-tooltip {
+  background-color: color(primary);
+}
+.specific-class > .mat-expansion-indicator, .mat-expansion-indicator:after {
+  color: color(reverse) !important;
+}
+

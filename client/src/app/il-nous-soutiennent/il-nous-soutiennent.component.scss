@@ -1,0 +1,109 @@
+@import '../../variables.scss';
+@import '../../needs.scss';
+@import '../../extends.scss';
+@import '../../mediaqueries.scss';
+
+
+.ilsNousSoutiennent {
+  position: relative;
+  padding-top: 60px;
+
+  .titlecontainer {
+    .title {
+      padding-bottom: 28px;
+
+      h1 {
+        position: relative;
+        z-index: 2;
+      }
+    }
+    @include laptop{
+      padding-bottom: 205px;
+    }
+    @include tablet{
+      padding-bottom: 0;
+    }
+  } 
+  .bg-dots{
+    @include tablet{
+      display: none !important;
+    }
+  }
+
+
+  .rendez-vous-solidaires {
+    background-color: color(primary);
+    color: color(reverse);
+
+    h1 {
+      font-size: 18px;
+      padding: 33px 116px;
+      font-family: $paragraph-font;
+      font-weight: bold;
+      margin: 0;
+      @include tablet{
+        font-size: 15px;
+      }
+      @include mobile-l{
+        padding: 33px 50px;
+      }
+    }
+  }
+
+  .ilsNousSoutiennent-right-row {
+    width: 728px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 144px;
+    @include laptop {
+      top: 230px;
+    }
+    @include tablet{
+      position: unset;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    @include mobile-l{
+      flex-direction: column !important;
+    }
+
+    .left-row {
+      background-color: color(background-grey-bold);
+      padding-top: 100px;
+
+      .list-cont {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+          border-bottom: 2px solid color(primary);
+          padding-bottom: 18px;
+          padding-right: 140px;
+          margin-left: 36px;
+          margin-bottom: 30px;
+          @include tablet-sm{
+            padding-right: 60px;
+          }
+
+          a {
+            color: color(primary);
+            font-size: 16px;
+            font-family: $paragraph-font;
+            font-weight: bolder;
+            text-decoration: none;
+            @include tablet{
+              font-size: 14px;
+            }
+            @include tablet-sm{
+              font-size: 13px; 
+            }
+            @include mobile-l{
+              font-size: 3.6vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

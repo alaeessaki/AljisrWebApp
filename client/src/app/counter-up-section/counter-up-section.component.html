@@ -1,0 +1,21 @@
+<section class="aljisr_en_numero" id="countup_sec">
+  <div class="title d-flex flex-row align-items-center">
+    <span class="number">04</span>
+    <h1 class="text-uppercase">Al jisr en chiffres ( 1999 - 2019 )</h1>
+  </div>
+  <div class="container" id="counter">
+    <div class="row mb-4 d-flex align-items-center justify-content-center">
+      <div class="num-sec col-12 col-sm-6 col-md-6 col-lg-4 d-flex flex-column align-items-center" *ngFor="let section of countSections">
+        <img src="{{section.counticon}}" alt="counter-icons" width="35" height="35" class="mb-3">
+        <div class="increm_num d-flex justify-content-center">
+          <p class="counter" [attr.data-count]="section.countend">0</p>
+          +
+        </div>
+        <div class="increm_text mb-5">{{section.title}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="voir-plus">
+    <a href="">Voir Plus</a>
+  </div>
+</section>

@@ -1,0 +1,541 @@
+@import "../variables.scss";
+@import "../mediaqueries.scss";
+
+
+//scroll background 
+*::-webkit-scrollbar {
+  width: 10px !important;
+  background-color: white !important;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  border-radius: 10px !important;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: color(primary) !important;
+  border-radius: 10px !important;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: color(primary) !important;
+}
+
+.noscroll {
+  &::-webkit-scrollbar {
+    width: 0px !important;
+    background-color: color(lite-primary) !important;
+  }
+}
+
+
+
+
+
+
+// extends 
+%login-style {
+  border: 1px solid color(primary);
+  text-transform: uppercase;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+%not-selectibale {
+  // set text not selectibale
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer */
+  -khtml-user-select: none;
+  /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none;
+  /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none;
+  /* Disable Android and iOS callouts*/
+}
+
+
+
+
+
+
+
+
+
+mat-sidenav-container {
+  height: 100%;
+  background-color: white;
+
+  mat-sidenav {
+    width: 40%;
+    background-color: color(primary);
+    display: flex;
+    flex-direction: row;
+
+    @include tablet {
+      width: 50%;
+      height: 100%;
+    }
+    @include tablet-sm{
+      width: 60%;
+    }
+
+    .side-menu-container {
+      width: 100%;
+      .left-row {
+        width: 20%;
+        @include mobile-l{
+          width: 30%;
+        }
+        background-color: color(reverse);
+
+        .left-row-wrapper {
+          padding: 17vh 2px 5px 5px;
+
+          
+          .social-link{
+            transform: rotate(-90deg);
+            margin-top: 54px;
+            img{
+              width: 25%;
+            }
+            a{
+              font-size: 12px;
+              @include tablet-sm{
+                font-size: 10px;
+              }
+              padding-left: 3px;
+              color: color(primary);
+              font-family: $secondary-font;
+              text-decoration: none;
+              &:focus{
+                outline: none !important;
+              }
+            }
+          }
+        }
+
+      }
+
+      .right-row {
+        width: 80%;
+        @include mobile-l{
+          width: 70%;
+        }
+        height: 100%;
+        width: 100%;
+
+        mat-toolbar {
+          font-family: $secondary-font;
+          background-color: color(primary);
+          border-bottom: 1px solid #3498DB;
+          color: color(reverse);
+          height: 85px;
+          font-size: 18px;
+          @include mobile-l{
+            font-size: 15px;
+          }
+          font-weight: bolder;
+          border: unset;
+        }
+
+        .sidenav-container {
+          width: 100%;
+          height: 100%;
+
+          mat-card {
+            padding: 6px;
+            background-color: color(primary);
+
+            mat-card-title {
+              a {
+                padding: 0;
+                text-decoration: none;
+                color: color(reverse);
+                font-family: $secondary-font;
+                font-size: 16px;
+
+                @include tablet-sm {
+                  font-size: 12px;
+                }
+                @include mobile-l{
+                  font-size: 11px;
+                }
+
+                font-weight: bolder;
+                margin-left: 19px;
+
+                &:focus {
+                  outline: unset !important;
+                }
+              }
+            }
+          }
+
+          mat-expansion-panel {
+            background-color: color(primary);
+            box-shadow: unset !important;
+
+            mat-expansion-panel-header {
+
+              &:hover {
+                background-color: color(primary);
+              }
+
+              mat-panel-title {
+                color: color(reverse);
+                font-size: 16px;
+                font-family: $secondary-font;
+                font-weight: 900;
+
+                @include tablet-sm {
+                  font-size: 12px;
+                }
+                @include mobile-l{
+                  font-size: 11px;
+                }
+              }
+            }
+
+            .sublink {
+              margin-left: 10px;
+
+              a {
+                color: color(reverse);
+                text-decoration: none;
+                font-family: $secondary-font;
+                font-weight: bold;
+                font-size: 13px;
+                @include tablet-sm {
+                  font-size: 11px;
+                }
+                @include mobile-l{
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+
+          .mat-expansion-panel {
+            box-shadow: unset !important;
+          }
+        }
+      }
+    }
+
+  }
+
+  mat-sidenav-content {
+    nav {
+      .menu {
+        @extend %not-selectibale;
+
+        .menuIcon {
+          font-size: 28px;
+        }
+
+        mat-icon {
+          cursor: pointer;
+
+        }
+
+        a {
+          display: none;
+          font-size: 14px;
+          text-decoration: none;
+          font-family: $font-family;
+          padding-top: 12px;
+          color: black;
+          cursor: pointer;
+          @extend %not-selectibale;
+
+          &:hover {
+            color: black;
+          }
+        }
+      }
+
+      a {
+        img {
+          padding: 16px 0px;
+          width: 67px;
+          @extend %not-selectibale;
+        }
+      }
+
+      .login {
+        @extend %not-selectibale;
+      }
+    }
+
+    .homeNav {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      .homeMenu {
+        position: absolute;
+        top: 18px;
+        left: 65px;
+
+        @include tablet {
+          left: 15px;
+        }
+
+        @include mobile-md {
+          top: 10px;
+          left: 10px;
+        }
+
+        .btnContainer {
+          position: relative;
+          background-color: color(reverse);
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+
+          @include tablet {
+            width: 35px;
+            height: 35px;
+          }
+
+          @include mobile-md {
+            width: 30px;
+            height: 30px;
+
+          }
+
+          #phone_menu {
+            position: absolute;
+            z-index: 2;
+            color: color(secondary);
+            top: 8px;
+            left: 8px;
+
+            @include tablet {
+              margin-top: 0 !important;
+              font-size: 22px !important;
+              top: 7px !important;
+              left: 7px !important;
+            }
+
+            @include mobile-md {
+              font-size: 19px !important;
+              top: 6px !important;
+              left: 6px !important;
+            }
+          }
+        }
+
+        a {
+          padding-left: 10px;
+          font-size: 15px;
+          font-family: $font-family;
+          font-weight: 300;
+          color: color(reverse);
+          padding-top: 8px;
+
+          @include tablet {
+            font-size: 12px;
+          }
+
+          &:hover {
+            color: color(reverse);
+          }
+        }
+      }
+
+
+      .homeLogo {
+        position: absolute;
+        left: 48%;
+        top: 10px;
+        background-color: color(reverse);
+        border-radius: 0 0 4px 4px;
+        top: 0;
+        transform: translateX(-50%) skewX(-9deg);
+        width: 190px;
+        height: 80px;
+
+        @include tablet {
+          width: 150px;
+          height: 60px;
+        }
+
+        @include tablet-sm {
+          width: 120px;
+          height: 50px;
+        }
+
+        @include mobile-md {
+          width: 95px;
+          height: 45px;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          width: 193px;
+          height: 89px;
+          background-color: transparent;
+          background-color: rgba(255, 255, 255, 0.15);
+          border-radius: 0 0 4px 4px;
+          position: absolute;
+          z-index: 2;
+          left: 8px;
+          top: 0;
+
+          @include tablet {
+            width: 150px;
+            height: 65px;
+          }
+
+          @include tablet-sm {
+            width: 120px;
+            height: 57px;
+          }
+
+          @include mobile-md {
+            width: 95px;
+            height: 50px;
+          }
+
+
+        }
+
+        img {
+          margin-left: 3.3rem;
+          padding: 9px 3px;
+          width: 86px;
+          transform: skew(-3deg, 0deg);
+
+          @include tablet {
+            margin-left: 2.8rem;
+            padding: 5px 3px;
+            width: 65px;
+          }
+
+          @include tablet-sm {
+            margin-left: 2.2em;
+            padding: 4px 3px;
+            width: 55px;
+          }
+
+          @include mobile-md {
+            margin-left: 1.5em;
+            padding: 4px 4px;
+            width: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: none;
+}
+
+
+
+
+footer {
+  padding: 0;
+  margin: 0;
+  background-color: #3498DB;
+
+  p {
+    margin: 0;
+  }
+}
+
+
+
+
+
+
+@media screen and (max-width:980px) {
+  mat-sidenav-container mat-sidenav-content nav #desktop_menu_container .single_row .link_row .link a {
+    font-size: 14px;
+  }
+
+  mat-sidenav-container mat-sidenav-content nav #desktop_menu_container .single_row .link_row .sub_link a {
+    font-size: 9px;
+  }
+
+}
+
+@media screen and (max-width:750px) {
+  mat-sidenav-container mat-sidenav-content nav #desktop_menu_container .single_row .link_row {
+    width: 33%;
+  }
+
+  mat-sidenav-container mat-sidenav-content nav #desktop_menu_container .single_row .link_row .link a {
+    font-size: 16px;
+  }
+
+  mat-sidenav-container mat-sidenav-content nav #desktop_menu_container .single_row .link_row .sub_link a {
+    font-size: 11px;
+  }
+
+}
+
+//Media Queries
+@media screen and (min-width:650px) {
+
+  mat-sidenav-container mat-sidenav-content nav .menu a {
+    display: flex;
+  }
+}
+
+@media screen and (max-width:650px) {
+  mat-sidenav-container mat-sidenav-content nav .menu #phone_menu {
+    font-size: 25px !important;
+    margin-top: 5px;
+  }
+
+  mat-sidenav-container mat-sidenav-content nav a img {
+    width: 9vw;
+  }
+
+  mat-sidenav-container mat-sidenav-content nav .login .account mat-icon {
+    font-size: 31px;
+    margin-bottom: 6px;
+  }
+
+  mat-sidenav-container mat-sidenav-content nav .login .account a {
+    font-size: 11px;
+    ;
+  }
+
+  mat-sidenav-container mat-sidenav-content nav a img {
+    margin-left: 0;
+  }
+
+}
+
+@media screen and (max-width:450px) {
+  mat-sidenav-container mat-sidenav-content nav a img {
+    width: 11vw;
+  }
+
+  mat-sidenav-container mat-sidenav-content nav .login {
+    .account {
+      mat-icon {
+        font-size: 25px;
+        margin-bottom: 0px;
+        margin-top: 5px;
+        margin-left: 7px;
+      }
+    }
+  }
+}

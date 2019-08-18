@@ -1,0 +1,167 @@
+@import '../../variables.scss';
+@import '../../needs.scss';
+@import '../../extends.scss';
+@import '../../mediaqueries.scss';
+
+.dernier-nouvelles {
+  .news-container {
+    padding-left: 10%;
+    padding-right: 25%;
+    padding-bottom: 100px;
+    padding-top: 2%;
+    @include tablet{
+      flex-direction: column !important;
+       padding-left: 0;
+       padding-top: 0;
+    }
+    .new-card {
+      position: relative;
+      &:first-child{
+        @include tablet{
+          margin-bottom: 90px;
+          margin-top: 20px;
+        }
+      }
+      .img-new-cont{
+        @include tablet{
+          width: 30vw !important;
+          height: 45vw !important;
+        }
+        @include tablet-sm{
+          width: 40vw !important;
+          height: 65vw !important;
+        }
+        @include mobile-md{
+          width: 50vw !important;
+          height: 70vw !important;
+        }
+        @include mobile-sm{
+          height: 300px!important;
+        }
+      }
+      .new-text {
+        position: absolute;
+        left: 70%;
+        top: 8%;
+        background-color: color(reverse);
+        border-bottom: 4px solid color(primary);
+        height: 100%;
+        width: 20vw;
+        @include tablet{
+          width: 30vw;
+        }
+        @include tablet-sm{
+          width: 40vw;
+        }
+        @include mobile-md{
+          width: 50vw;
+        }
+        .text-container {
+          word-wrap: break-word;
+          padding: 35px;
+          height: 100%;
+          width: 100%;
+          @include laptop{
+            padding: 27px;
+          }
+        
+          h1 {
+            font-size: 18px;
+            font-family: $font-family;
+            font-weight: bold;
+            color: #596059;
+            position: relative;
+            padding-bottom: 5px;
+
+            @include laptop{
+                font-size: 14px;
+            }
+            @include tablet-sm{
+              font-size: 12px;
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              height: 10px;
+              width: 10px;
+              background-color: color(primary);
+              left: -20px;
+              bottom: 26px;
+              border-radius: 50%;
+
+              @include laptop{
+                height: 8px;
+                width: 8px;
+                left: -18px;
+                bottom: 22px;
+              }
+            }
+
+          }
+
+          .text-cont {
+            height: 68%;
+
+            p {
+              font-size: 12px;
+              color: #596059;
+              font-weight: $font-family;
+              height: 100%;
+              width: 100%;
+              overflow: hidden;
+
+              @include laptop{
+                  font-size: 10px;
+              }
+              @include tablet-sm{
+                font-size: 9px;
+              }
+            }
+          }
+
+          a {
+            font-size: 13px;
+            font-family: $font-family;
+            text-decoration: none;
+            color: #596059;
+            font-weight: bold;
+            padding-top: 5px;
+            @include laptop{
+                font-size: 11px;
+                padding-top: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .voir-plus {
+    float: right;
+    margin-right: 8%;
+
+    a {
+      text-decoration: none;
+      color: color(reverse);
+      background-color: color(primary);
+      font-size: 13px;
+      font-family: $font-family;
+      padding: 15px 70px;
+      @include tablet{
+        padding: 10px 60px;
+      }
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 130%;
+        height: 3px;
+        background-color: color(primary);
+        left: -100%;
+        bottom: 40%;
+      }
+    }
+  }
+}
