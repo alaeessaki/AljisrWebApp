@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CarouselConfig } from 'ngx-bootstrap/carousel';
-import { HomePageService } from '../pages/home-page/home-page.service';
+import { CarouselImgService } from './carousel-img.service';
 
 @Component({
   selector: 'app-carousel',
@@ -13,14 +13,14 @@ import { HomePageService } from '../pages/home-page/home-page.service';
 })
 export class CarouselComponent implements OnInit {
   
-  images:Array<Object>;
+  images:Object;
 
-  constructor(private _homePage : HomePageService) { }
+  constructor(private _carouselService : CarouselImgService) { }
 
   ngOnInit() {
     // getting data from hero-imgs service
-    this._homePage.getdata().subscribe(data=>{
-      this.images = data[0].imgs
+    this._carouselService.getImgs().subscribe(data=>{
+      this.images = data
     });
   }
 

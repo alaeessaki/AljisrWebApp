@@ -45,9 +45,8 @@ import { TrophiesPicsComponent } from './trophies-pics/trophies-pics.component';
 import { HttpClientModule } from '@angular/common/http';
 
 // services 
-import { UsersService } from './users.service';
 import { BenevolerComponent } from './benevoler/benevoler.component';
-
+import { CookieService } from 'ngx-cookie-service'
 
 
 
@@ -95,7 +94,7 @@ import { BenevolerComponent } from './benevoler/benevoler.component';
     HttpClientModule
 
   ],
-  providers: [MatNativeDateModule, UsersService],
+  providers: [MatNativeDateModule, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

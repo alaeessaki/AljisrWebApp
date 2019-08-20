@@ -4,10 +4,11 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class HomePageService {
+export class CarouselImgService {
 
   constructor(private http: HttpClient) { }
-  getdata(){
+
+  getImgs(){
     return this.http.get('http://localhost:3200/api/heroSectionImgs');
   }
 }

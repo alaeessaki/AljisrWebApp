@@ -19,8 +19,8 @@
             <div class="theCard col-12 col-sm-6 col-md-4" *ngFor="let section of sections"
                 (mouseenter)="active(section)" [class.active]="section.active">
                 <div class="card-cont d-flex flex-column">
-                    <h1 class="text-uppercase">{{section.title}}</h1>
-                    <p>{{section.subtitle}}</p>
+                    <h1 class="text-uppercase">{{section.title[language]}}</h1>
+                    <p>{{section.description[language]}}</p>
                     <img [src]="section.icon">
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HomePageService } from '../pages/home-page/home-page.service'
-
+import { QueSoutenenonsNousCardsService } from './que-soutenenons-nous-cards.service'
+import { LangService } from '../lang.service';
 
 @Component({
   selector: 'app-que-soutenons-nous',
@@ -8,18 +8,18 @@ import { HomePageService } from '../pages/home-page/home-page.service'
   styleUrls: ['./que-soutenons-nous.component.scss']
 })
 export class QueSoutenonsNousComponent implements OnInit {
+  language:string
   title: string;
   subtitle: string;
-  sections: Array<any>;
+  sections:any;
 
-  constructor(private _homePage: HomePageService) {
+  constructor(private _cardsService: QueSoutenenonsNousCardsService, private _langService:LangService) {
   }
-
   ngOnInit() {
-    this._homePage.getdata().subscribe(data => {
-      this.sections = data[1].cards;
-      this.title = data[1].name;
-      this.subtitle = data[1].subname;
+    this.language = this._langService.getLanguage();
+    this._cardsService.getCards().subscribe(data => {
+      this.sections = data;
+      console.log(this.sections);
     })
   }
 
@@ -32,13 +32,13 @@ export class QueSoutenonsNousComponent implements OnInit {
       // checking if the element in the loop is the one that the mouse is over it
       if (element == section) {
         element.active = true;
-        element.icon = `../../assets/Que-soutenons-nous/${element.id}-white.png`;
+        element.icon = `../../assets/Que-soutenons-nous/${element.hoverId}-white.png`;
         // move the rect to the place according to cards hover id
-        if (element.id == 1) {
+        if (element.hoverId == 1) {
           rect.style.transition = "left 1s";
           rect.style.left = "40px";
         }
-        else if (element.id == 2) {
+        else if (element.hoverId == 2) {
           rect.style.transition = "left 1s";
           rect.style.left = "60px";
         }
@@ -50,7 +50,7 @@ export class QueSoutenonsNousComponent implements OnInit {
       // if the element is not the one that is the mouse on the icon turns grey and get a property of not active
       else {
         element.active = false;
-        element.icon = `../../assets/Que-soutenons-nous/${element.id}.png`;
+        element.icon = `../../assets/Que-soutenons-nous/${element.hoverId}.png`;
       }
     });
 

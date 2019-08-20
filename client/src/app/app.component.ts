@@ -10,6 +10,8 @@ import {
   Router
 } from '@angular/router';
 
+import { CookieService } from 'ngx-cookie-service';
+
 import * as $ from 'jquery';
 
 
@@ -21,35 +23,43 @@ import * as $ from 'jquery';
 export class AppComponent {
   title = 'aljisrwebapplication';
   itsHome = false;
-  constructor(private _loadingBar: SlimLoadingBarService, private _router: Router) {
+  constructor(private _loadingBar: SlimLoadingBarService, private _router: Router, private _cookieSercive: CookieService) {
     this._router.events.subscribe((event: Event) => {
       this.navigationInterceptor(event);
     });
     this._router.events.subscribe(
       (event: any) => {
         if (event instanceof NavigationEnd) {
-          if( this._router.url == "/home" || this._router.url == "/"){
+          if (this._router.url == "/home" || this._router.url == "/") {
             this.isHome();
           }
-          else{
+          else {
             this.isHomeNt();
           }
-          
+
         }
       }
     );
   }
-  isHome(){
-    this.itsHome=true;
+  isHome() {
+    this.itsHome = true;
   }
-  isHomeNt(){
-    this.itsHome=false;
+  isHomeNt() {
+    this.itsHome = false;
   }
   ngOnInit() {
+    // setting default language
+    if (this._cookieSercive.check("language") == false) {
+      this._cookieSercive.set('language', "fr");
+    }
+
     $(window).on("load", function () {
-      setTimeout(() => { $(".splash-wrapper").fadeOut("slow") },0);
+      setTimeout(() => { $(".splash-wrapper").fadeOut("slow") }, 0);
     });
+
   }
+
+  // Loading bar
   private navigationInterceptor(event: Event): void {
     if (event instanceof NavigationStart) {
       this._loadingBar.start();
@@ -67,6 +77,7 @@ export class AppComponent {
 
 
 
+  // menu data
 
   Menu: menu[] = [
     {

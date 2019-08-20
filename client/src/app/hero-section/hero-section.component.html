@@ -14,14 +14,14 @@
       <img src="../../assets/icons/search.png" (click)="clicked()">
     </div>
     <div class="lang-container d-flex flex-row">
-      <a href="#">FR /</a>
-      <a href="#">EN /</a>
-      <a href="#" class="ar"> ع</a>
+      <a href="#" (click)="changeLanguage('fr')">FR /</a>
+      <a href="#" (click)="changeLanguage('en')">EN /</a>
+      <a href="#" (click)="changeLanguage('ar')" class="ar"> ع</a>
     </div>
   </div>
 
   <div class="slogan2">
-    <h1>INSPIRER<br>LES JEUNES<br>à enquêter</h1>
+    <h1 style="white-space: pre-line;">{{bigSlogon[language]}}</h1>
   </div>
 
   <app-benevoler></app-benevoler>

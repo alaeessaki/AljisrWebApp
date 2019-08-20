@@ -27,6 +27,7 @@
     "jquery": "^3.4.1",
     "ng2-slim-loading-bar": "^4.0.0",
     "ngx-bootstrap": "^4.3.0",
+    "ngx-cookie-service": "^2.2.0",
     "ngx-scrollbar": "^4.2.0",
     "rxjs": "~6.4.0",
     "rxjs-compat": "^6.5.2",
