@@ -234,7 +234,7 @@ router.post('/addEvent', (req, res, next) => {
     })
 })
 
-// add participants to events
+// add participant to an event
 router.post('/addParticipant/:id', (req, res, next) => {
     var id = req.params.id
     Events.update({
@@ -330,7 +330,7 @@ router.put('/modifyHeroSectionImg/:id', (req, res, next) => {
     })
 })
 
-// Modify a Slogon to a section
+// Modify a Slogon of a section
 router.put('/modifySlogon/:sectionid/:slogonid', (req, res, next) => {
     Slogons.update({
         _id: req.params.sectionid,
