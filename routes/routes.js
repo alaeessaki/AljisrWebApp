@@ -182,6 +182,88 @@ router.post('/addSlogonToSection/:id', (req, res, next) => {
     })
 })
 
+// add benevole
+router.post('/addBenevoles', (req, res, next) => {
+    let newBenevole = new Benevoles({
+        nom: req.body.nom,
+        prenom: req.body.prenom,
+        adresse: req.body.adresse,
+        email: req.body.email,
+        nom_etablissement: req.body.nom_etablissement,
+        telephone: req.body.telephone,
+        nom_association: req.body.nom_association,
+        exp_domaine_association: req.body.exp_domaine_association
+    })
+    newBenevole.save((err, benevole) => {
+        if (err) {
+            res.status(500).send(err)
+        }
+        if (!benevole) {
+            res.status(404).end();
+        } else {
+            res.status(200).json({
+                msg: "slogonsSection added successfully",
+                dataSent: benevole
+            })
+        }
+    })
+})
+
+// add Event 
+router.post('/addEvent', (req, res, next) => {
+    let newEvent = new Events({
+        date: req.body.date,
+        title: req.body.title,
+        description: {
+            en: req.body.description.en,
+            fr: req.body.description.fr
+        }
+    })
+    newEvent.save((err, event) => {
+        if (err) {
+            res.status(500).send(err)
+        }
+        if (!event) {
+            res.status(404).end();
+        } else {
+            res.status(200).json({
+                msg: "slogonsSection added successfully",
+                dataSent: event
+            })
+        }
+    })
+})
+
+// add participants to events
+router.post('/addParticipant/:id', (req, res, next) => {
+    var id = req.params.id
+    Events.update({
+        _id: id
+    }, {
+        $push: {
+            participants: {
+                name: req.body.name,
+                lastname: req.body.lastname,
+                email: req.body.email,
+                tel: req.body.tel
+            }
+        }
+    }, (err, result)=>{
+        if (err) {
+            res.status(500).send(err)
+        }
+        if (!result) {
+            res.status(404).end();
+        } else {
+            res.status(200).json({
+                msg: req.body.name + " " + req.body.lastname + " is participant now to the event with id: " + req.params.id,
+                status: result
+            })
+        }
+    })
+})
+
+
 // // add card
 // router.post('/addcards', (req, res, next) => {
 //     let newCard = new Cards({
@@ -281,13 +363,13 @@ router.put('/modifyQstnCards/:id', (req, res, next) => {
         _id: req.params.id
     }, {
         $set: {
-            title:{
-                en:req.body.title.en,
-                fr:req.body.title.fr
+            title: {
+                en: req.body.title.en,
+                fr: req.body.title.fr
             },
-            description:{
-                en:req.body.description.en,
-                fr:req.body.description.fr
+            description: {
+                en: req.body.description.en,
+                fr: req.body.description.fr
             }
         }
     }, (err, result) => {
