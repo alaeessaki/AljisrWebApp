@@ -227,7 +227,7 @@ router.post('/addEvent', (req, res, next) => {
             res.status(404).end();
         } else {
             res.status(200).json({
-                msg: "slogonsSection added successfully",
+                msg: "event added successfully",
                 dataSent: event
             })
         }
@@ -264,7 +264,7 @@ router.post('/addParticipant/:id', (req, res, next) => {
 })
 
 
-// // add card
+// add card
 // router.post('/addcards', (req, res, next) => {
 //     let newCard = new Cards({
 //         title: {
