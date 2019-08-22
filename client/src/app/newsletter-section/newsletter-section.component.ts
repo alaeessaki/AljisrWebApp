@@ -1,7 +1,6 @@
-import { Component, OnInit, ViewEncapsulation, ErrorHandler } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { NewsLetterService } from './news-letter.service'
-import { Subscriber } from './subscriber';
 
 @Component({
   selector: 'app-newsletter-section',
@@ -16,7 +15,6 @@ export class NewsletterSectionComponent implements OnInit {
   email = new FormControl('', [Validators.required, Validators.email]);
   subscribed: boolean;
   emailExist: boolean;
-  error
   constructor(private _newsletter: NewsLetterService) { }
 
   ngOnInit() {
@@ -24,12 +22,10 @@ export class NewsletterSectionComponent implements OnInit {
   emailIsExist() {
     this.emailExist = true;
     this.subscribed = false;
-    console.log('he exist')
   }
   hepassed() {
     this.emailExist = false;
     this.subscribed = true;
-    console.log('he passed')
   }
 
   subscribe(subscriber_email) {

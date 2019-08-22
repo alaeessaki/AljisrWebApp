@@ -22,114 +22,129 @@
       </div>
       <div class="formulaire-wrapper">
         <div class="form-wrapper">
-          <div class="form-title d-flex flex-row justify-content-between align-items-center">
-            <h1>Nom Complet</h1>
-            <h1 class="spec-title">Informations Personnelles</h1>
-          </div>
-          <div class="double-form-container d-flex flex-column flex-sm-column flex-md-row">
-            <div class="form-cont">
-              <mat-form-field appearance="outline">
-                <mat-label>Nom</mat-label>
-                <input matInput #nom>
-              </mat-form-field>
+          <form [formGroup]="benevoleform" (ngSubmit)="onSubmit()">
+            <div class="form-title d-flex flex-row justify-content-between align-items-center">
+              <h1>Nom Complet</h1>
+              <h1 class="spec-title">Informations Personnelles</h1>
             </div>
-            <div class="form-cont">
-              <mat-form-field appearance="outline">
-                <mat-label>Prénom</mat-label>
-                <input matInput #prenom>
-              </mat-form-field>
+            <div class="double-form-container d-flex flex-column flex-sm-column flex-md-row">
+              <div class="form-cont">
+                <mat-form-field appearance="outline">
+                  <mat-label>Nom</mat-label>
+                  <input matInput formControlName="nom">
+                  <mat-error *ngIf="benevoleform.controls['nom'].invalid">{{getNomEmptyError()}}</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="form-cont">
+                <mat-form-field appearance="outline">
+                  <mat-label>Prénom</mat-label>
+                  <input matInput formControlName="prenom" required>
+                  <mat-error *ngIf="benevoleform.controls['prenom'].invalid">{{getprenomEmptyError()}}</mat-error>
+                </mat-form-field>
+              </div>
             </div>
-          </div>
 
-          <div class="form-title">
-            <h1>Adresse</h1>
-          </div>
-          <div class="single-form-container">
-            <div class="form-cont">
-              <mat-form-field appearance="outline">
-                <mat-label>Adresse</mat-label>
-                <input matInput #adresse>
-              </mat-form-field>
+            <div class="form-title">
+              <h1>Adresse</h1>
             </div>
-          </div>
-
-          <div class="form-title">
-            <h1>Nom de l'établissement</h1>
-          </div>
-          <div class="single-form-container">
-            <div class="form-cont">
-              <mat-form-field appearance="outline">
-                <mat-label>Nom de l'établissement</mat-label>
-                <input matInput #nomdetablissement>
-              </mat-form-field>
+            <div class="single-form-container">
+              <div class="form-cont">
+                <mat-form-field appearance="outline">
+                  <mat-label>Adresse</mat-label>
+                  <input matInput formControlName="adresse" required>
+                  <mat-error *ngIf="benevoleform.controls['adresse'].invalid">{{getadresseEmptyError()}}</mat-error>
+                </mat-form-field>
+              </div>
             </div>
-          </div>
 
-          <div class="form-title d-flex flex-row justify-content-between align-items-center">
-            <h1>Email</h1>
-            <h1 class="spec-title">Informations du compte</h1>
-          </div>
-          <div class="single-form-container">
-            <div class="form-cont">
-              <mat-form-field appearance="outline">
-                <mat-label>Email</mat-label>
-                <input matInput #email>
-              </mat-form-field>
+            <div class="form-title">
+              <h1>Nom de l'établissement</h1>
             </div>
-          </div>
-
-          <div class="form-title">
-            <h1>Téléphone</h1>
-          </div>
-          <div class="single-form-container">
-            <div class="form-cont">
-              <mat-form-field appearance="outline">
-                <mat-label>Téléphone</mat-label>
-                <input matInput #telephone>
-              </mat-form-field>
+            <div class="single-form-container">
+              <div class="form-cont">
+                <mat-form-field appearance="outline">
+                  <mat-label>Nom de l'établissement</mat-label>
+                  <input matInput formControlName="nom_etablissement" required>
+                  <mat-error *ngIf="benevoleform.controls['nom_etablissement'].invalid">{{getnom_etablissementEmptyError()}}</mat-error>
+                </mat-form-field>
+              </div>
             </div>
-          </div>
 
-          <div class="form-title d-flex flex-row justify-content-between align-items-center">
-            <h1>Nome de votre association/club</h1>
-            <h1 class="spec-title">Associatifs</h1>
-          </div>
-          <div class="single-form-container">
-            <div class="form-cont">
-              <mat-form-field appearance="outline">
-                <mat-label>Nome de votre association/club</mat-label>
-                <input matInput #nomdelassociation>
-              </mat-form-field>
+            <div class="form-title d-flex flex-row justify-content-between align-items-center">
+              <h1>Email</h1>
+              <h1 class="spec-title">Informations du compte</h1>
             </div>
-          </div>
-
-          <div class="form-title">
-            <h1>Expérience dans le domaine associatif ?</h1>
-          </div>
-          <div class="single-form-container">
-            <div class="select-form-cont">
-              <mat-form-field appearance="outline">
-                <mat-select placeholder="Select">
-                  <mat-option value="oui">Oui</mat-option>
-                  <mat-option value="Non">Non</mat-option>
-                </mat-select>
-              </mat-form-field>
+            <div class="single-form-container">
+              <div class="form-cont">
+                <mat-form-field appearance="outline">
+                  <mat-label>Email</mat-label>
+                  <input matInput type="email" formControlName="email" required>
+                  <mat-error *ngIf="benevoleform.controls['email'].invalid">{{getEmailErrorMessage()}}</mat-error>
+                </mat-form-field>
+              </div>
             </div>
-          </div>
 
-          <div class="checkbox-cont">
-            <mat-checkbox color="primary" class="mycheck"><span class="accord">Je Souhaite adérer au programme <a href="">"learn to act"</a> et je m'engage à dispenser l'activité suivante avec <a href="">
-                  régularuté</a></span></mat-checkbox>
-          </div>
+            <div class="form-title">
+              <h1>Téléphone</h1>
+            </div>
+            <div class="single-form-container">
+              <div class="form-cont">
+                <mat-form-field appearance="outline">
+                  <mat-label>Téléphone</mat-label>
+                  <input matInput formControlName="telephone" required>
+                  <mat-error *ngIf="benevoleform.controls['telephone'].invalid">{{gettelephoneEmptyError()}}
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
 
-          <div class="btn-cont d-flex justify-content-center align-items-center">
-            <div class="single-btn-cont">
+            <div class="form-title d-flex flex-row justify-content-between align-items-center">
+              <h1>Nome de votre association/club</h1>
+              <h1 class="spec-title">Associatifs</h1>
+            </div>
+            <div class="single-form-container">
+              <div class="form-cont">
+                <mat-form-field appearance="outline">
+                  <mat-label>Nome de votre association/club</mat-label>
+                  <input matInput formControlName="nom_association">
+                  <mat-error *ngIf="benevoleform.controls['nom_association'].invalid">
+                    {{getnom_associationEmptyError()}}</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="form-title">
+              <h1>Expérience dans le domaine associatif ?</h1>
+            </div>
+            <div class="single-form-container">
+              <div class="select-form-cont">
+                <mat-form-field appearance="outline">
+                  <mat-select placeholder="Select" formControlName="exp_assoc">
+                    <mat-option value="oui">Oui</mat-option>
+                    <mat-option value="Non">Non</mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="benevoleform.controls['exp_assoc'].invalid">{{getexp_assocEmptyError()}}
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="checkbox-cont">
+              <mat-checkbox color="primary" class="mycheck" formControlName="check" required="true"><span class="accord">Je
+                  Souhaite adérer au programme <a href="">"learn to act"</a> et je m'engage à dispenser l'activité
+                  suivante avec <a href="">
+                    régularuté</a></span></mat-checkbox>
+            </div>
+            <div class="btn-cont d-flex justify-content-center align-items-center">
+              <div class="single-btn-cont">
                 <button mat-stroked-button color="primary" class="mybtn" (click)="modalRef.hide()">Annuler</button>
+              </div>
+              <div class="single-btn-cont">
+                <button mat-flat-button color="primary" class="mybtn" type="submit"
+                  [disabled]="!benevoleform.valid">Confirmé</button>
+              </div>
             </div>
-            <div class="single-btn-cont">
-                <button mat-flat-button color="primary" class="mybtn">Confirmé</button>
-            </div>
-          </div>
+          </form>
         </div>
 
       </div>

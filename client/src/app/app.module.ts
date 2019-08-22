@@ -46,7 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 // services 
 import { BenevolerComponent } from './benevoler/benevoler.component';
-import { CookieService } from 'ngx-cookie-service'
+import { CookieService } from 'ngx-cookie-service';
+
 
 
 
@@ -80,7 +81,7 @@ import { CookieService } from 'ngx-cookie-service'
     TrophiesBinderComponent,
     TrophieDetailsComponent,
     TrophiesPicsComponent,
-    BenevolerComponent,
+    BenevolerComponent
   ],
   imports: [
     BrowserModule,

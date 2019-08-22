@@ -14,6 +14,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
 
@@ -35,6 +36,7 @@ import { MatSelectModule } from '@angular/material/select';
         ReactiveFormsModule,
         MatDatepickerModule,
         MatSelectModule,
+        MatSnackBarModule
     ],
     exports: [
         MatButtonModule,
@@ -54,6 +56,7 @@ import { MatSelectModule } from '@angular/material/select';
         ReactiveFormsModule,
         MatDatepickerModule,
         MatSelectModule,
+        MatSnackBarModule
     ]
 })
 export class MaterialModule { }  

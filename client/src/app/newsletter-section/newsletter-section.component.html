@@ -11,7 +11,7 @@
         <mat-icon matSuffix class="d-flex text-center jusify-content-center align-items-center" (click)="subscribe(email.value)">arrow_forward
         </mat-icon>
         <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-        <mat-hint *ngIf="subscribed" >thank you for you subscribing to our news letter<br>you subscried with email : {{email.value}}</mat-hint>
+        <mat-hint *ngIf="subscribed" >thank you for your subscribing to our news letter<br>you subscried with email : {{email.value}}</mat-hint>
         <mat-hint *ngIf="emailExist"style="color: #f44336" > this email is already subscribed</mat-hint>
       </mat-form-field>
     </div>
