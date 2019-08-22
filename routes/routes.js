@@ -248,7 +248,7 @@ router.post('/addParticipant/:id', (req, res, next) => {
                 tel: req.body.tel
             }
         }
-    }, (err, result)=>{
+    }, (err, result) => {
         if (err) {
             res.status(500).send(err)
         }
@@ -262,6 +262,154 @@ router.post('/addParticipant/:id', (req, res, next) => {
         }
     })
 })
+
+// add Subscriber
+router.post('/addSubscriber', (req, res, next) => {
+    let newSubscriber = new Subscribers({
+        email: req.body.email,
+    })
+    newSubscriber.save((err, subscriber) => {
+        if (err) {
+            res.status(500).send(err)
+        }
+        if (!subscriber) {
+            res.status(404).end();
+        } else {
+            res.status(200).json(err)
+        }
+    })
+})
+
+// add Aljisr Memeber
+
+router.post('/addAljisrMember', (req, res, next) => {
+    let newMember = new Members({
+        name: {
+            en: req.body.name.en,
+            fr: req.body.name.fr
+        },
+        lastname: {
+            en: req.body.lastname.en,
+            fr: req.body.lastname.fr
+        },
+        quote: {
+            en: req.body.quote.en,
+            fr: req.body.quote.fr
+        },
+        status: {
+            en: req.body.status.en,
+            fr: req.body.status.fr
+        },
+        img: {
+            src: req.body.img.src,
+            alt: req.body.img.alt
+        }
+    })
+    newMember.save((err, member) => {
+        if (err) {
+            res.status(500).send(err)
+        }
+        if (!member) {
+            res.status(404).end();
+        } else {
+            res.status(200).json(member)
+        }
+    })
+})
+
+// add news 
+router.post('/addNews', (req, res, next) => {
+    let newNew = new News({
+        title: {
+            en: req.body.title.en,
+            fr: req.body.title.fr
+        },
+        description: {
+            en: req.body.description.en,
+            fr: req.body.description.fr
+        },
+        img: {
+            src: req.body.img.src,
+            alt: req.body.img.alt,
+        },
+        auth: req.body.auth
+    })
+    newNew.save((err, New) => {
+        if (err) {
+            res.status(500).send(err)
+        }
+        if (!New) {
+            res.status(404).end();
+        } else {
+            res.status(200).json(New)
+        }
+    })
+})
+
+
+// add Temoin
+router.post('/addTemoin', (req, res, next) => {
+    let newTemoin = new Temoins({
+        src:req.body.src,
+        alt:req.body.alt,
+        testimoin:{
+            en:req.body.testimoin.en,
+            fr:req.body.testimoin.fr
+        },
+        profile:{
+            en:req.body.profile.en,
+            fr:req.body.profile.fr
+        },
+        status:{
+            en:req.body.status.en,
+            fr:req.body.status.fr
+        }
+    })
+    newTemoin.save((err, temoin) => {
+        if (err) {
+            res.status(500).send(err)
+        }
+        if (!temoin) {
+            res.status(404).end();
+        } else {
+            res.status(200).json(temoin)
+        }
+    })
+})
+
+
+
+// add Trophie
+router.post('/addTrophie', (req, res, next) => {
+    let newTrophie = new Trophies({
+        title:{
+            en:req.body.title.en,
+            fr:req.body.title.fr
+        },
+        description:{
+            en:req.body.description.en,
+            fr:req.body.description.fr
+        },
+        img:{
+            src:req.body.img.src,
+            alt:req.body.img.alt
+        }
+    })
+    newTrophie.save((err, trophie) => {
+        if (err) {
+            res.status(500).send(err)
+        }
+        if (!trophie) {
+            res.status(404).end();
+        } else {
+            res.status(200).json(trophie)
+        }
+    })
+})
+
+// add Trophie
+
+
 
 
 // add card
@@ -414,6 +562,89 @@ router.delete('/deleteHeroSectionImg/:id', (req, res, next) => {
     })
 });
 
+// delete benevole
+router.delete('/deletebenevole/:id', (req, res, next) => {
+    Benevoles.remove({
+        _id: req.params.id
+    }, (err, result) => {
+        if (err) {
+            res.status(500).send(err);
+        } else {
+            res.json({
+                msg: "benevole deleted successfully",
+                status: result
+            });
+        }
+    })
+});
+
+// delete aljisr memebre
+router.delete('/deleteMember/:id', (req, res, next) => {
+    Members.remove({
+        _id: req.params.id
+    }, (err, result) => {
+        if (err) {
+            res.status(500).send(err);
+        } else {
+            res.json({
+                msg: "member deleted successfully",
+                status: result
+            });
+        }
+    })
+});
+
+
+// delete new 
+router.delete('/deleteNew/:id', (req, res, next) => {
+    News.remove({
+        _id: req.params.id
+    }, (err, result) => {
+        if (err) {
+            res.status(500).send(err);
+        } else {
+            res.json({
+                msg: "new deleted successfully",
+                status: result
+            });
+        }
+    })
+});
+
+// delete Temoin
+router.delete('/deleteTemoin/:id', (req, res, next) => {
+    Temoins.remove({
+        _id: req.params.id
+    }, (err, result) => {
+        if (err) {
+            res.status(500).send(err);
+        } else {
+            res.json({
+                msg: "temoin deleted successfully",
+                status: result
+            });
+        }
+    })
+});
+
+// delete Trophie
+router.delete('/deleteTrophie/:id', (req, res, next) => {
+    Trophies.remove({
+        _id: req.params.id
+    }, (err, result) => {
+        if (err) {
+            res.status(500).send(err);
+        } else {
+            res.json({
+                msg: "trophie deleted successfully",
+                status: result
+            });
+        }
+    })
+});
+
+
+
 // delete a slogon from  section
 router.delete('/deleteSlogon/:sectionid/:slogonid', (req, res, next) => {
     Slogons.update({
@@ -437,7 +668,44 @@ router.delete('/deleteSlogon/:sectionid/:slogonid', (req, res, next) => {
     })
 });
 
+// delete event 
+router.delete('/deleteEvent/:id', (req, res, next) => {
+    Events.remove({
+        _id: req.params.id
+    }, (err, result) => {
+        if (err) {
+            res.status(500).send(err);
+        } else {
+            res.json({
+                msg: "event deleted successfully",
+                status: result
+            });
+        }
+    })
+});
 
+// delete participant of an event 
+router.delete('/deleteEventParticipant/:eventid/:participantid', (req, res, next) => {
+    Events.update({
+        _id: req.params.eventid,
+        "participants._id": req.params.participantid
+    }, {
+        $pull: {
+            "participants": {
+                _id: req.params.participantid
+            }
+        }
+    }, (err, result) => {
+        if (err) {
+            res.status(500).send(err);
+        } else {
+            res.json({
+                msg: "participant deleted successfully",
+                status: result
+            });
+        }
+    })
+});
 
 
 

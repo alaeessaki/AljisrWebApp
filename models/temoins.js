@@ -10,7 +10,7 @@ const temoinSchema = new Schema({
         type:String,
         required:true
     },
-    testimoin:[{
+    testimoin:{
         en:{
             type:String,
             required:true
@@ -19,8 +19,8 @@ const temoinSchema = new Schema({
             type:String,
             required:true
         }
-    }],
-    profile:[{
+    },
+    profile:{
         en:{
             type:String,
             required:true
@@ -29,8 +29,8 @@ const temoinSchema = new Schema({
             type:String,
             required:true
         }
-    }],
-    status:[{
+    },
+    status:{
         en:{
             type:String,
             required:true
@@ -39,7 +39,7 @@ const temoinSchema = new Schema({
             type:String,
             required:true
         }
-    }]
+    }
 }, {collection: 'temoins'})
 
 

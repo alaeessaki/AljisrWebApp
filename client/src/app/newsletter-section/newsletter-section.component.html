@@ -7,9 +7,12 @@
     <div class="form-wrapper">
       <mat-form-field appearance="outline" color="primary">
         <mat-label>inscrivez-vous avec votre adresse email</mat-label>
-        <input matInput>
-        <mat-icon matSuffix class="d-flex text-center jusify-content-center align-items-center">arrow_forward
+        <input matInput type="email" [formControl]="email" required>
+        <mat-icon matSuffix class="d-flex text-center jusify-content-center align-items-center" (click)="subscribe(email.value)">arrow_forward
         </mat-icon>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        <mat-hint *ngIf="subscribed" >thank you for you subscribing to our news letter<br>you subscried with email : {{email.value}}</mat-hint>
+        <mat-hint *ngIf="emailExist"style="color: #f44336" > this email is already subscribed</mat-hint>
       </mat-form-field>
     </div>
   </div>

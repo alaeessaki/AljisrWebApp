@@ -5,7 +5,7 @@ import { AppRoutingModule, routingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './materials';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 // ngx components
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -91,7 +91,8 @@ import { CookieService } from 'ngx-cookie-service'
     ModalModule.forRoot(),
     SlimLoadingBarModule,
     MatNativeDateModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
 
   ],
   providers: [MatNativeDateModule, CookieService],

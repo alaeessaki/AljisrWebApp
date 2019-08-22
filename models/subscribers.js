@@ -9,7 +9,7 @@ const subscriberSchema = new Schema({
     },
     subscribeDate:{
         type:Date,
-        required:true
+        default: Date.now
     }
 }, {
     collection: 'subscribers'
