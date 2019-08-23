@@ -28,12 +28,18 @@
 
     .right-side {
       background-image: url('../../../assets/login-pic.jpg');
+      flex: 1;
+    }
+
+    .left-side {
+      flex: 1;
     }
   }
 
   .mot-du-prez {
     background-color: #ffffff;
     padding: 5rem 3rem 12rem 3rem;
+    font-family: $paragraph-font;
 
     .presi-title {
       color: color(primary);
