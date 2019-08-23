@@ -1,0 +1,48 @@
+@import '../../../variables.scss';
+@import '../../../pagesflag.scss';
+
+
+.notre-vocation {
+  background-color: #F2F6F7;
+
+  .blue-nav {
+    background: color(primary);
+    color: white;
+    font-family: $font-family;
+    padding-bottom: 23px;
+
+    .lang-ins {
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .hero-flag {
+
+    .right-side {
+      background-image: url('../../../assets/login-pic.jpg');
+    }
+  }
+
+  .mot-du-prez {
+    background-color: #ffffff;
+    padding: 5rem 3rem 12rem 3rem;
+
+    .presi-title {
+      color: color(primary);
+    }
+
+    .prez {
+      color: color(primary);
+      font-weight: 500;
+      font-size: larger;
+    }
+  }
+}

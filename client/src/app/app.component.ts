@@ -91,8 +91,8 @@ export class AppComponent {
           link: 'QuiSommeNous'
         },
         {
-          name: 'Votre Vocation',
-          link: '#'
+          name: 'Notre Vocation',
+          link: 'NotreVocation'
         },
         {
           name: 'Notre Organisation',
