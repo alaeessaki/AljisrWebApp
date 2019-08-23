@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { temoins } from '../declarations';
-import { HomePageService } from '../pages/home-page/home-page.service';
+import {TemoinsService} from './temoins.service'
+import { LangService } from '../lang.service'
+
 @Component({
   selector: 'app-testimonials',
   templateUrl: './testimonials.component.html',
@@ -8,22 +10,27 @@ import { HomePageService } from '../pages/home-page/home-page.service';
   encapsulation: ViewEncapsulation.None
 })
 export class TestimonialsComponent implements OnInit {
-
-  temoin:Array<any>;
-  selectedItem2:temoins;
-  title:string;
-  constructor(private _homePage:HomePageService) {  }
+  language
+  temoin: any;
+  selectedItem2: temoins;
+  title = {
+    "en": "temoins",
+    "fr": "témoignage"
+  };
+  constructor(private _temoinsService: TemoinsService, private _langService:LangService) { }
 
   ngOnInit() {
+
+    this.language = this._langService.getLanguage();
+
     // getting temoins from services
-    this._homePage.getdata().subscribe(data=>{
-      this.temoin = data[2].temoins;
-      this.title = data[2].name;
-      this.selectedItem2 = this.temoin[2];
+    this._temoinsService.getTemoins().subscribe(data => {
+      this.temoin = data
+      this.selectedItem2 = data[0];
       this.changeX((this.temoin.length));
     });
-   
-    
+
+
   }
 
   onSelected(item: temoins): void {

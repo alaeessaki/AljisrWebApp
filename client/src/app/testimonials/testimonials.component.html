@@ -3,7 +3,7 @@
   <div class="titlecontainer title-cont">
     <div class="title d-flex flex-row align-items-center">
       <span class="number">03</span>
-      <h1 class="text-uppercase">{{title}}</h1>
+      <h1 class="text-uppercase">{{title[language]}}</h1>
     </div>
   </div>
 
@@ -11,9 +11,9 @@
     <div class="testi-wrapper">
       <div class="testi-flexer d-flex flex-row mr-5">
         <div class="container d-flex temoirespo justify-content-center">
-          <app-testimons [temo]="selectedItem2"></app-testimons>
+          <app-testimons [temo]="selectedItem2" [lang]="language"></app-testimons>
           <div class="d-flex flex-column radios">
-            <div *ngFor="let tm of temoin" (click)="onSelected(tm); changeX(tm.id) ">
+            <div *ngFor="let tm of temoin; let i = index" (click)="onSelected(tm); changeX(i) ">
               <mat-radio-group aria-label="Select an option" class="bigRadio2">
                 <mat-radio-button [value]="tm.id" color="primary" [checked]="tm===selectedItem2" class="radio-buttons">
                 </mat-radio-button>

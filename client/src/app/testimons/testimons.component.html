@@ -9,11 +9,11 @@
     <img src="../../assets/quotes.png" alt="quotes" class="quotes">
   </div>
   <div *ngIf="temo" class="temoin-para-cont">
-    <p>{{temo.testimon}}</p>
+    <p>{{temo.testimoin[lang]}}</p>
     <p>
-      <span>{{temo.profile}}</span>
+      <span>{{temo.profile[lang]}}</span>
       <br>
-      <span class="status">{{temo.status}}</span>
+      <span class="status">{{temo.status[profile]}}</span>
     </p>
   </div>
 </div>
