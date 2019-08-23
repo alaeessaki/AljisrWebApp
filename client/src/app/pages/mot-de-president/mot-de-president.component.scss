@@ -25,14 +25,20 @@
   }
 
   .hero-flag {
+    .left-side {
+      flex: 1;
+
+      span {
+        font-size: 17px;
+        font-family: $font-family;
+        font-weight: 400;
+        padding: 0 20%;
+      }
+    }
 
     .right-side {
       background-image: url('../../../assets/login-pic.jpg');
-      flex: 1;
-    }
-
-    .left-side {
-      flex: 1;
+      flex: 1
     }
   }
 
