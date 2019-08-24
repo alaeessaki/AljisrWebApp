@@ -78,19 +78,12 @@ export class TeamAljisrComponent implements AfterViewInit {
 
     // showing the team !!
 
-    teamImgs.forEach(el => {
-      el.addEventListener('mousedown', () => {
-        (<any>el).style.zIndex = "-1";
+    // test
+    carouselElements.forEach((el, index) => {
+      el.addEventListener('click', () => {
+        (<any>teamImgs[index]).classList.contains("active")?(<any>teamImgs[index]).classList.remove("active"):(<any>teamImgs[index]).classList.add("active");
       });
-    });
-
-    teamCards.forEach(e => {
-      e.addEventListener('click', () => {
-        teamImgs.forEach(elem => {
-          (<any>elem).style.zIndex = "1";
-        })
-      });
-    });
+    })
 
   }
 

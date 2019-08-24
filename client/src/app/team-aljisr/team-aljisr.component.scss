@@ -40,7 +40,9 @@
           box-shadow: unset !important;
           position: relative;
           padding-right: 2rem;
-
+          .active{
+              z-index:-1;
+          }
           .team-img {
             position: relative;
             bottom: 2rem;
