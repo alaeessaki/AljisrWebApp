@@ -212,8 +212,11 @@ router.post('/addBenevoles', (req, res, next) => {
 // add Event 
 router.post('/addEvent', (req, res, next) => {
     let newEvent = new Events({
-        date: req.body.date,
-        title: req.body.title,
+        date: new Date(req.body.date),
+        title: {
+            en: req.body.title.en,
+            fr: req.body.title.fr
+        },
         description: {
             en: req.body.description.en,
             fr: req.body.description.fr
@@ -350,19 +353,19 @@ router.post('/addNews', (req, res, next) => {
 // add Temoin
 router.post('/addTemoin', (req, res, next) => {
     let newTemoin = new Temoins({
-        src:req.body.src,
-        alt:req.body.alt,
-        testimoin:{
-            en:req.body.testimoin.en,
-            fr:req.body.testimoin.fr
+        src: req.body.src,
+        alt: req.body.alt,
+        testimoin: {
+            en: req.body.testimoin.en,
+            fr: req.body.testimoin.fr
         },
-        profile:{
-            en:req.body.profile.en,
-            fr:req.body.profile.fr
+        profile: {
+            en: req.body.profile.en,
+            fr: req.body.profile.fr
         },
-        status:{
-            en:req.body.status.en,
-            fr:req.body.status.fr
+        status: {
+            en: req.body.status.en,
+            fr: req.body.status.fr
         }
     })
     newTemoin.save((err, temoin) => {
@@ -382,17 +385,17 @@ router.post('/addTemoin', (req, res, next) => {
 // add Trophie
 router.post('/addTrophie', (req, res, next) => {
     let newTrophie = new Trophies({
-        title:{
-            en:req.body.title.en,
-            fr:req.body.title.fr
+        title: {
+            en: req.body.title.en,
+            fr: req.body.title.fr
         },
-        description:{
-            en:req.body.description.en,
-            fr:req.body.description.fr
+        description: {
+            en: req.body.description.en,
+            fr: req.body.description.fr
         },
-        img:{
-            src:req.body.img.src,
-            alt:req.body.img.alt
+        img: {
+            src: req.body.img.src,
+            alt: req.body.img.alt
         }
     })
     newTrophie.save((err, trophie) => {
@@ -534,6 +537,219 @@ router.put('/modifyQstnCards/:id', (req, res, next) => {
         }
     })
 })
+
+// Modify Benevole infos
+router.put('/modifyBenevole/:id', (req, res, next) => {
+    Benevoles.update({
+        _id: req.params.id
+    }, {
+        $set: {
+            nom: req.body.nom,
+            prenom: req.body.prenom,
+            adresse: req.body.adresse,
+            email: req.body.email,
+            nom_etablissement: req.body.nom_etablissement,
+            telephone: req.body.telephone,
+            nom_association: req.body.nom_association,
+            exp_domaine_association: req.body.exp_domaine_association
+        }
+    }, (err, result) => {
+        if (err) {
+            res.status(500).send(err)
+        }
+        if (!result) {
+            res.status(404).end();
+        } else {
+            res.status(200).json({
+                msg: "Benevole modified successfully",
+                status: result
+            })
+        }
+    })
+})
+
+// Modify Event 
+router.put('/modifyEvent/:id', (req, res, next) => {
+    Events.update({
+        _id: req.params.id
+    }, {
+        $set: {
+            date: new Date(req.body.date),
+            title: {
+                en: req.body.title.en,
+                fr: req.body.title.fr
+            },
+            description: {
+                en: req.body.description.en,
+                fr: req.body.description.fr
+            }
+        }
+    }, (err, result) => {
+        if (err) {
+            res.status(500).send(err)
+        }
+        if (!result) {
+            res.status(404).end();
+        } else {
+            res.status(200).json({
+                msg: "Event modified successfully",
+                status: result
+            })
+        }
+    })
+})
+
+// Modify Member 
+router.put('/modifyMember/:id', (req, res, next) => {
+    Members.update({
+        _id: req.params.id
+    }, {
+        $set: {
+            name: {
+                en: req.body.name.en,
+                fr: req.body.name.fr
+            },
+            lastname: {
+                en: req.body.lastname.en,
+                fr: req.body.lastname.fr
+            },
+            quote: {
+                en: req.body.quote.en,
+                fr: req.body.quote.fr
+            },
+            status: {
+                en: req.body.status.en,
+                fr: req.body.status.fr
+            },
+            img: {
+                src: req.body.img.src,
+                alt: req.body.img.alt
+            }
+        }
+    }, (err, result) => {
+        if (err) {
+            res.status(500).send(err)
+        }
+        if (!result) {
+            res.status(404).end();
+        } else {
+            res.status(200).json({
+                msg: "Member modified successfully",
+                status: result
+            })
+        }
+    })
+})
+
+// Modify News
+router.put('/modifyNew/:id', (req, res, next) => {
+    News.update({
+        _id: req.params.id
+    }, {
+        $set: {
+            title: {
+                en: req.body.title.en,
+                fr: req.body.title.fr
+            },
+            description: {
+                en: req.body.description.en,
+                fr: req.body.description.fr
+            },
+            img: {
+                src: req.body.img.src,
+                alt: req.body.img.alt,
+            },
+            auth: req.body.auth
+        }
+    }, (err, result) => {
+        if (err) {
+            res.status(500).send(err)
+        }
+        if (!result) {
+            res.status(404).end();
+        } else {
+            res.status(200).json({
+                msg: "New modified successfully",
+                status: result
+            })
+        }
+    })
+})
+
+
+// Modify Temoin
+router.put('/modifyTemoin/:id', (req, res, next) => {
+    Temoins.update({
+        _id: req.params.id
+    }, {
+        $set: {
+
+            src: req.body.src,
+            alt: req.body.alt,
+            testimoin: {
+                en: req.body.testimoin.en,
+                fr: req.body.testimoin.fr
+            },
+            profile: {
+                en: req.body.profile.en,
+                fr: req.body.profile.fr
+            },
+            status: {
+                en: req.body.status.en,
+                fr: req.body.status.fr
+            }
+        }
+    }, (err, result) => {
+        if (err) {
+            res.status(500).send(err)
+        }
+        if (!result) {
+            res.status(404).end();
+        } else {
+            res.status(200).json({
+                msg: "Temoin modified successfully",
+                status: result
+            })
+        }
+    })
+})
+
+
+// Modify Trophie
+router.put('/modifyTrophie/:id', (req, res, next) => {
+    Trophies.update({
+        _id: req.params.id
+    }, {
+        $set: {
+            title: {
+                en: req.body.title.en,
+                fr: req.body.title.fr
+            },
+            description: {
+                en: req.body.description.en,
+                fr: req.body.description.fr
+            },
+            img: {
+                src: req.body.img.src,
+                alt: req.body.img.alt
+            }
+        }
+    }, (err, result) => {
+        if (err) {
+            res.status(500).send(err)
+        }
+        if (!result) {
+            res.status(404).end();
+        } else {
+            res.status(200).json({
+                msg: "Trophie modified successfully",
+                status: result
+            })
+        }
+    })
+})
+
+
 
 
 
@@ -706,72 +922,6 @@ router.delete('/deleteEventParticipant/:eventid/:participantid', (req, res, next
         }
     })
 });
-
-
-
-// HeroSection
-// const Quotes = require('../models/heroSection/quotes');
-// const Imgs = require('../models/heroSection/imgs');
-// const HomePage = require('../models/homePage/homePage');
-// const ImgModel = require('../models/homePage/homePage');
-
-// // Temoins
-// const Temoin = require('../models/temoins/temoins');
-
-// retrieving herosectiondata
-// router.get('/quotes', (req,res, next)=>{
-//     Quotes.find(function(err, quotes){
-//         res.json(quotes);
-//     })
-// })
-
-// router.get('/homePage', (req, res, next) => {
-//     HomePage.find(function (err, data) {
-//         res.json(data)
-//     })
-// })
-
-// add slogon
-// router.put('/addSlogon/:id', (req, res, next) => {
-//     // let newImg = new ImgModel(
-//     //     {
-//     //         src:req.body.src,
-//     //         alt:req.body.alt
-//     //     }
-
-//     // )
-//     // newImg.save((err, img)=>{
-//     //     if(err){
-//     //         res.json(err)
-//     //     }
-//     //     else{
-//     //         res.json(img)
-//     //     }
-//     // })
-//     HomePage.insert({_id:req.params.id}, {"$push":{"name":req.body.name}},{safe:true, upsert:true}, (err, data)=>{
-//         if(err){
-//             res.status(500).send();
-//         }
-//         if(!data){
-//             res.status(404).end();
-//         }
-//         else{
-//             res.status(200).send(data)
-//         }
-//     });
-// });
-
-// delete contacts
-// router.delete('/contact/:id', (req, res, next)=>{
-//      Contact.remove({_id: req.params.id}, function(err, result){
-//          if(err){
-//              res.json(err);
-//          }
-//          else{
-//              res.json(result);
-//          }
-//      })
-// });
 
 
 

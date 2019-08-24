@@ -14,7 +14,9 @@ const participantSchema = new Schema({
     email:{
         type:String,
         required:true,
-        unique:true
+        index:true, 
+        unique:true,
+        sparse:true
     },
     tel:{
         type:String,
@@ -31,8 +33,14 @@ const eventSchema = new Schema({
         required:true
     },
     title:{
-        type:String,
-        required:true
+        en:{
+            type:String,
+            required:true
+        },
+        fr:{
+            type:String,
+            required:true
+        }
     },
     description:{
         en:{
@@ -46,7 +54,8 @@ const eventSchema = new Schema({
     },
     participants:{
         type:[participantSchema],
-        required:false
+        required:false,
+        unique:false
     }
 }, {
     collection: 'events'
