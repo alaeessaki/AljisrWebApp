@@ -10,18 +10,20 @@ const route = require('./routes/routes')
 
 // connect to mongodb
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://alaeessaki:live.1457@aljisrwebapp-shard-00-00-lfjnm.mongodb.net:27017,aljisrwebapp-shard-00-01-lfjnm.mongodb.net:27017,aljisrwebapp-shard-00-02-lfjnm.mongodb.net:27017/Aljisr?ssl=true&replicaSet=aljisrWebApp-shard-0&authSource=admin&retryWrites=true&w=majority',{useNewUrlParser: true}) .then(res => console.log("Connected to DB"))
-.catch(err => console.log(err));
+mongoose.connect('mongodb://khalilKessa:khalil123@aljisrwebapp-shard-00-00-lfjnm.mongodb.net:27017,aljisrwebapp-shard-00-01-lfjnm.mongodb.net:27017,aljisrwebapp-shard-00-02-lfjnm.mongodb.net:27017/Aljisr?ssl=true&replicaSet=aljisrWebApp-shard-0&authSource=admin&retryWrites=true&w=majority', {
+        useNewUrlParser: true
+    }).then(res => console.log("Connected to DB"))
+    .catch(err => console.log(err));
 
 // on connection
-mongoose.connection.on('connected', ()=>{
+mongoose.connection.on('connected', () => {
     console.log('connected to database mongodb @27017')
 })
 
-mongoose.connection.on('error', (err)=>{
-   if(err){
-        console.log('Error in Database connection',err);
-   }
+mongoose.connection.on('error', (err) => {
+    if (err) {
+        console.log('Error in Database connection', err);
+    }
 });
 
 
@@ -43,10 +45,10 @@ app.use('/api', route);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // testing server
-app.get('/', (req, res)=>{
+app.get('/', (req, res) => {
     res.send('foobar');
 })
 
-app.listen(port,()=>{
-    console.log('server started at port: '+port);
+app.listen(port, () => {
+    console.log('server started at port: ' + port);
 });

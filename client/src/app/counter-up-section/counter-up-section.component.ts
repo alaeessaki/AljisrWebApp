@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import { NavigationEnd, Router } from '@angular/router';
 import { AljisrNumsService } from './aljisr-nums.service';
 
 @Component({
@@ -12,35 +11,23 @@ export class CounterUpSectionComponent implements OnInit {
   countSections: Array<any>;
   isHome = false;
 
-  constructor(private _router: Router, private _AljisrNums: AljisrNumsService) {
-    this._router.events.subscribe(
-      (event: any) => {
-        if (event instanceof NavigationEnd) {
-          if (this._router.url == "/") {
-            this.isHome = true;
-            this.scrollCounter();
-          }
-          else {
-            this.isHome = false;
-            this.scrollCounter();
-          }
-        }
-      }
-    );
+  constructor(private _AljisrNums: AljisrNumsService) {
+
   }
 
   ngOnInit() {
     this.countSections = this._AljisrNums.getNums();
-    
-  }
+    var scroller = document.querySelector('#counter');
 
-  getRoutePos() {
-    return this.isHome;
-  }
-  public justScroll() {
-    var passed_countup = false;
-    $('body').bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup', function (event) {
-      if ($(window).scrollTop() >= ($("#countup_sec").offset().top - 400)) {
+    var inObserve = new IntersectionObserver(entries => {
+      // If intersectionRatio is 0, the sentinel is out of view
+      // and we do not need to do anything.
+      if (entries[0].intersectionRatio <= 0) {
+        return;
+      }
+      var passed_countup = false;
+      $('body').bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup', function (event) {
+
         if (!passed_countup) {
           $('.counter').each(function () {
             var $this = $(this),
@@ -63,20 +50,51 @@ export class CounterUpSectionComponent implements OnInit {
           });
           passed_countup = true;
         }
-      }
 
-    }).scroll();
+      });
+
+    });
+
+    inObserve.observe(scroller);
+
   }
 
-  scrollCounter() {
-    var home = this.getRoutePos();
-    if (home == true) {
-      this.justScroll();
-    }
-    else {
-      console.log("you're in else");
-    }
+  getRoutePos() {
+    return this.isHome;
   }
+
+  // public justScroll() {
+  //   var passed_countup = false;
+  //   $('body').bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup', function (event) {
+  //     if ($(window).scrollTop() >= ($("#countup_sec").offset().top - 400)) {
+  //       if (!passed_countup) {
+  //         $('.counter').each(function () {
+  //           var $this = $(this),
+  //             countTo = $this.attr('data-count');
+
+  //           $({ countNum: $this.text() }).animate({
+  //             countNum: countTo
+  //           },
+  //             {
+  //               duration: 2000,
+  //               easing: 'linear',
+  //               step: function () {
+  //                 $this.text(Math.floor(this.countNum));
+  //               },
+  //               complete: function () {
+  //                 $this.text(this.countNum);
+  //                 //alert('finished');
+  //               }
+  //             });
+  //         });
+  //         passed_countup = true;
+  //       }
+  //     }
+
+  //   }).scroll();
+  // }
+
+
 
   title = "Al jisr en chiffres";
 
