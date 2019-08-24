@@ -1,5 +1,5 @@
-import { Component, AfterViewInit, OnInit , ViewEncapsulation } from '@angular/core';
-import {TeamAljisrService} from './team-aljisr.service';
+import { Component, AfterViewInit, OnInit, ViewEncapsulation } from '@angular/core';
+import { TeamAljisrService } from './team-aljisr.service';
 
 @Component({
   selector: 'app-team-aljisr',
@@ -8,28 +8,32 @@ import {TeamAljisrService} from './team-aljisr.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class TeamAljisrComponent implements AfterViewInit {
-  members:Array<any>;
+  members: Array<any>;
 
-  constructor( private _teamAljisr : TeamAljisrService) {
+  constructor(private _teamAljisr: TeamAljisrService) {
 
-    // this.showTeam();
-    
+
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.members = this._teamAljisr.getTeamMembers();
+
   }
 
-  carousel(){
+  carousel() {
     const carouselSlide: HTMLElement = document.querySelector('.wrapper');
     const carouselElements = document.querySelectorAll('.member');
     const breakingCarousel: HTMLElement = document.querySelector('#stopping-carousel');
     const prevBtn = document.querySelector('#prevmem');
     const nextBtn = document.querySelector('#nextmem');
 
+    const teamImgs = document.querySelectorAll('.team-img');
+    const teamCards = document.querySelectorAll('.card-profile');
+
+
 
     let counter = 1;
-    let size = carouselElements[0].clientWidth +20;
+    let size = carouselElements[0].clientWidth + 20;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
     function movingSl() {
@@ -72,9 +76,25 @@ export class TeamAljisrComponent implements AfterViewInit {
       carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
     })
 
+    // showing the team !!
+
+    teamImgs.forEach(el => {
+      el.addEventListener('mousedown', () => {
+        (<any>el).style.zIndex = "-1";
+      });
+    });
+
+    teamCards.forEach(e => {
+      e.addEventListener('click', () => {
+        teamImgs.forEach(elem => {
+          (<any>elem).style.zIndex = "1";
+        })
+      });
+    });
+
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     this.carousel();
   }
 

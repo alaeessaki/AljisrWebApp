@@ -3,6 +3,25 @@
 
 //pages flag 
 
+.blue-nav {
+  background: color(primary);
+  color: white;
+  font-family: $font-family;
+  padding-bottom: 23px;
+
+  .lang-ins {
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
 .hero-flag {
   padding-bottom: 6rem;
   height: 25rem;
@@ -10,11 +29,21 @@
   .left-side {
     background: #01AEF3;
     color: white;
+    flex: 1;
+
+    span {
+      font-size: 17px;
+      font-family: $font-family;
+      font-weight: 400;
+      padding: 0 20%;
+    }
 
   }
 
   .right-side {
     box-shadow: inset 0 0 0 1000px rgba(34, 192, 255, 0.65);
     background-size: cover;
+    background-image: url('../../../assets/login-pic.jpg');
+    flex: 1
   }
 }

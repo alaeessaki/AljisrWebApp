@@ -10,13 +10,14 @@
   padding-bottom: 11rem;
 
   .container {
-    .liner{
-      .liner-cont{
-        @include tablet-sm{
+    .liner {
+      .liner-cont {
+        @include tablet-sm {
           right: 35%;
         }
       }
     }
+
     #nextmem {
       transform: rotateZ(180deg);
       -webkit-transform: rotateZ(180deg);
@@ -50,7 +51,8 @@
               height: 10rem;
               width: 14rem;
             }
-            @include mobile-l{
+
+            @include mobile-l {
               height: 6rem;
               width: 8rem;
             }
@@ -72,7 +74,8 @@
               height: 11rem;
               width: 11.5rem;
             }
-            @include mobile-l{
+
+            @include mobile-l {
               height: 7rem;
               width: 7.5rem;
               left: 1rem;
@@ -82,9 +85,7 @@
             justify-content: center;
             align-items: center;
 
-            p {
-              display: none;
-            }
+
           }
         }
       }
@@ -105,9 +106,11 @@
       padding: 15px 70px;
       position: relative;
       top: 5rem;
-      @include tablet{
+
+      @include tablet {
         padding: 10px 60px;
       }
+
       &::before {
         content: "";
         position: absolute;
