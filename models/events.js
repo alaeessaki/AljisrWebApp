@@ -35,11 +35,13 @@ const eventSchema = new Schema({
     title:{
         en:{
             type:String,
-            required:true
+            required:true, 
+            unique:true
         },
         fr:{
             type:String,
-            required:true
+            required:true,
+            unique:true
         }
     },
     description:{

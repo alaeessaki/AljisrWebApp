@@ -1,10 +1,10 @@
-<section class="events">
+<section class="events" *ngIf="events$ | async else loading">
   <div
     class="container events-cont p-1 pt-5 d-flex flex-column flex-sm-column flex-md-row  justify-content-center">
 
     <div class="events-details-container">
 
-      <app-events-details [event]="selectedItem"></app-events-details>
+      <app-events-details [event]="selectedItem" [language]="language"></app-events-details>
 
       <div class="liner d-flex justify-content-end align-items-end">
         <div class="liner-cont">
@@ -19,15 +19,15 @@
       <mat-radio-group aria-label="Select an option" class="bigRadio">
         <table>
 
-          <tr class="date_container" *ngFor="let item of event" (click)="onSelect(item); changed(item.id) ">
+          <tr class="date_container" *ngFor="let item of events$ | async; let i=index" (click)="onSelect(item); changed(i) ">
 
             <td class="check" align="center">
               <mat-radio-button [value]="item.id" color="primary" [checked]="item===selectedItem" #anotherMatRadio></mat-radio-button>
             </td>
 
             <td class="title_container" [class.selected]="item===selectedItem">
-              <h6 class="date">{{item.date | uppercase}}</h6>
-              <h2 class="eventstitle">{{item.title | uppercase}}</h2>
+              <h6 class="date">{{item.date.slice(0,10) | uppercase}} à {{item.date.slice(11,16) | uppercase}}</h6>
+              <h2 class="eventstitle">{{item.title[language] | uppercase}}</h2>
             </td>
 
             <td class="chose_container">
@@ -42,3 +42,7 @@
     </div>
   </div>
 </section>
+
+<ng-template #loading>
+events are loading ...
+</ng-template>

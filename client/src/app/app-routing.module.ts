@@ -5,7 +5,6 @@ import { MotDePresidentComponent } from './pages/mot-de-president/mot-de-preside
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { InscriStepperComponent } from './pages/inscription/inscri-stepper/inscri-stepper.component';
-import { from } from 'rxjs';
 
 const routes: Routes = [
   { path: 'Inscription', component: InscriptionComponent },

@@ -10,7 +10,7 @@ const route = require('./routes/routes')
 
 // connect to mongodb
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://khalilKessa:khalil123@aljisrwebapp-shard-00-00-lfjnm.mongodb.net:27017,aljisrwebapp-shard-00-01-lfjnm.mongodb.net:27017,aljisrwebapp-shard-00-02-lfjnm.mongodb.net:27017/Aljisr?ssl=true&replicaSet=aljisrWebApp-shard-0&authSource=admin&retryWrites=true&w=majority', {
+mongoose.connect('mongodb://alaeessaki:live.1457@aljisrwebapp-shard-00-00-lfjnm.mongodb.net:27017,aljisrwebapp-shard-00-01-lfjnm.mongodb.net:27017,aljisrwebapp-shard-00-02-lfjnm.mongodb.net:27017/Aljisr?ssl=true&replicaSet=aljisrWebApp-shard-0&authSource=admin&retryWrites=true&w=majority', {
         useNewUrlParser: true
     }).then(res => console.log("Connected to DB"))
     .catch(err => console.log(err));

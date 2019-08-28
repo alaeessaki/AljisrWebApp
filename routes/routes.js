@@ -58,12 +58,28 @@ router.get('/benevoles', function (req, res, next) {
     })
 })
 
+// get Benevole by id
+router.get('/benevoles/:id', function (req, res, next) {
+    Benevoles.find({_id:req.params.id},(err, benevoles) => {
+        res.json(benevoles)
+    })
+})
+
 // get Events
 router.get('/events', function (req, res, next) {
     Events.find((err, events) => {
         res.json(events)
     })
 })
+
+// get events participants
+router.get('/eventsParticipants/:id', function (req, res, next) {
+    Events.find({_id:req.params.id},(err, events) => {
+        res.json(events[0].participants)
+    })
+})
+
+
 
 // get Members
 router.get('/members', function (req, res, next) {

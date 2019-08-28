@@ -9,6 +9,7 @@ import {events} from '../declarations';
 })
 export class EventsDetailsComponent implements OnInit {
   @Input() event:events;
+  @Input() language;
   constructor() { }
 
   ngOnInit() {
