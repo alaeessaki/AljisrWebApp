@@ -19,7 +19,6 @@ export class QueSoutenonsNousComponent implements OnInit {
     this.language = this._langService.getLanguage();
     this._cardsService.getCards().subscribe(data => {
       this.sections = data;
-      console.log(this.sections);
     })
   }
 

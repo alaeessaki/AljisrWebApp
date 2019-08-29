@@ -15,8 +15,8 @@ const participantSchema = new Schema({
         type:String,
         required:true,
         index:true, 
-        unique:true,
-        sparse:true
+        sparse:true,
+        unique:false
     },
     tel:{
         type:String,

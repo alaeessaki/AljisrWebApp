@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 // import { events } from '../declarations';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -18,5 +18,16 @@ export class EventsService {
   getEvents(){
     return this.http.get('http://localhost:3200/api/events');;
   }
+
+  addParticipant(id, participant){
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    console.log(id)
+    return this.http.post('http://localhost:3200/api/addParticipant/'+id, participant, httpOptions);
+  }
+
 
 }

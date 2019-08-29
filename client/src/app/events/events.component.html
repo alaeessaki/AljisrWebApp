@@ -1,6 +1,5 @@
-<section class="events" *ngIf="events$ | async else loading">
-  <div
-    class="container events-cont p-1 pt-5 d-flex flex-column flex-sm-column flex-md-row  justify-content-center">
+<section class="events">
+  <div class="container events-cont p-1 pt-5 d-flex flex-column flex-sm-column flex-md-row  justify-content-center">
 
     <div class="events-details-container">
 
@@ -19,10 +18,11 @@
       <mat-radio-group aria-label="Select an option" class="bigRadio">
         <table>
 
-          <tr class="date_container" *ngFor="let item of events$ | async; let i=index" (click)="onSelect(item); changed(i) ">
-
+          <tr class="date_container" *ngFor="let item of lastFourEvents; let i=index"
+            (click)="onSelect(item); changed(i+1) ">
             <td class="check" align="center">
-              <mat-radio-button [value]="item.id" color="primary" [checked]="item===selectedItem" #anotherMatRadio></mat-radio-button>
+              <mat-radio-button [value]="i" color="primary" [checked]="item===selectedItem" #anotherMatRadio>
+              </mat-radio-button>
             </td>
 
             <td class="title_container" [class.selected]="item===selectedItem">
@@ -30,7 +30,7 @@
               <h2 class="eventstitle">{{item.title[language] | uppercase}}</h2>
             </td>
 
-            <td class="chose_container">
+            <td class="chose_container" (click)="openModal(template2, item._id)">
               <img src="../../assets/icons/right-arrow.png">
               <h6 class="text-uppercase">Participer</h6>
             </td>
@@ -43,6 +43,78 @@
   </div>
 </section>
 
-<ng-template #loading>
-events are loading ...
+<ng-template #template2>
+  <div class="modal-body">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="benevole-container">
+      <div class="lta-img-container d-flex justify-content-center mb-3">
+        <img src="../../assets/Aljisr_logo.png" style="width: 12%">
+      </div>
+      <div class="toolbar-wrapper">
+        <div class="toolbar-container">
+          <h5>Formulaire de participation à l'évennement {{selectedItem.title[language]}} | Learn To Act</h5>
+        </div>
+      </div>
+      <div class="formulaire-wrapper mt-5">
+        <form (ngSubmit)="onSubmit()" [formGroup]="participantFormGroup">
+          <div class="form-title d-flex flex-row justify-content-start align-items-center">
+            <h1 class="spec-title">Informations Personnelles</h1>
+          </div>
+          <div class="double-form-container d-flex flex-column flex-sm-column flex-md-row">
+            <div class="form-cont">
+              <mat-form-field appearance="outline">
+                <mat-label>Nom</mat-label>
+                <input matInput formControlName="nom">
+              </mat-form-field>
+            </div>
+            <div class="form-cont">
+              <mat-form-field appearance="outline">
+                <mat-label>Prénom</mat-label>
+                <input matInput required formControlName="prenom">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="form-title d-flex flex-row justify-content-start align-items-center">
+            <h1 class="spec-title">Contact</h1>
+          </div>
+          <div class="double-form-container d-flex flex-column flex-sm-column flex-md-row">
+            <div class="form-cont">
+              <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+              </mat-form-field>
+            </div>
+            <div class="form-cont">
+              <mat-form-field appearance="outline">
+                <mat-label>Téléphone</mat-label>
+                <input matInput required formControlName="telephone">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="form-title d-flex flex-row justify-content-start align-items-center">
+            <h1 class="spec-title">Le nom de l'évennement</h1>
+          </div>
+          <div class="single-form-container">
+            <div class="form-cont">
+              <mat-form-field appearance="outline">
+                <input matInput [value]="selectedItem.title[language]" disabled >
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="btn-cont d-flex justify-content-center align-items-center mb-5 mt-4">
+            <div class="single-btn-cont">
+              <button mat-stroked-button color="primary" class="mybtn mr-3" (click)="modalRef.hide()">Annuler</button>
+            </div>
+            <div class="single-btn-cont">
+              <button mat-flat-button color="primary" class="mybtn" type="submit">Confirmé</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
 </ng-template>

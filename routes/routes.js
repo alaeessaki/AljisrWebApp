@@ -256,7 +256,7 @@ router.post('/addEvent', (req, res, next) => {
 // add participant to an event
 router.post('/addParticipant/:id', (req, res, next) => {
     var id = req.params.id
-    Events.update({
+    Events.updateOne({
         _id: id
     }, {
         $push: {
