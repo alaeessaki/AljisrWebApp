@@ -174,7 +174,7 @@ router.post('/addSectionSlogon', (req, res, next) => {
 
 // Add Slogons to a section
 router.post('/addSlogonToSection/:id', (req, res, next) => {
-    Slogons.update({
+    Slogons.updateOne({
         _id: req.params.id
     }, {
         $push: {
@@ -475,7 +475,7 @@ router.post('/addTrophie', (req, res, next) => {
 
 // Modify a heroSectionImg
 router.put('/modifyHeroSectionImg/:id', (req, res, next) => {
-    Img.update({
+    Img.updateOne({
         _id: req.params.id
     }, {
         $set: {
@@ -499,7 +499,7 @@ router.put('/modifyHeroSectionImg/:id', (req, res, next) => {
 
 // Modify a Slogon of a section
 router.put('/modifySlogon/:sectionid/:slogonid', (req, res, next) => {
-    Slogons.update({
+    Slogons.updateOne({
         _id: req.params.sectionid,
         "slogons._id": req.params.slogonid
     }, {
@@ -526,7 +526,7 @@ router.put('/modifySlogon/:sectionid/:slogonid', (req, res, next) => {
 
 // modify QueSoutenonsNous Cards
 router.put('/modifyQstnCards/:id', (req, res, next) => {
-    Cards.update({
+    Cards.updateOne({
         _id: req.params.id
     }, {
         $set: {
@@ -556,7 +556,7 @@ router.put('/modifyQstnCards/:id', (req, res, next) => {
 
 // Modify Benevole infos
 router.put('/modifyBenevole/:id', (req, res, next) => {
-    Benevoles.update({
+    Benevoles.updateOne({
         _id: req.params.id
     }, {
         $set: {
@@ -586,7 +586,7 @@ router.put('/modifyBenevole/:id', (req, res, next) => {
 
 // Modify Event 
 router.put('/modifyEvent/:id', (req, res, next) => {
-    Events.update({
+    Events.updateOne({
         _id: req.params.id
     }, {
         $set: {
@@ -617,7 +617,7 @@ router.put('/modifyEvent/:id', (req, res, next) => {
 
 // Modify Member 
 router.put('/modifyMember/:id', (req, res, next) => {
-    Members.update({
+    Members.updateOne({
         _id: req.params.id
     }, {
         $set: {
@@ -659,7 +659,7 @@ router.put('/modifyMember/:id', (req, res, next) => {
 
 // Modify News
 router.put('/modifyNew/:id', (req, res, next) => {
-    News.update({
+    News.updateOne({
         _id: req.params.id
     }, {
         $set: {
@@ -695,7 +695,7 @@ router.put('/modifyNew/:id', (req, res, next) => {
 
 // Modify Temoin
 router.put('/modifyTemoin/:id', (req, res, next) => {
-    Temoins.update({
+    Temoins.updateOne({
         _id: req.params.id
     }, {
         $set: {
@@ -733,7 +733,7 @@ router.put('/modifyTemoin/:id', (req, res, next) => {
 
 // Modify Trophie
 router.put('/modifyTrophie/:id', (req, res, next) => {
-    Trophies.update({
+    Trophies.updateOne({
         _id: req.params.id
     }, {
         $set: {
@@ -879,7 +879,7 @@ router.delete('/deleteTrophie/:id', (req, res, next) => {
 
 // delete a slogon from  section
 router.delete('/deleteSlogon/:sectionid/:slogonid', (req, res, next) => {
-    Slogons.update({
+    Slogons.updateOne({
         _id: req.params.sectionid,
         "slogons._id": req.params.slogonid
     }, {
@@ -918,7 +918,7 @@ router.delete('/deleteEvent/:id', (req, res, next) => {
 
 // delete participant of an event 
 router.delete('/deleteEventParticipant/:eventid/:participantid', (req, res, next) => {
-    Events.update({
+    Events.updateOne({
         _id: req.params.eventid,
         "participants._id": req.params.participantid
     }, {
