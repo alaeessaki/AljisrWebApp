@@ -9,7 +9,7 @@ import { MotDePresidentComponent } from './mot-de-president/mot-de-president.com
 @NgModule({
   declarations: [
     
-  MotDePresidentComponent],
+  ],
   imports: [
     CommonModule
   ],

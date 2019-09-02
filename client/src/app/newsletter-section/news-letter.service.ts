@@ -17,7 +17,7 @@ export class NewsLetterService {
         'Authorization': 'my-auth-token'
       })
     };
-    return this._http.post("http://localhost:3200/api/addSubscriber", subscriber, httpOptions)
+    return this._http.post(window.location.origin+"/api/addSubscriber", subscriber, httpOptions)
   
   }
   itExist() {

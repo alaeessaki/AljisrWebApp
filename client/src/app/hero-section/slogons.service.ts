@@ -8,6 +8,6 @@ export class SlogonsService {
 
   constructor(private http: HttpClient) { }
   getSlogons(){
-    return this.http.get('http://localhost:3200/api/slogons');
+    return this.http.get(window.location.origin+'/api/slogons');
   }
 }

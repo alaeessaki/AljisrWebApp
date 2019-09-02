@@ -16,7 +16,7 @@ export class EventsService {
     // ]
   }
   getEvents(){
-    return this.http.get('http://localhost:3200/api/events');;
+    return this.http.get('/api/events');;
   }
 
   addParticipant(id, participant){
@@ -26,7 +26,7 @@ export class EventsService {
       })
     };
     console.log(id)
-    return this.http.post('http://localhost:3200/api/addParticipant/'+id, participant, httpOptions);
+    return this.http.post(window.location.origin+'/api/addParticipant/'+id, participant, httpOptions);
   }
 
 

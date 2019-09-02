@@ -8,6 +8,6 @@ export class TemoinsService {
 
   constructor(private http: HttpClient) { }
   getTemoins(){
-    return this.http.get('http://localhost:3200/api/temoins');
+    return this.http.get(window.location.origin+'/api/temoins');
   }
 }

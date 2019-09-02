@@ -8,6 +8,6 @@ export class HomePageService {
 
   constructor(private http: HttpClient) { }
   getdata(){
-    return this.http.get('http://localhost:3200/api/heroSectionImgs');
+    return this.http.get('/api/heroSectionImgs');
   }
 }
