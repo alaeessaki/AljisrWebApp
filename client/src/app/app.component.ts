@@ -61,7 +61,7 @@ export class AppComponent {
       this._cookieSercive.set('language', "fr");
     }
 
-    $(window).on("load", function () {
+    $('img').on("load", function () {
       setTimeout(() => { $(".splash-wrapper").fadeOut("slow") }, 500);
     });
 
@@ -120,8 +120,8 @@ export class AppComponent {
           link: 'QuiSommeNous'
         },
         {
-          name: 'Notre Vocation',
-          link: 'NotreVocation'
+          name: "Mot du président",
+          link: 'MotDePresident'
         },
         {
           name: 'Notre Organisation',

@@ -41,8 +41,18 @@ footer {
 
         .single_link {
           margin: 0rem 1rem 1.5rem;
-          
+          &:hover{
+            background-color: white;
+            opacity: 0.8;
+            a{
+              color:color(primary);
+            }
+            img{
+              filter: invert(30%);
+            }
+          }
           a {
+            transition: 0.3s;
             font-size: 0.8rem;
             text-transform: uppercase;
             color: white;
@@ -55,6 +65,7 @@ footer {
               max-height: 8vw;
             }
             img{
+              transition: 0.3s;
               width: 18%;
               padding-right: 6%;
             }
@@ -104,6 +115,7 @@ footer {
           }
 
           .single-column {
+            
             width: 100%;
             @include tablet{
               justify-content: center !important;
@@ -117,8 +129,15 @@ footer {
               margin-left: 0 !important;
               margin-right: 1rem !important;
               text-align: center;
-
+              transition: 0.3s;
+              &:hover{
+                background-color: rgb(255, 255, 255, 0.6);
+                img{
+                  filter: invert(20%);
+                }
+              }
               img{
+                transition: 0.3s;
                 width:25%;
               }
 

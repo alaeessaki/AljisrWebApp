@@ -147,6 +147,9 @@
 
     .mat-form-field {
       width: 100%;
+      @include tablet-sm{
+        font-size: 12px;
+      }
     }
   }
 }
@@ -159,15 +162,9 @@
 
     .mat-form-field {
       width: 100%;
-    }
-  }
-
-  .select-form-cont {
-    width: 15%;
-
-    .mat-form-field {
-      width: 100%;
-
+      @include tablet-sm{
+        font-size: 12px;
+      }
     }
   }
 }

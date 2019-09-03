@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CarouselConfig } from 'ngx-bootstrap/carousel';
 import { CarouselImgService } from './carousel-img.service';
 
+
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
@@ -22,6 +23,8 @@ export class CarouselComponent implements OnInit {
     this._carouselService.getImgs().subscribe(data=>{
       this.images = data
     });
+
+
   }
 
   

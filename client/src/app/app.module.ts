@@ -29,6 +29,8 @@ import { TestimonsComponent } from './testimons/testimons.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { InscriStepperComponent } from './pages/inscription/inscri-stepper/inscri-stepper.component';
 
+
+
 import { LoginComponent } from './login/login.component';
 
 
@@ -47,6 +49,9 @@ import { HttpClientModule } from '@angular/common/http';
 // services 
 import { BenevolerComponent } from './benevoler/benevoler.component';
 import { CookieService } from 'ngx-cookie-service';
+import { RoutingLoadingScreenComponent } from './routing-loading-screen/routing-loading-screen.component';
+import { PagesSlogonsComponent } from './pages-slogons/pages-slogons.component';
+import { SlgCarouselComponent } from './pages-slogons/slg-carousel/slg-carousel.component';
 
 
 
@@ -81,7 +86,10 @@ import { CookieService } from 'ngx-cookie-service';
     TrophiesBinderComponent,
     TrophieDetailsComponent,
     TrophiesPicsComponent,
-    BenevolerComponent
+    BenevolerComponent,
+    RoutingLoadingScreenComponent,
+    PagesSlogonsComponent,
+    SlgCarouselComponent
   ],
   imports: [
     BrowserModule,

@@ -6,44 +6,79 @@
 .blue-nav {
   background: color(primary);
   color: white;
-  font-family: $font-family;
-  padding-bottom: 23px;
-
+  font-family: $paragraph-font;
+  padding-bottom: 15px;
+  .links{
+    img{
+      @include mobile-md{
+        display: none;
+      }
+    }
+    .arbreLink{
+      color:color(reverse);
+      text-decoration: none;
+      font-size: 15px;
+      @include laptop-breakpoint{
+        font-size: 13px;
+      }
+      @include mobile-md{
+        display: none;
+      }
+    }
+  }
   .lang-ins {
     img {
       width: 1.5rem;
       height: 1.5rem;
+      @include laptop-breakpoint{
+        width: 1.2rem;
+        height: 1.2rem;
+      }
     }
 
     a {
       color: white;
       text-decoration: none;
+      font-size: 15px;;
+      @include laptop-breakpoint{
+        font-size: 13px;
+      }
     }
   }
 }
 
-.hero-flag {
-  padding-bottom: 6rem;
-  height: 25rem;
+// .hero-flag {
+//   padding-bottom: 6rem;
+//   height: 25rem;
 
-  .left-side {
-    background: #01AEF3;
-    color: white;
-    flex: 1;
+//   .left-side {
+//     background: #01AEF3;
+//     color: white;
+//     flex: 1;
+//     @include tablet-sm{
+//       flex:unset;
+//     }
+//     p {
+//       font-size: 18px;
+//       line-height: 40px;
+//       font-family: $paragraph-font;
+//       font-weight: 600;
+//       height: 100%;
+//       overflow: hidden;
+//       @include tablet-sm{
+//         font-size: 16px;
+//       }
+//     }
 
-    span {
-      font-size: 17px;
-      font-family: $font-family;
-      font-weight: 400;
-      padding: 0 20%;
-    }
+//   }
 
-  }
-
-  .right-side {
-    box-shadow: inset 0 0 0 1000px rgba(34, 192, 255, 0.65);
-    background-size: cover;
-    background-image: url('../../../assets/login-pic.jpg');
-    flex: 1
-  }
-}
+//   .right-side {
+//     box-shadow: inset 0 0 0 1000px rgba(34, 192, 255, 0.65);
+//     background-image: url('../../../assets/login-pic.jpg');
+//     background-size: cover;
+//     flex: 1;
+//     @include tablet-sm{
+//       flex:unset;
+//     }
+//   }
+// }

@@ -96,7 +96,12 @@
       top: 10px;
       color: color(primary);
       opacity: 1;
-      font-size: 2.8vw;
+      font-size: 40px;
+
+      @include tablet-sm {
+        font-size: 30px;
+      }
+
       font-weight: 400;
     }
 
@@ -127,18 +132,20 @@
 
         .form-wrapper {
           margin-top: 5%;
-          form{
+
+          form {
             height: 100%;
+
             .form-title {
               margin-bottom: 3px;
-  
+
               h1 {
                 font-size: 15px;
                 font-family: $font-family;
                 font-weight: bolder;
                 margin: 0 !important;
               }
-  
+
               .spec-title {
                 font-size: 13px;
                 color: color(reverse);
@@ -148,56 +155,69 @@
                 font-weight: 300;
               }
             }
-  
+
             .double-form-container {
               width: 100%;
               margin-bottom: 10px;
+
               .form-cont {
                 &:first-child {
                   padding-right: 10px;
                 }
-  
+
                 width: 50%;
-  
+
                 .mat-form-field {
                   width: 100%;
+
+                  @include tablet-sm {
+                    font-size: 12px;
+                  }
                 }
               }
             }
-  
+
             .single-form-container {
               width: 100%;
               margin-bottom: 10px;
+
               .form-cont {
                 width: 100%;
-  
+
+                @include tablet-sm {
+                  font-size: 12px;
+                }
+
                 .mat-form-field {
                   width: 100%;
                 }
               }
-  
+
               .select-form-cont {
-                width: 15%;
-  
+                width: 100px;
+                @include tablet-sm{
+                  font-size: 12px;
+                }
+
                 .mat-form-field {
                   width: 100%;
-  
+
                 }
               }
             }
-  
+
             .checkbox-cont {
               width: 100%;
-  
+
               .mat-checkbox {
                 .mat-checkbox-label {
                   white-space: initial;
-  
+
                   .accord {
                     position: relative;
                     top: 1px;
                     color: #929292;
-  
+
                     a {
                       color: color(primary);
                       text-decoration: none;
@@ -206,31 +226,33 @@
                 }
               }
             }
+
             .btn-cont {
               width: 100%;
               padding: 50px 0px;
+
               .single-btn-cont {
                 width: 120px;
                 height: 45px;
-  
+
                 &:first-child {
                   margin-right: 10px;
                 }
-  
+
                 .mybtn {
                   width: 100%;
                   height: 100%;
-  
+
                 }
-  
+
                 .mat-stroked-button {
                   border-color: color(primary);
                 }
               }
-  
+
             }
           }
-          
+
         }
       }
     }
@@ -243,14 +265,13 @@
   z-index: 99999 !important;
 }
 
-.blue-snackbar{
+.blue-snackbar {
   background-color: color(primary);
   color: color(reverse);
 }
-.blue-snackbar 
-.mat-simple-snackbar-action{
+
+.blue-snackbar .mat-simple-snackbar-action {
   background-color: color(reverse);
   color: color(primary);
   border-radius: 20px;
 }
-

@@ -1,11 +1,15 @@
-<section class="notre-vocation pb-5">
+<!-- Splash screen-->
+<app-routing-loading-screen></app-routing-loading-screen>
+
+<section class="Mot-de-president pb-5">
+
   <nav class="blue-nav d-flex justify-content-between">
-    <div class="pt-4 pl-4 d-flex flex-row justify-content-center align-items-center">
-      <div class="text-uppercase">al jisr</div>
+    <div class="pt-3 pl-4 d-flex flex-row justify-content-center align-items-center links">
+      <span class="arbreLink">Al jisr</span> 
       <img src="../../../assets/icons/rounded-arrow.png" alt="tree" width="14" height="14" class="mr-2 ml-2">
-      <div class="text-uppercase">mot du président</div>
+      <span class="arbreLink">Mot du président</span>
     </div>
-    <div class="lang-ins d-flex flex-row justify-content-center align-items-center pt-4 pr-4">
+    <div class="lang-ins d-flex flex-row justify-content-center align-items-center pt-3 pr-4">
       <img src="../../../assets/icons/phone.png" matTooltip="0522 98 01 36" matTooltipPosition="left">
       <img src="../../../assets/icons/place.png"
         matTooltip="Ecole El Bachiri Garçons, Angle Rue Ahmed kadmiri et Rue Bachir Laâlaj - Cité Plateau - casablanca"
@@ -14,15 +18,8 @@
       <a href="#">EN</a>
     </div>
   </nav>
-  <div class="hero-flag d-flex">
-    <div class="d-flex justify-content-center align-items-center left-side">
-      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas enim ullam voluptatibus quo quasi? Quasi,
-        nesciunt. Pariatur harum sapiente laboriosam vero est corporis cumque, recusandae sequi, architecto quia totam
-        asperiores!</span>
-    </div>
-    <div class="right-side">
-    </div>
-  </div>
+
+  <app-pages-slogons [slogons]="slogons" ></app-pages-slogons>
 
   <div class="mot-du-prez mr-5 ml-5 mb-5">
     <div class="presi-title pb-5">

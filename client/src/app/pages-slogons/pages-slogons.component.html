@@ -1,0 +1,13 @@
+<div class="hero-flag d-flex">
+  <div class="d-flex justify-content-center align-items-center left-side flex-column">
+
+    <app-slg-carousel [selectedItem]="selectedItem" class="mb-1 p-5"></app-slg-carousel>
+
+    <mat-radio-group aria-label="Select an option" color="primary">
+      <mat-radio-button *ngFor="let slogon of slogons; let i = index" [value]="i" (click)="change(slogon)"
+        [checked]="slogon === selectedItem"></mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div class="right-side">
+  </div>
+</div>

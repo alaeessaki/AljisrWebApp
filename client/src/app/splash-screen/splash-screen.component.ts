@@ -11,6 +11,7 @@ export class SplashScreenComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

@@ -12,6 +12,9 @@ export class HomePageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $('img').on("load", function () {
+      setTimeout(() => { $(".splash-wrapper").fadeOut("slow") }, 500);
+    });
   }
 
 }

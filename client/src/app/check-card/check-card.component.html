@@ -1,7 +1,7 @@
 <div class="check-card">
   <p>{{paragraph}}</p>
   <div class="faire-un-dont" id="checker{{id}}" (mouseenter)="checked()" (mouseleave)="checknt()">
-    <div class="checker">
+    <div class="checker" (click)="openModal(template3)">
       <div class="checker-cont" id="checker-cont{{id}}">
         <div class="checker-dot" id="check-dot{{id}}"></div>
       </div>

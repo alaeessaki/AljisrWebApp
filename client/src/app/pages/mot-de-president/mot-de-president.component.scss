@@ -3,9 +3,8 @@
 @import '../../../mediaqueries.scss';
 
 
-.notre-vocation {
+.Mot-de-president {
   background-color: #F2F6F7;
-
 
   .mot-du-prez {
     background-color: #ffffff;
@@ -28,18 +27,47 @@
         right: 0;
         top: 30px;
         left: 35rem;
+
+        @include laptop-breakpoint {
+          left: 28rem;
+        }
+
+        @include tablet {
+          left: 23rem;
+          top: 18px;
+        }
+
+        @include tablet-sm {
+          display: none;
+        }
       }
 
       h6 {
-        padding-bottom: 20px;
+        font-size: 16px;
+        font-family: $font-family;
+        color: color(primary);
+        padding-bottom: 25px;
+        font-weight: 600;
+
+        @include laptop-breakpoint {
+          font-size: 14px;
+        }
       }
 
       h3 {
         position: relative;
-        font-weight: 800;
+        font-weight: 600;
         font-family: $paragraph-font;
         font-size: 40px;
         z-index: 1;
+
+        @include laptop-breakpoint {
+          font-size: 32px;
+        }
+
+        @include tablet {
+          font-size: 26px;
+        }
 
         &::before {
           content: "";
@@ -48,13 +76,10 @@
           border-radius: 50%;
           width: 3rem;
           height: 3rem;
-          -webkit-border-radius: 50%;
-          -moz-border-radius: 50%;
-          -ms-border-radius: 50%;
-          -o-border-radius: 50%;
           z-index: -1;
           left: -11px;
           top: -9px;
+
         }
 
         &::after {
@@ -67,14 +92,86 @@
           right: 0;
           top: -4px;
           left: 33.5rem;
+
+          @include laptop-breakpoint {
+            left: 26.5rem;
+          }
+
+          @include tablet {
+            left: 21.5rem;
+            top: -18px;
+          }
+
+          @include tablet-sm {
+            display: none;
+          }
         }
 
       }
     }
 
+    p {
+      line-height: 32px;
+      font-family: $font-family;
+      font-size: 16px;
+
+      @include laptop-breakpoint {
+        font-size: 14px;
+      }
+
+      @include tablet {
+        font-size: 13px;
+      }
+    }
+
     .prez {
       color: color(primary);
+      font-family: $font-family;
       font-weight: 600;
+
+      @include laptop-breakpoint {
+        font-size: 13px;
+      }
     }
+  }
+}
+
+
+
+//material radio customize
+.Mot-de-president {
+
+  .mat-radio-container {
+    height: 12px !important;
+  }
+
+  .mat-radio-outer-circle {
+    height: 14px;
+    width: 14px;
+
+
+    border-width: 2px;
+    border-style: none;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .mat-radio-inner-circle {
+    height: 23px;
+    left: -4.5px;
+    top: -4.5px;
+    width: 23px;
+  }
+
+  .mat-radio-button .mat-radio-ripple {
+    height: 0;
+    width: 0;
+  }
+
+  .mat-radio-button.mat-primary .mat-radio-inner-circle,
+  .mat-radio-button.mat-primary .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple),
+  .mat-radio-button.mat-primary.mat-radio-checked .mat-radio-persistent-ripple,
+  .mat-radio-button.mat-primary:active .mat-radio-persistent-ripple {
+    background-color: #01AEF3;
   }
 }

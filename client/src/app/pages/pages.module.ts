@@ -6,10 +6,10 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { InscriStepperComponent } from './inscription/inscri-stepper/inscri-stepper.component';
 import { MotDePresidentComponent } from './mot-de-president/mot-de-president.component';
 
+
 @NgModule({
   declarations: [
-    
-  ],
+    ],
   imports: [
     CommonModule
   ],

@@ -9,7 +9,7 @@ import { InscriStepperComponent } from './pages/inscription/inscri-stepper/inscr
 const routes: Routes = [
   { path: 'Inscription', component: InscriptionComponent },
   { path: 'QuiSommeNous', component: QuiSomeNousComponent },
-  { path: 'NotreVocation', component: MotDePresidentComponent },
+  { path: 'MotDePresident', component: MotDePresidentComponent },
   // { path: 'home', component: HomePageComponent },
   { path: '', component: HomePageComponent },
   // { path: '', redirectTo: '/home', pathMatch: 'full' },

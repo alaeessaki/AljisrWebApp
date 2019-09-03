@@ -1,3 +1,98 @@
 @import '../../../variables.scss';
 @import '../../../pagesflag.scss';
 @import '../../../mediaqueries.scss';
+@import '../../../extends.scss';
+
+.qui-somme-nous {
+  main {
+    .titlecontainer {
+      .title {
+        margin-left: 5vw;
+
+        .number {
+          @extend %number;
+
+          &::before {
+            background-color: color(primary);
+          }
+
+          @include laptop {
+            font-size: 100px !important;
+          }
+
+          @include tablet {
+            font-size: 80px !important;
+          }
+
+          @include mobile-l {
+            font-size: 70px !important;
+          }
+        }
+
+        h1 {
+          font-family: $font-family;
+          font-size: 22px;
+          font-weight: bold;
+          color: color(primary);
+
+          @include laptop {
+            font-size: 18px;
+          }
+
+          @include tablet {
+            font-size: 16px !important;
+          }
+
+          @include mobile-l {
+            font-size: 12px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+//material radio customize
+.qui-somme-nous {
+
+  .mat-radio-container {
+    height: 12px !important;
+  }
+
+  .mat-radio-outer-circle {
+    height: 14px;
+    width: 14px;
+
+
+    border-width: 2px;
+    border-style: none;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .mat-radio-inner-circle {
+    height: 23px;
+    left: -4.5px;
+    top: -4.5px;
+    width: 23px;
+  }
+
+  .mat-radio-button .mat-radio-ripple {
+    height: 0;
+    width: 0;
+  }
+
+  .mat-radio-button.mat-primary .mat-radio-inner-circle,
+  .mat-radio-button.mat-primary .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple),
+  .mat-radio-button.mat-primary.mat-radio-checked .mat-radio-persistent-ripple,
+  .mat-radio-button.mat-primary:active .mat-radio-persistent-ripple {
+    background-color: #01AEF3;
+  }
+}
