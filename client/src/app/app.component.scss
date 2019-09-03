@@ -92,6 +92,7 @@ mat-sidenav-container {
         position: fixed;
         width: 80px;
         height: 100%;
+
         @include mobile-l {
           width: 60px;
         }
@@ -249,11 +250,36 @@ mat-sidenav-container {
 
   mat-sidenav-content {
     nav {
+      .search {
+        position: relative;
+
+        .searchCont {
+          position: absolute;
+          width: 0px;
+          opacity: 0;
+          transition: 0.5s;
+          top: -6px;
+          right: 80px;
+
+          .mat-form-field {
+            width: 100%;
+          }
+        }
+      }
+
       .menu {
         @extend %not-selectibale;
 
         .menuIcon {
-          font-size: 28px;
+          font-size: 25px;
+          border: 1px solid color(primary);
+          border-radius: 50%;
+          background-color: color(primary);
+          color: white;
+          width: 35px;
+          height: 35px;
+          padding: 4px;
+          margin-top: 4px;
         }
 
         mat-icon {
@@ -278,9 +304,11 @@ mat-sidenav-container {
       }
 
       a {
+        transition: 0.5s;
+
         img {
           padding: 16px 0px;
-          width: 67px;
+          width: 80px;
           @extend %not-selectibale;
         }
       }

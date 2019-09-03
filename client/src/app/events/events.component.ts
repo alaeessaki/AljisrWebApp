@@ -41,16 +41,16 @@ export class EventsComponent implements OnInit {
   // init method 
   ngOnInit() {
     this._events.getEvents().subscribe(data => {
-      if((<any>data).length>4){
+      if ((<any>data).length > 4) {
         for (let i = 1; i < 5; i++) {
           this.lastFourEvents.push(data[(<any>data).length - i]);
         };
       }
-      else{
+      else {
         (<any>data).forEach(element => {
           this.lastFourEvents.push(element)
         })
-        this.lastFourEvents 
+        this.lastFourEvents
       }
       this.selectedItem = this.lastFourEvents[0]
       this.language = this.langService.getLanguage();
@@ -84,9 +84,17 @@ export class EventsComponent implements OnInit {
       }
       // this._events.addParticipant(this.eventId, participant);
       this._events.addParticipant(this.eventId, participant).subscribe(
-        noError=>{ this.openSnackBar(this.participantFormGroup.controls['nom'].value + ' ' + this.participantFormGroup.controls['prenom'].value + ', merci de votre participation à '+this.selectedItem.title[this.language]+ ' votre participation est enregistée', "Merci !")
-        this.modalRef.hide();},
-        err=>{if(err.error.code==11000){this.openSnackBar('vous avez déjà inscrit à cette evenement avec cet email', "Ok !")}}
+        noError => {
+          this.openSnackBar(this.participantFormGroup.controls['nom'].value + ' ' + this.participantFormGroup.controls['prenom'].value + ', merci de votre participation à ' + this.selectedItem.title[this.language] + ' votre participation est enregistée', "Merci !")
+          this.modalRef.hide();
+          let date = `${this.selectedItem.date.slice(0,10)} à ${this.selectedItem.date.slice(11,16)}`
+          this._events.sendMail(participant, this.selectedItem.title[this.language], date).subscribe();
+        },
+        err => {
+          if (err.error.code == 11000) {
+            this.openSnackBar('vous avez déjà inscrit à cette evenement avec cet email', "Ok !")
+          }
+        }
       )
     }
   }

@@ -17,8 +17,8 @@ export class HeroSectionComponent implements OnInit {
 
   // init data
   bigSlogon = {
-    "fr":"INSPIRER \n LES JEUNES \n à enquêter",
-    "en":"inspire \n young men \n to investigate"
+    "fr": "INSPIRER \n LES JEUNES \n à enquêter",
+    "en": "inspire \n young men \n to investigate"
   };
 
   constructor(private _slogonService: SlogonsService, private _langService: LangService) {
@@ -82,10 +82,18 @@ export class HeroSectionComponent implements OnInit {
   // search bar toggle
   isClicked = false;
   clicked() {
+    let logo = document.querySelector('.homeLogo');
+    let screenWidth = window.innerWidth;
     if (this.isClicked) {
+      if (screenWidth < 1050) {
+        (<any>logo).style = "display:unset";
+      }
       this.isClicked = false;
     }
     else {
+      if (screenWidth < 1050) {
+        (<any>logo).style = "display:none";
+      }
       this.isClicked = true;
     }
   }

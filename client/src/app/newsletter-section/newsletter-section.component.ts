@@ -36,7 +36,15 @@ export class NewsletterSectionComponent implements OnInit {
       }
       this._newsletter.sendSubscriber(newSubscriber).subscribe(
         noError => {
-          this.hepassed()
+          this.hepassed();
+          this._newsletter.sendMail(newSubscriber).subscribe(
+            noError=>{
+              console.log('email sent')
+            },
+            err=>{
+              console.log(err);
+            }
+          )
         },
         err => {
           if (err.error.code == 11000) {

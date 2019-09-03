@@ -21,12 +21,17 @@ import * as $ from 'jquery';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'aljisrwebapplication';
   itsHome = false;
+  searchIsOpen = false;
+
   constructor(private _loadingBar: SlimLoadingBarService, private _router: Router, private _cookieSercive: CookieService) {
+
     this._router.events.subscribe((event: Event) => {
       this.navigationInterceptor(event);
     });
+
     this._router.events.subscribe(
       (event: any) => {
         if (event instanceof NavigationEnd) {
@@ -41,12 +46,15 @@ export class AppComponent {
       }
     );
   }
+
   isHome() {
     this.itsHome = true;
   }
+
   isHomeNt() {
     this.itsHome = false;
   }
+
   ngOnInit() {
     // setting default language
     if (this._cookieSercive.check("language") == false) {
@@ -54,9 +62,31 @@ export class AppComponent {
     }
 
     $(window).on("load", function () {
-      setTimeout(() => { $(".splash-wrapper").fadeOut("slow") }, 1000);
+      setTimeout(() => { $(".splash-wrapper").fadeOut("slow") }, 500);
     });
 
+
+
+  }
+
+  searchToggle() {
+    let searchbar = document.querySelector('.searchCont');
+    let screenWidth = window.innerWidth;
+    let logo = document.querySelector('.logo');
+    if (!this.searchIsOpen) {
+      if (screenWidth < 1050) {
+        (<any>logo).style = "opacity:0";
+      }
+      (<any>searchbar).style = "opacity:1;width:250px";
+      this.searchIsOpen = true;
+    }
+    else{
+      if (screenWidth < 1050) {
+        setTimeout(()=>{(<any>logo).style = "opacity:1"},200)
+      }
+      (<any>searchbar).style = "width:0px; opacity:0";
+      this.searchIsOpen = false;
+    }
   }
 
   // Loading bar
@@ -78,7 +108,6 @@ export class AppComponent {
 
 
   // menu data
-
   Menu: menu[] = [
     {
       title: {

@@ -83,11 +83,18 @@
         </div>
 
         <!-- Logo -->
-        <a routerLink="/"> <img src="../assets/Aljisr_logo2.png"></a>
+        <a routerLink="/" class="logo"> <img src="../assets/Aljisr_logo2.png"></a>
 
         <!-- Login -->
-        <div class="login mr-5">
-          <app-login></app-login>
+        <div class="btnContainer d-flex flex-row-reverse search menu">
+          <mat-icon id="phone_menu" class="menuIcon searchIcon mr-4 mt-0" aria-hidden="false"
+            aria-label="Example home icon" style="transform: rotate(90deg); padding: 5px;" (click)="searchToggle()">search</mat-icon>
+          <div class="searchCont">
+            <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
+              <mat-label>Search</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
         </div>
 
       </nav>
@@ -99,8 +106,8 @@
         <!-- Menu button -->
         <div class="homeMenu menu ml-3 d-flex justify-content-center align-items-center flex-direction-row">
           <div class="btnContainer">
-            <mat-icon id="phone_menu" class="menuIcon mr-3" aria-hidden="false" aria-label="Example home icon"
-              (click)="sidenav.toggle()">menu</mat-icon>
+            <mat-icon id="phone_menu" class="mr-3 mt-0" aria-hidden="false" aria-label="Example home icon"
+              (click)="sidenav.toggle()" style="font-size: 28px;">menu</mat-icon>
           </div>
 
           <a class="text-uppercase" (click)="sidenav.toggle()">Menu</a>

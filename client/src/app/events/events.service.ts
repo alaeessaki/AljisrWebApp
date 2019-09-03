@@ -26,8 +26,27 @@ export class EventsService {
       })
     };
     console.log(id)
-    return this.http.post(window.location.origin+'/api/addParticipant/'+id, participant, httpOptions);
+    // return this.http.post(window.location.origin+'/api/addParticipant/'+id, participant, httpOptions);
+    return this.http.post('/api/addParticipant/'+id, participant, httpOptions);
   }
+
+  // send participationMail
+  sendMail(participant, event, date){
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    const newParticipant={
+      email:participant.email,
+      event:event,
+      date:date
+    }
+    // return this.http.post(window.location.origin+'/api/addParticipant/'+id, participant, httpOptions);
+    return this.http.post('/api/sendParticipationMail', newParticipant, httpOptions);
+  }
+
+
 
 
 }

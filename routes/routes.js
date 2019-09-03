@@ -15,7 +15,7 @@ const News = require('../models/news');
 const Subscribers = require('../models/subscribers');
 const Temoins = require('../models/temoins');
 const Trophies = require('../models/trophies');
-
+const nodemailer = require('nodemailer');
 
 
 
@@ -60,7 +60,9 @@ router.get('/benevoles', function (req, res, next) {
 
 // get Benevole by id
 router.get('/benevoles/:id', function (req, res, next) {
-    Benevoles.find({_id:req.params.id},(err, benevoles) => {
+    Benevoles.find({
+        _id: req.params.id
+    }, (err, benevoles) => {
         res.json(benevoles)
     })
 })
@@ -74,7 +76,9 @@ router.get('/events', function (req, res, next) {
 
 // get events participants
 router.get('/eventsParticipants/:id', function (req, res, next) {
-    Events.find({_id:req.params.id},(err, events) => {
+    Events.find({
+        _id: req.params.id
+    }, (err, events) => {
         res.json(events[0].participants)
     })
 })
@@ -425,6 +429,73 @@ router.post('/addTrophie', (req, res, next) => {
         }
     })
 })
+
+// send mail
+router.post('/sendSubscribtionMail', (req, res) => {
+
+    let transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        host: "smt.gmail.com",
+        port: 465,
+        secure: true, // use TLS
+        auth: {
+            user: "alaeessaki3@gmail.com",
+            pass: "live.1457"
+        },
+        tls: {
+            // do not fail on invalid certs
+            rejectUnauthorized: false
+        }
+    });
+    const mailOptions = {
+        from: '"Aljisr" alaeessaki3@gmail.com', // sender address
+        to: req.body.email, // list of receivers
+        subject: 'Thank you for your subscribing', // Subject line
+        html: '<p>Thank you for your subscribing to our news letter </p>' // plain text body
+    };
+
+    transporter.sendMail(mailOptions, function (err, info) {
+        if (err) {
+            res.send(err)
+        } else {
+            res.send(info)
+        }
+    });
+})
+
+// send participationMail
+router.post('/sendParticipationMail', (req, res) => {
+
+    let transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        host: "smt.gmail.com",
+        port: 465,
+        secure: true, // use TLS
+        auth: {
+            user: "alaeessaki3@gmail.com",
+            pass: "live.1457"
+        },
+        tls: {
+            // do not fail on invalid certs
+            rejectUnauthorized: false
+        }
+    });
+    const mailOptions = {
+        from: '"Aljisr" alaeessaki3@gmail.com', // sender address
+        to: req.body.email, // list of receivers
+        subject: 'Thank you for your participation', // Subject line
+        html: `<p>Thank you for your subscribing to the Event: ${req.body.event} le: ${req.body.date}</p>` // plain text body,
+    };
+
+    transporter.sendMail(mailOptions, function (err, info) {
+        if (err) {
+            res.send(err)
+        } else {
+            res.send(info)
+        }
+    });
+})
+
 
 // add Trophie
 

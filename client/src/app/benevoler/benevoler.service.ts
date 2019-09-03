@@ -14,7 +14,7 @@ export class BenevolerService {
         'Authorization': 'my-auth-token'
       })
     };
-    return this._http.post(window.location.origin+"/api/addBenevoles", benevoler, httpOptions)
-  
+    // return this._http.post(window.location.origin+"/api/addBenevoles", benevoler, httpOptions)
+    return this._http.post("/api/addBenevoles", benevoler, httpOptions)
   }
 }

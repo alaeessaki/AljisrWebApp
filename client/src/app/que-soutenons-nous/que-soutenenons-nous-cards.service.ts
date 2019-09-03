@@ -8,6 +8,7 @@ export class QueSoutenenonsNousCardsService {
 
   constructor(private http: HttpClient) { }
   getCards(){
-    return this.http.get(window.location.origin+'/api/qstnCards');
+    // return this.http.get(window.location.origin+'/api/qstnCards');
+      return this.http.get('/api/qstnCards');
   }
 }

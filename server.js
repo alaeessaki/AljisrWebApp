@@ -1,12 +1,20 @@
-var express = require('express');
-var mongoose = require('mongoose');
-var bodyparser = require('body-parser');
-var cors = require('cors');
-var path = require('path');
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyparser = require('body-parser');
+const cors = require('cors');
+const path = require('path');
+const exphbs = require('express-handlebars');
 
-var app = express();
+
+
+const app = express();
 
 const route = require('./routes/routes')
+
+// view engine setup
+app.engine('handlebars',exphbs());
+app.set('vewi engine', 'handlebars');
+
 
 // connect to mongodb
 mongoose.Promise = global.Promise;
