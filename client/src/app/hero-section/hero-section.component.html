@@ -4,7 +4,8 @@
   <div class="slogan">
     <h3 class="text-uppercase" style="white-space: pre-line;">{{currentSlogon}}</h3>
   </div>
-  <div class="lang d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row justify-content-center align-items-center ">
+  <div
+    class="lang d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row justify-content-center align-items-center ">
     <div class="homeIcons d-flex flex-row">
       <img src="../../assets/icons/phone.png" matTooltip="0522 98 01 36" matTooltipPosition="left">
       <img src="../../assets/icons/place.png"
@@ -20,11 +21,15 @@
     </div>
   </div>
 
-  <div class="slogan2">
-    <h1 style="white-space: pre-line;">{{bigSlogon[language]}}</h1>
+  <div class="slogan2" *ngFor = "let slogon2 of actions" [ngClass]="{
+    'activeAction': slogon2 === selectedSlogon
+  }">
+    <h1 style="white-space: pre-line;">{{slogon2.title[language]}}</h1>
+    <h4 style="white-space: pre-line;">{{slogon2.slogon[language]}}</h4>
+    <a href="#">{{slogon2.link.text}}</a>
   </div>
+  <!-- 
+  <app-benevoler></app-benevoler> -->
 
-  <app-benevoler></app-benevoler>
-  
 
 </section>

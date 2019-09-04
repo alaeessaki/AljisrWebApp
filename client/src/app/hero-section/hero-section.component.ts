@@ -14,12 +14,41 @@ export class HeroSectionComponent implements OnInit {
   private index: number;
   currentSlogon: string;
   private Slogons: Array<any>;
+  selectedSlogon;
+  i = 0;
 
   // init data
-  bigSlogon = {
-    "fr": "INSPIRER \n LES JEUNES \n à enquêter",
-    "en": "inspire \n young men \n to investigate"
-  };
+
+  actions = [
+    {
+      "title": {
+        "fr": "Association Al jisr",
+        "en": "inspire young men to investigate"
+      },
+      "slogon": {
+        "fr": "l’association Al Jisr a le privilège d’être placée sous la Présidence d’honneur de Sa Majesté le Roi Mohammed VI et bénéficie de la Reconnaissance d’Utilité Publique depuis 2007.",
+        "en": "l’association Al Jisr a le privilège d’être placée sous la Présidence d’honneur de Sa Majesté le Roi Mohammed VI et bénéficie de la Reconnaissance d’Utilité Publique depuis 2007."
+      },
+      "link": {
+        'text': "Voir plus sur l'association",
+        'router': '#'
+      }
+    },
+    {
+      "title": {
+        "fr": "UN GESTE SIMPLE",
+        "en": "UN GESTE SIMPLE"
+      },
+      "slogon": {
+        "fr": "devenir bénévole, Une bonne idée ! ",
+        "en": "devenir bénévole, Une bonne idée ! "
+      },
+      "link": {
+        'text': "DEVENIR BÉNÉVOLE",
+        'router': '#'
+      }
+    }
+  ]
 
   constructor(private _slogonService: SlogonsService, private _langService: LangService) {
     this.Slogons = [];
@@ -44,6 +73,21 @@ export class HeroSectionComponent implements OnInit {
     // fetching data
     this.getdata();
     let _this = this;
+
+
+    // carousel of big slogons
+    this.selectedSlogon = this.actions[this.i];
+
+    setInterval(()=>{
+      if(this.i < (<any>this.actions).length - 1){
+        this.i++;
+        this.selectedSlogon = this.actions[this.i];
+      }
+      else{
+        this.i = 0;
+        this.selectedSlogon = this.actions[this.i];
+      }
+    }, 5000)
 
     // slogons carousel 
     function thisBind() {

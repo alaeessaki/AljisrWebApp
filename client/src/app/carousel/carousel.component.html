@@ -1,6 +1,19 @@
 <!-- Ngx Carousel -->
-<carousel>
+<!-- <carousel>
   <slide *ngFor="let item of images">
     <img src="{{item.src}}" alt="{{item.alt}}" style="display: block; width: 100%; height: auto;">
   </slide>
-</carousel>
+</carousel> -->
+<div class="carousel">
+  <div class="img" *ngFor="let item of images" [style.backgroundImage]="'url('+ item.src + ')'" [ngClass]="{
+    'active': item === selectedItem
+  }">
+  </div>
+  <div class="indicators-container d-flex flex-row">
+    <img src="../../assets/icons/right-arrow-(white).png" class="reversed previous">
+    <div class="indicators" *ngFor="let item of images; let i=index" [ngClass]="{
+      'active-indicator': item === selectedItem
+    }" (click)="select(item, i)"></div>
+    <img src="../../assets/icons/right-arrow-(white).png" class="next">
+  </div>
+</div>

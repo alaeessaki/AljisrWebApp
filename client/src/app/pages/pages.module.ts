@@ -17,4 +17,5 @@ import { MotDePresidentComponent } from './mot-de-president/mot-de-president.com
    
   ]
 })
+
 export class PagesModule { }

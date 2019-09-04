@@ -62,7 +62,7 @@ export class AppComponent {
     }
 
     $('img').on("load", function () {
-      setTimeout(() => { $(".splash-wrapper").fadeOut("slow") }, 500);
+      setTimeout(() => { $(".splash-wrapper").fadeOut("slow") }, 1500);
     });
 
 

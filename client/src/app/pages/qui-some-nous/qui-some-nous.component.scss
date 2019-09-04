@@ -53,6 +53,318 @@
 }
 
 
+.mainSection {
+  padding: 0 5%;
+
+  article {
+    .article-container {
+      padding: 30px 20px;
+
+      .left-rect {
+        width: 800px;
+
+        .blue-rect {
+          padding: 50px 30px;
+          margin-right: 40px;
+          position: relative;
+          background-color: color(primary);
+
+          &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: -21px;
+            left: -20px;
+            width: 100%;
+            height: 130%;
+            background-color: white;
+            border: 2px solid black;
+          }
+
+          h3 {
+            color: color(reverse);
+            text-align: left;
+            position: relative;
+            font-size: 21px;
+
+            &::before {
+              content: "";
+              position: absolute;
+              left: 3px;
+              bottom: -10px;
+              height: 2px;
+              width: 45%;
+              border-bottom: 2px dashed white;
+            }
+          }
+        }
+
+        .reverse-rect {
+          &::before {
+            left: 20px;
+          }
+        }
+      }
+
+      .text-container {
+        width: 224%;
+
+        .paragraph {
+          font-size: 17px;
+          line-height: 30px;
+          font-family: $font-family;
+          position: relative;
+          bottom: 25px;
+
+          .blue-text {
+            color: color(primary);
+          }
+        }
+
+        .list-with-dots {
+          padding-left: 30px;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 3px;
+            height: 65%;
+            left: 12px;
+            top: 9px;
+            border-right: 2px dashed color(primary);
+          }
+
+          p {
+            position: relative;
+          }
+
+          .item-with-big-dot {
+            &::before {
+              content: "";
+              position: absolute;
+              left: -25px;
+              width: 17px;
+              height: 17px;
+              top: 6px;
+              border-radius: 50%;
+              background-color: color(primary);
+            }
+          }
+
+          .item-with-md-dot {
+            &::before {
+              content: "";
+              position: absolute;
+              left: -23px;
+              width: 13px;
+              height: 13px;
+              top: 9px;
+              border-radius: 50%;
+              background-color: color(primary);
+            }
+          }
+
+          .item-with-sm-dot {
+            &::before {
+              content: "";
+              position: absolute;
+              left: -21px;
+              width: 10px;
+              height: 10px;
+              top: 11px;
+              border-radius: 50%;
+              background-color: color(primary);
+
+            }
+          }
+        }
+
+        .without-dash {
+          &::before {
+            display: none;
+          }
+
+          .with-border {
+            border: 2px solid color(primary);
+            width: 60%;
+            margin-bottom: 0;
+            padding-left: 37px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: none;
+
+            &:last-child {
+              border-bottom: 2px solid color(primary);
+              width: 80%;
+            }
+
+            &::before {
+              left: 13px !important;
+              top: 22px !important;
+            }
+          }
+        }
+
+        .list-with-rect-and-dots {
+          padding-left: 30px;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 3px;
+            height: 96%;
+            left: 12px;
+            top: 9px;
+            border-right: 2px dashed color(primary);
+          }
+
+          p {
+            position: relative;
+            margin-bottom: 17px;
+          }
+
+          .item-with-md-dot {
+            &::before {
+              content: "";
+              position: absolute;
+              left: -23px;
+              width: 13px;
+              height: 13px;
+              top: 9px;
+              border-radius: 50%;
+              background-color: color(primary);
+            }
+          }
+
+          .item-with-rect {
+            &::before {
+              content: "";
+              position: absolute;
+              left: -23px;
+              width: 13px;
+              height: 9px;
+              top: 9px;
+              background-color: color(primary);
+            }
+          }
+
+        }
+
+        .list-item {
+          font-size: 17px;
+          line-height: 30px;
+          font-family: $font-family;
+          margin-bottom: 7px;
+
+          .Listnumber {
+            background-color: color(primary);
+            color: color(reverse);
+            border-radius: 50%;
+            font-size: 13px;
+            padding: 0px 5px;
+            margin-right: 10px;
+            position: relative;
+            bottom: .8px;
+          }
+        }
+      }
+
+      .text-container-md {
+        width: 187%;
+      }
+    }
+
+    .documents-jur {
+      cursor: pointer;
+      background-color: color(primary);
+      margin-bottom: 10px;
+      padding: 20px 20px;
+
+      p {
+        color: color(reverse);
+        font-size: 16px;
+        font-family: $paragraph-font;
+        letter-spacing: 3px;
+        font-weight: 600;
+
+        .plus {
+          font-weight: 400;
+          font-size: 25px;
+          background-color: rgb(0, 160, 223);
+          border-radius: 50%;
+          padding: 2px 11px;
+          padding-left: 12px;
+          margin-left: 31px;
+          position: relative;
+          top: 3px;
+        }
+      }
+    }
+
+    .box-cont {
+      padding: 6% 23%;
+      margin-bottom: 50px;
+      .box {
+        position: relative;
+
+        p {
+          background-color: color(primary);
+          padding: 50px 25px;
+          color: color(reverse);
+          font-family: $paragraph-font;
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 30px;
+          left: 18%;
+          z-index: -1;
+          width: 100%;
+          height: 92%;
+          border: 2px solid color(primary);
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: -30px;
+          left: 70%;
+          width: 2px;
+          height: 100%;
+          border-right: 2px dashed color(primary);
+          top: -68px;
+          left: 105%;
+          z-index: -1;
+        }
+        .rect-imp{
+          position: absolute;
+          z-index: -1;
+          top: -102px;
+          left: 103.5%;
+          .rect-imp-cont{
+            padding: 1px;
+            background-color: color(primary);
+            .imp{
+              color: color(primary);
+              background-color: color(reverse);
+              padding: 0px 6px;
+              margin: 3px;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 
 
 

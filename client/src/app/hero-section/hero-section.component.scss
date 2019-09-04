@@ -6,11 +6,11 @@
   // top: 0;
   .slogan {
     position: absolute;
-    top: 35%;
+    top: 25%;
     left: 7%;
 
     @include mobile-md{
-      top: 40%;
+      top: 25%;
     }
 
     h3 {
@@ -45,18 +45,81 @@
   }
 
   .slogan2 {
+    opacity: 0;
+    transition: .8s;
     position: absolute;
-    top: 59%;
+    top: 48%;
     left: 7%;
     color: white;
+    width: 40%;
+    @include tablet{
+      width: 60%;
+    }
     @include tablet-sm{
-      display: none;
+      width: 70%
+    }
+    @include mobile-l{
+      top: 40%;
+    }
+
+    h4{
+      font-family: $font-family;
+      font-weight: 100;
+      line-height: 30px;
+      font-size: 16px;
+      margin-bottom: 50px;
+      @include tablet{
+        font-size: 12px;
+        line-height: 20px;
+      }
+      @include tablet-sm{
+        font-size: 10px;
+        letter-spacing: 1px;
+        line-height: 18px;
+        margin-bottom: 20px;
+      }
+      @include mobile-sm{
+        font-size: 8px;
+        letter-spacing: 1px;
+        line-height: 16px;
+        margin-bottom: 10px;
+      }
+    }
+    a{
+      text-decoration: none;
+      border: 2px solid color(primary);
+      padding: 10px 20px;
+      color: color(reverse);
+      transition: .2s;
+      font-size: 16px;
+      &:hover{
+        background-color: color(primary);
+        font-weight: 400;
+      }
+      @include tablet{
+        font-size: 13px;
+      }
+      @include tablet-sm{
+        font-size: 11px;
+      }
+      @include mobile-sm{
+        font-size: 8px;
+      }
     }
     h1 {
       text-transform: uppercase;
       font-family: $font-family;
       font-weight: bolder;
-      font-size: 4.5vw;
+      font-size: 30px;
+      @include tablet{
+        font-size: 18px;
+      }
+      @include tablet-sm{
+        font-size: 16px;
+      }
+      @include mobile-sm{
+        font-size: 13px;
+      }
     }
   }
  
@@ -132,4 +195,8 @@
     }
     
   }
+}
+
+.activeAction{
+  opacity: 1 !important;
 }
