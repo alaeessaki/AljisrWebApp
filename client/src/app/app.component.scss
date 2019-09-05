@@ -164,16 +164,20 @@ mat-sidenav-container {
 
           mat-card {
             padding: 6px;
+            @include laptop-breakpoint{
+              padding-bottom: 21px;
+            }
             background-color: color(primary);
 
             mat-card-title {
               a {
+                display: block;
                 padding: 0;
                 text-decoration: none;
                 color: color(reverse);
                 font-family: $secondary-font;
                 font-size: 16px;
-
+                margin-left: 19px;
                 @include tablet-sm {
                   font-size: 12px;
                 }
@@ -195,6 +199,13 @@ mat-sidenav-container {
           mat-expansion-panel {
             background-color: color(primary);
             box-shadow: unset !important;
+            @include laptop-breakpoint{
+              margin-bottom: 20px;
+            }
+            @include tablet-sm{
+              margin-bottom: 0px;
+            }
+            
 
             mat-expansion-panel-header {
 

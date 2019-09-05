@@ -18,7 +18,7 @@ export class NewsLetterService {
       })
     };
     // return this._http.post(window.location.origin+"/api/addSubscriber", subscriber, httpOptions)
-    return this._http.post("/api/addSubscriber", subscriber, httpOptions)
+    return this._http.post("api/addSubscriber", subscriber, httpOptions)
   }
 
   // mailsender
@@ -29,7 +29,7 @@ export class NewsLetterService {
         'Authorization': 'my-auth-token'
       })
     };
-    return this._http.post("/api/sendSubscribtionMail", subscriber, httpOptions)
+    return this._http.post("api/sendSubscribtionMail", subscriber, httpOptions)
   }
   itExist() {
     return this.emailExist;

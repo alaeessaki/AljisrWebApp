@@ -36,10 +36,12 @@
         <div class="sidenav-container d-flex flex-column">
           <mat-card>
             <mat-card-title>
-              <a routerLink="/" (click)="sidenav.close()">Home</a>
+              <a routerLink="/" (click)="sidenav.close()">Acceuil</a>
             </mat-card-title>
           </mat-card>
           <div *ngFor="let item of Menu">
+
+            <!-- Links that have sublinks -->
             <mat-expansion-panel *ngIf="item.subtitle.length>1">
               <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -50,10 +52,8 @@
                 <a routerLink="/{{subitem.link}}" (click)="sidenav.close()">{{subitem.name}}</a>
               </div>
             </mat-expansion-panel>
-          </div>
 
-          <!-- Links that doesnt have sublinks -->
-          <div *ngFor="let item of Menu" class="othercards">
+             <!-- Links that doesnt have sublinks -->
             <mat-card *ngIf="item.subtitle.length<1">
               <mat-card-title>
                 <a routerLink="/{{item.title.link}}">{{item.title.name}}</a>
@@ -61,6 +61,7 @@
             </mat-card>
           </div>
 
+    
         </div>
       </div>
     </div>

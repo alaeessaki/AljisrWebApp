@@ -124,91 +124,47 @@ export class AppComponent {
           link: 'MotDePresident'
         },
         {
-          name: 'Notre Organisation',
+          name: 'Notre Structure',
+          link: '#'
+        },
+        {
+          name: 'Rapport Annuelle',
           link: '#'
         },
       ]
     },
     {
       title: {
-        name: 'Education',
+        name: 'Pole Education & parriaignage',
         link: '#'
       },
       subtitle: [
         {
-          name: 'Fromation fondamental',
+          name: 'Presentation',
           link: '#'
         },
         {
-          name: 'Fonction-Renforcement',
+          name: 'Projects LTA',
           link: '#'
         },
         {
-          name: 'Trouver une école',
-          link: '#'
-        },
-      ]
-    },
-    {
-      title: {
-        name: 'Packes écoles',
-        link: '#'
-      },
-      subtitle: [
-        {
-          name: 'Aj Pee',
+          name: 'Amal',
           link: '#'
         },
         {
-          name: 'Aj Per',
+          name: 'Bibliothéque',
           link: '#'
         },
         {
-          name: 'Aj Pef',
+          name: 'Bibiliobus',
           link: '#'
         },
         {
-          name: 'Aj Pcv',
+          name: 'Journée solidaire',
           link: '#'
         },
         {
-          name: 'Aj Pev',
-          link: '#'
-        },
-        {
-          name: 'Aj Pei',
-          link: '#'
-        },
-        {
-          name: 'Aj Par',
-          link: '#'
-        },
-        {
-          name: 'Aj Ps',
-          link: '#'
-        },
-      ]
-    },
-    {
-      title: {
-        name: 'Formation-Insertion',
-        link: '#'
-      },
-      subtitle: [
-        {
-          name: 'Formation Apprentissage',
-          link: '#'
-        },
-        {
-          name: 'Formation Diplomé',
-          link: '#'
-        },
-        {
-          name: 'Insertion En Entreprise',
-          link: '#'
-        },
-        {
-          name: 'Insertion En Société',
+          name: 'Programme Ecole entreprise',
           link: '#'
         },
 
@@ -216,98 +172,54 @@ export class AppComponent {
     },
     {
       title: {
-        name: 'Activités',
+        name: 'Pole Insertion & Formation',
         link: '#'
       },
       subtitle: [
         {
-          name: 'Activités Scolaire',
+          name: 'Presentation',
           link: '#'
         },
         {
-          name: 'Programmes Scolaire',
+          name: 'Greenchip',
           link: '#'
         },
         {
-          name: 'Activités Parascolaire',
+          name: 'Greenchip 2.0',
           link: '#'
         },
         {
-          name: 'Programmes Parascolaire',
+          name: 'Centre de la deuxiéme chance',
+          link: '#'
+        },
+        {
+          name: 'Digi-bus',
+          link: '#'
+        },
+      ]
+    },
+    {
+      title: {
+        name: 'Pole innovation et transfert de compétence',
+        link: '#'
+      },
+      subtitle: [
+      ]
+    },
+    {
+      title: {
+        name: 'Mediatheque',
+        link: '#'
+      },
+      subtitle: [
+        {
+          name: 'Articles de presse',
+          link: '#'
+        },
+        {
+          name: 'Capsules vidéos',
           link: '#'
         }
-      ]
-    },
-    {
-      title: {
-        name: 'Génération citoyenne',
-        link: '#'
-      },
-      subtitle: [
-        {
-          name: 'Ecole Verte',
-          link: '#'
-        },
-        {
-          name: 'Revalorisation',
-          link: '#'
-        },
-        {
-          name: 'Patrimoine',
-          link: '#'
-        }
-      ]
-    },
-    {
-      title: {
-        name: 'Archives',
-        link: '#'
-      },
-      subtitle: [
-        {
-          name: 'Bibliothèque',
-          link: '#'
-        },
-        {
-          name: 'Photothèque',
-          link: '#'
-        },
-        {
-          name: 'Vidéothèque',
-          link: '#'
-        }
-      ]
-    },
-    {
-      title: {
-        name: 'My Jisr',
-        link: '#'
-      },
-      subtitle: [
-      ]
-    },
-    {
-      title: {
-        name: 'Newsletter',
-        link: '#'
-      },
-      subtitle: [
-      ]
-    },
-    {
-      title: {
-        name: 'Médiasphère',
-        link: '#'
-      },
-      subtitle: [
-      ]
-    },
-    {
-      title: {
-        name: 'Agenda',
-        link: '#'
-      },
-      subtitle: [
       ]
     },
     {

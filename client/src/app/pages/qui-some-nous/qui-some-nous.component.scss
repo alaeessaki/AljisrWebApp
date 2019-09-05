@@ -63,6 +63,18 @@
       .left-rect {
         width: 800px;
 
+        @include tablet {
+          width: 68%;
+          margin-bottom: 87px;
+        }
+
+        @include mobile-l {
+          width: 80%;
+        }
+        @include mobile-sm {
+          width: 100%;
+        }
+
         .blue-rect {
           padding: 50px 30px;
           margin-right: 40px;
@@ -87,6 +99,14 @@
             position: relative;
             font-size: 21px;
 
+            @include tablet {
+              font-size: 17px;
+            }
+
+            @include mobile-l {
+              font-size: 15px;
+            }
+
             &::before {
               content: "";
               position: absolute;
@@ -109,9 +129,24 @@
       .text-container {
         width: 224%;
 
+        @include tablet {
+          width: 100%;
+        }
+
         .paragraph {
           font-size: 17px;
           line-height: 30px;
+
+          @include tablet {
+            font-size: 15px;
+            line-height: 26px;
+          }
+
+          @include mobile-l {
+            font-size: 13px;
+            padding-right: 1rem !important;
+          }
+
           font-family: $font-family;
           position: relative;
           bottom: 25px;
@@ -188,6 +223,11 @@
           .with-border {
             border: 2px solid color(primary);
             width: 60%;
+
+            @include tablet {
+              width: 80%;
+            }
+
             margin-bottom: 0;
             padding-left: 37px;
             padding-right: 10px;
@@ -198,6 +238,11 @@
             &:last-child {
               border-bottom: 2px solid color(primary);
               width: 80%;
+
+              @include tablet {
+                width: 100%;
+                margin-bottom: 60px;
+              }
             }
 
             &::before {
@@ -254,9 +299,7 @@
         }
 
         .list-item {
-          font-size: 17px;
-          line-height: 30px;
-          font-family: $font-family;
+
           margin-bottom: 7px;
 
           .Listnumber {
@@ -274,13 +317,17 @@
 
       .text-container-md {
         width: 187%;
+
+        @include tablet {
+          width: 100%;
+        }
       }
     }
 
     .documents-jur {
       cursor: pointer;
       background-color: color(primary);
-      margin-bottom: 10px;
+      margin-bottom: 75px;
       padding: 20px 20px;
 
       p {
@@ -288,6 +335,16 @@
         font-size: 16px;
         font-family: $paragraph-font;
         letter-spacing: 3px;
+
+        @include tablet {
+          font-size: 14px;
+          letter-spacing: 2px;
+        }
+
+        @include mobile-l {
+          font-size: 13px;
+        }
+
         font-weight: 600;
 
         .plus {
@@ -300,6 +357,11 @@
           margin-left: 31px;
           position: relative;
           top: 3px;
+
+          @include tablet {
+            font-size: 20px;
+            padding: 2px 9px;
+          }
         }
       }
     }
@@ -307,6 +369,9 @@
     .box-cont {
       padding: 6% 23%;
       margin-bottom: 50px;
+      @include mobile-l{
+        padding: 6% 12%;
+      }
       .box {
         position: relative;
 
@@ -317,6 +382,12 @@
           font-family: $paragraph-font;
           font-size: 16px;
           font-weight: 600;
+          @include tablet{
+            font-size: 15px;
+          }
+          @include mobile-l{
+            font-size: 13px;
+          }
         }
 
         &::before {
@@ -342,15 +413,23 @@
           left: 105%;
           z-index: -1;
         }
-        .rect-imp{
+
+        .rect-imp {
           position: absolute;
           z-index: -1;
           top: -102px;
           left: 103.5%;
-          .rect-imp-cont{
+          @include tablet{
+            left: 101.5%;
+          }
+          @include mobile-sm{
+            left: 99.5%;
+          }
+          .rect-imp-cont {
             padding: 1px;
             background-color: color(primary);
-            .imp{
+
+            .imp {
               color: color(primary);
               background-color: color(reverse);
               padding: 0px 6px;

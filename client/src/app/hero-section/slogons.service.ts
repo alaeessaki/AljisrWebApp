@@ -9,6 +9,6 @@ export class SlogonsService {
   constructor(private http: HttpClient) { }
   getSlogons(){
     // return this.http.get(window.location.origin+'/api/slogons');
-      return this.http.get('/api/slogons');
+      return this.http.get('api/slogons');
   }
 }
