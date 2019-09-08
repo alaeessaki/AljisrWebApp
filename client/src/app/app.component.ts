@@ -80,9 +80,9 @@ export class AppComponent {
       (<any>searchbar).style = "opacity:1;width:250px";
       this.searchIsOpen = true;
     }
-    else{
+    else {
       if (screenWidth < 1050) {
-        setTimeout(()=>{(<any>logo).style = "opacity:1"},200)
+        setTimeout(() => { (<any>logo).style = "opacity:1" }, 200)
       }
       (<any>searchbar).style = "width:0px; opacity:0";
       this.searchIsOpen = false;
@@ -135,13 +135,13 @@ export class AppComponent {
     },
     {
       title: {
-        name: 'Pole Education & parriaignage',
+        name: 'Pole Education & parrainage',
         link: '#'
       },
       subtitle: [
         {
           name: 'Presentation',
-          link: '#'
+          link: 'Education'
         },
         {
           name: 'Projects LTA',
