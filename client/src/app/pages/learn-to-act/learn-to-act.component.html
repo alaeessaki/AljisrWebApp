@@ -1,3 +1,85 @@
-<p>
-  learn-to-act works!
-</p>
+<!-- Splash screen-->
+<app-routing-loading-screen></app-routing-loading-screen>
+
+<section class="learn-to-act">
+
+  <nav class="blue-nav d-flex justify-content-between">
+    <div class="pt-3 pl-4 d-flex flex-row justify-content-center align-items-center links">
+      <span class="arbreLink">Education</span>
+      <img src="../../../assets/icons/rounded-arrow.png" alt="tree" width="14" height="14" class="mr-2 ml-2">
+      <span class="arbreLink">Projets LTA (Learn To Act)</span>
+    </div>
+    <div class="lang-ins d-flex flex-row justify-content-center align-items-center pt-3 pr-4">
+      <img src="../../../assets/icons/phone.png" matTooltip="0522 98 01 36" matTooltipPosition="left">
+      <img src="../../../assets/icons/place.png"
+        matTooltip="Ecole El Bachiri Garçons, Angle Rue Ahmed kadmiri et Rue Bachir Laâlaj - Cité Plateau - casablanca"
+        matTooltipPosition="below" class="mr-2 ml-2">
+      <a href="#">FR /</a>
+      <a href="#">EN</a>
+    </div>
+  </nav>
+
+  <app-pages-slogons [slogons]="slogons"></app-pages-slogons>
+  <!-- Section title -->
+  <div class="titlecontainer">
+    <div class="title d-flex flex-row align-items-center">
+      <span class="number">01</span>
+      <h1 class="text-uppercase">Learn to Act</h1>
+    </div>
+  </div>
+
+  <div class="lta-container">
+
+    <article>
+      <div class="article-container d-flex flex-column flex-md-row align-items-start">
+
+        <!-- Blue rect -->
+        <div class="left-rect">
+          <div class="blue-rect text-uppercase">
+            <h3>CONCEPT DU BIBLIO-BUS</h3>
+          </div>
+        </div>
+
+        <!-- Text Container -->
+        <div class="text-container text-container-md">
+          <div class="paragraph">
+            <div class="list-with-dots mt-2 mb-2">
+              <p class="item-with-sm-dot mb-0">Le Biblio-Bus a pour objectif de rapprocher le jeune public <span
+                  class="blue-text">des régions défavorisées à la culture</span>, notamment la lecture, le cinéma et
+                différentes formes d’expression artistiques.
+              </p>
+              <p class="item-with-sm-dot mb-0">Organisé sous forme de caravane qui sera en tournée dans différentes
+                <span class="blue-text">régions périurbaines et rurales du Royaume</span>, le bibliobus est un bus
+                polyvalent qui se déplace dans les écoles et met à la disposition des enfants un large choix de livres
+                de différents niveaux : Contes, bandes dessinées, romans… En arabe et en français .
+
+              </p>
+              <p class="item-with-sm-dot mb-0">Chaque escale du bibliobus est également l’occasion d’animer des ateliers
+                : <span class="blue-text">lectures de contes, ateliers d’écritures, projections de films d'animation
+                  jeune public …</span>
+              </p>
+              <p class="item-with-sm-dot mb-0">Le projet pilote se déroulera autour de l’axe périphérique de la région
+                de Casablanca, à savoir Ain Sebaa, Bernoussi et Sidi Moumen. <span class="blue-text">Le choix se porte
+                  sur 10 écoles primaires publiques cette année scolaire 2017/2018 et 10 écoles pour la rentrée scolaire
+                  2018/2019.</span>
+              </p>
+              <p class="item-with-sm-dot mb-0">Le Biblio-Bus intègre le concept de <span class="blue-text">la mallette
+                  pédagogique</span> qui sera le support principal des livres et de l’approche éducative en vue de créer
+                un club de lecture dans chaque établissement et ainsi créer une dynamique pour choisir en fin d’année le
+                meilleur club culturel.
+              </p>
+              <p class="item-with-sm-dot mb-0">Il vise également à fédérer les différentes parties prenantes dans le
+                domaine éducatif : l’Académie de l’éducation Nationale, les Directeurs des établissements scolaires, les
+                associations de parents d’élèves ainsi que les professeurs, <span class="blue-text">de manière à les
+                  impliquer dans le contenu et l’action pédagogiques.</span>
+              </p>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
