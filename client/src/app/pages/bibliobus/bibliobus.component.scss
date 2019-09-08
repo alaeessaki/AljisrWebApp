@@ -227,9 +227,6 @@
           @include mobile-l{
             padding-left: 0;
           }
-          // @include xl-break-point{
-          //   width: 100%;
-          // }
           .atelier-with-border{
             margin-right: 20%;
             @include xl-device{
@@ -351,7 +348,6 @@
 
         .carousel-imgs {
           opacity: 0;
-          transition: 0.5s;
           position: absolute;
           top: 0;
           left: 0;
