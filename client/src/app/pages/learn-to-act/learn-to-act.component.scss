@@ -53,6 +53,7 @@
 
   .lta-container {
     padding: 0 5%;
+
     article {
       .article-container {
         padding: 30px 20px;
@@ -172,28 +173,87 @@
         }
       }
 
-      .atelier-container {
-        padding: 100px 20px;
+      .time-lapse-container {
+        position: relative;
 
-        .left-rect {
-          width: 300px;
+        .doted-line {
+          position: absolute;
+          top: 20%;
+          left: 13%;
+          width: 71%;
+          height: 2px;
+          border-bottom: 3px dashed color(primary);
 
-          @include xl-device {
-            width: 335px;
-            margin-left: 6%;
-            margin-bottom: 5rem;
+          @include tablet {
+            display: none;
+          }
+        }
+
+        section {
+          margin: 0% 3%;
+          @include tablet{
+            margin: 3%;
+          }
+          position: relative;
+
+          p {
+            color: color(primary);
+            font-family: $font-family;
+            font-weight: 600;
+            font-size: 18px;
+            @include tablet{
+                font-size: 16px;
+            }
+            @include mobile-md{
+                font-size: 14px;
+            }
           }
 
-          @include laptop-breakpoint {
-            width: 50%;
+          .year {
+            margin-bottom: 11rem;
+            font-size: 22px;
           }
 
-          @include tablet-sm {
-            width: 65%;
+          .spec-year {
+            position: relative;
+            bottom: 1rem;
           }
 
-          @include mobile-l {
-            width: 85%;
+          .dot {
+            position: absolute;
+            top: 17%;
+          }
+
+          .sm-dot {
+            width: 20px;
+            height: 20px;
+            background-color: color(primary);
+            border-radius: 50%;
+          }
+
+          .md-dot {
+            width: 50px;
+            height: 50px;
+            background-color: color(primary);
+            border-radius: 50%;
+            top: 12%;
+          }
+
+          .lg-dot {
+            width: 80px;
+            height: 80px;
+            background-color: color(primary);
+            border-radius: 50%;
+            top: 8%;
+          }
+
+          .line {
+            position: absolute;
+            top: 18%;
+            left: 50%;
+            width: 3px;
+            height: 44%;
+            background-color: color(primary);
           }
         }
       }
