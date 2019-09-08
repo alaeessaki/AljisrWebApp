@@ -2,7 +2,6 @@
 $xl-device: 2560px;
 $l-device: 1440px;
 $md-device : 1300px;
-$xl-break-point: 1200px;
 $laptop: 1024px;
 $laptop-breakpoint: 992px;
 $tablet: 768px;
@@ -11,11 +10,6 @@ $mobile-l: 425px;
 $mobile-md : 375px;
 $mobile-sm: 320px;
 
-@mixin xl-break-point {
-  @media(max-width : #{$xl-break-point}) {
-    @content;
-  }
-}
 
 @mixin xl-device {
   @media (max-width : #{$xl-device}) {
