@@ -6,15 +6,18 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { InscriStepperComponent } from './pages/inscription/inscri-stepper/inscri-stepper.component';
 import { PoleEducationComponent } from './pages/pole-education/pole-education.component';
+import { BibliobusComponent } from './pages/bibliobus/bibliobus.component';
+import { LearnToActComponent } from './pages/learn-to-act/learn-to-act.component';
+
 
 const routes: Routes = [
   { path: 'Education', component: PoleEducationComponent },
   { path: 'Inscription', component: InscriptionComponent },
   { path: 'QuiSommeNous', component: QuiSomeNousComponent },
   { path: 'MotDePresident', component: MotDePresidentComponent },
-  // { path: 'home', component: HomePageComponent },
+  { path: 'bibliobus', component: BibliobusComponent },
+  { path: 'learnToAct', component: LearnToActComponent },
   { path: '', component: HomePageComponent },
-  // { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -22,4 +25,13 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponent = [QuiSomeNousComponent, HomePageComponent, InscriptionComponent, InscriStepperComponent, MotDePresidentComponent, PoleEducationComponent];
+export const routingComponent = [
+  QuiSomeNousComponent,
+  HomePageComponent,
+  InscriptionComponent,
+  InscriStepperComponent,
+  MotDePresidentComponent,
+  BibliobusComponent,
+  LearnToActComponent,
+  PoleEducationComponent
+];

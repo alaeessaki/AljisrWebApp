@@ -5,17 +5,18 @@ import { QuiSomeNousComponent } from './qui-some-nous/qui-some-nous.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { InscriStepperComponent } from './inscription/inscri-stepper/inscri-stepper.component';
 import { MotDePresidentComponent } from './mot-de-president/mot-de-president.component';
-import { PoleEducationComponent } from './pole-education/pole-education.component';
+import { BibliobusComponent } from './bibliobus/bibliobus.component';
+import { LearnToActComponent } from './learn-to-act/learn-to-act.component';
+import { PoleEducationComponent } from './pole-education/pole-education.component'
 
 
 @NgModule({
-  declarations: [
-    PoleEducationComponent],
+  declarations: [],
   imports: [
     CommonModule
   ],
-  exports:[
-   
+  exports: [
+
   ]
 })
 
