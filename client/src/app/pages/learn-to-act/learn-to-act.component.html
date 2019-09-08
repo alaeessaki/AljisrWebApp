@@ -1,3 +1,131 @@
-<p>
-  learn-to-act works!
-</p>
+<!-- Splash screen-->
+<app-routing-loading-screen></app-routing-loading-screen>
+
+<section class="learn-to-act">
+
+  <nav class="blue-nav d-flex justify-content-between">
+    <div class="pt-3 pl-4 d-flex flex-row justify-content-center align-items-center links">
+      <span class="arbreLink">Education</span>
+      <img src="../../../assets/icons/rounded-arrow.png" alt="tree" width="14" height="14" class="mr-2 ml-2">
+      <span class="arbreLink">Projets LTA (Learn To Act)</span>
+    </div>
+    <div class="lang-ins d-flex flex-row justify-content-center align-items-center pt-3 pr-4">
+      <img src="../../../assets/icons/phone.png" matTooltip="0522 98 01 36" matTooltipPosition="left">
+      <img src="../../../assets/icons/place.png"
+        matTooltip="Ecole El Bachiri Garçons, Angle Rue Ahmed kadmiri et Rue Bachir Laâlaj - Cité Plateau - casablanca"
+        matTooltipPosition="below" class="mr-2 ml-2">
+      <a href="#">FR /</a>
+      <a href="#">EN</a>
+    </div>
+  </nav>
+
+  <app-pages-slogons [slogons]="slogons"></app-pages-slogons>
+  <!-- Section title -->
+  <div class="titlecontainer">
+    <div class="title d-flex flex-row align-items-center">
+      <span class="number">01</span>
+      <h1 class="text-uppercase">Learn to Act</h1>
+    </div>
+  </div>
+
+  <div class="lta-container">
+
+    <article>
+      <div class="article-container d-flex flex-column flex-md-row align-items-start">
+        <!-- Blue rect -->
+        <div class="left-rect">
+          <div class="blue-rect text-uppercase">
+            <h3>Présentation</h3>
+          </div>
+        </div>
+
+        <!-- Text Container -->
+        <div class="text-container text-container-md">
+          <p class="paragraph">
+            L’association Al Jisr a développé ce programme de bénévolat,mobilisant <span class="blue-text">des salariés
+              d’entreprises partenaires et des étudiants universitaires</span> afin d’animer des activités parascolaires
+            au sein des établissements publics parrainés selon un chronogramme prédéfini
+            s’étalant sur toute l’année scolaire. L’objectif principal étant <span class="blue-text">d’accompagner
+              l’élève</span> dans son éveil intellectuel, émotionnel, corporel, artistique & entrepreneurial, afin de le
+            préparer à son rôle de citoyen de demain.<br>
+            Le programme a pour objectifs de :
+          </p>
+          <div class="paragraph">
+            <p class="list-item mb-0"><span class="Listnumber">1</span><span class="blue-text">Développer les
+                compétences
+                académiques et le savoir-être des élèves</span></p>
+            <p class="list-item mb-0"><span class="Listnumber">2</span><span class="blue-text">Développer l’esprit
+                d’engagement communautaire et le transfert de savoir chez le bénévole</span></p>
+            <p class="list-item mb-0"><span class="Listnumber">3</span><span class="blue-text">Développer l’esprit
+                d’engagement communautaire et le transfert de savoir chez le bénévole</span> </p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="article-container d-flex flex-column flex-md-row-reverse align-items-start">
+        <!-- Blue rect -->
+        <div class="left-rect reverse-rect">
+          <div class="blue-rect text-uppercase">
+            <h3>ACTIVITES PARASCOLAIRES</h3>
+          </div>
+        </div>
+
+        <!-- Text Container -->
+        <div class="text-container text-container-md">
+          <p class="paragraph pr-5">
+            Le programme « Learn to act » développé par l’association Al Jisr vient contribuer à
+            <span class="blue-text">trouver des solutions SMART aux problématiques majeures du système éducatif.</span>
+            Et
+            ce, à travers l’animation d’activités parascolaires (clubs lecture pour le primaire,
+            débat pour le lycée) au sein des établissements publics et grâce à des bénévoles,
+            formés à cet effet.Ce programme éducatif est fondé sur <span class="blue-text">le renforcement des
+              compétences de qualité qui</span>,
+            au-delà, des capacités de lire, écrire, compter, s’exprimer (savoir-faire), <span class="blue-text">s’axe
+              surtout sur le développement personnel, social et entrepreneurial (savoir-être)</span> des
+            élèves des établissements publics marocains
+          </p>
+          <p class="paragraph pr-5">
+            C’est là d’ailleurs toute la mission de l’association Al Jisr, qui se décline à travers ses différents
+            projets et interventions : <span class="blue-text">faire le pont entre l’Entreprise et l’Ecole</span>.
+            Depuis son lancement en 2012, le programme des « bénévoles en faveur de l’école » a connu <span
+              class="blue-text">un grand succès qui s’est traduit par l’accroissement fulgurant du nombre de bénévoles
+              actifs</span> dans ce programme et celui des élèves ciblés comme le montre le schéma ci-après :
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article>
+      <div
+        class="time-lapse-container d-flex flex-column flex-md-row justify-content-center justify-content-md-around mt-5 mb-5">
+        <div class="doted-line"></div>
+        <section class="d-flex flex-column align-items-center">
+          <p class="year">2012</p>
+          <div class="dot sm-dot"></div>
+          <div class="line"></div>
+          <p class="text-center">Projet Pilote:<br>
+            2 Bénévoles<br>
+            30 élèves bénéficiaires</p>
+        </section>
+        <section class="d-flex flex-column align-items-center">
+          <p class="year">2013</p>
+          <div class="line"></div>
+          <div class="dot md-dot"></div>
+          <p class="text-center">Déploiement du programme sur 5 écoles:<br>
+            39 bénévoles<br>
+            -67 élèves bénéficiaires</p>
+        </section>
+        <section class="d-flex flex-column align-items-center">
+          <p class="year spec-year">2017</p>
+          <div class="line"></div>
+          <div class="dot lg-dot"></div>
+          <p class="text-center">Déploiement du programme sur 10 écoles :<br>
+            100 Bénévoles.<br>
+            1300 élèves bénéficiaires
+          </p>
+        </section>
+      </div>
+    </article>
+  </div>
+</section>

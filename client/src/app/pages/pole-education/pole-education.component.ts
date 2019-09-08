@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
+import * as $ from 'jquery';
+
 @Component({
   selector: 'app-pole-education',
   templateUrl: './pole-education.component.html',
@@ -17,6 +19,10 @@ export class PoleEducationComponent implements OnInit {
   ];
 
   ngOnInit() {
+    $('img').on("load", function () {
+      $(".loading-screen-wrapper").fadeOut("slow")
+    }
+    );
   }
 
 }

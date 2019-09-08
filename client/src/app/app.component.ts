@@ -140,7 +140,7 @@ export class AppComponent {
       },
       subtitle: [
         {
-          name: 'Presentation',
+          name: 'Presentation (2020)',
           link: 'Education'
         },
         {
