@@ -135,7 +135,7 @@ export class AppComponent {
     },
     {
       title: {
-        name: 'Pole Education & parriaignage',
+        name: 'Pole Education & parrainage',
         link: '#'
       },
       subtitle: [
@@ -157,7 +157,7 @@ export class AppComponent {
         },
         {
           name: 'Bibiliobus',
-          link: '#'
+          link: 'bibliobus'
         },
         {
           name: 'Journée solidaire',

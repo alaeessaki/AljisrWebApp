@@ -12,7 +12,7 @@ const app = express();
 const route = require('./routes/routes')
 
 // view engine setup
-app.engine('handlebars',exphbs());
+app.engine('handlebars', exphbs());
 app.set('vewi engine', 'handlebars');
 
 
@@ -48,14 +48,49 @@ app.use(bodyparser.json());
 app.use('/api', route);
 
 
+// Allowed extensions list can be extended depending on your own needs
+const allowedExt = [
+    '.js',
+    '.ico',
+    '.css',
+    '.png',
+    '.jpg',
+    '.woff2',
+    '.woff',
+    '.ttf',
+    '.svg',
+];
+
 
 // static files
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 
-// testing server
-app.get('/', (req, res) => {
-    res.send('foobar');
-})
+
+
+
+
+app.use('/', express.static(path.join(__dirname, 'public/')));
+app.use('/admin', express.static(path.join(__dirname, 'public/admin')));
+
+
+
+app.get('/admin/*', (req, res) => {
+    if (allowedExt.filter(ext => req.url.indexOf(ext) > 0).length > 0) {
+        res.sendFile(path.resolve(`public/admin/${req.url}`));
+    } else {
+        res.sendFile(path.resolve('public/admin/index.html'));
+    }
+});
+
+// base route
+app.get('/*', (req, res) => {
+    if (allowedExt.filter(ext => req.url.indexOf(ext) > 0).length > 0) {
+        res.sendFile(path.resolve(`./public/${req.url}`), );
+    } else {
+        res.sendFile(path.resolve('./public/index.html'));
+    }
+});
+
 
 app.listen(port, () => {
     console.log('server started at port: ' + port);

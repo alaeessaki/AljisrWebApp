@@ -29,3 +29,41 @@
 app-slg-carousel{
     height: 70%;
 }
+
+//material radio customize
+.hero-flag {
+
+  .mat-radio-container {
+    height: 12px !important;
+  }
+
+  .mat-radio-outer-circle {
+    height: 14px;
+    width: 14px;
+
+
+    border-width: 2px;
+    border-style: none;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .mat-radio-inner-circle {
+    height: 23px;
+    left: -4.5px;
+    top: -4.5px;
+    width: 23px;
+  }
+
+  .mat-radio-button .mat-radio-ripple {
+    height: 0;
+    width: 0;
+  }
+
+  .mat-radio-button.mat-primary .mat-radio-inner-circle,
+  .mat-radio-button.mat-primary .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple),
+  .mat-radio-button.mat-primary.mat-radio-checked .mat-radio-persistent-ripple,
+  .mat-radio-button.mat-primary:active .mat-radio-persistent-ripple {
+    background-color: #01AEF3;
+  }
+}

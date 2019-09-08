@@ -1,0 +1,181 @@
+<!-- Splash screen-->
+<app-routing-loading-screen></app-routing-loading-screen>
+
+<section class="biblio-bus">
+  <nav class="blue-nav d-flex justify-content-between">
+    <div class="pt-3 pl-4 d-flex flex-row justify-content-center align-items-center links">
+      <span class="arbreLink">Pole Education & parrainage</span>
+      <img src="../../../assets/icons/rounded-arrow.png" alt="tree" width="14" height="14" class="mr-2 ml-2">
+      <span class="arbreLink">Bibiliobus</span>
+    </div>
+    <div class="lang-ins d-flex flex-row justify-content-center align-items-center pt-3 pr-4">
+      <img src="../../../assets/icons/phone.png" matTooltip="0522 98 01 36" matTooltipPosition="left">
+      <img src="../../../assets/icons/place.png"
+        matTooltip="Ecole El Bachiri Garçons, Angle Rue Ahmed kadmiri et Rue Bachir Laâlaj - Cité Plateau - casablanca"
+        matTooltipPosition="below" class="mr-2 ml-2">
+      <a href="#">FR /</a>
+      <a href="#">EN</a>
+    </div>
+  </nav>
+
+  <app-pages-slogons [slogons]="slogons"></app-pages-slogons>
+
+
+  <!-- Section title -->
+  <div class="titlecontainer">
+    <div class="title d-flex flex-row align-items-center">
+      <span class="number">01</span>
+      <h1 class="text-uppercase">présentation de bibliobus</h1>
+    </div>
+  </div>
+
+
+  <div class="biblio-container">
+    <!-- Articles -->
+    <article>
+      <div class="article-container d-flex flex-column flex-md-row align-items-start">
+
+        <!-- Blue rect -->
+        <div class="left-rect">
+          <div class="blue-rect text-uppercase">
+            <h3>CONCEPT DU BIBLIO-BUS</h3>
+          </div>
+        </div>
+
+        <!-- Text Container -->
+        <div class="text-container text-container-md">
+          <div class="paragraph">
+            <div class="list-with-dots mt-2 mb-2">
+              <p class="item-with-sm-dot mb-0">Le Biblio-Bus a pour objectif de rapprocher le jeune public <span
+                  class="blue-text">des régions défavorisées à la culture</span>, notamment la lecture, le cinéma et
+                différentes formes d’expression artistiques.
+              </p>
+              <p class="item-with-sm-dot mb-0">Organisé sous forme de caravane qui sera en tournée dans différentes
+                <span class="blue-text">régions périurbaines et rurales du Royaume</span>, le bibliobus est un bus
+                polyvalent qui se déplace dans les écoles et met à la disposition des enfants un large choix de livres
+                de différents niveaux : Contes, bandes dessinées, romans… En arabe et en français .
+
+              </p>
+              <p class="item-with-sm-dot mb-0">Chaque escale du bibliobus est également l’occasion d’animer des ateliers
+                : <span class="blue-text">lectures de contes, ateliers d’écritures, projections de films d'animation
+                  jeune public …</span>
+              </p>
+              <p class="item-with-sm-dot mb-0">Le projet pilote se déroulera autour de l’axe périphérique de la région
+                de Casablanca, à savoir Ain Sebaa, Bernoussi et Sidi Moumen. <span class="blue-text">Le choix se porte
+                  sur 10 écoles primaires publiques cette année scolaire 2017/2018 et 10 écoles pour la rentrée scolaire
+                  2018/2019.</span>
+              </p>
+              <p class="item-with-sm-dot mb-0">Le Biblio-Bus intègre le concept de <span class="blue-text">la mallette
+                  pédagogique</span> qui sera le support principal des livres et de l’approche éducative en vue de créer
+                un club de lecture dans chaque établissement et ainsi créer une dynamique pour choisir en fin d’année le
+                meilleur club culturel.
+              </p>
+              <p class="item-with-sm-dot mb-0">Il vise également à fédérer les différentes parties prenantes dans le
+                domaine éducatif : l’Académie de l’éducation Nationale, les Directeurs des établissements scolaires, les
+                associations de parents d’élèves ainsi que les professeurs, <span class="blue-text">de manière à les
+                  impliquer dans le contenu et l’action pédagogiques.</span>
+              </p>
+
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+  </div>
+
+  <article>
+    <div class="objectif-du-projet objectif-wrapper d-flex flex-column flex-md-row">
+
+      <div class="image-carousel">
+
+        <div class="carousel-list">
+
+          <div class="carousel-imgs" *ngFor="let image of images" [style.backgroundImage]="'url('+ image + ')'"
+            [ngClass]="{
+            'active': image === selectedImage
+          }"></div>
+
+        </div>
+      </div>
+
+      <div class="objectifs-text">
+
+        <div class="text-title">
+          <h1 class="text-uppercase">Objectifs du projet</h1>
+        </div>
+
+        <div class="text-container">
+          <div class="paragraph">
+            <p class="list-item"><span class="Listnumber">1</span> Chaque escale du bibliobus est également l’occasion
+              d’animer des ateliers : <span class="blue-text">de contes, ateliers d’écritures, projections de films
+                d'animation jeune public …</span>
+            </p>
+            <p class="list-item"><span class="Listnumber">2</span> Sensibiliser un public défavorisé et isolé des
+              activités culturelles et atténuer les disparités quant à <span class="blue-text">l’accès à la
+                culture.</span>
+            </p>
+            <p class="list-item"><span class="Listnumber">3</span> Favoriser la collaboration avec des associations de
+              proximité dans les zones ciblées.
+            </p>
+          </div>
+          <div class="carousel-controls d-flex flex-row">
+            <img src="../../../assets/icons/right-arrow-primary.png" class="previous  mr-4">
+            <img src="../../../assets/icons/right-arrow-primary.png" class="next">
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <div class="biblio-container">
+
+    <article>
+      <div class="article-container atelier-container d-flex flex-column flex-lg-row-reverse">
+        <!-- Blue rect -->
+        <div class="left-rect">
+          <div class="blue-rect text-uppercase reverse-rect">
+            <h3>Nos objectifs</h3>
+          </div>
+        </div>
+
+        <div class="atelier-text-container d-flex flex-column flex-md-row">
+
+          <div class="atelier atelier-with-border">
+            <div class="header-box mb-5">
+              <h1 class="text-uppercase">Atelier autour du livre</h1>
+            </div>
+
+            <div class="text-list text-list-with-border">
+              <p class='text-list-item pl-5 mb-1'>Lecture de poèmes</p>
+              <p class='text-list-item pl-5 mb-1'>Comptines</p>
+              <p class='text-list-item pl-5 mb-1'>Conte</p>
+              <p class='text-list-item pl-5 mb-1'>Réaliser une fiche de lecture</p>
+              <p class='text-list-item pl-5 mb-1'>Comment réaliser la Marguerite</p>
+              <p class='text-list-item pl-5 mb-1'>Réaliser un résumé d’un livre</p>
+            </div>
+          </div>
+
+          <div class="atelier">
+            <div class="header-box mb-5">
+              <h1 class="text-uppercase">Atelier didactiques</h1>
+            </div>
+
+            <div class="text-list">
+              <p class='text-list-item pl-5 mb-1'>Projection de documentaires</p>
+              <p class='text-list-item pl-5 mb-1'>Projection de courts métrages</p>
+              <p class='text-list-item pl-5 mb-1'>Projection de films éducatifs</p>
+              <p class='text-list-item pl-5 mb-1'>Réaliser une couverture de livre</p>
+              <p class='text-list-item pl-5 mb-1'>Réaliser une couverture de livre</p>
+              <p class='text-list-item pl-5 mb-1'>Photographie autour d’un livre …</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </article>
+  </div>
+</section>

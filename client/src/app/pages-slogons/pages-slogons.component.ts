@@ -1,9 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input,ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-pages-slogons',
   templateUrl: './pages-slogons.component.html',
-  styleUrls: ['./pages-slogons.component.scss']
+  styleUrls: ['./pages-slogons.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class PagesSlogonsComponent implements OnInit {
 

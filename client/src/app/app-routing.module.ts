@@ -5,14 +5,15 @@ import { MotDePresidentComponent } from './pages/mot-de-president/mot-de-preside
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { InscriStepperComponent } from './pages/inscription/inscri-stepper/inscri-stepper.component';
+import { BibliobusComponent } from './pages/bibliobus/bibliobus.component';
+
 
 const routes: Routes = [
   { path: 'Inscription', component: InscriptionComponent },
   { path: 'QuiSommeNous', component: QuiSomeNousComponent },
   { path: 'MotDePresident', component: MotDePresidentComponent },
-  // { path: 'home', component: HomePageComponent },
+  { path: 'bibliobus', component: BibliobusComponent},
   { path: '', component: HomePageComponent },
-  // { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -20,4 +21,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponent = [QuiSomeNousComponent, HomePageComponent, InscriptionComponent, InscriStepperComponent, MotDePresidentComponent];
+export const routingComponent = [QuiSomeNousComponent, HomePageComponent, InscriptionComponent, InscriStepperComponent, MotDePresidentComponent, BibliobusComponent] ;

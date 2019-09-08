@@ -1,12 +1,11 @@
-import { Component, OnInit,ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import * as $ from 'jquery';
 
 @Component({
   selector: 'app-mot-de-president',
   templateUrl: './mot-de-president.component.html',
-  styleUrls: ['./mot-de-president.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./mot-de-president.component.scss']
 })
 export class MotDePresidentComponent implements OnInit {
   slogons = [

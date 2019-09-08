@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import * as $ from 'jquery';
 
@@ -6,7 +6,6 @@ import * as $ from 'jquery';
   selector: 'app-qui-some-nous',
   templateUrl: './qui-some-nous.component.html',
   styleUrls: ['./qui-some-nous.component.scss'],
-  encapsulation: ViewEncapsulation.None
 
 })
 export class QuiSomeNousComponent implements OnInit {
