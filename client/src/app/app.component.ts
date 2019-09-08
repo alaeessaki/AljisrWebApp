@@ -135,7 +135,7 @@ export class AppComponent {
     },
     {
       title: {
-        name: 'Pole Education & parrainage',
+        name: 'Education',
         link: '#'
       },
       subtitle: [
@@ -145,14 +145,14 @@ export class AppComponent {
         },
         {
           name: 'Projects LTA',
-          link: '#'
+          link: 'learnToAct'
         },
         {
           name: 'Amal',
           link: '#'
         },
         {
-          name: 'Bibliothéque',
+          name: 'Bibliothéque de classe(2022)',
           link: '#'
         },
         {
@@ -164,7 +164,7 @@ export class AppComponent {
           link: '#'
         },
         {
-          name: 'Programme Ecole entreprise',
+          name: 'Le programme de préscolaire oeuvre',
           link: '#'
         },
 
@@ -172,7 +172,7 @@ export class AppComponent {
     },
     {
       title: {
-        name: 'Pole Insertion & Formation',
+        name: 'Formation',
         link: '#'
       },
       subtitle: [
@@ -181,7 +181,7 @@ export class AppComponent {
           link: '#'
         },
         {
-          name: 'Greenchip',
+          name: 'Greenchip (2021)',
           link: '#'
         },
         {
@@ -200,7 +200,7 @@ export class AppComponent {
     },
     {
       title: {
-        name: 'Pole innovation et transfert de compétence',
+        name: 'Innovation et transfert des compétences',
         link: '#'
       },
       subtitle: [

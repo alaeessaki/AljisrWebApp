@@ -29,6 +29,7 @@ import { TestimonsComponent } from './testimons/testimons.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { InscriStepperComponent } from './pages/inscription/inscri-stepper/inscri-stepper.component';
 import { BibliobusComponent } from './pages/bibliobus/bibliobus.component';
+import { LearnToActComponent } from './pages/learn-to-act/learn-to-act.component';
 
 
 
@@ -91,7 +92,8 @@ import { SlgCarouselComponent } from './pages-slogons/slg-carousel/slg-carousel.
     RoutingLoadingScreenComponent,
     PagesSlogonsComponent,
     SlgCarouselComponent,
-    BibliobusComponent
+    BibliobusComponent,
+    LearnToActComponent
   ],
   imports: [
     BrowserModule,
