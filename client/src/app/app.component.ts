@@ -135,11 +135,7 @@ export class AppComponent {
     },
     {
       title: {
-<<<<<<< HEAD
-        name: 'Pole Education & parrainage',
-=======
         name: 'Education',
->>>>>>> ded1dcc23153c97150a24000e3648068a6e14d60
         link: '#'
       },
       subtitle: [

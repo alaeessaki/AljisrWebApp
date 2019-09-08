@@ -30,8 +30,8 @@
         }
 
         h1 {
-          font-family: $font-family;
-          font-size: 22px;
+          font-family: $third-font;
+          font-size: 30px;
           font-weight: bold;
           color: color(primary);
 
@@ -55,6 +55,15 @@
 .educSection {
   padding: 0 5%;
 
+  .blue-text {
+    color: color(primary);
+  }
+
+  .blue-left-border {
+    border-left: color(primary) solid 2px;
+    padding-left: 24px;
+  }
+
   article {
     .article-container {
       padding: 30px 20px;
@@ -77,7 +86,7 @@
 
         .blue-rect {
           padding: 50px 30px;
-          margin-right: 40px;
+          margin-right: 21px;
           position: relative;
           background-color: color(primary);
 
@@ -147,13 +156,10 @@
             padding-right: 1rem !important;
           }
 
-          font-family: $font-family;
+          font-family: $third-font;
           position: relative;
           bottom: 25px;
 
-          .blue-text {
-            color: color(primary);
-          }
         }
 
 
@@ -244,6 +250,8 @@
         .list-item {
 
           margin-bottom: 7px;
+          padding-left: 28px;
+          text-indent: -29px;
 
           .Listnumber {
             background-color: color(primary);
@@ -255,6 +263,7 @@
             position: relative;
             bottom: .8px;
           }
+
         }
       }
 
