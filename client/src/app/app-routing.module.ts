@@ -8,6 +8,8 @@ import { InscriStepperComponent } from './pages/inscription/inscri-stepper/inscr
 import { PoleEducationComponent } from './pages/pole-education/pole-education.component';
 import { BibliobusComponent } from './pages/bibliobus/bibliobus.component';
 import { LearnToActComponent } from './pages/learn-to-act/learn-to-act.component';
+import { BibliothequeDeClasseComponent } from './pages/bibliotheque-de-classe/bibliotheque-de-classe.component'
+
 
 
 const routes: Routes = [
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'MotDePresident', component: MotDePresidentComponent },
   { path: 'bibliobus', component: BibliobusComponent },
   { path: 'learnToAct', component: LearnToActComponent },
+  { path: 'bibliothequeDeClasse', component: BibliothequeDeClasseComponent },
+
   { path: '', component: HomePageComponent },
 ];
 

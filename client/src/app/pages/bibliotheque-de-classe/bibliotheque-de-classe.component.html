@@ -1,0 +1,133 @@
+<!-- Splash screen-->
+<app-routing-loading-screen></app-routing-loading-screen>
+
+<section class="bibliotheque-de-classe">
+  <nav class="blue-nav d-flex justify-content-between">
+    <div class="pt-3 pl-4 d-flex flex-row justify-content-center align-items-center links">
+      <span class="arbreLink">Pole Education & parrainage</span>
+      <img src="../../../assets/icons/rounded-arrow.png" alt="tree" width="14" height="14" class="mr-2 ml-2">
+      <span class="arbreLink">Bibiliobus</span>
+    </div>
+    <div class="lang-ins d-flex flex-row justify-content-center align-items-center pt-3 pr-4">
+      <img src="../../../assets/icons/phone.png" matTooltip="0522 98 01 36" matTooltipPosition="left">
+      <img src="../../../assets/icons/place.png"
+        matTooltip="Ecole El Bachiri Garçons, Angle Rue Ahmed kadmiri et Rue Bachir Laâlaj - Cité Plateau - casablanca"
+        matTooltipPosition="below" class="mr-2 ml-2">
+      <a href="#">FR /</a>
+      <a href="#">EN</a>
+    </div>
+  </nav>
+
+  <app-pages-slogons [slogons]="slogons"></app-pages-slogons>
+
+
+  <!-- Section title -->
+  <div class="titlecontainer">
+    <div class="title d-flex flex-row align-items-center">
+      <span class="number">01</span>
+      <h1 class="text-uppercase">Bibliothèque de classe</h1>
+    </div>
+  </div>
+
+
+  <div class="bibliotheque-dc-container">
+    <!-- Articles -->
+    <article>
+      <div class="article-container d-flex flex-column flex-md-row align-items-start">
+        <!-- Blue rect -->
+        <div class="left-rect">
+          <div class="blue-rect text-uppercase">
+            <h3>CONCEPT DU BIBLIO-BUS</h3>
+          </div>
+        </div>
+
+
+        <!-- Text Container -->
+        <div class="text-container text-container-md">
+          <p class="paragraph">
+            Le programme des bibliothèques de classe développé par Al jisr vise à <span class="blue-text">doter les
+              écoles primaires défavorisées de bibliothèques de classe</span>, considérées comme un outil pédagogique
+            qui permet de favoriser les apprentissages des élèves tout en leur donnant envie de lire les
+            livres qui se trouvent à portée de main.<span class="blue-text">Cette dernière est gérée et animée par des
+              élèves</span> avec l'appui de leur enseignant(e) pour mener au mieux leur projet pédagogique .
+            l'expérience sur le terrain a permis de constater l'impact généré par la bonne mise en place des
+            bibiliothèques de classe et <span class="blue-text">la formation des enseignants sur le guide de la
+              bibiliothèque de classe</span>
+          </p>
+          <p class="paragraph">
+            Compte tenu de ces résultats probants . Al jisr souhaite élargir cette action pour en <span
+              class="blue-text">faire profiter d'autres régions</span> (AREFS) et ce à travers :
+          </p>
+          <div class="paragraph">
+            <p class="list-item mb-0"><span class="Listnumber">1</span><span class="blue-text"> La mise en place des 240
+                bibliothéques de classe au sien d'école primaires en étroite coordination avec les AREFs bénéficiaires .
+                une soixantaine de bibliothèques de classe sont prévues durant la même période avec la fondation BMCI
+              </span></p>
+            <p class="list-item mb-0"><span class="Listnumber">2</span><span class="blue-text">Le renforcement de l'axe
+                formation des enseignants pour une meilleure approche d'apprentissage des enfants à la lecture </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article>
+      <div class="article-container d-flex flex-column flex-md-row-reverse align-items-start mt-5 mb-4">
+        <!-- Blue rect -->
+        <div class="left-rect reverse-rect">
+          <div class="blue-rect text-uppercase">
+            <h3>Nos actions</h3>
+          </div>
+        </div>
+
+
+        <!-- Text Container -->
+        <div class="text-container text-container-md">
+          <div class="paragraph spec-paragraph">
+            <div class="icons-container d-flex flex-column flex-sm-row justify-content-around flex-wrap">
+              <div class="item-icon-container d-flex flex-column align-items-center" *ngFor='let Nmb of numbers'>
+                <img [src]="Nmb.icon">
+                <p class="icon-number">{{Nmb.number}}</p>
+                <p>{{Nmb.text}} </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article>
+      <div class="article-container d-flex flex-column flex-md-row align-items-start mb-5 pb-4">
+        <!-- Blue rect -->
+        <div class="left-rect">
+          <div class="blue-rect text-uppercase">
+            <h3>Implémentation du projet</h3>
+          </div>
+        </div>
+
+
+        <!-- Text Container -->
+        <div class="text-container text-container-md">
+          <p class="paragraph">
+            Pour la période 2009-2021 nous ciblons 240 écoles au sein de 4 Académies régionales :
+            <span class="blue-text">Casablanca - Settat</span><br>
+            <span class="blue-text"> Sous - Massa</span><br>
+            <span class="blue-text">L'oriental</span><br>
+            <span class="blue-text">Tanger - Tétouan</span>
+          </p>
+          <p class="paragraph">
+            L'objectif est de <span class="blue-text">faire bénéficier les directions provinciales</span> qui n'ont pas
+            eu suffisamment leur chance de
+            profiter de ce programme et qui ont fréquemment exprimé leur besoin d'en faire partie
+          </p>
+          <p class="paragraph">
+            <span class="blue-text">l'AREF de casablanca étant un partenaire stratégique du programme , il s'avère très
+              important de continuer cette dynamique</span>
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
