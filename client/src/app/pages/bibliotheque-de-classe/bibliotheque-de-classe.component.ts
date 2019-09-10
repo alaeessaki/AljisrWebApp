@@ -8,9 +8,6 @@ import * as $ from 'jquery';
   styleUrls: ['./bibliotheque-de-classe.component.scss']
 })
 export class BibliothequeDeClasseComponent implements OnInit {
-
-  selectedImage;
-  i = 0;
   
   slogons = [
     "Nous plaçons la préscolarisation au coeur de l'éducation et de la protection de la petite enfance",

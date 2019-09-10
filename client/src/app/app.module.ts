@@ -31,6 +31,7 @@ import { InscriStepperComponent } from './pages/inscription/inscri-stepper/inscr
 import { BibliobusComponent } from './pages/bibliobus/bibliobus.component';
 import { LearnToActComponent } from './pages/learn-to-act/learn-to-act.component';
 import { BibliothequeDeClasseComponent } from './pages/bibliotheque-de-classe/bibliotheque-de-classe.component'
+import { AmalComponent } from './pages/amal/amal.component';
 
 
 
@@ -95,7 +96,8 @@ import { SlgCarouselComponent } from './pages-slogons/slg-carousel/slg-carousel.
     SlgCarouselComponent,
     BibliobusComponent,
     LearnToActComponent,
-    BibliothequeDeClasseComponent
+    BibliothequeDeClasseComponent,
+    AmalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,224 @@
+@import '../../../variables.scss';
+@import '../../../pagesflag.scss';
+@import '../../../mediaqueries.scss';
+@import '../../../extends.scss';
+
+
+.projet-amal {
+  .titlecontainer {
+    .title {
+      margin-left: 5vw;
+
+      .number {
+        @extend %number;
+
+        &::before {
+          background-color: color(primary);
+        }
+
+        @include laptop {
+          font-size: 100px !important;
+        }
+
+        @include tablet {
+          font-size: 80px !important;
+        }
+
+        @include mobile-l {
+          font-size: 70px !important;
+        }
+      }
+
+      h1 {
+        font-family: $font-family;
+        font-size: 22px;
+        font-weight: bold;
+        color: color(primary);
+
+        @include laptop {
+          font-size: 18px;
+        }
+
+        @include tablet {
+          font-size: 16px !important;
+        }
+
+        @include mobile-l {
+          font-size: 12px !important;
+        }
+      }
+    }
+  }
+
+  .amal-container {
+    padding: 0 5%;
+
+    article {
+      .spec-article-container {
+        background-color: #F2F6F7;
+        position: relative;
+        z-index: 0;
+        padding: 30px 50px !important;
+        &::before {
+          content: "";
+          position: absolute;
+          right: 3%;
+          top: 10%;
+          width: 50%;
+          height: 80%;
+          z-index: -1;
+          background-color: color(reverse);
+        }
+
+        .spec-text-container {
+          padding: 8%;
+        }
+
+        .spec-left-rect {
+          margin: 5% 0%;
+        }
+      }
+
+      .article-container {
+        padding: 30px 20px;
+
+        .left-rect {
+          width: 800px;
+
+          @include tablet {
+            width: 68%;
+            margin-bottom: 87px;
+          }
+
+          @include mobile-l {
+            width: 80%;
+          }
+
+          @include mobile-sm {
+            width: 100%;
+          }
+
+          .blue-rect {
+            padding: 50px 30px;
+            margin-right: 40px;
+            position: relative;
+            background-color: color(primary);
+
+            &::before {
+              content: "";
+              position: absolute;
+              z-index: -1;
+              top: -21px;
+              left: -20px;
+              width: 100%;
+              height: 130%;
+              background-color: white;
+              border: 2px solid black;
+            }
+
+            h3 {
+              color: color(reverse);
+              text-align: left;
+              position: relative;
+              font-size: 21px;
+
+              @include tablet {
+                font-size: 17px;
+              }
+
+              @include mobile-l {
+                font-size: 15px;
+              }
+
+              &::before {
+                content: "";
+                position: absolute;
+                left: 3px;
+                bottom: -10px;
+                height: 2px;
+                width: 45%;
+                border-bottom: 2px dashed white;
+              }
+            }
+          }
+
+          .reverse-rect {
+            &::before {
+              left: 20px;
+            }
+          }
+        }
+
+        .text-container {
+          width: 224%;
+
+          @include tablet {
+            width: 100%;
+          }
+
+          .paragraph {
+            font-size: 17px;
+            line-height: 30px;
+
+            @include tablet {
+              font-size: 15px;
+              line-height: 26px;
+            }
+
+            @include mobile-l {
+              font-size: 13px;
+              padding-right: 1rem !important;
+            }
+
+            font-family: $font-family;
+            position: relative;
+            bottom: 25px;
+
+            .blue-text {
+              color: color(primary);
+            }
+          }
+
+          .list-with-dots {
+            padding-left: 30px;
+            position: relative;
+
+            p {
+              position: relative;
+            }
+
+            .item-with-sm-dot {
+              &::before {
+                content: "";
+                position: absolute;
+                left: -21px;
+                width: 7px;
+                height: 7px;
+                top: 13px;
+                border-radius: 50%;
+                background-color: color(primary);
+
+              }
+            }
+          }
+
+          .list-item {
+            color: color(primary);
+            margin-bottom: 7px;
+
+            .Listnumber {
+              background-color: color(primary);
+              color: color(reverse);
+              border-radius: 50%;
+              font-size: 13px;
+              padding: 0px 5px;
+              margin-right: 10px;
+              position: relative;
+              bottom: .8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -9,6 +9,7 @@ import { PoleEducationComponent } from './pages/pole-education/pole-education.co
 import { BibliobusComponent } from './pages/bibliobus/bibliobus.component';
 import { LearnToActComponent } from './pages/learn-to-act/learn-to-act.component';
 import { BibliothequeDeClasseComponent } from './pages/bibliotheque-de-classe/bibliotheque-de-classe.component'
+import { AmalComponent } from './pages/amal/amal.component';
 
 
 
@@ -20,6 +21,8 @@ const routes: Routes = [
   { path: 'bibliobus', component: BibliobusComponent },
   { path: 'learnToAct', component: LearnToActComponent },
   { path: 'bibliothequeDeClasse', component: BibliothequeDeClasseComponent },
+  { path: 'ProjetAmal', component: AmalComponent },
+
 
   { path: '', component: HomePageComponent },
 ];
@@ -37,5 +40,6 @@ export const routingComponent = [
   MotDePresidentComponent,
   BibliobusComponent,
   LearnToActComponent,
-  PoleEducationComponent
+  PoleEducationComponent,
+  AmalComponent
 ];
