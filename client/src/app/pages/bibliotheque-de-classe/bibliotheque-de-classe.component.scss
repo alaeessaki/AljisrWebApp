@@ -4,8 +4,7 @@
 @import '../../../extends.scss';
 
 
-.learn-to-act {
-
+.bibliotheque-de-classe {
   .titlecontainer {
     .title {
       margin-left: 5vw;
@@ -51,7 +50,7 @@
     }
   }
 
-  .lta-container {
+  .bibliotheque-dc-container {
     padding: 0 5%;
 
     article {
@@ -131,7 +130,15 @@
           @include tablet {
             width: 100%;
           }
-
+          .spec-paragraph{
+            padding-right: 9rem;
+            @include laptop{
+                padding-right: 3rem;
+            }
+            @include tablet-sm{
+                padding-right: 0;
+            }
+          }
           .paragraph {
             font-size: 17px;
             line-height: 30px;
@@ -153,6 +160,55 @@
             .blue-text {
               color: color(primary);
             }
+
+            .icons-container {
+              width: 100%;
+
+              .item-icon-container {
+                width: 30%;
+                @include laptop{
+                    width: 50%;
+                }
+                @include tablet-sm{
+                    width: 100%;
+                }
+                padding: 2% 5%;
+
+                img {
+                  width: 47px;
+                }
+
+                p {
+                  text-align: center;
+                  font-size: 15px;
+                  font-family: $font-family;
+                  font-weight: 400;
+                  line-height: 26px;
+                  margin-top: 3%;
+                }
+
+                .icon-number {
+                  position: relative;
+
+                  &::before {
+                    content: "";
+                    width: 80%;
+                    height: 10px;
+                    background-color: color(primary);
+                    position: absolute;
+                    bottom: 1%;
+                    left: 0;
+                    z-index: -1;
+                  }
+
+                  padding-top: 4%;
+                  font-size: 26px;
+                  color: color(secondary-bold);
+                  font-weight: 900;
+                  font-family: $font-family;
+                }
+              }
+            }
           }
 
           .list-item {
@@ -169,91 +225,6 @@
               position: relative;
               bottom: .8px;
             }
-          }
-        }
-      }
-
-      .time-lapse-container {
-        position: relative;
-
-        .doted-line {
-          position: absolute;
-          top: 20%;
-          left: 13%;
-          width: 67%;
-          height: 2px;
-          border-bottom: 3px dashed color(primary);
-
-          @include tablet {
-            display: none;
-          }
-        }
-
-        section {
-          margin: 0% 3%;
-          @include tablet{
-            margin: 3%;
-          }
-          position: relative;
-
-          p {
-            color: color(primary);
-            font-family: $font-family;
-            font-weight: 600;
-            font-size: 18px;
-            @include tablet{
-                font-size: 16px;
-            }
-            @include mobile-md{
-                font-size: 14px;
-            }
-          }
-
-          .year {
-            margin-bottom: 11rem;
-            font-size: 22px;
-          }
-
-          .spec-year {
-            position: relative;
-            bottom: 1rem;
-          }
-
-          .dot {
-            position: absolute;
-            top: 17%;
-          }
-
-          .sm-dot {
-            width: 20px;
-            height: 20px;
-            background-color: color(primary);
-            border-radius: 50%;
-          }
-
-          .md-dot {
-            width: 50px;
-            height: 50px;
-            background-color: color(primary);
-            border-radius: 50%;
-            top: 12%;
-          }
-
-          .lg-dot {
-            width: 80px;
-            height: 80px;
-            background-color: color(primary);
-            border-radius: 50%;
-            top: 8%;
-          }
-
-          .line {
-            position: absolute;
-            top: 18%;
-            left: 50%;
-            width: 3px;
-            height: 44%;
-            background-color: color(primary);
           }
         }
       }

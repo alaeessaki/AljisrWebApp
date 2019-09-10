@@ -4,8 +4,7 @@
 @import '../../../extends.scss';
 
 
-.learn-to-act {
-
+.projet-amal {
   .titlecontainer {
     .title {
       margin-left: 5vw;
@@ -51,10 +50,35 @@
     }
   }
 
-  .lta-container {
+  .amal-container {
     padding: 0 5%;
 
     article {
+      .spec-article-container {
+        background-color: #F2F6F7;
+        position: relative;
+        z-index: 0;
+        padding: 30px 50px !important;
+        &::before {
+          content: "";
+          position: absolute;
+          right: 3%;
+          top: 10%;
+          width: 50%;
+          height: 80%;
+          z-index: -1;
+          background-color: color(reverse);
+        }
+
+        .spec-text-container {
+          padding: 8%;
+        }
+
+        .spec-left-rect {
+          margin: 5% 0%;
+        }
+      }
+
       .article-container {
         padding: 30px 20px;
 
@@ -155,8 +179,31 @@
             }
           }
 
-          .list-item {
+          .list-with-dots {
+            padding-left: 30px;
+            position: relative;
 
+            p {
+              position: relative;
+            }
+
+            .item-with-sm-dot {
+              &::before {
+                content: "";
+                position: absolute;
+                left: -21px;
+                width: 7px;
+                height: 7px;
+                top: 13px;
+                border-radius: 50%;
+                background-color: color(primary);
+
+              }
+            }
+          }
+
+          .list-item {
+            color: color(primary);
             margin-bottom: 7px;
 
             .Listnumber {
@@ -169,91 +216,6 @@
               position: relative;
               bottom: .8px;
             }
-          }
-        }
-      }
-
-      .time-lapse-container {
-        position: relative;
-
-        .doted-line {
-          position: absolute;
-          top: 20%;
-          left: 13%;
-          width: 67%;
-          height: 2px;
-          border-bottom: 3px dashed color(primary);
-
-          @include tablet {
-            display: none;
-          }
-        }
-
-        section {
-          margin: 0% 3%;
-          @include tablet{
-            margin: 3%;
-          }
-          position: relative;
-
-          p {
-            color: color(primary);
-            font-family: $font-family;
-            font-weight: 600;
-            font-size: 18px;
-            @include tablet{
-                font-size: 16px;
-            }
-            @include mobile-md{
-                font-size: 14px;
-            }
-          }
-
-          .year {
-            margin-bottom: 11rem;
-            font-size: 22px;
-          }
-
-          .spec-year {
-            position: relative;
-            bottom: 1rem;
-          }
-
-          .dot {
-            position: absolute;
-            top: 17%;
-          }
-
-          .sm-dot {
-            width: 20px;
-            height: 20px;
-            background-color: color(primary);
-            border-radius: 50%;
-          }
-
-          .md-dot {
-            width: 50px;
-            height: 50px;
-            background-color: color(primary);
-            border-radius: 50%;
-            top: 12%;
-          }
-
-          .lg-dot {
-            width: 80px;
-            height: 80px;
-            background-color: color(primary);
-            border-radius: 50%;
-            top: 8%;
-          }
-
-          .line {
-            position: absolute;
-            top: 18%;
-            left: 50%;
-            width: 3px;
-            height: 44%;
-            background-color: color(primary);
           }
         }
       }

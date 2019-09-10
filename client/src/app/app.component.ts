@@ -65,8 +65,9 @@ export class AppComponent {
       setTimeout(() => { $(".splash-wrapper").fadeOut("slow") }, 1500);
     });
 
-
-
+    console.log('Hi 👌 | Made With the power of Memes by Alae, Khalil and Anas')
+    console.log('What did it cost?');
+    console.log('everything ! 😔')
   }
 
   searchToggle() {
@@ -149,11 +150,11 @@ export class AppComponent {
         },
         {
           name: 'Amal',
-          link: '#'
+          link: 'ProjetAmal'
         },
         {
           name: 'Bibliothéque de classe(2022)',
-          link: '#'
+          link: 'bibliothequeDeClasse'
         },
         {
           name: 'Bibiliobus',

@@ -30,6 +30,8 @@ import { InscriptionComponent } from './pages/inscription/inscription.component'
 import { InscriStepperComponent } from './pages/inscription/inscri-stepper/inscri-stepper.component';
 import { BibliobusComponent } from './pages/bibliobus/bibliobus.component';
 import { LearnToActComponent } from './pages/learn-to-act/learn-to-act.component';
+import { BibliothequeDeClasseComponent } from './pages/bibliotheque-de-classe/bibliotheque-de-classe.component'
+import { AmalComponent } from './pages/amal/amal.component';
 
 
 
@@ -93,7 +95,9 @@ import { SlgCarouselComponent } from './pages-slogons/slg-carousel/slg-carousel.
     PagesSlogonsComponent,
     SlgCarouselComponent,
     BibliobusComponent,
-    LearnToActComponent
+    LearnToActComponent,
+    BibliothequeDeClasseComponent,
+    AmalComponent
   ],
   imports: [
     BrowserModule,

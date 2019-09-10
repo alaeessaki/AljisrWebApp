@@ -8,7 +8,9 @@ import { MotDePresidentComponent } from './mot-de-president/mot-de-president.com
 import { BibliobusComponent } from './bibliobus/bibliobus.component';
 import { LearnToActComponent } from './learn-to-act/learn-to-act.component';
 import { PoleEducationComponent } from './pole-education/pole-education.component';
-import { PrescolairePageComponent } from './prescolaire-page/prescolaire-page.component'
+import { PrescolairePageComponent } from './prescolaire-page/prescolaire-page.component';
+import { AmalComponent } from './amal/amal.component'
+
 
 
 @NgModule({
