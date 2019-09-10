@@ -59,6 +59,7 @@
         position: relative;
         z-index: 0;
         padding: 30px 50px !important;
+
         &::before {
           content: "";
           position: absolute;
@@ -81,6 +82,20 @@
 
       .article-container {
         padding: 30px 20px;
+
+        .left-lg-rect {
+          @include laptop {
+            width: 38% !important;
+          }
+
+          @include tablet {
+            width: 60% !important;
+          }
+
+          @include tablet-sm {
+            width: 68% !important;
+          }
+        }
 
         .left-rect {
           width: 800px;
@@ -149,6 +164,17 @@
           }
         }
 
+        .text-container-lg {
+          @include laptop {
+            width: 100% !important;
+            margin-top: 15%;
+          }
+
+          @include tablet {
+            margin-top: 6%;
+          }
+        }
+
         .text-container {
           width: 224%;
 
@@ -176,6 +202,130 @@
 
             .blue-text {
               color: color(primary);
+            }
+
+            .schema-container {
+              .schema-item {
+                @include tablet-sm {
+                  margin-bottom: 18%;
+                }
+
+                .schema-dot-container {
+                  width: 30%;
+                  position: relative;
+
+                  @include tablet-sm {
+                    width: 100%;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                  }
+
+                  .schema-dot {
+                    width: 150px;
+                    height: 150px;
+                    background-color: color(primary);
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+
+                    p {
+                      margin: 0;
+                      padding: 15%;
+                      color: color(reverse);
+                      text-align: center;
+                      font-size: 18px;
+                      font-family: $font-family;
+                      font-weight: 600;
+                    }
+
+                    .column-line {
+                      position: absolute;
+                      top: 94%;
+                      z-index: -1;
+                      left: 50%;
+                      width: 4px;
+                      background-color: color(primary);
+
+                      @include tablet-sm {
+                        display: none;
+                      }
+                    }
+                  }
+
+                  .row-line {
+                    position: absolute;
+                    top: 49%;
+                    right: -31px;
+                    z-index: -1;
+                    width: 80%;
+                    height: 4px;
+                    background-color: color(primary);
+
+                    @include tablet-sm {
+                      display: none;
+                    }
+                  }
+
+                }
+
+                .schema-text-container {
+                  width: 70%;
+
+                  @include tablet-sm {
+                    width: 100%;
+                  }
+
+                  .list-with-dots {
+                    padding-left: 30px;
+                    position: relative;
+                    padding-top: 6% !important;
+
+                    @include tablet-sm {
+                      padding-left: 10px;
+                    }
+
+                    p {
+                      position: relative;
+                      padding: 12px 30px;
+                      border: 2px solid color(primary);
+                      border-bottom: none;
+                      border-top: none;
+                      font-size: 16px;
+
+                      @include tablet {
+                        padding: 3px 30px;
+                        font-size: 15px;
+                      }
+
+                      &:last-child {
+                        border-bottom: 2px solid color(primary);
+                      }
+
+                      &:first-child {
+                        border-top: 2px solid color(primary);
+                      }
+                    }
+
+                    .item-with-sm-dot {
+                      &::before {
+                        content: "";
+                        position: absolute;
+                        left: 14px;
+                        width: 7px;
+                        height: 7px;
+                        top: 23px;
+                        border-radius: 50%;
+                        background-color: color(primary);
+
+                      }
+                    }
+                  }
+
+                }
+              }
             }
           }
 
