@@ -7,11 +7,12 @@ import { InscriStepperComponent } from './inscription/inscri-stepper/inscri-step
 import { MotDePresidentComponent } from './mot-de-president/mot-de-president.component';
 import { BibliobusComponent } from './bibliobus/bibliobus.component';
 import { LearnToActComponent } from './learn-to-act/learn-to-act.component';
-import { PoleEducationComponent } from './pole-education/pole-education.component'
+import { PoleEducationComponent } from './pole-education/pole-education.component';
+import { PrescolairePageComponent } from './prescolaire-page/prescolaire-page.component'
 
 
 @NgModule({
-  declarations: [],
+  declarations: [PrescolairePageComponent],
   imports: [
     CommonModule
   ],
