@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const request = require('request');
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                      MODELS IMPORTS                                            //
@@ -291,6 +292,7 @@ router.post('/addSubscriber', (req, res, next) => {
     let newSubscriber = new Subscribers({
         email: req.body.email,
     })
+
     newSubscriber.save((err, subscriber) => {
         if (err) {
             res.status(500).send(err)
@@ -432,6 +434,36 @@ router.post('/addTrophie', (req, res, next) => {
 
 // send mail
 router.post('/sendSubscribtionMail', (req, res) => {
+    const email = req.body.email;
+
+    const data = {
+        members: [{
+            email_address: email,
+            status: 'subscribed'
+        }]
+    };
+
+    const postData = JSON.stringify(data);
+    const options = {
+        url: 'https://us4.api.mailchimp.com/3.0/lists/0fcf9c9986',
+        method: 'POST',
+        headers: {
+            Authorization: 'auth 76707fce793ba70c931443de031356ef-us4'
+        },
+        body: postData
+    };
+
+    request(options, (err, response, body) => {
+        if (err) {
+            res.send(err);
+        } else {
+            if (response.statusCode === 200) {
+                console.log('done')
+            } else {
+                res.send(err);
+            }
+        }
+    });
 
     let transporter = nodemailer.createTransport({
         service: 'Gmail',
