@@ -10,6 +10,7 @@ import { InscriStepperComponent } from './pages/inscription/inscri-stepper/inscr
 import { PoleEducationComponent } from './pages/pole-education/pole-education.component';
 import { BibliobusComponent } from './pages/bibliobus/bibliobus.component';
 import { LearnToActComponent } from './pages/learn-to-act/learn-to-act.component';
+import { PrescolairePageComponent } from './pages/prescolaire-page/prescolaire-page.component';
 import { BibliothequeDeClasseComponent } from './pages/bibliotheque-de-classe/bibliotheque-de-classe.component'
 import { AmalComponent } from './pages/amal/amal.component';
 import { C2cComponent } from './pages/c2c/c2c.component';
@@ -19,6 +20,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 
 
 const routes: Routes = [
+  { path: 'ProgrammePrescolaire', component: PrescolairePageComponent },
   { path: 'Education', component: PoleEducationComponent },
   { path: 'Inscription', component: InscriptionComponent },
   { path: 'QuiSommeNous', component: QuiSomeNousComponent },
@@ -53,6 +55,7 @@ export const routingComponent = [
   AmalComponent,
   C2cComponent,
   JourneesSolidairesComponent,
-  ContactComponent
+  ContactComponent,
+  PrescolairePageComponent
 
 ];

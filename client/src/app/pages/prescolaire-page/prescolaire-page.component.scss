@@ -3,7 +3,7 @@
 @import '../../../mediaqueries.scss';
 @import '../../../extends.scss';
 
-.pole-education {
+.prescolaire-sect {
   main {
     font-family: $third-font;
 
@@ -32,7 +32,7 @@
         }
 
         h1 {
-          font-family: $font-family;
+
           font-size: 30px;
           font-weight: bold;
           color: color(primary);
@@ -54,7 +54,7 @@
   }
 }
 
-.educSection {
+.prescomain {
   padding: 0 5%;
 
   .blue-text {
