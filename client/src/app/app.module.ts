@@ -34,6 +34,7 @@ import { AmalComponent } from './pages/amal/amal.component';
 import { C2cComponent } from './pages/c2c/c2c.component';
 import { JourneesSolidairesComponent } from './pages/journees-solidaires/journees-solidaires.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { PrescolairePageComponent } from './pages/prescolaire-page/prescolaire-page.component';
 
 
 
@@ -102,7 +103,8 @@ import { SlgCarouselComponent } from './pages-slogons/slg-carousel/slg-carousel.
     AmalComponent,
     C2cComponent,
     JourneesSolidairesComponent,
-    ContactComponent
+    ContactComponent,
+    PrescolairePageComponent
   ],
   imports: [
     BrowserModule,
