@@ -162,7 +162,7 @@ export class AppComponent {
         },
         {
           name: 'Journée solidaire',
-          link: '#'
+          link: 'journéeSolidaire'
         },
         {
           name: 'Le programme de préscolaire oeuvre',
@@ -191,7 +191,7 @@ export class AppComponent {
         },
         {
           name: 'Centre de la deuxiéme chance',
-          link: '#'
+          link: 'c2c'
         },
         {
           name: 'Digi-bus',
@@ -226,7 +226,7 @@ export class AppComponent {
     {
       title: {
         name: 'Contact',
-        link: '#'
+        link: 'contact'
       },
       subtitle: [
       ]

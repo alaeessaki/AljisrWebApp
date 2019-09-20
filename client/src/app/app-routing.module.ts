@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+// components
 import { QuiSomeNousComponent } from './pages/qui-some-nous/qui-some-nous.component';
 import { MotDePresidentComponent } from './pages/mot-de-president/mot-de-president.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -10,6 +12,9 @@ import { BibliobusComponent } from './pages/bibliobus/bibliobus.component';
 import { LearnToActComponent } from './pages/learn-to-act/learn-to-act.component';
 import { BibliothequeDeClasseComponent } from './pages/bibliotheque-de-classe/bibliotheque-de-classe.component'
 import { AmalComponent } from './pages/amal/amal.component';
+import { C2cComponent } from './pages/c2c/c2c.component';
+import { JourneesSolidairesComponent } from './pages/journees-solidaires/journees-solidaires.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 
 
@@ -22,6 +27,10 @@ const routes: Routes = [
   { path: 'learnToAct', component: LearnToActComponent },
   { path: 'bibliothequeDeClasse', component: BibliothequeDeClasseComponent },
   { path: 'ProjetAmal', component: AmalComponent },
+  { path: 'c2c', component: C2cComponent },
+  { path: 'journéeSolidaire', component: JourneesSolidairesComponent},
+  { path: 'contact', component: ContactComponent},
+
 
 
   { path: '', component: HomePageComponent },
@@ -41,5 +50,9 @@ export const routingComponent = [
   BibliobusComponent,
   LearnToActComponent,
   PoleEducationComponent,
-  AmalComponent
+  AmalComponent,
+  C2cComponent,
+  JourneesSolidairesComponent,
+  ContactComponent
+
 ];

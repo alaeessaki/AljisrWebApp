@@ -496,6 +496,39 @@ router.post('/sendParticipationMail', (req, res) => {
     });
 })
 
+// send contact mail
+router.post('/sendContactMail', (req, res) => {
+
+    let transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        host: "smt.gmail.com",
+        port: 465,
+        secure: true, // use TLS
+        auth: {
+            user: "alaeessaki3@gmail.com",
+            pass: "live.1457"
+        },
+        tls: {
+            // do not fail on invalid certs
+            rejectUnauthorized: false
+        }
+    });
+    const mailOptions = {
+        from: `${req.body.nom} ${req.body.prenom} ${req.body.email}`, // sender address
+        to: "alaeessaki3@gmail.com", // list of receivers
+        subject: 'Conact Message', // Subject line
+        html: `<p>${req.body.message}</p>` // plain text body,
+    };
+
+    transporter.sendMail(mailOptions, function (err, info) {
+        if (err) {
+            res.send(err)
+        } else {
+            res.send(info)
+        }
+    });
+})
+
 
 // add Trophie
 

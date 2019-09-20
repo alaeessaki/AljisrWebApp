@@ -1,0 +1,106 @@
+<!-- Splash screen-->
+<app-routing-loading-screen></app-routing-loading-screen>
+
+<section class="journée-solidaire">
+  <nav class="blue-nav d-flex justify-content-between">
+    <div class="pt-3 pl-4 d-flex flex-row justify-content-center align-items-center links">
+      <span class="arbreLink">Pole Education & parrainage</span>
+      <img src="../../../assets/icons/rounded-arrow.png" alt="tree" width="14" height="14" class="mr-2 ml-2">
+      <span class="arbreLink">Journée solidaire</span>
+    </div>
+    <div class="lang-ins d-flex flex-row justify-content-center align-items-center pt-3 pr-4">
+      <img src="../../../assets/icons/phone.png" matTooltip="0522 98 01 36" matTooltipPosition="left">
+      <img src="../../../assets/icons/place.png"
+        matTooltip="Ecole El Bachiri Garçons, Angle Rue Ahmed kadmiri et Rue Bachir Laâlaj - Cité Plateau - casablanca"
+        matTooltipPosition="below" class="mr-2 ml-2">
+      <a href="#">FR /</a>
+      <a href="#">EN</a>
+    </div>
+  </nav>
+
+  <app-pages-slogons [slogons]="slogons"></app-pages-slogons>
+
+
+  <!-- Section title -->
+  <div class="titlecontainer mt-4">
+    <div class="title d-flex flex-row align-items-center">
+      <span class="number">01</span>
+      <h1 class="text-uppercase">JOURNÉE SOLIDAIRE</h1>
+    </div>
+  </div>
+
+
+  <div class="journée-container">
+    <!-- Articles -->
+    <article>
+      <div class="article-container d-flex flex-column flex-md-row align-items-start">
+
+        <!-- Blue rect -->
+        <div class="left-rect">
+          <div class="blue-rect text-uppercase">
+            <h3>présentation</h3>
+          </div>
+        </div>
+
+        <!-- Text Container -->
+        <div class="text-container text-container-md">
+          <div class="paragraph">
+            <div class="list-with-dots mt-2 mb-2">
+              <p class="item-with-sm-dot mb-0">La journée solidaire est une action sociale en faveur de l’école publique développée parAl Jisr grâce à la mobilisation des entreprises qui souhaitent agir à travers des actions ponctuelles. C’est aussi l’occasion d’introduire de façon concrète les différents axes d’interventions d’Al Jisr à ses nouveaux partenaires dans la perspective de <span class="blue-text">transformer cette action en parrainage d’écoles comme ce fut le cas avec de nombreux partenaires.</span>
+              </p>
+              <p class="item-with-sm-dot mb-0">En 2017, Al Jisr a organisé deux journées solidaires avec d’une part BDSI et d’autre part, InnovistaSensors. <span class="blue-text">Une trentaine d’employés de ces entreprises ont travaillé bénévolement à la mise en place de bibliothèques de classes</span> et à l’aménagement d’un espace vert au sein de 2 écoles primaires dans des zones défavorisées du grand Casablanca : l’école IBN EL ARIF (Nouaceur) et l’école 18 Novembre (Nouaceur).
+              </p>
+              <p class="item-with-sm-dot mb-0"><span class="blue-text">Dans une ambiance de joie et de solidarité</span>, les employés-bénévoles de ces entreprises et les élèves ont travaillé main dans la main pour faire de l’école un espace agréable acceuillant aux apprentissages
+              </p>
+            
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+  </div>
+
+  <article>
+    <div class="differents-ateliers objectif-wrapper d-flex flex-column flex-md-row mb-5">
+
+      <div class="image-carousel">
+
+        <div class="carousel-list">
+
+          <div class="carousel-imgs" *ngFor="let image of images" [style.backgroundImage]="'url('+ image + ')'"
+            [ngClass]="{
+            'active': image === selectedImage
+          }"></div>
+
+        </div>
+      </div>
+
+      <div class="objectifs-text mb-5">
+
+        <div class="text-title">
+          <h1 class="text-uppercase">Les différents ateliers</h1>
+        </div>
+
+        <div class="text-container">
+          <div class="paragraph">
+            <p class="list-item"><span class="Listnumber">1</span> Atelier dessin
+            </p>
+            <p class="list-item"><span class="Listnumber">2</span> Atelier nettoyage
+            </p>
+            <p class="list-item"><span class="Listnumber">3</span> Atelier jardinage
+            </p>
+            <p class="list-item"><span class="Listnumber">4</span> Atelier Triage des livres
+            </p>
+          </div>
+          <div class="carousel-controls d-flex flex-row">
+            <img src="../../../assets/icons/right-arrow-primary.png" class="previous  mr-4">
+            <img src="../../../assets/icons/right-arrow-primary.png" class="next">
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+</section>

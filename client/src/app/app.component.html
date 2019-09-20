@@ -56,7 +56,7 @@
              <!-- Links that doesnt have sublinks -->
             <mat-card *ngIf="item.subtitle.length<1">
               <mat-card-title>
-                <a routerLink="{{item.title.link}}">{{item.title.name}}</a>
+                <a routerLink="{{item.title.link}}" (click)="sidenav.close()">{{item.title.name}}</a>
               </mat-card-title>
             </mat-card>
           </div>
