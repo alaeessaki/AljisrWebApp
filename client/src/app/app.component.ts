@@ -149,8 +149,8 @@ export class AppComponent {
           link: 'learnToAct'
         },
         {
-          name: 'Amal',
-          link: 'ProjetAmal'
+          name: 'Amale',
+          link: 'ProjetAmale'
         },
         {
           name: 'Bibliothéque de classe(2022)',
@@ -179,7 +179,7 @@ export class AppComponent {
       subtitle: [
         {
           name: 'Presentation',
-          link: '#'
+          link: 'formation'
         },
         {
           name: 'Greenchip (2021)',

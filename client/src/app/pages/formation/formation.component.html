@@ -1,0 +1,227 @@
+<!-- Splash screen-->
+<app-routing-loading-screen></app-routing-loading-screen>
+
+<section class="formation">
+
+  <nav class="blue-nav d-flex justify-content-between">
+    <div class="pt-3 pl-4 d-flex flex-row justify-content-center align-items-center links">
+      <span class="arbreLink">Formation</span>
+      <img src="../../../assets/icons/rounded-arrow.png" alt="tree" width="14" height="14" class="mr-2 ml-2">
+      <span class="arbreLink">Présentation</span>
+    </div>
+    <div class="lang-ins d-flex flex-row justify-content-center align-items-center pt-3 pr-4">
+      <img src="../../../assets/icons/phone.png" matTooltip="0522 98 01 36" matTooltipPosition="left">
+      <img src="../../../assets/icons/place.png"
+        matTooltip="Ecole El Bachiri Garçons, Angle Rue Ahmed kadmiri et Rue Bachir Laâlaj - Cité Plateau - casablanca"
+        matTooltipPosition="below" class="mr-2 ml-2">
+      <a href="#">FR /</a>
+      <a href="#">EN</a>
+    </div>
+  </nav>
+
+  <app-pages-slogons [slogons]="slogons"></app-pages-slogons>
+
+  <!-- Section title -->
+  <div class="titlecontainer mt-4">
+    <div class="title d-flex flex-row align-items-center">
+      <span class="number">01</span>
+      <h1 class="text-uppercase">Formation</h1>
+    </div>
+  </div>
+
+  <div class="formation-container">
+    <!-- Articles -->
+    <article>
+      <div class="article-container d-flex flex-column flex-md-row align-items-start mb-5 pb-5">
+
+        <!-- Blue rect -->
+        <div class="left-rect">
+          <div class="blue-rect text-uppercase">
+            <h3>Programme Amal</h3>
+          </div>
+        </div>
+
+        <!-- Text Container -->
+        <div class="text-container ">
+          <div class="paragraph">
+            <div class="list-with-dots mt-2 mb-2">
+              <p class="item-with-sm-dot mb-0">Le pôle formation-Insertion intervient sous une approche curative, <span
+                  class="blue-text">pour contribuer à remédier à la problématique de l’abandon scolaire</span>. À
+                travers ses grands projets que sont « Green Chip », le « Centre de la Deuxième Chance » et le
+                «Greenchip 2.0 », <span class="blue-text">l’association contribue à favoriser l’insertion
+                  socioprofessionnelle des jeunes âgés</span> de 13 à 30 ans en situation précaire et en décrochage
+                scolaire.
+              </p>
+              <p class="item-with-sm-dot mb-0">L’association AL JISR <span class="blue-text">consacre également une
+                  grande importance à l’apport d’une solution innovante</span>, à la fois pour <span
+                  class="blue-text">la promotion des métiers verts et à la problématique de traitement des DEEE au
+                  Maroc</span>, à travers le projet « Green Chip » initié en 2010, avec nos partenaire Managem la
+                Fondation Drosos
+              </p>
+              <p class="item-with-sm-dot mb-0"><span class="blue-text">Le but :</span> Favoriser l'insertion
+                socioprofessionnelle des jeunes en situation précaire
+              </p>
+              <p class="item-with-sm-dot mb-0"><span class="blue-text">La cible :</span> Jeunes de 13 à 30 en situation
+                d'abandon scolaire du grand casablanca et oujda
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <article>
+      <div class="article-container schema-article-wrapper d-flex flex-row-reverse align-items-start mb-5 pb-5">
+
+        <!-- Blue rect -->
+        <div class="left-rect">
+          <div class="blue-rect text-uppercase reverse-rect">
+            <h3>Programme Amal</h3>
+          </div>
+        </div>
+
+        <!-- Text Container -->
+        <div class="schema-md-container pr-lg-5 d-flex flex-row">
+          <div class="singlerow d-flex flex-column">
+            <div class="head">
+              <h1>Greenchip</h1>
+              <div class="head-right-line"></div>
+              <div class="vertical-line"></div>
+            </div>
+            <div class="circle d-flex justify-content align-items-center">
+              <p class="text-center">Favoriser l'insertion professionnelle des 40 jeunes déscolarisés par an.</p>
+              <div class="vertical-line"></div>
+            </div>
+            <div class="circle d-flex justify-content align-items-center">
+              <p class="text-center">Réduire la fracture numérique au maroc</p>
+              <div class="vertical-line"></div>
+            </div>
+            <div class="circle d-flex justify-content align-items-center">
+              <p class="text-center">Contribuer à la protection de l'environnement</p>
+            </div>
+          </div>
+          <div class="singlerow d-flex flex-column">
+            <div class="head">
+              <h1>Greenchip 2.0</h1>
+              <div class="head-right-line"></div>
+              <div class="vertical-line"></div>
+            </div>
+            <div class="circle d-flex justify-content align-items-center">
+              <p class="text-center">Créer des emplois pérennes et répondre à des besoins en compétences informatiques
+              </p>
+              <div class="vertical-line"></div>
+            </div>
+            <div class="circle d-flex justify-content align-items-center">
+              <p class="text-center">favoriser la (trans)formation numérique, inclusive et solidaire.</p>
+              <div class="vertical-line"></div>
+            </div>
+            <div class="circle d-flex justify-content align-items-center">
+              <p class="text-center">Permettre aux jeunes d’acquérir de nouvelles compétences </p>
+            </div>
+          </div>
+          <div class="singlerow d-flex flex-column">
+            <div class="head">
+              <h1>C2C</h1>
+              <div class="vertical-line"></div>
+            </div>
+            <div class="circle d-flex justify-content align-items-center">
+              <p class="text-center">Informer & orineter 200 jeunes dans les programmes d'édcuation </p>
+              <div class="vertical-line"></div>
+            </div>
+            <div class="circle d-flex justify-content align-items-center">
+              <p class="text-center">Assurer la mise à niveau éducative des jeunes </p>
+              <div class="vertical-line"></div>
+            </div>
+            <div class="circle d-flex justify-content align-items-center">
+              <p class="text-center">Accompagner les jeunes à la formation et l'insertion professionnelle</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="schema-sm-container">
+
+          <!-- greenchip -->
+          <div class="header-column single-column">
+            <h1>Greenchip</h1>
+          </div>
+          <div class="single-column">
+            <p class="text-center">Favoriser l'insertion professionnelle des 40 jeunes déscolarisés par an.</p>
+          </div>
+          <div class="single-column">
+            <p class="text-center">Réduire la fracture numérique au maroc</p>
+          </div>
+          <div class="single-column">
+            <p class="text-center">Contribuer à la protection de l'environnement</p>
+          </div>
+
+          <!-- greenchip 2.0 -->
+          <div class="header-column single-column">
+            <h1>Greenchip 2.0</h1>
+          </div>
+          <div class="single-column">
+            <p class="text-center">Créer des emplois pérennes et répondre à des besoins en compétences informatiques
+            </p>
+          </div>
+          <div class="single-column">
+            <p class="text-center">favoriser la (trans)formation numérique, inclusive et solidaire.</p>
+          </div>
+          <div class="single-column">
+            <p class="text-center">Permettre aux jeunes d’acquérir de nouvelles compétences </p>
+          </div>
+
+          <!-- C2C -->
+          <div class="header-column single-column">
+            <h1>C2C</h1>
+          </div>
+          <div class="single-column">
+            <p class="text-center">Informer & orineter 200 jeunes dans les programmes d'édcuation </p>
+          </div>
+          <div class="single-column">
+            <p class="text-center">Assurer la mise à niveau éducative des jeunes </p>
+          </div>
+          <div class="single-column">
+            <p class="text-center">Accompagner les jeunes à la formation et l'insertion professionnelle</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article>
+      <div class="article-container d-flex flex-column flex-md-row align-items-start mb-5 pb-5">
+
+        <!-- Blue rect -->
+        <div class="left-rect">
+          <div class="blue-rect text-uppercase">
+            <h3>Réalisations</h3>
+          </div>
+        </div>
+
+        <!-- Text Container -->
+        <div class="text-container ">
+          <div class="paragraph">
+            <div class="list-with-dots mt-2 mb-2">
+              <p class="item-with-sm-dot mb-0"><span class="blue-text">Greenchip :</span><br> 327 lauréats en
+                maintenance informatique <br>
+                50% Insérés en milieu d'entreprise <br>
+                14 micro-ateliers crées <br>
+                140.000 Articles informatiques collectés et traités <br>
+                680 Tonnes de déchets informatiques livrées à Managem pour traitement et recyclage <br> 1.200
+                Ordinateurs réparés et offerts aux écoles et assocations sélétionnées dans le cadre du concours Assoclic
+              </p>
+              <p class="item-with-sm-dot mb-0"><span class="blue-text">Centre de deuxiéme chance :</span> <br>Local du
+                centre mis à disposition et équipé<br>
+                par la préfecture Ben M'sik<br>
+                Lancement du centre prévu en janvier 2017<br>
+                200 Bénéficiaires à accompagner en 2017<br>
+                600 Bénéficiaires prévus sur 3 ans
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+  </div>
+
+</section>

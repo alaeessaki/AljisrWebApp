@@ -16,6 +16,7 @@ import { AmalComponent } from './pages/amal/amal.component';
 import { C2cComponent } from './pages/c2c/c2c.component';
 import { JourneesSolidairesComponent } from './pages/journees-solidaires/journees-solidaires.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { FormationComponent } from './pages/formation/formation.component';
 
 
 
@@ -28,10 +29,13 @@ const routes: Routes = [
   { path: 'bibliobus', component: BibliobusComponent },
   { path: 'learnToAct', component: LearnToActComponent },
   { path: 'bibliothequeDeClasse', component: BibliothequeDeClasseComponent },
-  { path: 'ProjetAmal', component: AmalComponent },
+  { path: 'ProjetAmale', component: AmalComponent },
   { path: 'c2c', component: C2cComponent },
   { path: 'journéeSolidaire', component: JourneesSolidairesComponent},
+  { path: 'formation', component: FormationComponent},
   { path: 'contact', component: ContactComponent},
+
+
 
 
 
@@ -56,6 +60,6 @@ export const routingComponent = [
   C2cComponent,
   JourneesSolidairesComponent,
   ContactComponent,
-  PrescolairePageComponent
-
+  PrescolairePageComponent,
+  FormationComponent
 ];

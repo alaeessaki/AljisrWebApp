@@ -35,6 +35,7 @@ import { C2cComponent } from './pages/c2c/c2c.component';
 import { JourneesSolidairesComponent } from './pages/journees-solidaires/journees-solidaires.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PrescolairePageComponent } from './pages/prescolaire-page/prescolaire-page.component';
+import { FormationComponent } from './pages/formation/formation.component';
 
 
 
@@ -104,7 +105,8 @@ import { SlgCarouselComponent } from './pages-slogons/slg-carousel/slg-carousel.
     C2cComponent,
     JourneesSolidairesComponent,
     ContactComponent,
-    PrescolairePageComponent
+    PrescolairePageComponent,
+    FormationComponent
   ],
   imports: [
     BrowserModule,
