@@ -1,3 +1,240 @@
-<p>
-  greenchip works!
-</p>
+<!-- Splash screen-->
+<app-routing-loading-screen></app-routing-loading-screen>
+
+<section class="greenchip">
+  <nav class="blue-nav d-flex justify-content-between">
+    <div class="pt-3 pl-4 d-flex flex-row justify-content-center align-items-center links">
+      <span class="arbreLink">Formation</span>
+      <img src="../../../assets/icons/rounded-arrow.png" alt="tree" width="14" height="14" class="mr-2 ml-2">
+      <span class="arbreLink">Greenchip</span>
+    </div>
+    <div class="lang-ins d-flex flex-row justify-content-center align-items-center pt-3 pr-4">
+      <img src="../../../assets/icons/phone.png" matTooltip="0522 98 01 36" matTooltipPosition="left">
+      <img src="../../../assets/icons/place.png"
+        matTooltip="Ecole El Bachiri Garçons, Angle Rue Ahmed kadmiri et Rue Bachir Laâlaj - Cité Plateau - casablanca"
+        matTooltipPosition="below" class="mr-2 ml-2">
+      <a href="#">FR /</a>
+      <a href="#">EN</a>
+    </div>
+  </nav>
+
+  <app-pages-slogons [slogons]="slogons"></app-pages-slogons>
+
+  <!-- Section title -->
+  <div class="titlecontainer mt-4">
+    <div class="title d-flex flex-row align-items-center">
+      <span class="number">01</span>
+      <h1 class="text-uppercase">Greenchip</h1>
+    </div>
+  </div>
+
+  <div class="greenchip-container">
+    <!-- Arcticles -->
+    <article>
+      <div class="article-container d-flex flex-column flex-md-row align-items-start mb-5 pb-5">
+
+        <!-- Blue rect -->
+        <div class="left-rect">
+          <div class="blue-rect text-uppercase">
+            <h3>présentation</h3>
+          </div>
+        </div>
+
+        <!-- Text Container -->
+        <div class="text-container ">
+          <div class="paragraph">
+            <div class="list-with-dots mt-2 mb-2">
+              <p class="item-with-sm-dot mb-0">Crée en 2010 par l'association partenariat ecole-entreprise Al Jisr suite
+                à la mise en place en 2006 de l'atelier de solidarité numérique “Green Chip” <span
+                  class="blue-text">vise la qualification et l'insertion socio-professionnelle des jeunes en situation
+                  de précarité dans les métiers verts </span>. un programme de revalorisation des équipements
+                informatiques collectés auprés de nos partenaires permet de leur donner une seconde vie en les
+                reconditionnant et en les réparant pour qu'ils soient réutilisés au sein des écoles publiques ,<span
+                  class="blue-text"> ou triés pour un traitement éco-responsable par notre partenaire MANAGEM </span>.
+              </p>
+              <p class="item-with-sm-dot mb-0">Nous préparons au marché du travail des jeunes adultes en difficultés
+                face à l'emploi , en leur offrant un encadrement personnalisé ,<span class="blue-text">un programme de
+                  formation de 8 mois assujestti d'un stage d'insertion </span>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+
+    <article>
+      <div class="article-container d-flex flex-column flex-md-row-reverse align-items-start mt-5 mb-4">
+        <!-- Blue rect -->
+        <div class="left-rect reverse-rect">
+          <div class="blue-rect text-uppercase">
+            <h3>Nos actions</h3>
+          </div>
+        </div>
+
+
+        <!-- Text Container -->
+        <div class="text-container text-container-md">
+          <div class="paragraph spec-paragraph">
+            <div class="icons-container d-flex flex-column flex-sm-row justify-content-around flex-wrap">
+              <div class="item-icon-container d-flex flex-column align-items-center" *ngFor='let Nmb of numbers'>
+                <img [src]="Nmb.icon">
+                <p class="icon-number">{{Nmb.number}}</p>
+                <p>{{Nmb.text}} </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article>
+      <div class="article-container d-flex flex-column flex-md-row align-items-start mb-5 pb-5">
+
+        <!-- Blue rect -->
+        <div class="left-rect">
+          <div class="blue-rect text-uppercase">
+            <h3>Programme de formation </h3>
+          </div>
+        </div>
+
+        <!-- Text Container -->
+        <div class="text-container ">
+          <div class="paragraph">
+            <div class="list-with-dots mt-2 mb-2">
+              <p class="item-with-sm-dot mb-0">Le centre de formation par Apprentissage green chip offre un programme de
+                formation <span class="blue-text">adapté aux besoins et évolution du marché de l'emploi</span>, en
+                partenariat avec la direction de <span class="blue-text">la formation professionnelle et l'académie
+                  régionale de l'éducation</span> et de
+                la formation de casablanca-settat
+              </p>
+              <p class="item-with-sm-dot mb-0">Le programme de formation comprend les modules suivants :
+              </p>
+              <table border="2" class="mt-5">
+                <div class="flag-vertical-line"></div>
+                <div class="flag-bottom"></div>
+                <tr>
+                  <td>Système d'exploitation et logiciels</td>
+                </tr>
+                <tr>
+                  <td>Électricité et électronique</td>
+                </tr>
+                <tr>
+                  <td>Architecture des ordinateurs</td>
+                </tr>
+                <tr>
+                  <td>Méthodes de maintenance</td>
+                </tr>
+                <tr>
+                  <td>Assemblage et valorisaton</td>
+                </tr>
+                <tr>
+                  <td>Installation et configuration</td>
+                </tr>
+                <tr>
+                  <td>Diagnostic et résolution</td>
+                </tr>
+                <tr>
+                  <td>Entretien et maintenance</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article>
+      <div class="article-container d-flex flex-column flex-md-row-reverse align-items-center mb-5 pb-5">
+
+        <!-- Blue rect -->
+        <div class="left-rect">
+          <div class="blue-rect text-uppercase reverse-rect">
+            <h3>Critères de sélection</h3>
+          </div>
+        </div>
+
+        <!-- Text Container -->
+        <div class="text-container ">
+          <div class="paragraph no-position-paragraph pr-5">
+            <div class="list-number d-flex flex-row align-items-center mb-2">
+              <img src="../../../assets/icons/verified.png">
+              <p class="m-0 pl-4">être âgé(e) entre 18 ans et 30 ans</p>
+            </div>
+            <div class="list-number d-flex flex-row align-items-center mb-2">
+              <img src="../../../assets/icons/verified.png">
+              <p class="m-0 pl-4">être sans emploi, en abandon scolaire et motivé(e) à apprendre et à travailler </p>
+            </div>
+            <div class="list-number d-flex flex-row align-items-center mb-2">
+              <img src="../../../assets/icons/verified.png">
+              <p class="m-0 pl-4">Avoir de la difficulté à intégrer le marché du travail </p>
+            </div>
+            <div class="list-number d-flex flex-row align-items-center mb-2">
+              <img src="../../../assets/icons/verified.png">
+              <p class="m-0 pl-4">être Prêt (e) à s'engager pour une période d'un an </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <article>
+      <div class="article-container spec-article d-flex flex-column flex-md-row align-items-start mb-5 pb-5">
+
+        <!-- Blue rect -->
+        <div class="left-rect">
+          <div class="blue-rect text-uppercase">
+            <h3>Pour Postuler</h3>
+          </div>
+        </div>
+
+        <!-- Text Container -->
+        <div class="text-container ">
+          <div class="paragraph">
+
+            <!-- rows -->
+            <div class="row-cont">
+              <div class="number">
+                <p>1</p>
+              </div>
+              <div class="row-text">
+                <p>Téléphone pour t'inscrire à une rencontre d'information</p>
+                <div class="text-with-icon d-flex flex-row align-items-center">
+                  <img src="../../../assets/icons/smartphone-call.png">
+                  <p class="m-0 pl-3">0522980136 | 0522850588</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row-cont mt-3">
+              <div class="number">
+                <p>2</p>
+              </div>
+              <div class="row-text">
+                <p>Nous écrire à </p>
+                <div class="text-with-icon d-flex flex-row align-items-center">
+                  <img src="../../../assets/icons/arroba.png">
+                  <p class="m-0 pl-3">a.khiri@aljisr.ma </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row-cont mt-3">
+              <div class="number">
+                <p>3</p>
+              </div>
+              <div class="row-text">
+                <p>Si ta candidature est retenue, tu seras invité(e) à une entrevue qui nous permettra de mieux te connaître </p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+  </div>
+</section>
