@@ -118,19 +118,23 @@ export class AppComponent {
       subtitle: [
         {
           name: 'Qui somme nous?',
-          link: 'QuiSommeNous'
+          link: 'QuiSommeNous',
+          href: false
         },
         {
           name: "Mot du président",
-          link: 'MotDePresident'
+          link: 'MotDePresident',
+          href: false
         },
         {
           name: 'Notre Structure',
-          link: '#'
+          link: '#',
+          href: false
         },
         {
           name: 'Rapport Annuelle',
-          link: '#'
+          link: 'https://en.calameo.com/read/0051166192bf1dac4dcfe',
+          href: true
         },
       ]
     },
@@ -142,31 +146,38 @@ export class AppComponent {
       subtitle: [
         {
           name: 'Presentation (2020)',
-          link: 'Education'
+          link: 'Education',
+          href: false
         },
         {
           name: 'Projects LTA',
-          link: 'learnToAct'
+          link: 'learnToAct',
+          href: false
         },
         {
           name: 'Amale',
-          link: 'ProjetAmale'
+          link: 'ProjetAmale',
+          href: false
         },
         {
           name: 'Bibliothéque de classe(2022)',
-          link: 'bibliothequeDeClasse'
+          link: 'bibliothequeDeClasse',
+          href: false
         },
         {
           name: 'Bibiliobus',
-          link: 'bibliobus'
+          link: 'bibliobus',
+          href: false
         },
         {
           name: 'Journée solidaire',
-          link: 'journéeSolidaire'
+          link: 'journéeSolidaire',
+          href: false
         },
         {
           name: 'Le programme de préscolaire oeuvre',
-          link: 'ProgrammePrescolaire'
+          link: 'ProgrammePrescolaire',
+          href: false
         },
 
       ]
@@ -179,23 +190,28 @@ export class AppComponent {
       subtitle: [
         {
           name: 'Presentation',
-          link: 'formation'
+          link: 'formation',
+          href: false
         },
         {
           name: 'Greenchip (2021)',
-          link: '#'
+          link: 'greenchip',
+          href: false
         },
         {
           name: 'Greenchip 2.0',
-          link: '#'
+          link: '#',
+          href: false
         },
         {
           name: 'Centre de la deuxiéme chance',
-          link: 'c2c'
+          link: 'c2c',
+          href: false
         },
         {
           name: 'Digi-bus',
-          link: '#'
+          link: '#',
+          href: false
         },
       ]
     },
@@ -215,11 +231,13 @@ export class AppComponent {
       subtitle: [
         {
           name: 'Articles de presse',
-          link: '#'
+          link: '#',
+          href: false
         },
         {
           name: 'Capsules vidéos',
-          link: '#'
+          link: '#',
+          href: false
         }
       ]
     },

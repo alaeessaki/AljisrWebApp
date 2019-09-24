@@ -17,6 +17,7 @@ import { C2cComponent } from './pages/c2c/c2c.component';
 import { JourneesSolidairesComponent } from './pages/journees-solidaires/journees-solidaires.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FormationComponent } from './pages/formation/formation.component';
+import { GreenchipComponent } from './pages/greenchip/greenchip.component';
 
 
 
@@ -33,7 +34,9 @@ const routes: Routes = [
   { path: 'c2c', component: C2cComponent },
   { path: 'journéeSolidaire', component: JourneesSolidairesComponent},
   { path: 'formation', component: FormationComponent},
+  { path: 'greenchip', component: GreenchipComponent},
   { path: 'contact', component: ContactComponent},
+  
 
 
 
@@ -61,5 +64,6 @@ export const routingComponent = [
   JourneesSolidairesComponent,
   ContactComponent,
   PrescolairePageComponent,
-  FormationComponent
+  FormationComponent,
+  GreenchipComponent
 ];

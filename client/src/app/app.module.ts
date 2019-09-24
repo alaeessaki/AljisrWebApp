@@ -36,6 +36,7 @@ import { JourneesSolidairesComponent } from './pages/journees-solidaires/journee
 import { ContactComponent } from './pages/contact/contact.component';
 import { PrescolairePageComponent } from './pages/prescolaire-page/prescolaire-page.component';
 import { FormationComponent } from './pages/formation/formation.component';
+import { GreenchipComponent } from './pages/greenchip/greenchip.component';
 
 
 
@@ -106,7 +107,8 @@ import { SlgCarouselComponent } from './pages-slogons/slg-carousel/slg-carousel.
     JourneesSolidairesComponent,
     ContactComponent,
     PrescolairePageComponent,
-    FormationComponent
+    FormationComponent,
+    GreenchipComponent
   ],
   imports: [
     BrowserModule,

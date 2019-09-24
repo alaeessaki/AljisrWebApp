@@ -3,7 +3,7 @@ export class menu {
         name: string;
         link: string;
     };
-    subtitle: Array<{ name: string, link: string }>;
+    subtitle: Array<{ name: string, link: string, href: boolean }>;
 }
 
 export class images {

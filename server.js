@@ -93,5 +93,6 @@ app.get('/*', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log('server started at port: ' + port);
+    console.log('server started at port: http://localhost:' + port + '/');
+    console.log('connecting to database ...');
 });

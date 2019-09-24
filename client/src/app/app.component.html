@@ -49,19 +49,24 @@
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <div *ngFor="let subitem of item.subtitle" class="sublink mb-3">
-                <a routerLink="{{subitem.link}}" (click)="sidenav.close()">{{subitem.name}}</a>
+                <a *ngIf="!subitem.href" routerLink="{{subitem.link}}" (click)="sidenav.close()">{{subitem.name}}</a>
+                <a *ngIf="subitem.href" href="{{subitem.link}}" (click)="sidenav.close()" target="_blank">{{subitem.name}}</a>
               </div>
             </mat-expansion-panel>
 
-             <!-- Links that doesnt have sublinks -->
+            <!-- Links that doesnt have sublinks -->
             <mat-card *ngIf="item.subtitle.length<1">
               <mat-card-title>
                 <a routerLink="{{item.title.link}}" (click)="sidenav.close()">{{item.title.name}}</a>
               </mat-card-title>
             </mat-card>
+
+        
+
+
           </div>
 
-    
+
         </div>
       </div>
     </div>
@@ -89,7 +94,8 @@
         <!-- Login -->
         <div class="btnContainer d-flex flex-row-reverse search menu">
           <mat-icon id="phone_menu" class="menuIcon searchIcon mr-4 mt-0" aria-hidden="false"
-            aria-label="Example home icon" style="transform: rotate(90deg); padding: 5px;" (click)="searchToggle()">search</mat-icon>
+            aria-label="Example home icon" style="transform: rotate(90deg); padding: 5px;" (click)="searchToggle()">
+            search</mat-icon>
           <div class="searchCont">
             <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
               <mat-label>Search</mat-label>
