@@ -471,8 +471,8 @@ router.post('/sendSubscribtionMail', (req, res) => {
         port: 465,
         secure: true, // use TLS
         auth: {
-            user: "alaeessaki3@gmail.com",
-            pass: "live.1457"
+            user: "aljisrassocia@gmail.com",
+            pass: "Aljisr@2019"
         },
         tls: {
             // do not fail on invalid certs
@@ -480,7 +480,7 @@ router.post('/sendSubscribtionMail', (req, res) => {
         }
     });
     const mailOptions = {
-        from: '"Aljisr" alaeessaki3@gmail.com', // sender address
+        from: '"Aljisr" aljisrassocia@gmail.com', // sender address
         to: req.body.email, // list of receivers
         subject: 'Thank you for your subscribing', // Subject line
         html: '<p>Thank you for your subscribing to our news letter </p>' // plain text body
@@ -504,8 +504,8 @@ router.post('/sendParticipationMail', (req, res) => {
         port: 465,
         secure: true, // use TLS
         auth: {
-            user: "alaeessaki3@gmail.com",
-            pass: "live.1457"
+            user: "aljisrassocia@gmail.com",
+            pass: "Aljisr@2019"
         },
         tls: {
             // do not fail on invalid certs
@@ -513,10 +513,11 @@ router.post('/sendParticipationMail', (req, res) => {
         }
     });
     const mailOptions = {
-        from: '"Aljisr" alaeessaki3@gmail.com', // sender address
+        from: '"Aljisr" aljisrassocia@gmail.com', // sender address
         to: req.body.email, // list of receivers
-        subject: 'Thank you for your participation', // Subject line
-        html: `<p>Thank you for your subscribing to the Event: ${req.body.event} le: ${req.body.date}</p>` // plain text body,
+        subject: 'Merci pour votre participation', // Subject line
+        html: `<p>Merci pour votre participation à l'évenement: ${req.body.event}</p>
+                <p>Vous êtes le bienvenue le ${req.body.date}` // plain text body,
     };
 
     transporter.sendMail(mailOptions, function (err, info) {
@@ -537,8 +538,8 @@ router.post('/sendContactMail', (req, res) => {
         port: 465,
         secure: true, // use TLS
         auth: {
-            user: "alaeessaki3@gmail.com",
-            pass: "live.1457"
+            user: "aljisrassocia@gmail.com",
+            pass: "Aljisr@2019"
         },
         tls: {
             // do not fail on invalid certs
@@ -547,7 +548,7 @@ router.post('/sendContactMail', (req, res) => {
     });
     const mailOptions = {
         from: `${req.body.nom} ${req.body.prenom} ${req.body.email}`, // sender address
-        to: "alaeessaki3@gmail.com", // list of receivers
+        to: "aljisrassocia@gmail.com", // list of receivers
         subject: 'Conact Message', // Subject line
         html: `<p>${req.body.message}</p>` // plain text body,
     };

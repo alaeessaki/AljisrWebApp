@@ -1,0 +1,29 @@
+@import '../../../variables.scss';
+
+.errorPage {
+  .container {
+    .number {
+      font-family: $secondary-font;
+      font-size: 180px;
+      color: color(primary);
+    }
+
+    .text {
+      font-family: $secondary-font;
+      font-size: 30px;
+    }
+
+    .link-container {
+      a {
+        cursor: pointer;
+        font-family: $secondary-font;
+        font-size: 20px;
+        color: color(primary);
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 1px solid color(primary);
+      }
+    }
+
+  }
+}

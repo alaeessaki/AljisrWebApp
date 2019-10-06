@@ -1,4 +1,4 @@
-import { Component, OnInit, TemplateRef, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewEncapsulation, Input } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { LangService } from '../lang.service';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
@@ -14,10 +14,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class BenevolerComponent implements OnInit {
   // setting data
-  help = {
-    "en": "help",
-    "fr": "Aidez nous"
-  }
+
+  @Input() text;
   modalRef: BsModalRef;
   constructor(private modalService: BsModalService, private _langService: LangService, private _benevolerService: BenevolerService, private _snackBar: MatSnackBar) {
   }

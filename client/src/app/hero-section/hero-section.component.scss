@@ -85,6 +85,10 @@
         margin-bottom: 10px;
       }
     }
+
+    app-benevoler{
+      display: none;
+    }
     a{
       text-decoration: none;
       border: 2px solid color(primary);
@@ -199,4 +203,7 @@
 
 .activeAction{
   opacity: 1 !important;
+  app-benevoler{
+    display: unset !important;
+  }
 }

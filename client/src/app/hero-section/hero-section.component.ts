@@ -23,28 +23,34 @@ export class HeroSectionComponent implements OnInit {
     {
       "title": {
         "fr": "Association Al jisr",
-        "en": "inspire young men to investigate"
+        "en": "Al jisr Association"
       },
       "slogon": {
         "fr": "l’association Al Jisr a le privilège d’être placée sous la Présidence d’honneur de Sa Majesté le Roi Mohammed VI et bénéficie de la Reconnaissance d’Utilité Publique depuis 2007.",
-        "en": "l’association Al Jisr a le privilège d’être placée sous la Présidence d’honneur de Sa Majesté le Roi Mohammed VI et bénéficie de la Reconnaissance d’Utilité Publique depuis 2007."
+        "en": "Al Jisr Association has the privilege of being placed under the Honorary Presidency of His Majesty King Mohammed VI and has benefited from the Recognition of Public Utility since 2007."
       },
       "link": {
-        'text': "Voir plus sur l'association",
-        'router': '#'
+        'text': {
+          "fr":"Voir plus sur l'association",
+          "en":"See more about the association"
+        },
+        'router': '/QuiSommeNous'
       }
     },
     {
       "title": {
         "fr": "UN GESTE SIMPLE",
-        "en": "UN GESTE SIMPLE"
+        "en": "A SIMPLE GESTURE"
       },
       "slogon": {
         "fr": "devenir bénévole, Une bonne idée ! ",
-        "en": "devenir bénévole, Une bonne idée ! "
+        "en": "become a volunteer, A good idea!"
       },
       "link": {
-        'text': "DEVENIR BÉNÉVOLE",
+        'text': {
+          "fr":"DEVENIR BÉNÉVOLE",
+          "en":"BECOME VOLUNTEER"
+        },
         'router': '#'
       }
     }

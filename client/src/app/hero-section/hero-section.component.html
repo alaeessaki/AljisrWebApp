@@ -26,10 +26,9 @@
   }">
     <h1 style="white-space: pre-line;">{{slogon2.title[language]}}</h1>
     <h4 style="white-space: pre-line;">{{slogon2.slogon[language]}}</h4>
-    <a href="#">{{slogon2.link.text}}</a>
+    <a *ngIf="slogon2.link.router!='#'" routerLink="{{slogon2.link.router}}">{{slogon2.link.text[language]}}</a>
+    <app-benevoler *ngIf="slogon2.link.router=='#'" [text]="slogon2.link.text[language]"></app-benevoler>
   </div>
-  <!-- 
-  <app-benevoler></app-benevoler> -->
-
+  
 
 </section>

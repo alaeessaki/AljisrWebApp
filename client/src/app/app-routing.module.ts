@@ -18,10 +18,13 @@ import { JourneesSolidairesComponent } from './pages/journees-solidaires/journee
 import { ContactComponent } from './pages/contact/contact.component';
 import { FormationComponent } from './pages/formation/formation.component';
 import { GreenchipComponent } from './pages/greenchip/greenchip.component';
+import { Page404Component } from './pages/page404/page404.component';
 
 
 
 const routes: Routes = [
+
+  { path: '', component: HomePageComponent },
   { path: 'ProgrammePrescolaire', component: PrescolairePageComponent },
   { path: 'Education', component: PoleEducationComponent },
   { path: 'Inscription', component: InscriptionComponent },
@@ -32,17 +35,13 @@ const routes: Routes = [
   { path: 'bibliothequeDeClasse', component: BibliothequeDeClasseComponent },
   { path: 'ProjetAmale', component: AmalComponent },
   { path: 'c2c', component: C2cComponent },
-  { path: 'journéeSolidaire', component: JourneesSolidairesComponent},
-  { path: 'formation', component: FormationComponent},
-  { path: 'greenchip', component: GreenchipComponent},
-  { path: 'contact', component: ContactComponent},
-  
+  { path: 'journéeSolidaire', component: JourneesSolidairesComponent },
+  { path: 'formation', component: FormationComponent },
+  { path: 'greenchip', component: GreenchipComponent },
+  { path: 'contact', component: ContactComponent },
 
+  { path: '**', component: Page404Component },
 
-
-
-
-  { path: '', component: HomePageComponent },
 ];
 
 @NgModule({
@@ -65,5 +64,6 @@ export const routingComponent = [
   ContactComponent,
   PrescolairePageComponent,
   FormationComponent,
-  GreenchipComponent
+  GreenchipComponent,
+  Page404Component
 ];

@@ -1,5 +1,5 @@
-// @import '../../variables.scss';
-// @import '../../mediaqueries.scss';
+@import '../../variables.scss';
+@import '../../mediaqueries.scss';
 
 // .benevole {
 //   cursor: pointer;
@@ -80,198 +80,227 @@
 //   }
 // }
 
+.benevole-btn {
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid color(primary);
+  padding: 10px 20px;
+  color: color(reverse);
+  transition: .2s;
+  font-size: 16px;
+  background-color: transparent;
 
-// .benevole-modal {
-//   .modal-content {
-//     border: none !important;
-//     border-radius: unset !important;
-//   }
+  &:hover {
+    background-color: color(primary);
+    font-weight: 400;
+  }
 
-//   .modal-content .modal-body {
-//     padding: 0 !important;
+  @include tablet {
+    font-size: 13px;
+  }
 
-//     .close {
-//       position: absolute;
-//       right: 15px;
-//       top: 10px;
-//       color: color(primary);
-//       opacity: 1;
-//       font-size: 40px;
+  @include tablet-sm {
+    font-size: 11px;
+  }
 
-//       @include tablet-sm {
-//         font-size: 30px;
-//       }
+  @include mobile-sm {
+    font-size: 8px;
+  }
 
-//       font-weight: 400;
-//     }
+}
 
-//     .benevole-container {
-//       .lta-img-container {
-//         margin-top: 65px;
-//         margin-bottom: 20px;
-//       }
+.benevole-modal {
+  .modal-content {
+    border: none !important;
+    border-radius: unset !important;
+  }
 
-//       .toolbar-wrapper {
-//         margin: 0px 10%;
+  .modal-content .modal-body {
+    padding: 0 !important;
 
-//         .toolbar-container {
-//           background-color: #e0e0e0;
-//           border-left: 4px solid color(primary);
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      color: color(primary);
+      opacity: 1;
+      font-size: 40px;
 
-//           h5 {
-//             color: color(para-grey-bold);
-//             font-size: 14px;
-//             font-family: $font-family;
-//             padding: 20px;
-//           }
-//         }
-//       }
+      @include tablet-sm {
+        font-size: 30px;
+      }
 
-//       .formulaire-wrapper {
-//         margin: 0% 11%;
+      font-weight: 400;
+    }
 
-//         .form-wrapper {
-//           margin-top: 5%;
+    .benevole-container {
+      .lta-img-container {
+        margin-top: 65px;
+        margin-bottom: 20px;
+      }
 
-//           form {
-//             height: 100%;
+      .toolbar-wrapper {
+        margin: 0px 10%;
 
-//             .form-title {
-//               margin-bottom: 3px;
+        .toolbar-container {
+          background-color: #e0e0e0;
+          border-left: 4px solid color(primary);
 
-//               h1 {
-//                 font-size: 15px;
-//                 font-family: $font-family;
-//                 font-weight: bolder;
-//                 margin: 0 !important;
-//               }
+          h5 {
+            color: color(para-grey-bold);
+            font-size: 14px;
+            font-family: $font-family;
+            padding: 20px;
+          }
+        }
+      }
 
-//               .spec-title {
-//                 font-size: 13px;
-//                 color: color(reverse);
-//                 background-color: color(primary);
-//                 padding: 7px 17px;
-//                 border-radius: 5px;
-//                 font-weight: 300;
-//               }
-//             }
+      .formulaire-wrapper {
+        margin: 0% 11%;
 
-//             .double-form-container {
-//               width: 100%;
-//               margin-bottom: 10px;
+        .form-wrapper {
+          margin-top: 5%;
 
-//               .form-cont {
-//                 &:first-child {
-//                   padding-right: 10px;
-//                 }
+          form {
+            height: 100%;
 
-//                 width: 50%;
+            .form-title {
+              margin-bottom: 3px;
 
-//                 .mat-form-field {
-//                   width: 100%;
+              h1 {
+                font-size: 15px;
+                font-family: $font-family;
+                font-weight: bolder;
+                margin: 0 !important;
+              }
 
-//                   @include tablet-sm {
-//                     font-size: 12px;
-//                   }
-//                 }
-//               }
-//             }
+              .spec-title {
+                font-size: 13px;
+                color: color(reverse);
+                background-color: color(primary);
+                padding: 7px 17px;
+                border-radius: 5px;
+                font-weight: 300;
+              }
+            }
 
-//             .single-form-container {
-//               width: 100%;
-//               margin-bottom: 10px;
+            .double-form-container {
+              width: 100%;
+              margin-bottom: 10px;
 
-//               .form-cont {
-//                 width: 100%;
+              .form-cont {
+                &:first-child {
+                  padding-right: 10px;
+                }
 
-//                 @include tablet-sm {
-//                   font-size: 12px;
-//                 }
+                width: 50%;
 
-//                 .mat-form-field {
-//                   width: 100%;
-//                 }
-//               }
+                .mat-form-field {
+                  width: 100%;
 
-//               .select-form-cont {
-//                 width: 100px;
-//                 @include tablet-sm{
-//                   font-size: 12px;
-//                 }
+                  @include tablet-sm {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
 
-//                 .mat-form-field {
-//                   width: 100%;
+            .single-form-container {
+              width: 100%;
+              margin-bottom: 10px;
 
-//                 }
-//               }
-//             }
+              .form-cont {
+                width: 100%;
 
-//             .checkbox-cont {
-//               width: 100%;
+                @include tablet-sm {
+                  font-size: 12px;
+                }
 
-//               .mat-checkbox {
-//                 .mat-checkbox-label {
-//                   white-space: initial;
+                .mat-form-field {
+                  width: 100%;
+                }
+              }
 
-//                   .accord {
-//                     position: relative;
-//                     top: 1px;
-//                     color: #929292;
+              .select-form-cont {
+                width: 100px;
 
-//                     a {
-//                       color: color(primary);
-//                       text-decoration: none;
-//                     }
-//                   }
-//                 }
-//               }
-//             }
+                @include tablet-sm {
+                  font-size: 12px;
+                }
 
-//             .btn-cont {
-//               width: 100%;
-//               padding: 50px 0px;
+                .mat-form-field {
+                  width: 100%;
 
-//               .single-btn-cont {
-//                 width: 120px;
-//                 height: 45px;
+                }
+              }
+            }
 
-//                 &:first-child {
-//                   margin-right: 10px;
-//                 }
+            .checkbox-cont {
+              width: 100%;
 
-//                 .mybtn {
-//                   width: 100%;
-//                   height: 100%;
+              .mat-checkbox {
+                .mat-checkbox-label {
+                  white-space: initial;
 
-//                 }
+                  .accord {
+                    position: relative;
+                    top: 1px;
+                    color: #929292;
 
-//                 .mat-stroked-button {
-//                   border-color: color(primary);
-//                 }
-//               }
+                    a {
+                      color: color(primary);
+                      text-decoration: none;
+                    }
+                  }
+                }
+              }
+            }
 
-//             }
-//           }
+            .btn-cont {
+              width: 100%;
+              padding: 50px 0px;
 
-//         }
-//       }
-//     }
+              .single-btn-cont {
+                width: 120px;
+                height: 45px;
 
-//   }
-// }
+                &:first-child {
+                  margin-right: 10px;
+                }
 
-// .cdk-global-overlay-wrapper,
-// .cdk-overlay-container {
-//   z-index: 99999 !important;
-// }
+                .mybtn {
+                  width: 100%;
+                  height: 100%;
 
-// .blue-snackbar {
-//   background-color: color(primary);
-//   color: color(reverse);
-// }
+                }
 
-// .blue-snackbar .mat-simple-snackbar-action {
-//   background-color: color(reverse);
-//   color: color(primary);
-//   border-radius: 20px;
-// }
+                .mat-stroked-button {
+                  border-color: color(primary);
+                }
+              }
+
+            }
+          }
+
+        }
+      }
+    }
+
+  }
+}
+
+.cdk-global-overlay-wrapper,
+.cdk-overlay-container {
+  z-index: 99999 !important;
+}
+
+.blue-snackbar {
+  background-color: color(primary);
+  color: color(reverse);
+}
+
+.blue-snackbar .mat-simple-snackbar-action {
+  background-color: color(reverse);
+  color: color(primary);
+  border-radius: 20px;
+}

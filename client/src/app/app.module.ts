@@ -37,6 +37,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { PrescolairePageComponent } from './pages/prescolaire-page/prescolaire-page.component';
 import { FormationComponent } from './pages/formation/formation.component';
 import { GreenchipComponent } from './pages/greenchip/greenchip.component';
+import { Page404Component } from './pages/page404/page404.component';
 
 
 
@@ -108,7 +109,8 @@ import { SlgCarouselComponent } from './pages-slogons/slg-carousel/slg-carousel.
     ContactComponent,
     PrescolairePageComponent,
     FormationComponent,
-    GreenchipComponent
+    GreenchipComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
