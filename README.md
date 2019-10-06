@@ -54,7 +54,7 @@ All the documentations needed are inside the files
 
 ## Athors: 
 * **Alae Es-saki**  - [Alaeessaki](https://github.com/alaeessaki)
-* **Khalil Kessa**  - [YassineOsip](https://github.com/KhalilKes)
+* **Khalil Kessa**  - [KhalilKes](https://github.com/KhalilKes)
 * **Chamkhi Anas** 
 
 ## Licence & Copyright
