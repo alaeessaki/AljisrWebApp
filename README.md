@@ -20,6 +20,7 @@ Client folder is the Angular Project
 Public folder is the prod 
 The server is only routes the Public, so after deployment copy the dist to Public folder.
 For the dashboard, its the same thing move te dist to Public/admin and the server will do the rest
+If the master branch doesnt work switch to testing-branch for backup
 
 ## Routing 
 
